@@ -14,7 +14,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
-SWEP.CamAttachment = 5
+SWEP.CamAttachment = 3
 SWEP.TracerNum = 1
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 2
@@ -30,11 +30,11 @@ SWEP.TrueName = "XCR-M"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Its design is similar to an AR-15 but uses a completely different mechanism based on the AR-18."
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
-SWEP.Trivia_Country = "Germany / USA"
+SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
 
 -- Weapon slot --
@@ -50,20 +50,20 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lowpolyhk416.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpaxcrm.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
-SWEP.ViewModelFOV = 80
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
-SWEP.DamageMin = 19
-SWEP.Range = 150
-SWEP.Penetration = 13
+SWEP.Damage = 40
+SWEP.DamageMin = 23
+SWEP.Range = 100
+SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 850
+SWEP.MuzzleVelocity = 650
 
 -- Mag size --
 
@@ -74,17 +74,17 @@ SWEP.ReducedClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 0.33
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0.3
-SWEP.VisualRecoilMult = 0.7
-SWEP.MaxRecoilBlowback = 0.3
-SWEP.MaxRecoilPunch = 0
+SWEP.VisualRecoilMult = 0.3
+SWEP.MaxRecoilBlowback = 5
+SWEP.MaxRecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 850
+SWEP.Delay = 60 / 750
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -142,8 +142,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.135, 0, 0.3),
-     Ang = Angle(0.8, 0, 0),
+     Pos = Vector(-3.065, 0, 0.7),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
 }
@@ -179,123 +179,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    -- HK 417 --
-
-    ["hk417mag"] = {
-        VMBodygroups = {{ind = 2, bg = 1},{ind = 3, bg = 1}},
-        TrueNameChange = "HK 417",
-        PrintName = "M417",
-    },
-    ["Hk416ExtBarrel"] = {
-        VMBodygroups = {{ind = 1, bg = 1},{ind = 5, bg = 1},{ind = 7, bg = 1}},
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, -1, 20)
-            },
-            [5] = {
-                vpos = Vector(0, -1, 12),
-            },
-            [4] = {
-                vpos = Vector(0, 0, 5.7),
-            },
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-3.135, 0, 0.3),
-            Ang = Angle(0.8, 0, 0),
-            Magnification = 1,
-        },
-    },
-
-    -- HK 416C variant --
-
-    ["Hk416RedBarrel"] = {
-        VMBodygroups = {{ind = 1, bg = 2},{ind = 5, bg = 2},{ind = 7, bg = 2}},
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, -1, 15)
-            },
-            [5] = {
-                vpos = Vector(0, -1, 10.5),
-            },
-            [4] = {
-                vpos = Vector(0, 0, -5.5),
-            },
-        },
-    },
-    ["Hk416SuppBarrel"] = {
-        VMBodygroups = {{ind = 1, bg = 3},{ind = 5, bg = 3},{ind = 7, bg = 3}},
-        AttPosMods = {
-            [5] = {
-                vpos = Vector(0, -1, 11),
-            },
-            [4] = {
-                vpos = Vector(0, 0, -5.5),
-            },
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-3.135, 0, 0.3),
-            Ang = Angle(0.8, 0, 0),
-            Magnification = 1,
-        },
-    },
 
     -- Ind stocks --
-
-    ["go_stock"] = {
-        VMElements = {
-        {
-                Model = "models/weapons/arccw/atts/buffer_lpstock.mdl",
-                Bone = "Body",
-                Offset = {
-                    pos = Vector(0, -2.1, -0.8),
-                    ang = Angle(90, 0, -90),
-                },
-                Scale = Vector(0.9,0.9,0.9),
-            }
-        },
-    },
-    
-    ["lpglobal_stock"] = {
-        VMElements = {
-        {
-                Model = "models/weapons/arccw/atts/buffer_lpstock.mdl",
-                Bone = "Body",
-                Offset = {
-                    pos = Vector(0, -2.1, -0.8),
-                    ang = Angle(90, 0, -90),
-                },
-                Scale = Vector(0.9,0.9,0.9),
-            }
-        },
-    },
-    
-    ["buffer"] = {
-        VMElements = {
-        {
-                Model = "models/weapons/arccw/atts/buffer_lpstock.mdl",
-                Bone = "Body",
-                Offset = {
-                    pos = Vector(0, -2.1, -0.8),
-                    ang = Angle(90, 0, -90),
-                },
-                Scale = Vector(0.9,0.9,0.9),
-            }
-        },
-    },
-    
-    ["lphm_stock"] = {},
-    
-    -- Iron Sights / Flash Hiders --
-
-    ["altirons1"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
-    },
-    ["altirons2"] = {
-        VMBodygroups = {{ind = 6, bg = 2}},
-    },
-    ["nois"] = {
-        VMBodygroups = {{ind = 6, bg = 3},{ind = 7, bg = 4}},
-    },
     ["nofh"] = {
         VMBodygroups = {{ind = 5, bg = 3}},
     },
@@ -305,19 +190,11 @@ SWEP.AttachmentElements = {
     ["pmag"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
     },
-    ["hk419mag"] = {
-        VMBodygroups = {{ind = 2, bg = 2},{ind = 3, bg = 3}},
-        TrueNameChange = "HK 419",
-        PrintName = "M419",
-    },
 
     -- Skins --
 
     ["skin_wireframe"] = {
         VMSkin = 1,
-    },
-    ["skin_tan"] = {
-        VMSkin = 2, -- Looks terrible that's why it's unused
     },
 }
 
@@ -332,8 +209,8 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
-        Framerate = 60,
-        time = 75 / 60,
+        Framerate = 30,
+        time = 75 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -343,16 +220,16 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
-        Framerate = 60,
-        Time = 30 / 60,
+        Source = "fire",
+        Framerate = 30,
+        Time = 16 / 30,
         ShellEjectAt = 0.01,
         --SoundTable = {{ s = "weapons/arccw/hk416/lowpolyhk416_mech.ogg"}},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Framerate = 60,
-        Time = 30 / 60,
+        Framerate = 30,
+        Time = 30 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
@@ -362,8 +239,8 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 126 / 60,
-        Framerate = 60,
+        Time = 126 / 30,
+        Framerate = 30,
         LastClip1OutTime = 1,
         LHIK = true,
         LHIKIn = 0.2,
@@ -374,163 +251,38 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 60,
-        Time = 160 / 60,
+        Framerate = 30,
+        Time = 160 / 30,
         LastClip1OutTime = 0.8,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
-    },
-
-    -- 417 variants --
-
-    ["reload_417"] = {
-        Source = "reload_417",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 126 / 60,
-        Framerate = 60,
-        LastClip1OutTime = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
-    },
-    ["reload_empty_417"] = {
-        Source = "reload_empty_417",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 60,
-        Time = 160 / 60,
-        LastClip1OutTime = 0.8,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
-    },
-
-    ["exit_inspect_417"] = {
-        Source = "exit_inspect_417",
-        time = 241 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
-    },
-
-    ["exit_inspect_empty_417"] = {
-        Source = "exit_inspect_empty_417",
-        time = 241 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
-    },
-
-    -- 419 variants --
-
-    ["reload_419"] = {
-        Source = "reload_419",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 126 / 60,
-        Framerate = 60,
-        LastClip1OutTime = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
-    },
-    ["reload_empty_419"] = {
-        Source = "reload_empty_419",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 60,
-        Time = 160 / 60,
-        LastClip1OutTime = 0.8,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
-    },
-    
-    ["exit_inspect_419"] = {
-        Source = "exit_inspect_419",
-        time = 241 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
-    },
-
-    ["exit_inspect_empty_419"] = {
-        Source = "exit_inspect_empty_419",
-        time = 241 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
     },
     
     -- Inspecc --
 
     ["enter_inspect"] = {
         Source = "enter_inspect",
-        time = 45 / 60,
-        Framerate = 60,
+        time = 10 / 30,
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0,
     },
     ["idle_inspect"] = {
         Source = "idle_inspect",
-        time = 120 / 60,
-        Framerate = 60,
+        time = 1 / 30,
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
     },
     ["exit_inspect"] = {
         Source = "exit_inspect",
-        time = 241 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
-    },
-
-    ["enter_inspect_empty"] = {
-        Source = "enter_inspect_empty",
-        time = 45 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0.1,
-        LHIKOut = 0,
-    },
-    ["idle_inspect_empty"] = {
-        Source = "idle_inspect_empty",
-        time = 120 / 60,
-        Framerate = 60,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
-    },
-    ["exit_inspect_empty"] = {
-        Source = "exit_inspect_empty",
-        time = 241 / 60,
-        Framerate = 60,
+        time = 20 / 30,
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseIn = 0.2,
@@ -556,17 +308,6 @@ SWEP.RejectAttachments = {
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lphk416_rs"},
-        MergeSlots = {3},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lphk416_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
-        PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
@@ -576,7 +317,12 @@ SWEP.Attachments = {
         },
         ExtraSightDist = 10,
         InstalledEles = {"nois"},
-        Hidden = true, -- Shittiest way of fixing bodygroup priority --
+    },
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "14.5' Barrel",
+        Slot = {"lphk416_barrel"},
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
     },
     {
         PrintName = "Muzzle",
@@ -588,7 +334,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
-		ExcludeFlags = {"SuppBarrel"},
     },
     { 
         PrintName = "Underbarrel",
@@ -623,8 +368,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(0.9,0.9,0.9),
-        DefaultEles = {"buffer"},
-        Installed = "lphk416_hkheavystock",
     },
     {
         PrintName = "Mag Type",
