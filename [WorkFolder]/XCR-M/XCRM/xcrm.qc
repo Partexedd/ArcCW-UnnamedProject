@@ -10,6 +10,8 @@ $bodygroup "1" {
 
 $bodygroup "2" {
 	studio "shortirons.smd"
+	studio "longirons.smd"
+	blank
 }
 
 $bodygroup "3" {
@@ -38,6 +40,13 @@ $bbox 0 0 0 0 0 0
 $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
+
+$sequence "ref"{
+	"anims\idle_iron.smd"
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
 
 $sequence "idle"{
 	"anims\idle.smd" 
@@ -83,14 +92,14 @@ $sequence "fire" {
 // 	{ event 5001 0 "1" }
 // }
 
-// $sequence "ready" {
-// 	"anims\ready.smd"
-// 	"anims\ready_iron.smd"
-//  	blend "sights" 0 1
-// 	fps 30
-// 	"ACT_VM_DRAW" 1
-// 	snap
-// }
+$sequence "ready" {
+	"anims\ready.smd"
+	//"anims\ready_iron.smd"
+ 	//blend "sights" 0 1
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
 
 // $sequence "reload" {
 // 	"anims\reload.smd"

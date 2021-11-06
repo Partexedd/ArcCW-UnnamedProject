@@ -74,7 +74,7 @@ SWEP.ReducedClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0.3
@@ -113,7 +113,7 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 4
+SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 400
 
@@ -142,8 +142,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.065, 0, 0.7),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.29, 4, 0.7),
+     Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
 }
@@ -210,7 +210,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 75 / 30,
+        time = 34 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -312,7 +312,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -3.5, 6),
+            vpos = Vector(0, -0.1, 2),
             vang = Angle(90, 0, -90),
         },
         ExtraSightDist = 10,
