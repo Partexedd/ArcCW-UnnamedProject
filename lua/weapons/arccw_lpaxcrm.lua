@@ -32,8 +32,8 @@ SWEP.TrueName = "XCR-M"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
+SWEP.Trivia_Calibre = ".308 Winchester"
+SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
 
@@ -57,10 +57,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 40
-SWEP.DamageMin = 23
+SWEP.Damage = 39
+SWEP.DamageMin = 22
 SWEP.Range = 100
-SWEP.Penetration = 18
+SWEP.Penetration = 15
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 650
