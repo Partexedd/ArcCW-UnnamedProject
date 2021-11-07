@@ -77,10 +77,10 @@ SWEP.ReducedClipSize = 20
 SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.2
 
-SWEP.RecoilRise = 0.3
-SWEP.VisualRecoilMult = 0.3
-SWEP.MaxRecoilBlowback = 5
-SWEP.MaxRecoilPunch = 0.2
+SWEP.RecoilRise = 0
+SWEP.VisualRecoilMult = 0
+SWEP.MaxRecoilBlowback = 0
+SWEP.MaxRecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -180,6 +180,10 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
+    ["nois"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
+    },
+
     -- Ind stocks --
     ["nofh"] = {
         VMBodygroups = {{ind = 5, bg = 3}},
@@ -210,7 +214,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 34 / 30,
+        time = 35 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -312,10 +316,9 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.1, 2),
+            vpos = Vector(0, 0.2, 4),
             vang = Angle(90, 0, -90),
         },
-        ExtraSightDist = 10,
         InstalledEles = {"nois"},
     },
     {
