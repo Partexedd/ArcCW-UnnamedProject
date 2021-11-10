@@ -291,7 +291,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.7,
+        LHIKOut = 0.5,
     },
 }
 
@@ -333,7 +333,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "Barrel",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(0, 0, -1.2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
@@ -343,7 +343,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","bipod","ubgl"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -1, 11),
+            vpos = Vector(0, 2.5, 13),
             vang = Angle(90, 0, -90),
         },
     },
@@ -355,11 +355,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1, 16),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Grip",
-        Slot = "grip",
-    },
+    }, 
     {
         PrintName = "Stock",
         Slot = {"lpglobal_stock","go_stock","lphm_stock"},
@@ -379,22 +375,8 @@ SWEP.Attachments = {
         DefaultAttName = "30-Round STANAG Mag",
     },
     {
-        PrintName = "Ammo Type",
-        Slot = {"go_ammo"},
-    },
-    {
         PrintName = "Perk",
         Slot = "go_perk"
-    },
-    {
-        PrintName = "Charm",
-        Slot = {"charm","fml_charm"},
-        FreeSlot = true,
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0.7, -3.6, 9),
-            vang = Angle(90, 0, -90),
-        },
     },
     {
         PrintName = "Skins",
