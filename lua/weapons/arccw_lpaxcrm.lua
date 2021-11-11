@@ -135,7 +135,7 @@ SWEP.BarrelLength = 45
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 0, 0.5)
+SWEP.ActivePos = Vector(1, 1, 0.5)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -243,7 +243,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 126 / 30,
+        Time = 39 / 30,
         Framerate = 30,
         LastClip1OutTime = 1,
         LHIK = true,
@@ -277,7 +277,7 @@ SWEP.Animations = {
     },
     ["idle_inspect"] = {
         Source = "idle_inspect",
-        time = 1 / 30,
+        time = 120 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
