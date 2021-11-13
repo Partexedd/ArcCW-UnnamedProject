@@ -6,6 +6,7 @@ $bodygroup "studio" {
 
 $bodygroup "1" {
 	studio "shortupper.smd"
+	studio "longupper.smd"
 }
 
 $bodygroup "2" {
@@ -20,7 +21,8 @@ $bodygroup "3" {
 
 $texturegroup "skinfamilies"
 {
-	{ "LightBlackWire" }
+	{ "xcrm" }
+	{ "xcrm_black" }
 }
 
 $cdmaterials "models\weapons\arccw\shared"
@@ -59,16 +61,16 @@ $sequence "idle"{
 	node "Ready"
 }
 
-// $sequence "idle_empty"{
-// 	"anims\idle_empty.smd" 
-// 	"anims\idle_iron_empty.smd"
-// 	fps 30
-// 	"ACT_VM_IDLE" 1
-//  	blend "sights" 0 1
-// 	loop
-// 	snap
-// 	node "Ready"
-// }
+$sequence "idle_empty"{
+	"anims\idle_empty.smd" 
+	"anims\idle_empty_iron.smd"
+	fps 30
+	"ACT_VM_IDLE" 1
+ 	blend "sights" 0 1
+	loop
+	snap
+	node "Ready"
+}
 
 $sequence "fire" {
 	"anims\fire.smd"
@@ -81,21 +83,21 @@ $sequence "fire" {
 	{ event 5001 0 "1" }
 }
 
-// $sequence "fire_empty" {
-// 	"anims\fire_empty.smd"
-// 	"anims\fire_iron_empty.smd"
-// 	fps 30
-// 	"ACT_VM_PRIMARYATTACK" 1
-//  	blend "sights" 0 1
-// 	fadein 0.03
-// 	fadeout 0.03
-// 	{ event 5001 0 "1" }
-// }
+$sequence "fire_empty" {
+	"anims\fire_empty.smd"
+	"anims\fire_empty_iron.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.03
+	fadeout 0.03
+	{ event 5001 0 "1" }
+}
 
 $sequence "ready" {
 	"anims\ready.smd"
-	//"anims\ready_iron.smd"
- 	//blend "sights" 0 1
+	"anims\ready_iron.smd"
+ 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
@@ -112,8 +114,8 @@ $sequence "reload" {
 
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
-	// "anims\reload_empty_iron.smd"
-	// blend "sights" 0 1
+	"anims\reload_empty_iron.smd"
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -135,8 +137,8 @@ $sequence "idle_inspect" {
 
 $sequence "exit_inspect" {
 	"anims\exit_inspect.smd"
-	//"anims\exit_inspect_iron.smd"
-	//blend "sights" 0 1
+	"anims\exit_inspect_iron.smd"
+	blend "sights" 0 1
 	"ACT_VM_IDLE" 1
 	snap
 	fps 30

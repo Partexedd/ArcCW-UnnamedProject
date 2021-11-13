@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "HK"
+    SWEP.Trivia_Manufacturer = "Robinson Armament"
 end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
@@ -68,19 +68,21 @@ SWEP.MuzzleVelocity = 650
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 30
+SWEP.Primary.ClipSize = 20
 SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 20
+SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
 SWEP.Recoil = 0.8
-SWEP.RecoilSide = 0.2
+SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.MaxRecoilPunch = 0
+
+SWEP.Sway = 0
 
 -- Firerate / Firemodes --
 
@@ -99,7 +101,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.ShootPitch = 100
-SWEP.ShootVol = 140
+SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -118,7 +120,7 @@ SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
-SWEP.MagID = "416"
+SWEP.MagID = "xcr"
 
 -- Speed mult --
 
@@ -148,7 +150,7 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizePos = Vector(0, 8, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)
@@ -182,6 +184,12 @@ SWEP.AttachmentElements = {
 
     ["nois"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
+    },
+
+    -- Barrel
+
+    ["extbar"] = {
+        VMBodygroups = {{ind = 1, bg = 1},{ind = 2, bg = 1}},
     },
 
     -- Ind stocks --
@@ -228,12 +236,11 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,
-        --SoundTable = {{ s = "weapons/arccw/hk416/lowpolyhk416_mech.ogg"}},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 30 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
@@ -245,19 +252,19 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 40 / 30,
         Framerate = 30,
-        LastClip1OutTime = 1,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKEaseOut = 0.1,
+        LHIKOut = 0.3,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
         Time = 48 / 30,
-        LastClip1OutTime = 0.8,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -312,6 +319,17 @@ SWEP.RejectAttachments = {
 SWEP.Attachments = {
     {
         PrintName = "Optic",
+        DefaultAttName = "Iron Sights",
+        MergeSlots = {1,3},
+    },
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "14.5' Barrel",
+        Slot = {"lpxcr_barrel"},
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
+    },
+    {
+        PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
@@ -320,12 +338,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lphk416_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
+        Hidden = true,
     },
     {
         PrintName = "Muzzle",
@@ -358,9 +371,9 @@ SWEP.Attachments = {
     }, 
     {
         PrintName = "Stock",
-        Slot = {"lpglobal_stock","go_stock","lphm_stock"},
+        Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Buffer Tube",
+        DefaultAttName = "Solid Stock",
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -2.1, -0.8),
@@ -370,9 +383,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Mag Type",
-        Slot = {"lphk416_mag"},
+        Slot = {"lpxcr_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "30-Round STANAG Mag",
+        DefaultAttName = "20-Round .308 Win",
     },
     {
         PrintName = "Perk",
