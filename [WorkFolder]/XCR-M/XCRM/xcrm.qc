@@ -110,14 +110,14 @@ $sequence "reload" {
 	snap
 }
 
-// $sequence "reload_empty" {
-// 	"anims\reload_empty.smd"
-// 	"anims\reload_empty_iron.smd"
-// 	blend "sights" 0 1
-// 	fps 30
-// 	"ACT_VM_RELOAD" 1
-// 	snap
-// }
+$sequence "reload_empty" {
+	"anims\reload_empty.smd"
+	// "anims\reload_empty_iron.smd"
+	// blend "sights" 0 1
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
 
 $sequence "enter_inspect" {
 	"anims\enter_inspect.smd"
