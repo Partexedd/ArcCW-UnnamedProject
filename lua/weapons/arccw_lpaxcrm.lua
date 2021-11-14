@@ -82,8 +82,6 @@ SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.MaxRecoilPunch = 0
 
-SWEP.Sway = 0
-
 -- Firerate / Firemodes --
 
 SWEP.Delay = 60 / 750
@@ -167,10 +165,17 @@ SWEP.WorldModelOffset = {
 }
 
 -- Weapon sounds --
+
+local path = "weapons/arccw/m249/"
+local pathDist = "weapons/arccw/hk416/"
+local pathXC = "weapons/arccw/xcrm/"
+
 SWEP.FirstShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
 SWEP.ShootSound = {"weapons/arccw/hk416/lowpolyhk416_fire_auto_01.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_02.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_03.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_04.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_05.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_06.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_07.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_08.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_09.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_10.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_11.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_12.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_13.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_14.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_15.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
 SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg"
+
+SWEP.ShootPitch = 80
 
 -- Bodygroups --
 
@@ -257,7 +262,14 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
-        LHIKOut = 0.3,
+        LHIKOut = 0.4,
+        SoundTable = {
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -269,7 +281,15 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKOut = 0.5,
+        SoundTable = {
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 28 / 30, c = ca, v = 0.8 },
+        },
     },
     
     -- Inspecc --
