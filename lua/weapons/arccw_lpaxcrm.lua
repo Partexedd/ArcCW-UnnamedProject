@@ -144,7 +144,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.29, -3, 0.7),
+     Pos = Vector(-2.29, 4, 0.7),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
