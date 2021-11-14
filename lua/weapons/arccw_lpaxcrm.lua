@@ -144,13 +144,13 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.29, 4, 0.7),
+     Pos = Vector(-2.29, -3, 0.7),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
 }
 
-SWEP.CustomizePos = Vector(0, 8, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)
@@ -250,7 +250,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 40 / 30,
+        Time = 42 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
@@ -263,7 +263,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
-        Time = 48 / 30,
+        Time = 50 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
