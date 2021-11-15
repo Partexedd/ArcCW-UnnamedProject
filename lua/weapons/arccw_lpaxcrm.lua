@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_3"
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -15,9 +15,9 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 1
+SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
-SWEP.TracerWidth = 2
+SWEP.TracerWidth = 1
 
 -- Fake name --
 
@@ -60,7 +60,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 39
 SWEP.DamageMin = 22
 SWEP.Range = 100
-SWEP.Penetration = 15
+SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 650
@@ -80,7 +80,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
-SWEP.MaxRecoilPunch = 0
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -115,21 +115,20 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 400
+SWEP.MoveDispersion = 250
 
-SWEP.Primary.Ammo = "smg1"
+SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "xcr"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.80
-SWEP.SightTime = 0.4
-SWEP.ExtraSightDist = 4
+SWEP.SpeedMult = 1
+SWEP.SightedSpeedMult = 0.9
+SWEP.SightTime = 0.2
 
 -- Gun length --
 
-SWEP.BarrelLength = 45
+SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
@@ -142,10 +141,11 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.29, 4, 0.7),
+     Pos = Vector(-2.29, -3, 0.7),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
+     ViewModelFOV = 90,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -195,6 +195,11 @@ SWEP.AttachmentElements = {
 
     ["extbar"] = {
         VMBodygroups = {{ind = 1, bg = 1},{ind = 2, bg = 1}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 5.5),
+            }
+        },
     },
 
     -- Ind stocks --
@@ -204,8 +209,8 @@ SWEP.AttachmentElements = {
 
     -- Extras --
 
-    ["pmag"] = {
-        VMBodygroups = {{ind = 3, bg = 2}},
+    ["6_8"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
 
     -- Skins --
@@ -232,6 +237,11 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
+        SoundTable = {
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "charge.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
+        },
     },
     ["draw"] = {
         Source = "draw",
