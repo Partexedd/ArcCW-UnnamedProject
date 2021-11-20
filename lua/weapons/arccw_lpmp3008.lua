@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_suppressed"
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -50,7 +50,7 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpmp3008.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpamp3008.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -67,7 +67,7 @@ SWEP.MuzzleVelocity = 650
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
+SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 20
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 10
@@ -108,23 +108,23 @@ SWEP.ReloadInSights = true
 
 -- NPC stuff -- 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 100
+SWEP.MoveDispersion = 150
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.1
 
 -- Gun length --
 
@@ -134,15 +134,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 1, 0.5)
+SWEP.ActivePos = Vector(0, 1, 1)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg1"
+SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.29, -3, 0.7),
-     Ang = Angle(-0.2, 0, 0),
+     Pos = Vector(-2.285, -4, 2.3),
+     Ang = Angle(-0.1, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      ViewModelFOV = 90,
@@ -154,7 +154,7 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-2, -2, 0)
+SWEP.CrouchPos = Vector(-2, 1, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
@@ -166,7 +166,7 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = "weapons/arccw/sterling/"
+local path = "weapons/arccw/mp3008/"
 
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
@@ -262,7 +262,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 42 / 30,
+        Time = 46 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
@@ -273,7 +273,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
@@ -292,9 +292,9 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
+            { s = path .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 28 / 30, c = ca, v = 0.8 },
         },
     },
@@ -327,6 +327,33 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
     },
+
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 10 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 120 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 20 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+    },
 }
 
 -- LUA --
@@ -336,12 +363,6 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
-
-SWEP.RejectAttachments = {
-  ["muzz_hbar"] = true,
-  ["muzz_lbar"] = true,
-  ["lpak_polymer"] = true,
-}
 
 SWEP.Attachments = {
     {
@@ -373,7 +394,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "Barrel",
         Offset = {
-            vpos = Vector(0, 0, -1.2),
+            vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
