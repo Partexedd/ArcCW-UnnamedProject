@@ -21,7 +21,7 @@ $bodygroup "3" {
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
-$attachment "2" "Bolt" -0.3 1 3 rotate -10 110 180
+$attachment "2" "Bolt" -0.3 1 1 rotate -10 110 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
  
 $surfaceprop "default"
@@ -116,14 +116,14 @@ $sequence "reload" {
 	snap
 }
 
-// $sequence "reload_empty" {
-// 	"anims\reload_empty.smd"
-// 	"anims\reload_empty_iron.smd"
-// 	blend "sights" 0 1
-// 	fps 30
-// 	"ACT_VM_RELOAD" 1
-// 	snap
-// }
+$sequence "reload_empty" {
+	"anims\reload_empty.smd"
+	"anims\reload_empty_iron.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
 
 $sequence "enter_inspect" {
 	"anims\enter_inspect.smd"

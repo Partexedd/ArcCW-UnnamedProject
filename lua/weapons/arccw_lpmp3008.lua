@@ -80,7 +80,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 1
 
 -- Firerate / Firemodes --
 
@@ -123,7 +123,7 @@ SWEP.MagID = "mp3008"
 -- Speed mult --
 
 SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.9
+SWEP.SightedSpeedMult = 1
 SWEP.SightTime = 0.1
 
 -- Gun length --
@@ -159,8 +159,8 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-11, 4.5, -6.5),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-6, 2, -6),
+    ang        =    Angle(-6, -5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -169,8 +169,8 @@ SWEP.WorldModelOffset = {
 local path = "weapons/arccw/mp3008/"
 
 SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg"
+SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg"
+SWEP.DistantShootSound = path .. "sterling_dist.ogg"
 
 SWEP.ShootPitch = 80
 
@@ -235,9 +235,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "charge.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltunlock.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltback.ogg", t = 7 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_stockopen_01.ogg", t = 22 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -254,14 +254,14 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 20 / 30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
+        SoundTable = {{ s = path .. "sterling_boltunlock.ogg", t = 0.05 }},
     },
 
     -- 416 reloads --
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 46 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.5,
@@ -271,18 +271,18 @@ SWEP.Animations = {
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
+            { s = path .. "sterling_maginv2.ogg", t = 20 / 30, c = ca, v = 0.5 },
+            --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
-        Time = 50 / 30,
+        Time = 62 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -290,12 +290,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = path .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
+            { s = path .. "sterling_maginv2.ogg", t = 20 / 30, c = ca, v = 0.5 },
+            { s = path .. "sterling_boltunlock.ogg", t = 36 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltback.ogg", t = 37 / 30, c = ca, v = 0.8 },
+            --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
     
