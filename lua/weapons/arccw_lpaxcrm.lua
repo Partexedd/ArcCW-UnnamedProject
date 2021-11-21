@@ -19,13 +19,9 @@ SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
--- Fake name --
-
-SWEP.PrintName = "XCAR"
-
 -- Real name --
 
-SWEP.TrueName = "XCR-M" 
+SWEP.TrueName = "XCAR" 
 
 -- Trivia --
 
@@ -74,8 +70,8 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 0.8
+SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
