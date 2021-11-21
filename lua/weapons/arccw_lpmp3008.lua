@@ -74,7 +74,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.8
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0
@@ -367,26 +367,15 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
+        Slot = {"lpmp3008_irons"},
         DefaultAttName = "Iron Sights",
-        MergeSlots = {1,3},
+        Bone = "Body",
     },
     {
         PrintName = "Barrel",
         DefaultAttName = "14.5' Barrel",
         Slot = {"lpxcr_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
-        PrintName = "Optic",
-        Slot = {"optic_lp", "optic", "optic_sniper"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.2, 4),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nois"},
-        Hidden = true,
     },
     {
         PrintName = "Muzzle",
