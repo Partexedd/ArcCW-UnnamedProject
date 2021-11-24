@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Fake name --
 
-SWEP.PrintName = "XCAR"
+SWEP.PrintName = "VMP"
 
 -- Real name --
 
@@ -30,12 +30,12 @@ SWEP.TrueName = "MP-3008"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "crazy sten"
+SWEP.Trivia_Desc = "A german take on the iconic British submachine gun Sten"
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Mechanism = "Blowback Operated, Open Bolt "
+SWEP.Trivia_Country = "Nazi Germany"
+SWEP.Trivia_Year = 1944-1945
 
 -- Weapon slot --
 
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Robinson Armament"
+    SWEP.Trivia_Manufacturer = "Ludwig Vorgrimler"
 end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
@@ -57,13 +57,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 36
-SWEP.DamageMin = 12
+SWEP.Damage = 30
+SWEP.DamageMin = 19
 SWEP.Range = 100
-SWEP.Penetration = 11
+SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 650
+SWEP.MuzzleVelocity = 365
 
 -- Mag size --
 
