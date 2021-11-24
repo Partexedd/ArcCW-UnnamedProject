@@ -29,10 +29,10 @@ SWEP.TrueName = "MP-3008"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "crazy sten"
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = ".308 Winchester"
+SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
@@ -57,10 +57,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 39
-SWEP.DamageMin = 22
+SWEP.Damage = 36
+SWEP.DamageMin = 12
 SWEP.Range = 100
-SWEP.Penetration = 30
+SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 650
@@ -68,17 +68,17 @@ SWEP.MuzzleVelocity = 650
 -- Mag size --
 
 SWEP.ChamberSize = 0
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 32
 SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
+SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.4
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0
+SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilPunch = 1
 
@@ -132,8 +132,6 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
 SWEP.ActivePos = Vector(0, 1, 1)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -144,7 +142,6 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.285, -4, 2.3),
      Ang = Angle(-0.1, 0, 0),
      Magnification = 1,
-     SwitchToSound = "",
      ViewModelFOV = 90,
 }
 
@@ -152,7 +149,7 @@ SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterAng = Angle(-8, 25.881, -5)
 
 SWEP.CrouchPos = Vector(-2, 1, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
@@ -184,36 +181,16 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["nois"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+    ["sawnoffirons"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
     },
 
-    -- Barrel
-
-    ["extbar"] = {
-        VMBodygroups = {{ind = 1, bg = 1},{ind = 2, bg = 1}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 5.5),
-            }
-        },
+    ["intsupp"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 
-    -- Ind stocks --
-    ["nofh"] = {
-        VMBodygroups = {{ind = 5, bg = 3}},
-    },
-
-    -- Extras --
-
-    ["6_8"] = {
+    ["solidstock"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
     },
 }
 
@@ -247,7 +224,7 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.05,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -262,8 +239,6 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Time = 46 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -281,8 +256,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Time = 62 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -296,6 +269,7 @@ SWEP.Animations = {
             { s = path .. "sterling_maginv2.ogg", t = 20 / 30, c = ca, v = 0.5 },
             { s = path .. "sterling_boltunlock.ogg", t = 36 / 30, c = ca, v = 0.8 },
             { s = path .. "sterling_boltback.ogg", t = 37 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltlock.ogg", t = 38 / 30, c = ca, v = 0.8 },            
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
@@ -369,71 +343,19 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"lpmp3008_irons"},
+		DefaultAttIcon = Material("entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "Iron Sights",
         Bone = "Body",
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpxcr_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
         PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, 0),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
+        DefaultAttName = "Vent",
+        Slot = {"lpmp3008_muzzle"},
     },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.5, 13),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
-        },
-    }, 
     {
         PrintName = "Stock",
-        Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
+        Slot = {"lpmp3008_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -2.1, -0.8),
-            vang = Angle(90, 0, -90),
-        },
-        VMScale = Vector(0.9,0.9,0.9),
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpxcr_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
+        DefaultAttName = "Skeleton Stock",
     },
 }

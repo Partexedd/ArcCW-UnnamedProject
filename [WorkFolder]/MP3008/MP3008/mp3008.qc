@@ -6,6 +6,7 @@ $bodygroup "studio" {
 
 $bodygroup "1" {
 	studio "vent.smd"
+	studio "suppressor.smd"
 	blank
 }
 
@@ -18,11 +19,17 @@ $bodygroup "3" {
 	studio "woodenstock.smd"
 }
 
+$bodygroup "4" {
+	studio "defirons.smd"
+	studio "sawnoffirons.smd"
+}
+
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" -0.3 1 1 rotate -10 110 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
+$attachment "4" "Barrel" 0 0 7 rotate -90 0 0
  
 $surfaceprop "default"
  
