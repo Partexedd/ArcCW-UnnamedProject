@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 39
+SWEP.Damage = 40
 SWEP.DamageMin = 22
 SWEP.Range = 100
 SWEP.Penetration = 30
@@ -74,7 +74,7 @@ SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0
+SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilPunch = 0.5
 
@@ -94,7 +94,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.ShootPitch = 100
+SWEP.ShootPitch = 90
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
@@ -140,7 +140,6 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.29, -3, 0.7),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
-     SwitchToSound = "",
      ViewModelFOV = 90,
 }
 
