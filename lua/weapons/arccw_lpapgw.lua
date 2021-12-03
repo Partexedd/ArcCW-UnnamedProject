@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed"
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -46,7 +46,7 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpaxcrm.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpapgw.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -64,19 +64,19 @@ SWEP.MuzzleVelocity = 650
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 5
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.8
-SWEP.RecoilSide = 0.4
+SWEP.Recoil = 3
+SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.5
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -85,9 +85,6 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-    },
-    {
-        Mode = 1,
     },
     {
         Mode = 0
@@ -101,6 +98,8 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
+SWEP.ManualAction = true
+SWEP.NoLastCycle = true
 
 -- NPC stuff -- 
 
@@ -120,7 +119,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.35
 
 -- Gun length --
 
@@ -137,8 +136,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.29, -3, 0.7),
-     Ang = Angle(-0.2, 0, 0),
+     Pos = Vector(-2.32, -3, 0),
+     Ang = Angle(0.7, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -165,10 +164,9 @@ local path = "weapons/arccw/m249/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 
-SWEP.FirstShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
-SWEP.ShootSound = {"weapons/arccw/hk416/lowpolyhk416_fire_auto_01.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_02.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_03.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_04.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_05.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_06.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_07.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_08.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_09.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_10.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_11.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_12.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_13.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_14.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_15.ogg"}
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg"
+SWEP.ShootSound = "weapons/arccw/m98b/lowpolym98b_fire.ogg"
+SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg"
+SWEP.DistantShootSound = "weapons/arccw/m98b/lowpolym98b_dist.ogg"
 
 SWEP.ShootPitch = 80
 
@@ -245,15 +243,20 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        Time = 21 / 30,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 20 / 30,
-        ShellEjectAt = 0.01,
+        Time = 21 / 30,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
+    },
+    
+    ["cycle"] = {
+        Source = "cycle",
+        Framerate = 30,
+        Time = 27 / 30,
+        ShellEjectAt = 0.3,
     },
 
     -- 416 reloads --
@@ -261,8 +264,6 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 42 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -280,8 +281,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Time = 50 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
