@@ -57,16 +57,16 @@ $sequence "idle"{
 	node "Ready"
 }
 
-// $sequence "idle_empty"{
-// 	"anims\idle_empty.smd" 
-// 	"anims\idle_empty_iron.smd"
-// 	fps 30
-// 	"ACT_VM_IDLE" 1
-//  	blend "sights" 0 1
-// 	loop
-// 	snap
-// 	node "Ready"
-// }
+$sequence "idle_empty"{
+	"anims\idle_empty.smd" 
+	"anims\idle_empty_iron.smd"
+	fps 30
+	"ACT_VM_IDLE" 1
+ 	blend "sights" 0 1
+	loop
+	snap
+	node "Ready"
+}
 
 $sequence "fire" {
 	"anims\fire.smd"

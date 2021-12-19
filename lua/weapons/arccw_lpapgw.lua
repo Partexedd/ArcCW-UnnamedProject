@@ -246,10 +246,9 @@ SWEP.Animations = {
         Time = 21 / 30,
     },
     ["fire_empty"] = {
-        Source = "fire_empty",
+        Source = "fire",
         Framerate = 30,
         Time = 21 / 30,
-        SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
     
     ["cycle"] = {
