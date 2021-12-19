@@ -295,9 +295,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        ShellEjectAt = 0.3,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 23 / 30, c = ca, v = 0.3 },
