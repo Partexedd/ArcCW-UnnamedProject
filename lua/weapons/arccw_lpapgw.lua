@@ -19,8 +19,9 @@ SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
--- Real name --
+-- Name --
 
+SWEP.PrintName = "CSR338" 
 SWEP.TrueName = "CSR338" 
 
 -- Trivia --

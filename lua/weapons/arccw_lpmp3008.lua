@@ -19,13 +19,10 @@ SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
--- Fake name --
+-- Name --
 
-SWEP.PrintName = "VMP"
-
--- Real name --
-
-SWEP.TrueName = "MP-3008" 
+SWEP.PrintName = "VMP" 
+SWEP.TrueName = "VMP" 
 
 -- Trivia --
 
