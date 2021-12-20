@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.2
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
 
@@ -183,7 +183,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["nois"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+        VMBodygroups = {{ind = 4, bg = 1}},
     },
 
     -- Barrel
@@ -228,15 +228,16 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
+        time = 33 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "charge.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 8 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 14 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -338,6 +339,33 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
     },
+
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 10 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 120 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 20 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+    },
 }
 
 -- LUA --
@@ -372,7 +400,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 0.2, 4),
+            vpos = Vector(0, -0.6, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
