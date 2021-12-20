@@ -164,6 +164,7 @@ SWEP.WorldModelOffset = {
 local path = "weapons/arccw/m249/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
+local pathCSR = "weapons/arccw/csr338/"
 
 SWEP.ShootSound = "weapons/arccw/m98b/lowpolym98b_fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg"
@@ -257,6 +258,13 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 27 / 30,
         ShellEjectAt = 0.3,
+        SoundTable = {
+            { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 11 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 16 / 30, c = ca, v = 0.8 },
+        },
     },
 
     -- 416 reloads --
@@ -274,8 +282,8 @@ SWEP.Animations = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "30emptymagin.ogg", t = 22 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -287,13 +295,18 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        ShellEjectAt = 0.3,
         SoundTable = {
+            { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = path .. "30magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 23 / 30, c = ca, v = 0.3 },
+            { s = path .. "30emptymagin.ogg", t = 42 / 32, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 62 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 70 / 30, c = ca, v = 0.8 },
         },
     },
     
