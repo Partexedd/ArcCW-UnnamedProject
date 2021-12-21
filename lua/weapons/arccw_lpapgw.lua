@@ -66,8 +66,8 @@ SWEP.MuzzleVelocity = 650
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 5
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
+SWEP.ExtendedClipSize = 10
+SWEP.ReducedClipSize = 2
 
 -- Recoil --
 
@@ -75,7 +75,7 @@ SWEP.Recoil = 3
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0.2
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilPunch = 0.2
 
@@ -177,7 +177,7 @@ SWEP.ShootPitch = 80
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
+    [2] = "bullet1",    [3] = "bullet2",    [4] = "bullet3"
 }
 
 SWEP.AttachmentElements = {
@@ -290,7 +290,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
+        LastClip1OutTime = 1,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
