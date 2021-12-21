@@ -54,9 +54,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 40
-SWEP.DamageMin = 22
-SWEP.Range = 100
+SWEP.Damage = 120
+SWEP.DamageMin = 100
+SWEP.Range = 500
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -114,7 +114,7 @@ SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.MagID = "xcr"
+SWEP.MagID = "pgm"
 
 -- Speed mult --
 
