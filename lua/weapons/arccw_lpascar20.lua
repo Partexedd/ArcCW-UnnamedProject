@@ -79,8 +79,8 @@ SWEP.ReducedClipSize = 5
 
 -- Recoil --
 
-SWEP.Recoil = 0.8
-SWEP.RecoilSide = 0.4
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.22
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -265,8 +265,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.38,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
@@ -283,7 +283,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.47,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "30magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
