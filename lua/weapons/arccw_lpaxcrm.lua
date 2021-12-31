@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Low Poly"
+SWEP.Category = "ArcCW - Low Poly (wip)"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -329,19 +329,19 @@ SWEP.Animations = {
     },
 }
 
--- LUA --
+-- FESIUG MY BELOVED --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- This is entirely possible thanks to Fesiug
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() )
 end
 
 -- Attachments --
 
-SWEP.RejectAttachments = {
-  ["muzz_hbar"] = true,
-  ["muzz_lbar"] = true,
-  ["lpak_polymer"] = true,
-}
+-- SWEP.RejectAttachments = {
+--   ["muzz_hbar"] = true,
+--   ["muzz_lbar"] = true,
+--   ["lpak_polymer"] = true,
+-- }
 
 SWEP.Attachments = {
     {
