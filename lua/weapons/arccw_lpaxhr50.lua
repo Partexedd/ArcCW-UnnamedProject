@@ -77,7 +77,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 1
+SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
@@ -131,7 +131,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.6, 1, 0.8)
+SWEP.ActivePos = Vector(0, 1, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -378,8 +378,8 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0, 0.3, 15),
+            vang = Angle(90, 0, 90),
         },
     }, 
     {
