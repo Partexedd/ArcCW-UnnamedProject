@@ -228,7 +228,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "charge.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 22 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -266,7 +266,7 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 26 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
