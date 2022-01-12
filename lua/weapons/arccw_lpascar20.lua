@@ -172,9 +172,9 @@ local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg"
+SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg" -- Placeholder
+SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
+SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg" -- Placeholder
 
 SWEP.ShootPitch = 80
 

@@ -162,9 +162,9 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw/mp3008/"
 
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg"
-SWEP.DistantShootSound = path .. "sterling_dist.ogg"
+SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
+SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
 SWEP.ShootPitch = 80
 

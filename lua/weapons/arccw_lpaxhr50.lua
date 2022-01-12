@@ -167,12 +167,11 @@ local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 
-SWEP.FirstShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
-SWEP.ShootSound = {"weapons/arccw/hk416/lowpolyhk416_fire_auto_01.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_02.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_03.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_04.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_05.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_06.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_07.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_08.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_09.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_10.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_11.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_12.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_13.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_14.ogg", "weapons/arccw/hk416/lowpolyhk416_fire_auto_15.ogg"}
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg"
+SWEP.ShootSound = path .."aug-1.ogg" -- Placeholder
+SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
+SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 82
 
 -- Bodygroups --
 
