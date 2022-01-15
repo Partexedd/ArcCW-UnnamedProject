@@ -47,7 +47,7 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpamp3008.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpaghs18.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -65,14 +65,14 @@ SWEP.MuzzleVelocity = 365
 -- Mag size --
 
 SWEP.ChamberSize = 0
-SWEP.Primary.ClipSize = 32
+SWEP.Primary.ClipSize = 18
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
 SWEP.Recoil = 0.6
-SWEP.RecoilSide = 0.6
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
@@ -81,12 +81,9 @@ SWEP.RecoilPunch = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 800
 SWEP.Num = 1
 SWEP.Firemodes = {
-    {
-        Mode = 2,
-    },
     {
         Mode = 1,
     },
@@ -136,7 +133,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.285, -4, 2.3),
+     Pos = Vector(-1.92, 0, 1.2),
      Ang = Angle(-0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
@@ -173,7 +170,9 @@ SWEP.ShootPitch = 80
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3", [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6", 
+    [7] = "Bullet7",    [8] = "Bullet8",    [9] = "Bullet9", [10] = "Bullet10",    [11] = "Bullet11",    [12] = "Bullet12", 
+    [13] = "Bullet13",    [14] = "Bullet14",    [15] = "Bullet15", [16] = "Bullet16",    [17] = "Bullet17",    [18] = "Bullet18"
 }
 
 SWEP.AttachmentElements = {
@@ -203,7 +202,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
+        time = 36 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -218,16 +217,16 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = "fire",
+        Source = {"fire_01","fire_02","fire_03"},
         Framerate = 30,
         Time = 16 / 30,
-        ShellEjectAt = 0.05,
+        ShellEjectAt = 0.02,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
         Time = 20 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "sterling_boltunlock.ogg", t = 0.05 }},
     },
 
@@ -244,9 +243,9 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path .. "sterling_magoutv2.ogg", t = 4 / 30, c = ca, v = 0.5 },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 20 / 30, c = ca, v = 0.5 },
+            { s = path .. "sterling_maginv2.ogg", t = 17 / 30, c = ca, v = 0.5 },
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
@@ -261,12 +260,12 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path .. "sterling_magoutv2.ogg", t = 4 / 30, c = ca, v = 0.5 },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 20 / 30, c = ca, v = 0.5 },
-            { s = path .. "sterling_boltunlock.ogg", t = 36 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltback.ogg", t = 37 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltlock.ogg", t = 38 / 30, c = ca, v = 0.8 },            
+            { s = path .. "sterling_maginv2.ogg", t = 17 / 30, c = ca, v = 0.5 },
+            { s = path .. "sterling_boltunlock.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltback.ogg", t = 24 / 30, c = ca, v = 0.8 },
+            { s = path .. "sterling_boltlock.ogg", t = 25 / 30, c = ca, v = 0.8 },            
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },

@@ -16,19 +16,19 @@ $bodygroup "2" {
 }
 
 $bodygroup "3" {
-	studio "skelstock.smd"
-	studio "woodenstock.smd"
+	studio "9mm.smd"
 }
 
-$bodygroup "4" {
-	studio "defirons.smd"
-	studio "sawnoffirons.smd"
-}
+// $bodygroup "4" {
+// 	blank
+// 	studio "skelstock.smd"
+// 	studio "woodenstock.smd"
+// }
 
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
-$attachment "2" "Bolt" -0.3 1 1 rotate -10 110 180
+$attachment "2" "Slide" 0 0 0 rotate -10 110 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
 $attachment "4" "Barrel" 0 0 7 rotate -90 0 0
  
@@ -73,8 +73,8 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
-$sequence "fire" {
-	"anims\fire.smd"
+$sequence "fire_01" {
+	"anims\fire_01.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -84,15 +84,26 @@ $sequence "fire" {
 	{ event 5001 0 "1" }
 }
 
-
-$sequence "trigger" {
-	"anims\trigger.smd"
-	//"anims\trigger_iron.smd"
+$sequence "fire_02" {
+	"anims\fire_02.smd"
+	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
- 	//blend "sights" 0 1
+ 	blend "sights" 0 1
 	fadein 0.03
 	fadeout 0.03
+	{ event 5001 0 "1" }
+}
+
+$sequence "fire_03" {
+	"anims\fire_03.smd"
+	"anims\fire_iron.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.03
+	fadeout 0.03
+	{ event 5001 0 "1" }
 }
 
 $sequence "fire_empty" {
@@ -127,6 +138,24 @@ $sequence "reload" {
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
 	"anims\reload_empty_iron.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "reload_32" {
+	"anims\reload_32.smd"
+	"anims\reload_iron_32.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "reload_empty_32" {
+	"anims\reload_empty_32.smd"
+	"anims\reload_empty_iron_32.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
