@@ -164,7 +164,7 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-11, 4.5, -6.5),
+    pos        =    Vector(-4, 3, -6.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -266,6 +266,8 @@ SWEP.Animations = {
     
     ["cycle"] = {
         Source = "cycle",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnimStartTime = 0.7,
         Framerate = 30,
         Time = 27 / 30,
         ShellEjectAt = 0.3,
@@ -278,7 +280,7 @@ SWEP.Animations = {
         },
     },
 
-    -- 416 reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",

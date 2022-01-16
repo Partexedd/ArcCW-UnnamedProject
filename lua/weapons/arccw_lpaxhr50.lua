@@ -111,7 +111,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 700
+SWEP.HipDispersion = 300
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "ar2"
@@ -155,7 +155,7 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-11, 4.5, -6.5),
+    pos        =    Vector(-4, 3, -5.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }

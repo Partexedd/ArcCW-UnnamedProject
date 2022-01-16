@@ -66,7 +66,7 @@ SWEP.MuzzleVelocity = 365
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1.5,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTLEG] = 0.9,
@@ -140,12 +140,12 @@ SWEP.BarrelLength = 0 -- Anti fun
 -- SWEP.ActivePos = Vector(0, 1, 1)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeActive = "revolver"
+SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-1.92, 0, 1.2),
-     Ang = Angle(-0.1, 0, 0),
+     Ang = Angle(-0.5, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -153,7 +153,7 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
+SWEP.HolsterPos = Vector(2, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, -5)
 
 SWEP.ActivePos = Vector(-2, 1, 0)
@@ -161,7 +161,7 @@ SWEP.ActiveAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6, 2, -6),
+    pos        =    Vector(-8.5, 1.8, -3),
     ang        =    Angle(-6, -5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -243,7 +243,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 34 / 30,
         LastClip1OutTime = 0.5,
@@ -262,7 +262,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 36 / 30,
         LastClip1OutTime = 0.5,

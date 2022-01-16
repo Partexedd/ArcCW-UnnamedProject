@@ -111,7 +111,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 100
+SWEP.HipDispersion = 150
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol"
