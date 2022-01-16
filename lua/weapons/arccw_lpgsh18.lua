@@ -36,7 +36,7 @@ SWEP.Trivia_Year = 2000
 
 -- Weapon slot --
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 -- Weapon's manufacturer real name --
 
@@ -62,9 +62,20 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 365
 
+-- slight tomfoolery --
+
+SWEP.BodyDamageMults = 
+{
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
+}
+
 -- Mag size --
 
-SWEP.ChamberSize = 0
+SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 18
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 16
@@ -126,7 +137,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, 1, 1)
+-- SWEP.ActivePos = Vector(0, 1, 1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -145,8 +156,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, -5)
 
-SWEP.CrouchPos = Vector(-2, 1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.ActivePos = Vector(-2, 1, 0)
+SWEP.ActiveAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -157,9 +168,9 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = "weapons/arccw/mp3008/"
+local path = "weapons/arccw/gsh18/"
 
-SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
+SWEP.ShootSound = path .. "shot.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
@@ -208,9 +219,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "sterling_boltunlock.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltback.ogg", t = 7 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_stockopen_01.ogg", t = 22 / 30, c = ca, v = 0.8 },
+            { s = path .. "sliderelease.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -227,7 +236,7 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 20 / 30,
         ShellEjectAt = 0.02,
-        SoundTable = {{ s = path .. "sterling_boltunlock.ogg", t = 0.05 }},
+        SoundTable = {{ s = path .. "empty.ogg", t = 0.02 }},
     },
 
     -- 416 reloads --
@@ -235,23 +244,27 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        Framerate = 30,
+        Time = 34 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
+        MinProgress = 1,
         SoundTable = {
-            --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 4 / 30, c = ca, v = 0.5 },
+            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 17 / 30, c = ca, v = 0.5 },
-            --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
+            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        Framerate = 30,
+        Time = 36 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -259,14 +272,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
         SoundTable = {
-            --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 4 / 30, c = ca, v = 0.5 },
+            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 17 / 30, c = ca, v = 0.5 },
-            { s = path .. "sterling_boltunlock.ogg", t = 23 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltback.ogg", t = 24 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltlock.ogg", t = 25 / 30, c = ca, v = 0.8 },            
-            --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
+            { s = path .. "sliderelease.ogg", t = 22 / 30, c = ca, v = 0.8 },      
+            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
     

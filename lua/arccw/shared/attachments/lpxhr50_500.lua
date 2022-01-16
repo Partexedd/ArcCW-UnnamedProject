@@ -11,7 +11,7 @@ att.Slot = "lpxhr_mag"
 att.AutoStats = true
 att.SortOrder = -3
 
-att.Mult_RPM = 0.7
+att.Mult_RPM = 0.3
 att.Mult_Recoil = 1.4
 att.Mult_Damage = 2.2
 att.Mult_DamageMin = 0.6

@@ -130,7 +130,7 @@ SWEP.MagID = "pgm"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.2
 
 -- Gun length --
 

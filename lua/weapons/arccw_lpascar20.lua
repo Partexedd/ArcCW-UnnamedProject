@@ -68,6 +68,8 @@ SWEP.BodyDamageMults =
 {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_LEFTARM] = 1
 }
 
 -- Mag size --
