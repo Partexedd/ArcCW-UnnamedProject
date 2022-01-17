@@ -111,8 +111,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 150
+SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "xcr"
@@ -150,8 +151,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-2, -2, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(0, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

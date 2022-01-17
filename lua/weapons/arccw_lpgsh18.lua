@@ -57,10 +57,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 30
 SWEP.DamageMin = 19
 SWEP.Range = 100
-SWEP.Penetration = 2
+SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 365
+SWEP.MuzzleVelocity = 535
 
 -- slight tomfoolery --
 
@@ -69,6 +69,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1.5,
     [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
     [HITGROUP_LEFTLEG] = 0.9,
     [HITGROUP_RIGHTLEG] = 0.9,
 }
@@ -156,8 +158,11 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(2, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, -5)
 
-SWEP.ActivePos = Vector(-2, 1, 0)
-SWEP.ActiveAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(-2, 1, 0)
+SWEP.CrouchAng = Angle(0, 0, -8)
+
+SWEP.ActivePos = Vector(0, 2, 0.7)
+SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -174,7 +179,7 @@ SWEP.ShootSound = path .. "shot.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 100
 
 -- Bodygroups --
 
@@ -188,16 +193,16 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["sawnoffirons"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+    ["32mag"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
 
-    ["intsupp"] = {
+    ["compbarrel"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
 
-    ["solidstock"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+    ["sdbarrel"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
 }
 
@@ -213,7 +218,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 36 / 30,
+        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -239,14 +244,14 @@ SWEP.Animations = {
         SoundTable = {{ s = path .. "empty.ogg", t = 0.02 }},
     },
 
-    -- 416 reloads --
+    -- 18-R Reloads --
 
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 34 / 30,
-        LastClip1OutTime = 0.5,
+        LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -254,9 +259,9 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         MinProgress = 1,
         SoundTable = {
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
+            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
+            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
             { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
@@ -265,17 +270,58 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 36 / 30,
-        LastClip1OutTime = 0.5,
+        LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
         SoundTable = {
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 22 / 30, c = ca, v = 0.8 },      
+            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
+            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
+            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
+            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
+        },
+    },
+
+    -- 32-R Reloads --
+
+    ["reload_32"] = {
+        Source = "reload_32",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Framerate = 30,
+        Time = 34 / 30,
+        LastClip1OutTime = 0.4,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.1,
+        LHIKOut = 0.4,
+        MinProgress = 1,
+        SoundTable = {
+            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
+            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
+            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
+        },
+    },
+    ["reload_empty_32"] = {
+        Source = "reload_empty_32",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Framerate = 30,
+        Time = 36 / 30,
+        LastClip1OutTime = 0.4,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+        SoundTable = {
+            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
+            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
+            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
             { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
@@ -348,20 +394,34 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpmp3008_irons"},
-		DefaultAttIcon = Material("entities/att/mp3008/closedirons.png", "smooth"),
+        Slot = {"optic_lp"},
         DefaultAttName = "Iron Sights",
-        Bone = "Body",
+        Bone = "Slide",
+        Offset = {
+            vpos = Vector(0, -0.3, -2.8),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
-        PrintName = "Muzzle",
-        DefaultAttName = "Vent",
-        Slot = {"lpmp3008_muzzle"},
+        PrintName = "Barrel",
+        DefaultAttName = "Barrel",
+        Slot = {"lpgsh18_barrel"},
+    },
+    {
+        PrintName = "Mag",
+        DefaultAttName = "18-Round 9mm AP",
+        Slot = {"lpgsh18_mag"},
     },
     {
         PrintName = "Stock",
         Slot = {"lpmp3008_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Skeleton Stock",
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
+        DefaultAttName = "No Stock",
+    },
+    {
+        PrintName = "Pose",
+        Slot = {"lpgsh18_pose"},
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
+        DefaultAttName = "Default Pose",
     },
 }

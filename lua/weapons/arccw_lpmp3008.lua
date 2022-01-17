@@ -340,7 +340,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"lpmp3008_irons"},
-		DefaultAttIcon = Material("entities/att/mp3008/closedirons.png", "smooth"),
+		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "Iron Sights",
         Bone = "Body",
     },

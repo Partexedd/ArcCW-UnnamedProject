@@ -1,5 +1,5 @@
 att.PrintName = "Sawn Off Irons"
-att.Icon = Material("entities/att/mp3008/openirons.png", "smooth")
+att.Icon = Material("models/entities/att/mp3008/openirons.png", "smooth")
 att.Description = "description saying these improve peripheral vision or something"
 att.Desc_Pros = {
     "Improved peripheral vision"
