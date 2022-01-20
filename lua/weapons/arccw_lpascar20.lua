@@ -21,15 +21,15 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SCAR20 (give name suggestions)" 
-SWEP.TrueName = "SCAR20 (give name suggestions)" 
+SWEP.PrintName = "BMR65E2" 
+SWEP.TrueName = "BMR65E2" 
 
 -- Trivia --
 
 SWEP.Trivia_Class = "DMR"
-SWEP.Trivia_Desc = "This gun needs a description and i don't trust my english enough to write something here so yeah do that pelase"
+SWEP.Trivia_Desc = "cum, pee poo"
 SWEP.Trivia_Manufacturer = "BT"
-SWEP.Trivia_Calibre = ".308 Winchester"
+SWEP.Trivia_Calibre = "6.5 Creedmoor"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
@@ -54,10 +54,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 40
-SWEP.DamageMin = 22
+SWEP.Damage = 48
+SWEP.DamageMin = 32
 SWEP.Range = 200
-SWEP.Penetration = 30
+SWEP.Penetration = 16
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 750
@@ -91,7 +91,7 @@ SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 600
+SWEP.Delay = 60 / 350
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

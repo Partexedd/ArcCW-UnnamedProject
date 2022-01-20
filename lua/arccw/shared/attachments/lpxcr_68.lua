@@ -1,4 +1,4 @@
-att.PrintName = "25- Round 6.8mm"
+att.PrintName = "6.8mm Sig Sauer"
 att.Icon = Material("entities/att/acwatt_lpm249_commandohandguard.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {

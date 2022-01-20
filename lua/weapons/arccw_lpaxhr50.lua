@@ -21,8 +21,8 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "XHR50" 
-SWEP.TrueName = "XHR50" 
+SWEP.PrintName = "XHR308" 
+SWEP.TrueName = "XHR308" 
 
 -- Trivia --
 
@@ -57,7 +57,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 40
 SWEP.DamageMin = 22
 SWEP.Range = 100
-SWEP.Penetration = 30
+SWEP.Penetration = 15
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 800
