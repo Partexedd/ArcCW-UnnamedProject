@@ -206,7 +206,11 @@ SWEP.AttachmentElements = {
         },
     },
 
-    -- Ind stocks --
+    ["snipergrip"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+    },
+
+    -- Flash hider --
     ["nofh"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
@@ -401,7 +405,12 @@ SWEP.Attachments = {
             vpos = Vector(0, -1, 16),
             vang = Angle(90, 0, -90),
         },
-    }, 
+    },
+    {
+        PrintName = "Grip",
+        DefaultAttName = "A2 Grip",
+        Slot = "lpscar20_grip"
+    },
     {
         PrintName = "Stock",
         Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
@@ -419,10 +428,6 @@ SWEP.Attachments = {
         Slot = {"lpxcr_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
     },
     {
         PrintName = "Skins",
