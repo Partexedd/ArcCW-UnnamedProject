@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_5"
-SWEP.ShellModel = "models/shells/shell_338.mdl"
+SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellScale = 1
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mm"
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mag"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -125,7 +125,7 @@ SWEP.HipDispersion = 650
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "scar"
 
 -- Speed mult --
@@ -150,7 +150,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.35, -3, 0),
-     Ang = Angle(-0.2, 0, 0),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -198,30 +198,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
 
-    -- Barrel
-
-    ["extbar"] = {
-        VMBodygroups = {{ind = 1, bg = 1},{ind = 5, bg = 1}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 5.5),
-            }
-        },
-    },
-
-    ["snipergrip"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
-    },
-
     -- Flash hider --
     ["nofh"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Extras --
-
-    ["6_8"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
     },
 
     -- Skins --

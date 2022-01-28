@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_338.mdl"
+SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellScale = 1.2
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mm"
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mag"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -126,7 +126,7 @@ SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "pgm"
 
 -- Speed mult --
