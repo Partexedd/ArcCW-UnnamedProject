@@ -235,7 +235,7 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = "fire",
+        Source = {"fire_01","fire_02","fire_03"},
         Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,

@@ -26,10 +26,10 @@ SWEP.TrueName = "CSR338"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = ".308 Winchester"
+SWEP.Trivia_Calibre = ".338 Lapua Magnum"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
@@ -56,7 +56,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 107
 SWEP.DamageMin = 87
-SWEP.Range = 500
+SWEP.Range = 300
 SWEP.Penetration = 50
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil

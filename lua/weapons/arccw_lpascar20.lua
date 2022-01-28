@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 350
+SWEP.Delay = 60 / 500
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

@@ -54,9 +54,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 100
-SWEP.DamageMin = 81
-SWEP.Range = 500
+SWEP.Damage = 103
+SWEP.DamageMin = 95
+SWEP.Range = 100
 SWEP.Penetration = 44
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -67,34 +67,34 @@ SWEP.MuzzleVelocity = 890
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.025,
-    [HITGROUP_STOMACH] = 0.95,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.87,
-    [HITGROUP_RIGHTLEG] = 0.87,
+    [HITGROUP_CHEST] = 1.03,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.97,
+    [HITGROUP_RIGHTARM] = 0.97,
+    [HITGROUP_LEFTLEG] = 0.94,
+    [HITGROUP_RIGHTLEG] = 0.94,
 }
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 8
-SWEP.ExtendedClipSize = 11
-SWEP.ReducedClipSize = 4
+SWEP.Primary.ClipSize = 10
+SWEP.ExtendedClipSize = 14
+SWEP.ReducedClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 5
+SWEP.Recoil = 4
 SWEP.RecoilSide = 1.5
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.3
+SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 300
+SWEP.Delay = 60 / 350
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
