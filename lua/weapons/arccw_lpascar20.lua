@@ -66,10 +66,13 @@ SWEP.MuzzleVelocity = 750
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTARM] = 1
+    [HITGROUP_HEAD] = 4,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 0.9,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.85,
+    [HITGROUP_RIGHTLEG] = 0.85,
 }
 
 -- Mag size --

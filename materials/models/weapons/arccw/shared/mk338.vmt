@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+		"$basetexture"	"models/weapons/arccw/shared/mk338"
+		$nocull 1
+}

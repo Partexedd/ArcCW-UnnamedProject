@@ -11,8 +11,8 @@ att.Slot = "lpxcr_barrel"
 att.AutoStats = true
 att.SortOrder = -3
 
-att.Mult_RPM = 0.87
-att.Mult_RecoilSide = 0.7
+att.Mult_RPM = 0.92
+att.Mult_RecoilSide = 0.57
 att.Mult_AccuracyMOA = 0
 att.Mult_SightTime = 2
 att.Mult_Damage = 1.1

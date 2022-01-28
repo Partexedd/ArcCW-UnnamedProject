@@ -62,6 +62,19 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 650
 
+-- miniscule tomfoolery --
+
+SWEP.BodyDamageMults = 
+{
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.,
+    [HITGROUP_STOMACH] = 0.9,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.85,
+    [HITGROUP_RIGHTLEG] = 0.85,
+}
+
 -- Mag size --
 
 SWEP.ChamberSize = 1
@@ -71,7 +84,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.8
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0

@@ -71,7 +71,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 1.5
 SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0
@@ -81,7 +81,7 @@ SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 750
+SWEP.Delay = 60 / 800
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

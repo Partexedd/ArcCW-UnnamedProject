@@ -11,7 +11,7 @@ att.Slot = "lpxhr_mag"
 att.AutoStats = true
 att.SortOrder = -3
 
-att.Override_MuzzleEffect = "muzzleflash_5" -- Iron sights are much easier to use this way
+att.Override_MuzzleEffect = "muzzleflash_5"
 att.Mult_Range = 0.64
 att.Mult_RPM = 0.4
 att.Mult_Recoil = 1.8

@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_338.mdl"
 SWEP.ShellScale = 1.2
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mm"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -55,21 +55,24 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 107
-SWEP.DamageMin = 100
+SWEP.DamageMin = 87
 SWEP.Range = 500
 SWEP.Penetration = 50
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 650
+SWEP.MuzzleVelocity = 823
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_LEFTLEG] = 0.83,
-    [HITGROUP_RIGHTLEG] = 0.83,
-    [HITGROUP_STOMACH] = 0.9,
+    [HITGROUP_CHEST] = 0.984,
+    [HITGROUP_STOMACH] = 0.962,
+    [HITGROUP_LEFTARM] = 0.95,
+    [HITGROUP_RIGHTARM] = 0.95,
+    [HITGROUP_LEFTLEG] = 0.87,
+    [HITGROUP_RIGHTLEG] = 0.87,
 }
 
 -- Mag size --
