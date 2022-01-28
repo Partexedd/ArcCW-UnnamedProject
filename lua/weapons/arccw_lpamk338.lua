@@ -132,7 +132,7 @@ SWEP.MagID = "scar"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.25
+SWEP.SightTime = 0.35
 
 -- Gun length --
 
