@@ -100,9 +100,6 @@ SWEP.Firemodes = {
     {
         Mode = 2,
     },
-    {
-        Mode = 0
-    }
 }
 
 SWEP.ShootPitch = 90
@@ -412,6 +409,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
+        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -450,27 +448,23 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     }, 
-    {
-        PrintName = "Stock",
-        Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -2.1, -0.8),
-            vang = Angle(90, 0, -90),
-        },
-        VMScale = Vector(0.9,0.9,0.9),
-    },
+    -- {
+    --     PrintName = "Stock",
+    --     Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
+	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
+    --     DefaultAttName = "Solid Stock",
+    --     Bone = "Body",
+    --     Offset = {
+    --         vpos = Vector(0, -2.1, -0.8),
+    --         vang = Angle(90, 0, -90),
+    --     },
+    --     VMScale = Vector(0.9,0.9,0.9),
+    -- },
     {
         PrintName = "Mag Type",
         Slot = {"lpxcr_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
     },
     {
         PrintName = "Skins",

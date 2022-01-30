@@ -57,7 +57,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 30
 SWEP.DamageMin = 19
 SWEP.Range = 100
-SWEP.Penetration = 11
+SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 535
@@ -100,9 +100,6 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = 0
-    }
 }
 
 SWEP.ShootPitch = 100
@@ -395,6 +392,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"optic_lp"},
+        --Slot = {"lowpoly_optic_lp"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {

@@ -57,7 +57,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 48
 SWEP.DamageMin = 32
 SWEP.Range = 200
-SWEP.Penetration = 16
+SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 750
@@ -100,9 +100,6 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = 0
-    }
 }
 
 SWEP.ShootPitch = 90
@@ -366,6 +363,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
+        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -393,7 +391,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
+        Slot = {"lowpoly_foregrip"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, 2.5, 13),
@@ -402,7 +400,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = {"tac"},
+        Slot = {"lowpoly_tac"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -1, 16),
@@ -415,23 +413,23 @@ SWEP.Attachments = {
         Slot = "lpscar20_grip"
     },
     {
-        PrintName = "Stock",
-        Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -2.1, -0.8),
-            vang = Angle(90, 0, -90),
-        },
-        VMScale = Vector(0.9,0.9,0.9),
-    },
-    {
         PrintName = "Mag Type",
         Slot = {"lpxcr_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "20-Round .308 Win",
     },
+    -- {
+    --     PrintName = "Stock",
+    --     Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
+	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
+    --     DefaultAttName = "Solid Stock",
+    --     Bone = "Body",
+    --     Offset = {
+    --         vpos = Vector(0, -2.1, -0.8),
+    --         vang = Angle(90, 0, -90),
+    --     },
+    --     VMScale = Vector(0.9,0.9,0.9),
+    -- },
     {
         PrintName = "Skins",
         PrintName = "Skin",

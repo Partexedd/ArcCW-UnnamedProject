@@ -57,7 +57,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 40
 SWEP.DamageMin = 22
 SWEP.Range = 100
-SWEP.Penetration = 30
+SWEP.Penetration = 34
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 650
@@ -102,10 +102,10 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
+        Override_ShotRecoilTable = {
+            [1] = 0.7,
+        },
     },
-    {
-        Mode = 0
-    }
 }
 
 SWEP.ShootPitch = 90
@@ -372,6 +372,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
+        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -427,10 +428,6 @@ SWEP.Attachments = {
         Slot = {"lpxcr_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
     },
     {
         PrintName = "Skins",

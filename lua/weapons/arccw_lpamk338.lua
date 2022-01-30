@@ -60,7 +60,7 @@ SWEP.Range = 100
 SWEP.Penetration = 44
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 890 
+SWEP.MuzzleVelocity = 940
 
 -- miniscule tomfoolery --
 
@@ -84,7 +84,7 @@ SWEP.ReducedClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 3
+SWEP.Recoil = 2.5
 SWEP.RecoilSide = 1.5
 
 SWEP.RecoilRise = 0
@@ -100,9 +100,6 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = 0
-    }
 }
 
 SWEP.ShootPitch = 80
@@ -345,6 +342,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"optic_lp", "optic", "optic_sniper"},
+        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
