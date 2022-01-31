@@ -172,7 +172,7 @@ SWEP.ShootSound = path .."aug-1.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 82
+--SWEP.ShootPitch = 100
 
 -- Bodygroups --
 
