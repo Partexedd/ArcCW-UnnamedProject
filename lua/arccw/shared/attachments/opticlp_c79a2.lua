@@ -36,4 +36,5 @@ att.HolosightPiece = "models/weapons/arccw/atts/c79a2_hsp.mdl"
 att.Colorable = true
 
 att.HolosightMagnification = 3.4
-att.HolosightBlackbox = true
+
+att.HolosightBlackbox = false

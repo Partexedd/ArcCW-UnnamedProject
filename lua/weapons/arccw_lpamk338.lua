@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 103
+SWEP.Damage = 100
 SWEP.DamageMin = 95
 SWEP.Range = 100
 SWEP.Penetration = 44
@@ -332,12 +332,6 @@ end
 
 -- Attachments --
 
--- SWEP.RejectAttachments = {
---   ["muzz_hbar"] = true,
---   ["muzz_lbar"] = true,
---   ["lpak_polymer"] = true,
--- }
-
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -367,7 +361,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","bipod","ubgl"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(0, 1.8, 15),
             vang = Angle(90, 0, -90),
         },
     },
