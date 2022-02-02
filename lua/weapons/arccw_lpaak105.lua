@@ -84,7 +84,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -124,7 +124,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
+SWEP.HipDispersion = 250
 SWEP.MoveDispersion = 50
 SWEP.JumpDispersion = 0
 
@@ -192,8 +192,7 @@ SWEP.ShootPitchVariation = 0
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3",    [4] = "bullet4",    [5] = "bullet5",
-    [6] = "bullet6",    [7] = "bullet7",    [8] = "bullet8",    [9] = "bullet9",    [10] = "bullet10"
+    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
 }
 
 SWEP.AttachmentElements = {
@@ -238,7 +237,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "charge.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 22 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -268,7 +267,7 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = path .. "magin.ogg", t = 20 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 32 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -286,7 +285,7 @@ SWEP.Animations = {
             { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = path .. "magin.ogg", t = 20 / 30, c = ca, v = 0.8 },
             { s = path .. "chamber.ogg", t = 38 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 44 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 47 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -336,7 +335,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.05, 0.1, 11),
+            vpos = Vector(0.048, 0.1, 11),
             vang = Angle(90, 0, -90),
         },
     },

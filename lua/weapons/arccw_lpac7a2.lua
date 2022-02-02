@@ -198,8 +198,7 @@ SWEP.ShootPitchVariation = 0
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3",    [4] = "bullet4",    [5] = "bullet5",
-    [6] = "bullet6",    [7] = "bullet7",    [8] = "bullet8",    [9] = "bullet9",    [10] = "bullet10"
+    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
 }
 
 SWEP.AttachmentElements = {
