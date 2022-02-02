@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 650
+SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -342,7 +342,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.048, 0.1, 11),
+            vpos = Vector(0.048, 0.2, 11),
             vang = Angle(90, 0, -90),
         },
     },
