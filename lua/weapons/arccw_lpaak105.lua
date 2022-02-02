@@ -57,7 +57,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 30
 SWEP.DamageMin = 18
 SWEP.Range = 100
-SWEP.Penetration = 26
+SWEP.Penetration = 37
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 800
@@ -135,7 +135,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.24
+SWEP.SightTime = 0.18
 
 -- Gun length --
 
@@ -152,7 +152,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.23, -3, 0.85),
+     Pos = Vector(-2.23, -3, 0.84),
      Ang = Angle(0.8, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
@@ -164,8 +164,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-1, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(-1, -1, 1)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -246,9 +246,16 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire_01","fire_02","fire_03"},
         Framerate = 30,
-        Time = 16 / 30,
+        Time = 18 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
+    },
+    ["fire_empty"] = {
+        Source = {"fire_01","fire_02","fire_03"},
+        Framerate = 30,
+        Time = 18 / 30,
+        ShellEjectAt = 0.01,
+        SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
     -- 416 reloads --
