@@ -90,7 +90,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.5
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -145,7 +145,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 1, 0.5)
+SWEP.ActivePos = Vector(0.4, 1, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

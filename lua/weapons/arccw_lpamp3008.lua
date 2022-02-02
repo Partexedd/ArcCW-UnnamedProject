@@ -77,7 +77,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 1
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -106,7 +106,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 150
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"

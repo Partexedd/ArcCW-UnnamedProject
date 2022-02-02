@@ -29,7 +29,7 @@ SWEP.TrueName = "AK105"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "ak47"
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "5.56x45mm NATO"
+SWEP.Trivia_Calibre = "5.45x39mm Soviet"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "Russian Federation"
 SWEP.Trivia_Year = 2004
@@ -54,13 +54,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
-SWEP.DamageMin = 18
+SWEP.Damage = 24
+SWEP.DamageMin = 20
 SWEP.Range = 100
 SWEP.Penetration = 37
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 800
+SWEP.MuzzleVelocity = 960
 
 -- slight tomfoolery --
 
@@ -237,7 +237,7 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathAK .. "charge.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = pathAK .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
         },
     },
@@ -273,7 +273,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 0.3 },
+            { s = path556 .. "magdrop.ogg", t = 25 / 30, c = ca, v = 1 },
             { s = pathAK .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 35 / 30, c = ca, v = 0.8 },
         },
@@ -290,7 +290,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 0.3 },
+            { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 1 },
             { s = pathAK .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "charge.ogg", t = 38 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 51 / 30, c = ca, v = 0.8 },
@@ -384,23 +384,11 @@ SWEP.Attachments = {
         },
     }, 
     -- {
-    --     PrintName = "Stock",
-    --     Slot = {"lpglobal_stock","lphm_stock"},
-	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-    --     DefaultAttName = "Solid Stock",
-    --     Bone = "Body",
-    --     Offset = {
-    --         vpos = Vector(0, -2.1, -0.8),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    --     VMScale = Vector(0.9,0.9,0.9),
+    --     PrintName = "Mag Type",
+    --     Slot = {"lpak_mag"},
+	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
+    --     DefaultAttName = "30-Round 5.45 Soviet",
     -- },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpxhr_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
-    },
     {
         PrintName = "Skins",
         PrintName = "Skin",

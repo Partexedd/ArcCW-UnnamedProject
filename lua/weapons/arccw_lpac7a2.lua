@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
+SWEP.Damage = 27
 SWEP.DamageMin = 18
 SWEP.Range = 100
 SWEP.Penetration = 26
@@ -67,7 +67,7 @@ SWEP.MuzzleVelocity = 800
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -90,7 +90,7 @@ SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.5
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
@@ -102,15 +102,18 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.05,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
-            [1] = 0.2,
-            [2] = 0.2,
+            [1] = 0.3,
+            [2] = 0.3,
         },
+        --PostBurstDelay = 0.2,
+        --AutoBurst = true,
     },
     {
         Mode = 1,
         Override_ShotRecoilTable = {
             [1] = 0.3,
         },
+        RPM = 0.7,
     },
 }
 
@@ -281,7 +284,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
         },
@@ -298,7 +301,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
             { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
