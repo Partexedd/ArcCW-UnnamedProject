@@ -273,7 +273,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 0.3 },
             { s = pathAK .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 35 / 30, c = ca, v = 0.8 },
         },
@@ -290,7 +290,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 0.3 },
             { s = pathAK .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "charge.ogg", t = 38 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 51 / 30, c = ca, v = 0.8 },
