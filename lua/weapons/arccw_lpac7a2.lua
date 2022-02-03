@@ -99,21 +99,24 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
+        RunawayBurst = true,
+        PostBurstDelay = 0.2,
+        AutoBurst = true,
+        PrintName = "Auto-Burst",
+        Override_ShotRecoilTable = {
+            [1] = 0.5,
+            [2] = 0.5,
+        },
+    },
+    {
+        Mode = -3,
         PostBurstDelay = 0.05,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
             [1] = 0.3,
             [2] = 0.3,
+            [3] = 0.6,
         },
-        --PostBurstDelay = 0.2,
-        --AutoBurst = true,
-    },
-    {
-        Mode = 1,
-        Override_ShotRecoilTable = {
-            [1] = 0.3,
-        },
-        RPM = 0.7,
     },
 }
 
