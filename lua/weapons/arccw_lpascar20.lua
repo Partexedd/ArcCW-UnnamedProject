@@ -112,7 +112,7 @@ SWEP.ReloadInSights = true
 
 -- NPC stuff -- 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_crossbow"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
@@ -122,7 +122,7 @@ SWEP.HipDispersion = 250
 SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "scar"
 
 -- Speed mult --

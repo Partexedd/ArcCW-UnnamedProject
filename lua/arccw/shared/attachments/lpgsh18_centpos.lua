@@ -11,7 +11,7 @@ att.SortOrder = 1
 
 att.Slot = "lpgsh18_pose"
 
-att.Override_ActivePos = Vector(-2, 1, 0)
+att.Override_ActivePos = Vector(-2, -0.5, 0)
 att.Override_ActiveAng = Angle(0, 0, -8)
 
 att.Override_CrouchPos = Vector(0, 0, 0.7)

@@ -114,7 +114,7 @@ SWEP.NoLastCycle = true
 
 -- NPC stuff -- 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_crossbow"
 SWEP.NPCWeight = 60
 
 -- Accuracy --

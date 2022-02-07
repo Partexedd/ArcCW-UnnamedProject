@@ -52,7 +52,7 @@ SWEP.WorldModel = "models/weapons/arccw/c_lpac7a2.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
--- Damage parameters --
+-- Damage parameters >--
 
 SWEP.Damage = 27
 SWEP.DamageMin = 18

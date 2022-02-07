@@ -112,7 +112,7 @@ SWEP.ReloadInSights = true
 
 -- NPC -- 
 
-SWEP.NPCWeaponType = "weapon_smg1"
+SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
@@ -155,10 +155,10 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(2, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, -5)
 
-SWEP.CrouchPos = Vector(-2, 1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(-1.5, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(0, 2, 0.7)
+SWEP.ActivePos = Vector(0, 0, 0.4)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
