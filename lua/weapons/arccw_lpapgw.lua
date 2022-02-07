@@ -378,6 +378,33 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
     },
+
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 10 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 120 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 20 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+    },
 }
 
 -- FESIUG MY BELOVED --

@@ -84,8 +84,8 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.45
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.7
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 850
+SWEP.Delay = 60 / 800
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -153,7 +153,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.24, -3, 0.35),
-     Ang = Angle(0.4, 0, 0),
+     Ang = Angle(0.47, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -232,15 +232,14 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
+        time = 32 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "charge.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 22 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 18 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -261,7 +260,7 @@ SWEP.Animations = {
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
-    -- 416 reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",
@@ -327,6 +326,33 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
     },
+
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        time = 10 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
+        time = 120 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        time = 20 / 30,
+        Framerate = 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+    },
 }
 
 -- FESIUG MY BELOVED --
@@ -345,7 +371,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.2, 2),
+            vpos = Vector(0, -0.1, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -377,15 +403,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"fgrail"},
     },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
-    }, 
     -- {
     --     PrintName = "Stock",
     --     Slot = {"lpglobal_stock","lphm_stock"},
