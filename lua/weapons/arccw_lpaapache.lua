@@ -371,7 +371,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.1, 2),
+            vpos = Vector(0.03, -0.1, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -388,7 +388,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "Barrel",
         Offset = {
-            vpos = Vector(0, 0, -2.5),
+            vpos = Vector(0, 0, -1),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
@@ -424,8 +424,8 @@ SWEP.Attachments = {
     {
         PrintName = "Skins",
         PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
+        Slot = {"skin_apache"},
+        DefaultAttName = "Tan",
         FreeSlot = true,
     },
 }
