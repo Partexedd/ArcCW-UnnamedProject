@@ -257,11 +257,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.38,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 26 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magin.ogg", t = 14 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 26 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -274,12 +274,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.47,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magin.ogg", t = 14 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "boltrelease.ogg", t = 34 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 41 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 41 / 30, c = ca, v = 0.8 },
         },
     },
     
