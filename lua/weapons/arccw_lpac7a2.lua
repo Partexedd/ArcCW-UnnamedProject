@@ -84,7 +84,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
@@ -104,8 +104,8 @@ SWEP.Firemodes = {
         AutoBurst = true,
         PrintName = "Auto-Burst",
         Override_ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.5,
+            [1] = 0.3,
+            [2] = 0.3,
         },
     },
     {
@@ -113,9 +113,9 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.05,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
-            [1] = 0.3,
-            [2] = 0.3,
-            [3] = 0.6,
+            [1] = 0.2,
+            [2] = 0.2,
+            [3] = 0.4,
         },
     },
 }
@@ -157,7 +157,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(0, 1, 0.5)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -176,8 +176,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-1, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(-0.2, -1, -0.5)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

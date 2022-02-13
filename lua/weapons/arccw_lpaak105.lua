@@ -164,8 +164,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-1, -1, 1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = Vector(0, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

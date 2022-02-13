@@ -66,7 +66,7 @@ SWEP.MuzzleVelocity = 800
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 1.95,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 0.9,
     [HITGROUP_LEFTARM] = 0.9,
@@ -164,8 +164,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-1, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(0, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -393,16 +393,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"nofh"},
     },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.2, 11),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"fgrail"},
-    },
     -- {
     --     PrintName = "Stock",
     --     Slot = {"lpglobal_stock","lphm_stock"},
@@ -415,12 +405,6 @@ SWEP.Attachments = {
     --     },
     --     VMScale = Vector(0.9,0.9,0.9),
     -- },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpxhr_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
-    },
     {
         PrintName = "Skins",
         PrintName = "Skin",
