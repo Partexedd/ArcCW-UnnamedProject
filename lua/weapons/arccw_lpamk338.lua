@@ -170,7 +170,7 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = "weapons/arccw/m249/"
+local path = "weapons/arccw/xhr50/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
@@ -259,7 +259,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 14 / 30, c = ca, v = 0.3 },
+            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
             { s = pathXC .. "magin.ogg", t = 14 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 26 / 30, c = ca, v = 0.8 },
         },
@@ -276,7 +276,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 14 / 30, c = ca, v = 0.3 },
+            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
             { s = pathXC .. "magin.ogg", t = 14 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "boltrelease.ogg", t = 34 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 41 / 30, c = ca, v = 0.8 },
