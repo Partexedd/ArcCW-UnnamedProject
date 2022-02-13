@@ -176,9 +176,9 @@ local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 
-SWEP.ShootSound = "weapons/arccw/m98b/lowpolym98b_fire.ogg" -- Placeholder
+SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
-SWEP.DistantShootSound = "weapons/arccw/m98b/lowpolym98b_dist.ogg" -- Placeholder
+SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
 SWEP.ShootPitch = 80
 
@@ -257,11 +257,17 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         Time = 21 / 30,
+        SoundTable = {
+            { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0.03 }
+        },
     },
     ["fire_empty"] = {
         Source = "fire",
         Framerate = 30,
         Time = 21 / 30,
+        SoundTable = {
+            { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0.03 }
+        },
     },
     
     ["cycle"] = {
@@ -292,11 +298,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
         SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 22 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -313,11 +319,11 @@ SWEP.Animations = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "30magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
             { s = pathDist .. "lowpolyhk416_drop.ogg", t = 23 / 30, c = ca, v = 0.3 },
-            { s = path .. "30emptymagin.ogg", t = 42 / 32, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magin.ogg", t = 39 / 32, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltforward.ogg", t = 62 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltdown.ogg", t = 70 / 30, c = ca, v = 0.8 },
         },
