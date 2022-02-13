@@ -174,10 +174,11 @@ local path = "weapons/arccw/m249/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
+local path338 = "weapons/arccw/mk338/"
 
-SWEP.ShootSound = "weapons/arccw/m98b/lowpolym98b_fire.ogg" -- Placeholder
+SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
-SWEP.DistantShootSound = "weapons/arccw/hk416/lowpolyhk416_fire_auto_dist.ogg" -- Placeholder
+SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
 SWEP.ShootPitch = 80
 
@@ -234,6 +235,9 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.01,
+        SoundTable = {
+            { s = {path338 .. "mech-01.ogg", path338 .. "mech-02.ogg", path338 .. "mech-03.ogg", path338 .. "mech-04.ogg", path338 .. "mech-05.ogg", path338 .. "mech-06.ogg"}, t = 0.03 }
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
