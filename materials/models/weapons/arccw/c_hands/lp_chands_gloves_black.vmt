@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+		"$basetexture"	"models/weapons/arccw/c_hands/lp_chands_arms_green"
+		$nocull 1
+}
