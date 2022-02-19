@@ -306,7 +306,7 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber_press.ogg", t = 28 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
         },
     },
