@@ -132,7 +132,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(0, 1, 0.4)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -355,17 +355,10 @@ end
 
 -- Attachments --
 
--- SWEP.RejectAttachments = {
---   ["muzz_hbar"] = true,
---   ["muzz_lbar"] = true,
---   ["lpak_polymer"] = true,
--- }
-
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp", "optic", "optic_sniper"},
-        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

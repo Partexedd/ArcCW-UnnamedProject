@@ -27,11 +27,11 @@ SWEP.TrueName = "MUTANT"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "ak47"
+SWEP.Trivia_Desc = "tremendo mutante"
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "5.45x39mm Soviet"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
-SWEP.Trivia_Country = "Russian Federation"
+SWEP.Trivia_Calibre = "7.62x39mm Soviet"
+SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
+SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
 
 -- Weapon slot --
@@ -153,7 +153,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.25, -3, 0.6),
-     Ang = Angle(0.8, 0, 0),
+     Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -198,27 +198,10 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["nois"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
-    -- Ind stocks --
-    
-    ["fgrail"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Extras --
-
-    ["50Beo"] = {
+    ["nofs"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
 
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
-    },
 }
 
 -- Animations --
@@ -346,9 +329,10 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.048, 0.2, 11),
+            vpos = Vector(0, -0.4, 5),
             vang = Angle(90, 0, -90),
         },
+        InstalledEles = {"nofs"},
     },
     {
         PrintName = "Muzzle",
@@ -359,7 +343,6 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -2.5),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nofh"},
     },
     { 
         PrintName = "Underbarrel",

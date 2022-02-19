@@ -366,8 +366,7 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp", "optic", "optic_sniper"},
-        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

@@ -21,8 +21,8 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "AK105" 
-SWEP.TrueName = "AK105" 
+SWEP.PrintName = "CVM344" 
+SWEP.TrueName = "CVM344" 
 
 -- Trivia --
 
@@ -342,8 +342,7 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp"},
-        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
