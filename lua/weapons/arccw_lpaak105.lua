@@ -249,7 +249,7 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {pathAK .. "mech-01.ogg", pathAK .. "mech-02.ogg", pathAK .. "mech-03.ogg", pathAK .. "mech-04.ogg", pathAK .. "mech-05.ogg", pathAK .. "mech-06.ogg"}, t = 0.03 }},
+        SoundTable = {{ s = {pathAK .. "mech-01.ogg", pathAK .. "mech-02.ogg", pathAK .. "mech-03.ogg", pathAK .. "mech-04.ogg", pathAK .. "mech-05.ogg", pathAK .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = {"fire_01","fire_02","fire_03"},
