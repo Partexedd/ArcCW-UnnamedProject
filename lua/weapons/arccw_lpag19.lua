@@ -21,17 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "GSH-18" -- gib fake name 
-SWEP.TrueName = "GSH-18" -- gib fake name
+SWEP.PrintName = "gock" -- gib fake name 
+SWEP.TrueName = "glonk" -- gib fake name
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "it is pistol"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Desc = "walk wit a stick"
+SWEP.Trivia_Manufacturer = "FUCK"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Blowback Operated, Open Bolt"
-SWEP.Trivia_Country = "Russian Federation"
+SWEP.Trivia_Mechanism = "Short Recoil, Locked Breech"
+SWEP.Trivia_Country = "Austria"
 SWEP.Trivia_Year = 2000
 
 -- Weapon slot --
@@ -42,7 +42,7 @@ SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Ludwig Vorgrimler"
+    SWEP.Trivia_Manufacturer = "are these all supposed to be fake names"
 end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
@@ -78,9 +78,9 @@ SWEP.BodyDamageMults =
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 18
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 16
+SWEP.Primary.ClipSize = 15
+SWEP.ExtendedClipSize = 33
+SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
@@ -170,12 +170,12 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
-local path = "weapons/arccw/gsh18/"
-local path9 = "weapons/arccw/glock/"
+local path = "weapons/arccw/glock/"
+local pathGSH = "weapons/arccw/gsh18/"
 
-SWEP.ShootSound = {path9 .. "fire-01.ogg", path9 .. "fire-02.ogg", path9 .. "fire-03.ogg", path9 .. "fire-04.ogg", path9 .. "fire-05.ogg", path9 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
-SWEP.DistantShootSound = {path9 .. "fire-dist-01.ogg", path9 .. "fire-dist-02.ogg", path9 .. "fire-dist-03.ogg", path9 .. "fire-dist-04.ogg", path9 .. "fire-dist-05.ogg", path9 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
 SWEP.ShootPitch = 100
 
@@ -222,7 +222,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "sliderelease.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -259,9 +259,9 @@ SWEP.Animations = {
         MinProgress = 1,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 15 / 30, c = ca, v = 0.8 },
+            { s = path .. "drop.ogg", t = 12 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 12 / 30, c = ca, v = 1 },
+            { s = pathGSH.. "cloth.ogg", t = 15 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -277,10 +277,10 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 19 / 30, c = ca, v = 0.8 },
+            { s = path .. "drop.ogg", t = 12 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 12 / 30, c = ca, v = 1 },
+            { s = path .. "chamber.ogg", t = 18 / 30, c = ca, v = 0.8 },      
+            { s = pathGSH .. "cloth.ogg", t = 19 / 30, c = ca, v = 0.8 },
         },
     },
 
@@ -320,7 +320,7 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
+            { s = path .. "chamber.ogg", t = 18 / 30, c = ca, v = 0.8 },      
             { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
