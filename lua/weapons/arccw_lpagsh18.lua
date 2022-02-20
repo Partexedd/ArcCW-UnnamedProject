@@ -171,10 +171,11 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/gsh18/"
+local path9 = "weapons/arccw/glock/"
 
-SWEP.ShootSound = path .. "shot.ogg" -- Placeholder
+SWEP.ShootSound = {path9 .. "fire-01.ogg", path9 .. "fire-02.ogg", path9 .. "fire-03.ogg", path9 .. "fire-04.ogg", path9 .. "fire-05.ogg", path9 .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
-SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
+SWEP.DistantShootSound = {path9 .. "fire-dist-01.ogg", path9 .. "fire-dist-02.ogg", path9 .. "fire-dist-03.ogg", path9 .. "fire-dist-04.ogg", path9 .. "fire-dist-05.ogg", path9 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
 SWEP.ShootPitch = 100
 
@@ -232,6 +233,7 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.02,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -259,7 +261,7 @@ SWEP.Animations = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "cloth.ogg", t = 15 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -278,7 +280,7 @@ SWEP.Animations = {
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
             { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
             { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "cloth.ogg", t = 19 / 30, c = ca, v = 0.8 },
         },
     },
 
