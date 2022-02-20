@@ -115,7 +115,7 @@ SWEP.MagID = "mp3008"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.1
+SWEP.SightTime = 0.12
 
 -- Gun length --
 

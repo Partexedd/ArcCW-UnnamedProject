@@ -118,18 +118,18 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 650
+SWEP.HipDispersion = 2000
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
-SWEP.MagID = "scar"
+SWEP.MagID = "mk338"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.4
 
 -- Gun length --
 

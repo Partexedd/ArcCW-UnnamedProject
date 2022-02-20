@@ -23,9 +23,6 @@ att.Override_Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = 0
-    }
 }
 
 att.ActivateElements = {"50Beo"}

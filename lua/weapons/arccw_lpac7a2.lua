@@ -147,7 +147,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.24
+SWEP.SightTime = 0.3
 
 -- Gun length --
 
@@ -164,8 +164,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.24, -3, 0.52),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.24, -3, 0.3),
+     Ang = Angle(1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 90,
 }
@@ -215,8 +215,8 @@ SWEP.AttachmentElements = {
 
     -- Ind stocks --
     
-    ["fgrail"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
+    ["45acp"] = {
+        VMBodygroups = {{ind = 1, bg = 2},{ind = 2, bg = 1},{ind = 3, bg = 1},{ind = 4, bg = 1},{ind = 5, bg = 2}},
     },
 
     -- Extras --
@@ -273,7 +273,7 @@ SWEP.Animations = {
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
-    -- 416 reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",
@@ -294,6 +294,44 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LastClip1OutTime = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.45,
+        SoundTable = {
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber_press.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
+        },
+    },
+
+    -- .45 reloads --
+
+    ["reload_45"] = {
+        Source = "reload_45",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LastClip1OutTime = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+        SoundTable = {
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
+        },
+    },
+    ["reload_empty_45"] = {
+        Source = "reload_empty_45",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
         LHIK = true,
@@ -389,6 +427,19 @@ SWEP.Attachments = {
         },
         Installed = "opticlp_c79a2",
         Hidden = true;
+		ExcludeFlags = {"45acp","modernframe"},
+    },
+    {
+        PrintName = "Optic",
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        DefaultAttName = "Iron Sights",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0.035, -0.2, 2),
+            vang = Angle(90, 0, -90),
+        },
+        Hidden = true;
+		ExcludeFlags = {"45acp","modernframe"},
     },
     {
         PrintName = "Barrel",
@@ -440,9 +491,9 @@ SWEP.Attachments = {
     -- },
     {
         PrintName = "Mag Type",
-        Slot = {"lpxhr_mag"},
+        Slot = {"lpc7a2_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
+        DefaultAttName = "30-Round 5.56x45mm",
     },
     {
         PrintName = "Skins",

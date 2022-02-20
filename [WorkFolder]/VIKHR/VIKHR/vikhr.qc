@@ -20,7 +20,7 @@ $cdmaterials "models\weapons\arccw\shared"
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
-$attachment "4" "Barrel" 0 0 -4 rotate -90 0 0
+$attachment "4" "Barrel" 0 0 -9 rotate -90 0 0
  
 $surfaceprop "default"
  

@@ -120,8 +120,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 1500
 SWEP.MoveDispersion = 250
+SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "pgm"
@@ -420,12 +421,6 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
-
--- SWEP.RejectAttachments = {
---   ["muzz_hbar"] = true,
---   ["muzz_lbar"] = true,
---   ["lpak_polymer"] = true,
--- }
 
 SWEP.Attachments = {
     {

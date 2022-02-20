@@ -27,9 +27,9 @@ SWEP.TrueName = "VIKHR"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "tremendo mutante"
+SWEP.Trivia_Desc = "First 4 bullets have less recoil"
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "7.62x39mm Soviet"
+SWEP.Trivia_Calibre = "9x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas operated, Rotating bolt"
 SWEP.Trivia_Country = "Russian Federation"
 SWEP.Trivia_Year = 1996
@@ -42,7 +42,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Robinson Armament"
+    SWEP.Trivia_Manufacturer = "NW"
 end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
@@ -50,14 +50,14 @@ end
 SWEP.ViewModel = "models/weapons/arccw/c_lpavikhr.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpavikhr.mdl"
 SWEP.ViewModelFOV = 70
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
 SWEP.Damage = 39
 SWEP.DamageMin = 14
-SWEP.Range = 75
-SWEP.Penetration = 38
+SWEP.Range = 40
+SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 310
@@ -66,11 +66,11 @@ SWEP.MuzzleVelocity = 310
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.25,
-    [HITGROUP_STOMACH] = 1.25,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.25,
+    [HITGROUP_CHEST] = 1.15,
+    [HITGROUP_STOMACH] = 1.15,
+    [HITGROUP_LEFTARM] = 0.85,
+    [HITGROUP_RIGHTARM] = 0.85,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -84,7 +84,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 1.4
+SWEP.Recoil = 1.1
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -120,27 +120,28 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
+SWEP.Silencer = true
 
 -- NPC stuff -- 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
+SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 50
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
-SWEP.MagID = "xcr"
+SWEP.MagID = "vikhr"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.18
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.24
 
 -- Gun length --
 
@@ -153,8 +154,8 @@ SWEP.HolsterPos = Vector(12, -1, -1)
 SWEP.ActivePos = Vector(0, 1, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.23, -3, 0.85),
@@ -189,8 +190,8 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathVKR = "weapons/arccw/vikhr/"
 
-SWEP.ShootSound = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSound = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {path556 .. "fire-01.ogg", path556 .. "fire-02.ogg", path556 .. "fire-03.ogg", path556 .. "fire-04.ogg", path556 .. "fire-05.ogg", path556 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSoundSilenced = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
 SWEP.DistantShootSound = nil --subsonic
 
 SWEP.ShootPitchVariation = 0
@@ -204,9 +205,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-
-    ["nofs"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+    ["fh"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
 
 }
@@ -253,7 +253,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         LastClip1OutTime = 2,
         LHIK = true,
         LHIKIn = 0.2,
@@ -270,7 +270,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         LastClip1OutTime = 1.4,
         LHIK = true,
         LHIKIn = 0.2,
@@ -328,42 +328,17 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp_russian", "lowpoly_optic_russian", "lowpoly_optic_sniper_russian"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -0.4, 5),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nofs"},
     },
     {
         PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -2.5),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.2, 11),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"fgrail"},
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
+        DefaultAttName = "Standard Suppressor",
+        Slot = {"lpvikhr_muzzle"},
     },
 }

@@ -29,6 +29,7 @@ $bodygroup "4" {
 $bodygroup "5" {
 	studio "defhandguard.smd"
 	studio "grenadierhandguard.smd"
+	blank
 }
 
 $bodygroup "6" {
