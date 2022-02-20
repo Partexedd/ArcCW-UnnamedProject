@@ -187,8 +187,6 @@ SWEP.ShootSound = {path762 .. "fire-01.ogg", path762 .. "fire-02.ogg", path762 .
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path762 .. "fire-dist-01.ogg", path762 .. "fire-dist-02.ogg", path762 .. "fire-dist-03.ogg", path762 .. "fire-dist-04.ogg", path762 .. "fire-dist-05.ogg", path762 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0
-
 -- Bodygroups --
 
 SWEP.DefaultBodygroups = "00000000000"

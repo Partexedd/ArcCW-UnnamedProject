@@ -78,9 +78,9 @@ SWEP.BodyDamageMults =
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 18
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 16
+SWEP.Primary.ClipSize = 15
+SWEP.ExtendedClipSize = 33
+SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
