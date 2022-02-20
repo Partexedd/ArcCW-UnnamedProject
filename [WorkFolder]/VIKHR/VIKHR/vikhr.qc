@@ -6,6 +6,7 @@ $bodygroup "studio" {
 
 $bodygroup "1" {
 	studio "defgrip.smd"
+	studio "fgrip.smd"
 }
 
 $bodygroup "2" {
