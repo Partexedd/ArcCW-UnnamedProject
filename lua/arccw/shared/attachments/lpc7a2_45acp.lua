@@ -10,9 +10,13 @@ att.Slot = "lpc7a2_mag"
 att.AutoStats = true
 att.SortOrder = -3
 
-att.Mult_Recoil = 4
+att.Mult_Recoil = 3
 
 att.Override_ClipSize = 32
+
+att.Override_PrimaryAmmo = "pistol"
+
+att.Override_MuzzleEffectAttachment = 5
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_45"

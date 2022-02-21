@@ -38,6 +38,13 @@ $bodygroup "6" {
 	blank
 }
 
+$texturegroup "skinfamilies"
+{
+	{ "c7a2" }
+	{ "c7a2_black" }
+}
+
+
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0

@@ -227,7 +227,7 @@ SWEP.AttachmentElements = {
 
     -- Skins --
 
-    ["skin_wireframe"] = {
+    ["skin_black"] = {
         VMSkin = 1,
     },
 }
@@ -417,8 +417,7 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"optic_lp", "lowpoly_optic", "optic_sniper"},
-        --Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -430,22 +429,16 @@ SWEP.Attachments = {
 		ExcludeFlags = {"45acp","modernframe"},
     },
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0.035, -0.2, 2),
-            vang = Angle(90, 0, -90),
-        },
-        Hidden = true;
-		ExcludeFlags = {"45acp","modernframe"},
-    },
-    {
         PrintName = "Barrel",
         DefaultAttName = "14.5' Barrel",
         Slot = {"lpc7a2_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
+        Bone = "Barrel",
+        Offset = {
+            vpos = Vector(0, 0, -2.5),
+            vang = Angle(90, 0, -90),
+        },
+		ExcludeFlags = {"45acp"},
     },
     {
         PrintName = "Muzzle",
@@ -456,7 +449,6 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -2.5),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nofh"},
     },
     { 
         PrintName = "Underbarrel",
@@ -466,7 +458,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 2.2, 11),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"fgrail"},
+		IncludeFlags = {"45acp"},
     },
     {
         PrintName = "Tactical",
@@ -476,6 +468,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.3, 15),
             vang = Angle(90, 0, 90),
         },
+		IncludeFlags = {"45acp"},
     }, 
     -- {
     --     PrintName = "Stock",
@@ -499,7 +492,7 @@ SWEP.Attachments = {
         PrintName = "Skins",
         PrintName = "Skin",
         Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
+        DefaultAttName = "Green",
         FreeSlot = true,
     },
 }
