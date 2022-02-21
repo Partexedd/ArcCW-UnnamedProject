@@ -54,10 +54,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 107
-SWEP.DamageMin = 87
-SWEP.Range = 300
-SWEP.Penetration = 50
+SWEP.Damage = 75
+SWEP.DamageMin = 56
+SWEP.Range = 100
+SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 823
@@ -67,12 +67,12 @@ SWEP.MuzzleVelocity = 823
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 0.984,
-    [HITGROUP_STOMACH] = 0.962,
-    [HITGROUP_LEFTARM] = 0.95,
-    [HITGROUP_RIGHTARM] = 0.95,
-    [HITGROUP_LEFTLEG] = 0.87,
-    [HITGROUP_RIGHTLEG] = 0.87,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
 
 -- Mag size --
@@ -84,8 +84,8 @@ SWEP.ReducedClipSize = 2
 
 -- Recoil --
 
-SWEP.Recoil = 3
-SWEP.RecoilSide = 2
+SWEP.Recoil = 1
+SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -121,7 +121,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 1500
+SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
@@ -253,8 +253,6 @@ SWEP.Animations = {
         Source = "cycle",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         TPAnimStartTime = 0.7,
-        Framerate = 30,
-        Time = 27 / 30,
         ShellEjectAt = 0.3,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -407,7 +405,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.1, 3),
+            vpos = Vector(0, -0.3, 4),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

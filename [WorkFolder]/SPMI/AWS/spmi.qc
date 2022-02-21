@@ -79,7 +79,7 @@ $sequence "cycle" {
  	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.3
+	fadein 0.2
 	fadeout 0.03
 }
 
