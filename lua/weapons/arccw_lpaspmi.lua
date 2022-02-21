@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
-SWEP.ShellScale = 1.2
+SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mag"
 SWEP.ShellPitch = 90
 
@@ -29,7 +29,7 @@ SWEP.TrueName = "SPMI"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = ".338 Lapua Magnum"
+SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
@@ -60,7 +60,8 @@ SWEP.Range = 100
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 823
+SWEP.MuzzleVelocity = 400
+SWEP.PhysBulletMuzzleVelocity = 400
 
 -- slight tomfoolery --
 
@@ -405,7 +406,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.3, 4),
+            vpos = Vector(0, -0.2, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -414,7 +415,7 @@ SWEP.Attachments = {
         PrintName = "Mag Type",
         Slot = {"lpspmi_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "5-Round .308 Win",
+        DefaultAttName = "5-Round 7.62x51mm NATO",
     },
     {
         PrintName = "Skins",
