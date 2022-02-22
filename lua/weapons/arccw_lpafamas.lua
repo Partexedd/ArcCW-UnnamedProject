@@ -156,8 +156,6 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
 SWEP.ActivePos = Vector(0, 2, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -174,7 +172,7 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
+SWEP.HolsterPos = Vector(3, 2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -1, 1)
@@ -233,7 +231,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathVKR .. "charge.ogg", t = 4 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "end.ogg", t = 10 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "end.ogg", t = 23 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -329,7 +327,7 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
