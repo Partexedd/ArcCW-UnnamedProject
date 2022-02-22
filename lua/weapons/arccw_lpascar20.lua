@@ -357,12 +357,6 @@ end
 
 -- Attachments --
 
--- SWEP.RejectAttachments = {
---   ["muzz_hbar"] = true,
---   ["muzz_lbar"] = true,
---   ["lpak_polymer"] = true,
--- }
-
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -378,13 +372,13 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "14.5' Barrel",
-        Slot = {"lpxcr_barrel"},
+        Slot = {"lpscar_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"lowpoly_muzzle"},
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -1.2),
@@ -412,8 +406,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Grip",
+        Slot = {"lpscar20_grip"},
         DefaultAttName = "A2 Grip",
-        Slot = "lpscar20_grip"
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
     },
     {
         PrintName = "Mag Type",
@@ -421,18 +416,6 @@ SWEP.Attachments = {
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "20-Round .308 Win",
     },
-    -- {
-    --     PrintName = "Stock",
-    --     Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
-	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-    --     DefaultAttName = "Solid Stock",
-    --     Bone = "Body",
-    --     Offset = {
-    --         vpos = Vector(0, -2.1, -0.8),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    --     VMScale = Vector(0.9,0.9,0.9),
-    -- },
     {
         PrintName = "Skins",
         PrintName = "Skin",

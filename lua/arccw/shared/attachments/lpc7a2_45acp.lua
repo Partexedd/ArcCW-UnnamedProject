@@ -14,7 +14,9 @@ att.Mult_Recoil = 3
 
 att.Override_ClipSize = 32
 
-att.Override_PrimaryAmmo = "pistol"
+att.Override_Ammo = "pistol"
+
+att.Override_Trivia_Class = "Submachine Gun"
 
 att.Override_MuzzleEffectAttachment = 5
 

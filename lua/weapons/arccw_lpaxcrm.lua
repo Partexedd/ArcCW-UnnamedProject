@@ -378,12 +378,6 @@ end
 
 -- Attachments --
 
--- SWEP.RejectAttachments = {
---   ["muzz_hbar"] = true,
---   ["muzz_lbar"] = true,
---   ["lpak_polymer"] = true,
--- }
-
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -411,7 +405,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"lowpoly_muzzle"},
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -1.2),
@@ -421,7 +415,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
+        Slot = {"lowpoly_foregrip"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, 2.5, 13),
@@ -430,24 +424,12 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = {"tac"},
+        Slot = {"lowpoly_tac"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -1, 16),
             vang = Angle(90, 0, -90),
         },
-    }, 
-    {
-        PrintName = "Stock",
-        Slot = {"lpglobal_stock","lphm_stock","lpxcr_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -2.1, -0.8),
-            vang = Angle(90, 0, -90),
-        },
-        VMScale = Vector(0.9,0.9,0.9),
     },
     {
         PrintName = "Mag Type",

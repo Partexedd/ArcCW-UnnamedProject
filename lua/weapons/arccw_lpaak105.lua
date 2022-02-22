@@ -351,12 +351,6 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpc7a2_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
@@ -385,13 +379,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.3, 15),
             vang = Angle(90, 0, 90),
         },
-    }, 
-    -- {
-    --     PrintName = "Mag Type",
-    --     Slot = {"lpak_mag"},
-	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-    --     DefaultAttName = "30-Round 5.45 Soviet",
-    -- },
+    },
     {
         PrintName = "Skins",
         PrintName = "Skin",

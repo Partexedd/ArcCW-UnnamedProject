@@ -412,12 +412,6 @@ SWEP.Attachments = {
         Slot = {"lpgsh18_mag"},
     },
     {
-        PrintName = "Stock",
-        Slot = {"lpmp3008_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
-        DefaultAttName = "No Stock",
-    },
-    {
         PrintName = "Pose",
         Slot = {"lpgsh18_pose"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph

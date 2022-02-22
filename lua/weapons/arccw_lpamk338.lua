@@ -351,7 +351,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"lowpoly_muzzle"},
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -1.2),
@@ -361,7 +361,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
+        Slot = {"lowpoly_foregrip"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, 1.8, 15),
@@ -370,7 +370,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = {"tac"},
+        Slot = {"lowpoly_tac"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -1, 16),
@@ -379,9 +379,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Mag Type",
-        Slot = {"lpxcr_mag"},
+        Slot = {"lpmk338_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
+        DefaultAttName = "10-Round .338 Lapua Magnum",
     },
     {
         PrintName = "Skins",

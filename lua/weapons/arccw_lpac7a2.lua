@@ -443,7 +443,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"lowpoly_muzzle"},
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -2.5),
@@ -469,19 +469,13 @@ SWEP.Attachments = {
             vang = Angle(90, 0, 90),
         },
 		IncludeFlags = {"45acp"},
-    }, 
-    -- {
-    --     PrintName = "Stock",
-    --     Slot = {"lpglobal_stock","lphm_stock"},
-	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-    --     DefaultAttName = "Solid Stock",
-    --     Bone = "Body",
-    --     Offset = {
-    --         vpos = Vector(0, -2.1, -0.8),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    --     VMScale = Vector(0.9,0.9,0.9),
-    -- },
+    },
+    {
+        PrintName = "Stock",
+        Slot = {"lpc7a2_stock"},
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
+        DefaultAttName = "Solid Stock"
+    },
     {
         PrintName = "Mag Type",
         Slot = {"lpc7a2_mag"},

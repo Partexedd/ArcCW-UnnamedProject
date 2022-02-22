@@ -378,13 +378,13 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "14.5' Barrel",
-        Slot = {"lpc7a2_barrel"},
+        Slot = {"lpapache_barrel"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"lowpoly_muzzle"},
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -1),
@@ -392,18 +392,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"nofh"},
     },
-    -- {
-    --     PrintName = "Stock",
-    --     Slot = {"lpglobal_stock","lphm_stock"},
-	-- 	DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-    --     DefaultAttName = "Solid Stock",
-    --     Bone = "Body",
-    --     Offset = {
-    --         vpos = Vector(0, -2.1, -0.8),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    --     VMScale = Vector(0.9,0.9,0.9),
-    -- },
     {
         PrintName = "Skins",
         PrintName = "Skin",
