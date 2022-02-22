@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "lowpoly_optic"
+att.Slot = "lowpoly_optic_sniper"
 
 att.Model = "models/weapons/arccw/atts/vortexrazor.mdl"
 

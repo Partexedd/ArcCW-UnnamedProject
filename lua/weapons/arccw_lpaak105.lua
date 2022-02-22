@@ -60,7 +60,7 @@ SWEP.Range = 100
 SWEP.Penetration = 37
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 960
+SWEP.PhysBulletMuzzleVelocity = 960
 
 -- slight tomfoolery --
 
