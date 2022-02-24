@@ -26,7 +26,7 @@ SWEP.TrueName = "XHR308"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = ".308 Winchester"
