@@ -187,6 +187,7 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
+local path = "weapons/arccw/famas/"
 local pathAK = "weapons/arccw/ak105/"
 local path556 = "weapons/arccw/xhr50/"
 local path762 = "weapons/arccw/mutant/"
@@ -261,9 +262,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathAK .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 25 / 30, c = ca, v = 1 },
-            { s = pathAK .. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "magdrop_metal.ogg", t = 25 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 37 / 30, c = ca, v = 0.8 },
         },
     },
@@ -278,9 +279,9 @@ SWEP.Animations = {
         LHIKOut = 0.45,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathAK .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "magdrop.ogg", t = 25 / 30, c = ca, v = 1 },
-            { s = pathAK .. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "magdrop_metal.ogg", t = 25 / 30, c = ca, v = 1 },
+            { s = path .. "magin.ogg", t = 19 / 30, c = ca, v = 0.8 },
             { s = pathVKR .. "charge.ogg", t = 40 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 54 / 30, c = ca, v = 0.8 },
         },
