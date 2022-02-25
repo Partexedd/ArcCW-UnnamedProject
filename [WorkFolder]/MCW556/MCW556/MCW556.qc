@@ -1,7 +1,7 @@
-$modelname "weapons\arccw\c_lpaMCW556.mdl"
+$modelname "weapons\arccw\c_lpamcw556.mdl"
  
 $bodygroup "studio" {
-	studio "MCW556.smd"
+	studio "mcw556.smd"
 } 
 
 $bodygroup "1" {
