@@ -277,7 +277,7 @@ SWEP.Animations = {
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
             { s = path556 .. "magdrop.ogg", t = 25 / 30, c = ca, v = 1 },
             { s = pathAK .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "end.ogg", t = 35 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "end.ogg", t = 30 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -297,7 +297,7 @@ SWEP.Animations = {
             { s = path556 .. "magdrop.ogg", t = 22 / 30, c = ca, v = 1 },
             { s = pathAK .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "charge.ogg", t = 35 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "end.ogg", t = 51 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "end.ogg", t = 46 / 30, c = ca, v = 0.8 },
         },
     },
     
