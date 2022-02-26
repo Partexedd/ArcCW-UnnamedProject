@@ -112,7 +112,7 @@ SWEP.ProceduralIronFire = false
 SWEP.ReloadInSights = true
 SWEP.ManualAction = true
 SWEP.NoLastCycle = true
---SWEP.Silencer = true
+SWEP.Silencer = true
 
 -- NPC stuff -- 
 
