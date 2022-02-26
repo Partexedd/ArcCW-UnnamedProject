@@ -176,6 +176,7 @@ local path = "weapons/arccw/m249/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
+local pathXHR = "weapons/arccw/xhr50/"
 
 SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
@@ -301,7 +302,7 @@ SWEP.Animations = {
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 16 / 30, c = ca, v = 0.3 },
+            { s = pathXHR .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
             { s = pathXC .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
         },
@@ -322,7 +323,7 @@ SWEP.Animations = {
             { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
-            { s = pathDist .. "lowpolyhk416_drop.ogg", t = 23 / 30, c = ca, v = 0.3 },
+            { s = pathXHR .. "magdrop.ogg", t = 30 / 30, c = ca, v = 0.3 },
             { s = pathXC .. "magin.ogg", t = 39 / 32, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltforward.ogg", t = 62 / 30, c = ca, v = 0.8 },
