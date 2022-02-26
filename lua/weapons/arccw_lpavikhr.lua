@@ -108,7 +108,7 @@ SWEP.Firemodes = {
     {
         Mode = 1,
         Override_ShotRecoilTable = {
-            [1] = 0.5,
+            [1] = 0.7,
         },
     },
 }
