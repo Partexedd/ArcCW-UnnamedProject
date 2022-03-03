@@ -21,8 +21,8 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "GSH-18" -- gib fake name 
-SWEP.TrueName = "GSH-18" -- gib fake name
+SWEP.PrintName = "EPM" -- gib fake name 
+SWEP.TrueName = "EPM" -- gib fake name
 
 -- Trivia --
 
@@ -56,7 +56,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 30
 SWEP.DamageMin = 19
-SWEP.Range = 100
+SWEP.Range = 40
 SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil

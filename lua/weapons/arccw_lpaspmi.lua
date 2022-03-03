@@ -121,7 +121,7 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 1
+SWEP.AccuracyMOA = 0
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
