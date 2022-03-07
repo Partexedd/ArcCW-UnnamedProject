@@ -215,8 +215,6 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
-        Framerate = 30,
-        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -351,29 +349,8 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "Barrel",
-        Slot = {"lpgsh18_barrel"},
-    },
-    {
         PrintName = "Mag",
-        DefaultAttName = "18-Round 9mm AP",
-        Slot = {"lpgsh18_mag"},
-    },
-    {
-        PrintName = "Pose",
-        Slot = {"lpgsh18_pose"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
-        DefaultAttName = "Default Pose",
+        DefaultAttName = "21-Round 9mm",
+        Slot = {"lpcsp9_mag"},
     },
 }

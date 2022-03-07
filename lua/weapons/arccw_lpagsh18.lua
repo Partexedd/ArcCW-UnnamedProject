@@ -136,8 +136,6 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
--- SWEP.ActivePos = Vector(0, 1, 1)
-
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
@@ -184,23 +182,12 @@ SWEP.ShootPitch = 100
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3", [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6", 
-    [7] = "Bullet7",    [8] = "Bullet8",    [9] = "Bullet9", [10] = "Bullet10",    [11] = "Bullet11",    [12] = "Bullet12", 
-    [13] = "Bullet13",    [14] = "Bullet14",    [15] = "Bullet15", [16] = "Bullet16",    [17] = "Bullet17",    [18] = "Bullet18"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
 }
 
 SWEP.AttachmentElements = {
-
-    ["32mag"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
-    },
-
-    ["compbarrel"] = {
+    ["lasermag"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    ["sdbarrel"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
     },
 }
 
