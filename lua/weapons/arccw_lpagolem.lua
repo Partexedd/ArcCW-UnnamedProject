@@ -66,8 +66,8 @@ SWEP.MuzzleVelocity = 719
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.36,
+    [HITGROUP_HEAD] = 2.7,
+    [HITGROUP_CHEST] = 1.35,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -84,7 +84,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 1.4
+SWEP.Recoil = 1.6
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
