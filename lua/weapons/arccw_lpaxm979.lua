@@ -385,7 +385,7 @@ SWEP.Animations = {
 
     ["reload_ubgl"] = {
         Source = "reload_ubgl",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -397,7 +397,7 @@ SWEP.Animations = {
     },
     ["reload_ubgl_e"] = {
         Source = "reload_ubgl_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
