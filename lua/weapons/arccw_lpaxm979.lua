@@ -171,6 +171,7 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/xhr50/"
+local path203 = "weapons/arccw/m203/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
@@ -388,10 +389,10 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path203 .. "open.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
-            { s = path .. "magin_metal.ogg", t = 33 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber.ogg", t = 47 / 30, c = ca, v = 0.8 },
+            { s = path203 .. "insert.ogg", t = 33 / 30, c = ca, v = 0.8 },
+            { s = path203 .. "close.ogg", t = 47 / 30, c = ca, v = 0.8 },
             { s = path .. "end.ogg", t = 56 / 30, c = ca, v = 0.8 },
         },
     },
