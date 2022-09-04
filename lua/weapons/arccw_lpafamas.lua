@@ -41,15 +41,14 @@ SWEP.Slot = 2
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "NW"
 end
+
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpafamas.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpafamas.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
@@ -324,6 +323,8 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
+
+SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {

@@ -41,15 +41,13 @@ SWEP.Slot = 2
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Robinson Armament"
 end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaxm979.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaxm979.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
@@ -139,7 +137,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(0, 0, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -277,7 +275,6 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
-        Time = 73 / 30,
         LastClip1OutTime = 0.5,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },

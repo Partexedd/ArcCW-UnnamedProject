@@ -41,15 +41,14 @@ SWEP.Slot = 2
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Robinson Armament"
 end
+
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpamutant.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpamutant.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -145,7 +144,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(0, -1, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -320,6 +319,8 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
+
+SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {

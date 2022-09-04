@@ -41,15 +41,14 @@ SWEP.Slot = 2
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Robinson Armament"
 end
+
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpapgw.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpapgw.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --

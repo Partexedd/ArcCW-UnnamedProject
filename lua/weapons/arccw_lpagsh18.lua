@@ -41,15 +41,14 @@ SWEP.Slot = 1
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Ludwig Vorgrimler"
 end
+
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaghs18.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaghs18.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -156,7 +155,7 @@ SWEP.HolsterAng = Angle(-8, 25.881, -5)
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(0, 0, 0.4)
+SWEP.ActivePos = Vector(0, -1, 0.4)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
@@ -202,6 +201,8 @@ SWEP.AttachmentElements = {
 }
 
 -- Animations --
+
+SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {

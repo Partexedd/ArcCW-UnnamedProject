@@ -41,15 +41,14 @@ SWEP.Slot = 1
 -- Weapon's manufacturer real name --
 
 if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Me"
 end
+
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpacsp9.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpacsp9.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 90
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 -- Damage parameters --
@@ -77,7 +76,7 @@ SWEP.BodyDamageMults =
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
+SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 21
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 16
@@ -335,6 +334,8 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
+
+SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
