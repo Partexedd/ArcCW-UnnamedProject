@@ -170,6 +170,7 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
+local path = "weapons/arccw/galil/"
 local pathAK = "weapons/arccw/ak105/"
 local path556 = "weapons/arccw/xhr50/"
 local path762 = "weapons/arccw/mutant/"
@@ -218,7 +219,7 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
         },
     },
@@ -230,7 +231,7 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {pathAK .. "mech-01.ogg", pathAK .. "mech-02.ogg", pathAK .. "mech-03.ogg", pathAK .. "mech-04.ogg", pathAK .. "mech-05.ogg", pathAK .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = {"fire_01","fire_02","fire_03"},
@@ -253,9 +254,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathAK .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 7 / 30, c = ca, v = 0.8 },
             { s = path556 .. "magdrop.ogg", t = 19 / 30, c = ca, v = 1 },
-            { s = pathAK .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 33 / 30, c = ca, v = 0.8 },
         },
     },
@@ -270,10 +271,10 @@ SWEP.Animations = {
         LHIKOut = 0.45,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathAK .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path556 .. "magdrop.ogg", t = 19 / 30, c = ca, v = 1 },
-            { s = pathAK .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "charge.ogg", t = 38 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "charge.ogg", t = 38 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 56 / 30, c = ca, v = 0.8 },
         },
     },
