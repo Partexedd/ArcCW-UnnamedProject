@@ -58,7 +58,7 @@ $sequence "fire" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
-	fadeout 0.03
+	fadeout 0.2
 	{ event 5001 0 "1" }
 }
 
@@ -77,7 +77,7 @@ $sequence "hammer"{
  	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1
-	fadein 0.03
+	fadein 0.2
 	fadeout 0.03
 }
 

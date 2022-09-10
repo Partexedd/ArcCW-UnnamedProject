@@ -129,7 +129,7 @@ SWEP.Primary.Ammo = "pistol"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.26
 
 -- Gun length --
 
@@ -382,7 +382,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.2, 3),
+            vpos = Vector(0, 0.4, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
