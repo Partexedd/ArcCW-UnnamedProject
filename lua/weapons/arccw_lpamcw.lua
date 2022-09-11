@@ -324,6 +324,8 @@ end
 
 -- Attachments --
 
+SWEP.AutosolveSourceSeq = "ref"
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",

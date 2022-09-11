@@ -4,11 +4,6 @@ $bodygroup "studio" {
 	studio "mk338.smd"
 }
 
-$bodygroup "1" {
-	studio "338mag.smd"
-	studio "300mag.smd"
-}
-
 $bodygroup "2" {
 	studio "ironsup.smd"
 	studio "ironsdown.smd"
@@ -203,7 +198,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "mk338_col.smd"
+$collisionmodel "mk338.smd"
 {
 	$mass 5
 }
