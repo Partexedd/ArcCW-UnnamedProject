@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "VIKHR" 
-SWEP.TrueName = "VIKHR" 
+SWEP.TrueName = "SR3M" 
 
 -- Trivia --
 
@@ -47,7 +47,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpavikhr.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpavikhr.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
@@ -149,7 +149,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(1, 0.6, 1)
+SWEP.ActiveAng = Angle(-0.2, 0, 2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -159,7 +160,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.23, -3, 0.85),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)

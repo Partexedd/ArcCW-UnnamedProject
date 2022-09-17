@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "APACHE" 
-SWEP.TrueName = "APACHE" 
+SWEP.TrueName = "Mk. 18 CQBR"
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaapache.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaapache.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
@@ -101,9 +101,8 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
-        Override_ShotRecoilTable = {
-            [1] = 0.36,
-        },
+        Mult_Recoil = 0.3,
+        Mult_RPM = 0.7,
     },
 }
 
@@ -144,7 +143,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(1.1, 1, 1)
+SWEP.ActiveAng = Angle(-0.2, 0, 4)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -154,7 +154,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.24, -3, 0.35),
      Ang = Angle(0.47, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)

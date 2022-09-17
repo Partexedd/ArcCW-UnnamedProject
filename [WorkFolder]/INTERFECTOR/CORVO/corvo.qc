@@ -89,8 +89,6 @@ $sequence "ready" {
 
 $sequence "reload" {
 	"anims\reload.smd"
-	"anims\reload_iron.smd"
-	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -98,8 +96,6 @@ $sequence "reload" {
 
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
-	"anims\reload_empty_iron.smd"
-	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -192,7 +188,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "corvus.smd"
+$collisionmodel "corvo.smd"
 {
 	$mass 5
 }

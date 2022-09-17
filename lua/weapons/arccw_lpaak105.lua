@@ -21,8 +21,8 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CVM344" 
-SWEP.TrueName = "CVM344" 
+SWEP.PrintName = "CVM433" 
+SWEP.TrueName = "AK-105 Custom" 
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaak105.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaak105.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -144,7 +144,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, -1, 0.8)
+SWEP.ActivePos = Vector(1, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, 4)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -154,7 +155,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.23, -5, 0.88),
      Ang = Angle(0.8, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -193,31 +194,6 @@ SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
-}
-
-SWEP.AttachmentElements = {
-
-    ["nois"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
-    -- Ind stocks --
-    
-    ["fgrail"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Extras --
-
-    ["50Beo"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
-    },
 }
 
 -- Animations --

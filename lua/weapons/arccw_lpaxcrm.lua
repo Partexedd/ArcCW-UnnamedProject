@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "XCAR" 
-SWEP.TrueName = "XCAR" 
+SWEP.TrueName = "XCR-M" 
 
 -- Trivia --
 
@@ -47,7 +47,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaxcrm.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaxcrm.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -143,7 +143,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.4, 1, 0.8)
+SWEP.ActivePos = Vector(0.7, 0.6, 1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -153,10 +153,10 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.29, -3, 0.7),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
-SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizePos = Vector(0, 3, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)

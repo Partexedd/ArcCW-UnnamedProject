@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "MK338" 
-SWEP.TrueName = "MK338" 
+SWEP.TrueName = "MK-18 Mjölnir" 
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpamk338.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpamk338.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -138,7 +138,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.2, -1, -0.5)
+SWEP.ActivePos = Vector(1, 1, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -148,7 +148,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.35, -3, 0),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -192,18 +192,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["nois"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
-    },
-
-    -- Flash hider --
-    ["nofh"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 }
 

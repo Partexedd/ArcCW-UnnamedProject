@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.4
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
 
@@ -21,8 +21,8 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CSP9 MK1" -- gib fake name 
-SWEP.TrueName = "CSP9 MK1" -- gib fake name
+SWEP.PrintName = "CSP9 MK1"
+SWEP.TrueName = "CSP9 MK1"
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpacsp9.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpacsp9.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 -- Damage parameters --
@@ -83,7 +83,7 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -100,6 +100,13 @@ SWEP.Firemodes = {
         Mode = -3,
         PostBurstDelay = 0.14,
         RunawayBurst = true,
+        Mult_Recoil = 0.5,
+    },
+    {
+        Mode = 2,
+        Mult_Recoil = 1.8,
+        Mult_HipDispersion = 8,
+        Mult_RPM = 0.8,
     },
 }
 
@@ -145,7 +152,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.37, 0, 1.1),
      Ang = Angle(-0.47, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -157,7 +164,7 @@ SWEP.HolsterAng = Angle(-8, 25.881, -5)
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(0, 0, 0.4)
+SWEP.ActivePos = Vector(1, 0, 0.4)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true

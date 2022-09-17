@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaghs18.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaghs18.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -143,7 +143,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-1.92, 0, 1.2),
      Ang = Angle(-0.5, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -155,8 +155,8 @@ SWEP.HolsterAng = Angle(-8, 25.881, -5)
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(0, -1, 0.4)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(1, 0.6, 0.8)
+SWEP.ActiveAng = Angle(-0.2, 0, 5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "DR-508" 
-SWEP.TrueName = "DR-508" 
+SWEP.TrueName = "C7A2" 
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpac7a2.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpac7a2.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
@@ -156,7 +156,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.5)
+SWEP.ActivePos = Vector(1.1, 1, 1)
+SWEP.ActiveAng = Angle(-0.2, 0, 4)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -166,7 +167,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.24, -3, 0.3),
      Ang = Angle(1, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)

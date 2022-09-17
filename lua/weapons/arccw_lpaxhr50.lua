@@ -47,7 +47,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpaxhr50.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpaxhr50.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
@@ -130,7 +130,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 1, 0.4)
+SWEP.ActivePos = Vector(0.7, 0.6, 0.8)
+SWEP.ActiveAng = Angle(-0.2, 0, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

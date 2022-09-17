@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "AMF Chevalier" 
-SWEP.TrueName = "AMF Chevalier" 
+SWEP.TrueName = "FAMAS Valorisé" 
 
 -- Trivia --
 
@@ -48,7 +48,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_lpafamas.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpafamas.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
@@ -83,7 +83,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.8
+SWEP.Recoil = 1.2
 SWEP.RecoilSide = 0.35
 
 SWEP.RecoilRise = 0
@@ -147,7 +147,7 @@ SWEP.MagID = "famas"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.4
 
 -- Gun length --
 
@@ -155,7 +155,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, 2, 0.8)
+SWEP.ActivePos = Vector(1, 2, 0.8)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -165,7 +165,7 @@ SWEP.IronSightStruct = {
      Pos = Vector(-2.26, -3, 0.7),
      Ang = Angle(-1, 0, 0),
      Magnification = 1,
-     ViewModelFOV = 90,
+     ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
