@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.2
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellScale = 1
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
@@ -357,10 +357,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 2.5, 13),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Suppressor",
-        Slot = {"lowpoly_muzzle"},
     },
 }
