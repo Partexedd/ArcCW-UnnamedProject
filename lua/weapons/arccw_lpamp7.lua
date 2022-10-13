@@ -150,13 +150,26 @@ SWEP.WorldModelOffset = {
 
 -- Weapon sounds --
 
+local path7 = "weapons/arccw/mp7/"
 local path = "weapons/arccw/mp3008/"
 
-SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
+SWEP.ShootSound = {
+    path7 .. "fire-01.ogg",
+    path7 .. "fire-02.ogg",
+    path7 .. "fire-03.ogg",
+    path7 .. "fire-04.ogg",
+    path7 .. "fire-05.ogg",
+    path7 .. "fire-06.ogg"
+}
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
-SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
-
-SWEP.ShootPitch = 80
+SWEP.DistantShootSound = {
+    path7 .. "fire-dist-01.ogg",
+    path7 .. "fire-dist-02.ogg",
+    path7 .. "fire-dist-03.ogg",
+    path7 .. "fire-dist-04.ogg",
+    path7 .. "fire-dist-05.ogg",
+    path7 .. "fire-dist-06.ogg"
+}
 
 -- Bodygroups --
 
@@ -198,9 +211,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "sterling_boltunlock.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltback.ogg", t = 7 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_stockopen_01.ogg", t = 22 / 30, c = ca, v = 0.8 },
+            { s = path7 .. "chamber.ogg", t = 6 / 30, c = ca },
         },
     },
     ["draw"] = {
@@ -210,6 +221,7 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         ShellEjectAt = 0.05,
+        SoundTable = {{ s = {path7 .. "mech-01.ogg", path7 .. "mech-02.ogg", path7 .. "mech-03.ogg", path7 .. "mech-04.ogg", path7 .. "mech-05.ogg", path7 .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -231,9 +243,9 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path7 .. "magout.ogg", t = 2 / 30, c = ca, v = 0.5 },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 23 / 30, c = ca, v = 0.5 },
+            { s = path7 .. "magin.ogg", t = 23 / 30, c = ca, v = 0.5 },
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
@@ -248,12 +260,10 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_magoutv2.ogg", t = 5 / 30, c = ca, v = 0.5 },
+            { s = path7 .. "magout.ogg", t = 2 / 30, c = ca},
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sterling_maginv2.ogg", t = 23 / 30, c = ca, v = 0.5 },
-            { s = path .. "sterling_boltunlock.ogg", t = 30 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltback.ogg", t = 31 / 30, c = ca, v = 0.8 },
-            { s = path .. "sterling_boltlock.ogg", t = 32 / 30, c = ca, v = 0.8 },            
+            { s = path7 .. "magin.ogg", t = 23 / 30, c = ca },
+            { s = path7 .. "chamber.ogg", t = 32 / 30, c = ca },         
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
