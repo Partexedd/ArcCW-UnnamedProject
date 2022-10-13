@@ -243,9 +243,9 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path7 .. "magout.ogg", t = 2 / 30, c = ca, v = 0.5 },
+            { s = path7 .. "magout.ogg", t = 2 / 30, c = ca },
             { s = path .. "drop.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path7 .. "magin.ogg", t = 23 / 30, c = ca, v = 0.5 },
+            { s = path7 .. "magin.ogg", t = 23 / 30, c = ca },
             --{ s = path .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
