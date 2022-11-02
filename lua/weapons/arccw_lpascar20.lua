@@ -189,8 +189,7 @@ SWEP.ShootSound = {pathSCAR .. "fire-01.ogg", pathSCAR .. "fire-02.ogg", pathSCA
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
 SWEP.DistantShootSound = {pathSCAR .. "fire-dist-01.ogg", pathSCAR .. "fire-dist-02.ogg", pathSCAR .. "fire-dist-03.ogg", pathSCAR .. "fire-dist-04.ogg", pathSCAR .. "fire-dist-05.ogg", pathSCAR .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0 --pitch var on the .308 sound sucks
---SWEP.ShootPitch = 80
+SWEP.ShootPitch = 100
 
 -- Bodygroups --
 
@@ -256,7 +255,8 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "charge.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "chpull.ogg", t = 4 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "chrelease.ogg", t = 10 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
         },
     },
@@ -264,6 +264,13 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
+        Source = "fire",
+        ShellEjectAt = 0.01,
+        SoundTable = {
+            { s = {pathSCAR .. "mech-01.ogg", pathSCAR .. "mech-02.ogg", pathSCAR .. "mech-03.ogg", pathSCAR .. "mech-04.ogg", pathSCAR .. "mech-05.ogg", pathSCAR .. "mech-06.ogg"}, t = 0, v = 0.25 }
+        },
+    },
+    ["fire_iron"] = {
         Source = "fire",
         ShellEjectAt = 0.01,
         SoundTable = {
@@ -289,9 +296,10 @@ SWEP.Animations = {
         LHIKOut = 0.38,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "magout.ogg", t = 1 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathXC.. "magin.ogg", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR.. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
         },
     },
@@ -306,10 +314,11 @@ SWEP.Animations = {
         LHIKOut = 0.47,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathXC .. "magin.ogg", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "boltrelease.ogg", t = 24 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "boltcatchpress.ogg", t = 24 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 29 / 30, c = ca, v = 0.8 },
         },
     },
