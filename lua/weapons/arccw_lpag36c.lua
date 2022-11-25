@@ -185,6 +185,7 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/famas/"
+local path3 = "weapons/arccw/g36/"
 local pathAK = "weapons/arccw/ak105/"
 local path556 = "weapons/arccw/xhr50/"
 local path762 = "weapons/arccw/mutant/"
@@ -193,9 +194,23 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathVKR = "weapons/arccw/vikhr/"
 
-SWEP.ShootSound = {path556 .. "fire-01.ogg", path556 .. "fire-02.ogg", path556 .. "fire-03.ogg", path556 .. "fire-04.ogg", path556 .. "fire-05.ogg", path556 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {
+    path3 .. "fire-01.ogg",
+    path3 .. "fire-02.ogg",
+    path3 .. "fire-03.ogg",
+    path3 .. "fire-04.ogg",
+    path3 .. "fire-05.ogg",
+    path3 .. "fire-06.ogg"
+}
 SWEP.ShootSoundSilenced = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
-SWEP.DistantShootSound = {path556 .. "fire-dist-01.ogg", path556 .. "fire-dist-02.ogg", path556 .. "fire-dist-03.ogg", path556 .. "fire-dist-04.ogg", path556 .. "fire-dist-05.ogg", path556 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = {
+    path3 .. "fire-dist-01.ogg",
+    path3 .. "fire-dist-02.ogg",
+    path3 .. "fire-dist-03.ogg",
+    path3 .. "fire-dist-04.ogg",
+    path3 .. "fire-dist-05.ogg",
+    path3 .. "fire-dist-06.ogg"
+}
 
 SWEP.ShootPitchVariation = 0
 
@@ -241,7 +256,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {{ s = {path3 .. "mech-01.ogg", path3 .. "mech-02.ogg", path3 .. "mech-03.ogg", path3 .. "mech-04.ogg", path3 .. "mech-05.ogg", path3 .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -262,9 +277,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
             { s = path556 .. "magdrop_metal.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 24 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "magin.ogg", t = 23 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 39 / 30, c = ca, v = 0.8 },
         },
     },
@@ -279,10 +294,11 @@ SWEP.Animations = {
         LHIKOut = 0.45,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
             { s = path556 .. "magdrop_metal.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 24 / 30, c = ca, v = 0.8 },
-            { s = pathVKR .. "charge.ogg", t = 44 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "magin.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "chpull.ogg", t = 40 / 30, c = ca, v = 0.8 },
+            { s = path3 .. "chamber.ogg", t = 46 / 30, c = ca, v = 0.8 },
             { s = path556 .. "end.ogg", t = 54 / 30, c = ca, v = 0.8 },
         },
     },
