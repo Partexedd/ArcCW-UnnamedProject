@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "BMR65E2" 
-SWEP.TrueName = "SCAR-20" 
+SWEP.PrintName = "SCAR-20"
 
 -- Trivia --
 
@@ -102,7 +101,7 @@ SWEP.Firemodes = {
         Mode = 2,
         Mult_Recoil = 2,
         Mult_HipDispersion = 5,
-        Mult_RPM = 1.3,
+        Mult_RPM = 1.2,
         -- Mult_BodyDamage = 
         -- {
         --     [HITGROUP_HEAD] = 2,
@@ -268,13 +267,6 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             { s = {pathSCAR .. "mech-01.ogg", pathSCAR .. "mech-02.ogg", pathSCAR .. "mech-03.ogg", pathSCAR .. "mech-04.ogg", pathSCAR .. "mech-05.ogg", pathSCAR .. "mech-06.ogg"}, t = 0, v = 0.25 }
-        },
-    },
-    ["fire_iron"] = {
-        Source = "fire",
-        ShellEjectAt = 0.01,
-        SoundTable = {
-            { s = {pathSCAR .. "mech-01.ogg", pathSCAR .. "mech-02.ogg", pathSCAR .. "mech-03.ogg", pathSCAR .. "mech-04.ogg", pathSCAR .. "mech-05.ogg", pathSCAR .. "mech-06.ogg"}, t = 0 }
         },
     },
     ["fire_empty"] = {

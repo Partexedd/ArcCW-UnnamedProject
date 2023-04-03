@@ -141,7 +141,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.78, -5, 1),
-     Ang = Angle(0, 0, 0),
+     Ang = Angle(0.4, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -258,7 +258,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
-        ShellEjectAt = 0.3,
+        ShellEjectAt = 3.3,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },

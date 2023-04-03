@@ -21,14 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CVM433" 
-SWEP.TrueName = "AK-105 Custom" 
+SWEP.PrintName = "AK-105"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "ak47"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "Kalashnikov"
 SWEP.Trivia_Calibre = "5.45x39mm Soviet"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "Russian Federation"
@@ -65,8 +64,8 @@ SWEP.PhysBulletMuzzleVelocity = 960
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,

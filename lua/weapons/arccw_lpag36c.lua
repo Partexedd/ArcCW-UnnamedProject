@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "DSaG-97C" 
-SWEP.TrueName = "G36C" 
+SWEP.PrintName = "G36C"
 
 -- Trivia --
 
@@ -81,7 +80,7 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -96,30 +95,11 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-        Override_ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.7,
-            [3] = 0.9,
-            [4] = 0.5,
-            [5] = 0.7,
-            [6] = 0.9,
-        },
-    },
-    {
-        Mode = -3,
-        PostBurstDelay = 0.05,
-        RunawayBurst = true,
-        Override_ShotRecoilTable = {
-            [1] = 0.2,
-            [2] = 0.2,
-            [3] = 0.2,
-            [4] = 0.2,
-        },
     },
 }
 
 SWEP.ShootPitch = 100
-SWEP.ShootVol = 80
+SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false

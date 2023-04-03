@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "XCAR" 
-SWEP.TrueName = "XCR-M" 
+SWEP.PrintName = "XCR-M"
 
 -- Trivia --
 
@@ -52,7 +51,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 40
+SWEP.Damage = 36
 SWEP.DamageMin = 22
 SWEP.Range = 100
 SWEP.Penetration = 34
@@ -64,13 +63,13 @@ SWEP.MuzzleVelocity = 650
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.,
-    [HITGROUP_STOMACH] = 0.9,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.3,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_LEFTLEG] = 0.95,
+    [HITGROUP_RIGHTLEG] = 0.95,
 }
 
 -- Mag size --
@@ -92,7 +91,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 750
+SWEP.Delay = 60 / 700
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
