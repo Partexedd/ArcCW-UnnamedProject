@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "AMF Chevalier" 
-SWEP.TrueName = "FAMAS Valorisé" 
+SWEP.PrintName = "FAMAS Valorisé"
 
 -- Trivia --
 

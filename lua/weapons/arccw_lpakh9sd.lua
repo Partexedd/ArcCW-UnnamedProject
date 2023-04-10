@@ -22,7 +22,6 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "KH9-SD" 
-SWEP.TrueName = "KH9-SD"
 
 -- Trivia --
 

@@ -21,14 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "XM979" 
-SWEP.TrueName = "M16/M203" 
+SWEP.PrintName = "M16 M203"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "It has grenade luncher :)"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Desc = "gread lacher"
+SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"

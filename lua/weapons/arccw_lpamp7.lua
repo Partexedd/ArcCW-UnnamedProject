@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "TWC6" 
-SWEP.TrueName = "MP7A1" 
+SWEP.PrintName = "MP7A1"
 
 -- Trivia --
 
@@ -30,9 +29,9 @@ SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Low calibre SMG designed to defeat armor"
 SWEP.Trivia_Manufacturer = "HK"
 SWEP.Trivia_Calibre = "4.6x30mm HK"
-SWEP.Trivia_Mechanism = "Blowback Operated, Open Bolt "
+SWEP.Trivia_Mechanism = "Gas-operated, short stroke piston"
 SWEP.Trivia_Country = "Germany"
-SWEP.Trivia_Year = 1944-1945
+SWEP.Trivia_Year = 1999
 
 -- Weapon slot --
 

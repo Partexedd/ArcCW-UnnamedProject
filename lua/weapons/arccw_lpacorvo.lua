@@ -21,16 +21,15 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Interfector"
-SWEP.TrueName = "Corvo V"
+SWEP.PrintName = "Corvo V"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = ""
+SWEP.Trivia_Desc = "big snoiber"
+SWEP.Trivia_Manufacturer = "Victrix Armaments"
 SWEP.Trivia_Calibre = ".50 BMG"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
+SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 2004
 

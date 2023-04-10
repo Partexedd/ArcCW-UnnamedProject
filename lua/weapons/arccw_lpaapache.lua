@@ -21,18 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "APACHE" 
-SWEP.TrueName = "Mk. 18 CQBR"
+SWEP.PrintName = "Mk. 18 MOD 1"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Class = "Carbine"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "Daniel Defense"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
+SWEP.Trivia_Mechanism = "Gas-operated, rotating bolt"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Year = 2000
 
 -- Weapon slot --
 

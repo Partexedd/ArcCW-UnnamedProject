@@ -21,16 +21,15 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "KCR" 
-SWEP.TrueName = "KAC SRR" 
+SWEP.PrintName = "SRR"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Sniper Rifle"
+SWEP.Trivia_Class = "Battle Carbine"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "7.62x51mm NATO"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
+SWEP.Trivia_Manufacturer = "KAC"
+SWEP.Trivia_Calibre = ".30 Caliber Telescoping"
+SWEP.Trivia_Mechanism = "Double-Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2004
 
@@ -66,7 +65,7 @@ SWEP.PhysBulletMuzzleVelocity = 400
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_CHEST] = 1.3,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -97,6 +96,7 @@ SWEP.Delay = 60 / 60
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
+        PrintName = "DOUBLE-ACTION",
         Mode = 2,
     },
 }

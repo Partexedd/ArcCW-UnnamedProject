@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SPMI" 
-SWEP.TrueName = "AWS" 
+SWEP.PrintName = "AWS"
 
 -- Trivia --
 

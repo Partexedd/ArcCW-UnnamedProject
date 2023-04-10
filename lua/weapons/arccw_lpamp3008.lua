@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "VMP" 
-SWEP.TrueName = "MP-3008" 
+SWEP.PrintName = "MP 3008"
 
 -- Trivia --
 

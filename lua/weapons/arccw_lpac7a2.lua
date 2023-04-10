@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "DR-508" 
-SWEP.TrueName = "C7A2" 
+SWEP.PrintName = "C7A2 (ELCAN)"
 
 -- Trivia --
 

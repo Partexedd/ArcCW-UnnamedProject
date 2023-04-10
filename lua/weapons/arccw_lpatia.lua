@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "TIA" 
+SWEP.PrintName = "CAR-15 Modified" 
 SWEP.TrueName = "CAR-15" 
 
 -- Trivia --

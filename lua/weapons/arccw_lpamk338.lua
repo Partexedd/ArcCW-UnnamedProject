@@ -21,14 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "MK338" 
-SWEP.TrueName = "MK-18 Mjölnir" 
+SWEP.PrintName = "Mk-18 Mjölnir"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "DMR"
 SWEP.Trivia_Desc = "needs balacing"
-SWEP.Trivia_Manufacturer = "BT"
+SWEP.Trivia_Manufacturer = "Sword International"
 SWEP.Trivia_Calibre = ".338 Lapua Magnum"
 SWEP.Trivia_Mechanism = "Short Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"

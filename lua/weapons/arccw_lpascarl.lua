@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SCAR-L" 
-SWEP.TrueName = "SCAR-L" 
+SWEP.PrintName = "SCAR-L (Custom)"
 
 -- Trivia --
 

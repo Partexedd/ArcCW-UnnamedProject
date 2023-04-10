@@ -21,18 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CSR338" 
-SWEP.TrueName = "CSR338" 
+SWEP.PrintName = "C14 Timberwolf"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "PGW Defence Technologies Ltd"
 SWEP.Trivia_Calibre = ".338 Lapua Magnum"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Mechanism = "Manually operated bolt action"
+SWEP.Trivia_Country = "Canada"
+SWEP.Trivia_Year = 2005
 
 -- Weapon slot --
 

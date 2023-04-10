@@ -21,14 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "GOLEM" 
-SWEP.TrueName = "GOLEM" 
+SWEP.PrintName = "Galil"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "weap"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "IMI"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
 SWEP.Trivia_Country = "Israel"

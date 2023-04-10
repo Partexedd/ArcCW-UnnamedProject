@@ -98,6 +98,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
+        PrintName = "HYPER-BURST",
         PostBurstDelay = 0.14,
         RunawayBurst = true,
         Mult_Recoil = 0.5,

@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "XHR308" 
-SWEP.TrueName = "XHR308" 
+SWEP.PrintName = "AR-10 (Custom)"
 
 -- Trivia --
 

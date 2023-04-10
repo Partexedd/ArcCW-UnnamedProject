@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "EPM" -- gib fake name 
-SWEP.TrueName = "EPM" -- gib fake name
+SWEP.PrintName = "GSH-18"
 
 -- Trivia --
 
@@ -30,7 +29,7 @@ SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "it is pistol"
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Blowback Operated, Open Bolt"
+SWEP.Trivia_Mechanism = "Short recoil, rotating barrel striker fired"
 SWEP.Trivia_Country = "Russian Federation"
 SWEP.Trivia_Year = 2000
 

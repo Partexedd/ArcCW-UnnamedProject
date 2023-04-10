@@ -96,6 +96,12 @@ SWEP.Firemodes = {
     {
         Mode = 2,
     },
+    {
+        Mode = -2,
+        PostBurstDelay = 0.11,
+        RunawayBurst = true,
+        Mult_Recoil = 0.5,
+    },
 }
 
 SWEP.ShootPitch = 100

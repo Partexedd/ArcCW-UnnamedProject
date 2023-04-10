@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "VIKHR" 
-SWEP.TrueName = "SR3M" 
+SWEP.PrintName = "SR3M"
 
 -- Trivia --
 
