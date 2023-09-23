@@ -21,12 +21,12 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SRR"
+SWEP.PrintName = "KAC SRR"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Battle Carbine"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "Literally called Silenced Revolver Rifle"
 SWEP.Trivia_Manufacturer = "KAC"
 SWEP.Trivia_Calibre = ".30 Caliber Telescoping"
 SWEP.Trivia_Mechanism = "Double-Action"
