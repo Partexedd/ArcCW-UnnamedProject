@@ -27,11 +27,11 @@ SWEP.PrintName = "AWS"
 
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
-SWEP.Trivia_Calibre = "7.62x51mm NATO"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Manufacturer = "Accuracy International"
+SWEP.Trivia_Calibre = ".300 Winchester Magnum"
+SWEP.Trivia_Mechanism = "Bolt-action"
+SWEP.Trivia_Country = "United Kingdom"
+SWEP.Trivia_Year = 1990
 
 -- Weapon slot --
 
@@ -51,8 +51,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 75
-SWEP.DamageMin = 56
+SWEP.Damage = 63
+SWEP.DamageMin = 37
 SWEP.Range = 100
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
@@ -64,8 +64,8 @@ SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_HEAD] = 3,
+    [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -82,8 +82,8 @@ SWEP.ReducedClipSize = 2
 
 -- Recoil --
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 1
+SWEP.Recoil = 0.7
+SWEP.RecoilSide = 0.7
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -100,8 +100,8 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ShootPitch = 90
-SWEP.ShootVol = 120
+SWEP.ShootPitch = 80
+SWEP.ShootVol = 80
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -147,7 +147,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.32, -3, 0.67),
+     Pos = Vector(-2.32, -3, 0.35),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -164,8 +164,8 @@ SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3, -6.5),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-4, 3, -4.5),
+    ang        =    Angle(-9, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -177,11 +177,11 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
 
-SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
-SWEP.DistantShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", pathXC .. "fire-dist-03.ogg", pathXC .. "fire-dist-04.ogg", pathXC .. "fire-dist-05.ogg", pathXC .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder -- Maybe Not Placeholder
+SWEP.ShootSound = "weapons/arccw/mp3008/sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.ShootSoundSilenced = "weapons/arccw/mp3008/sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.DistantShootSound = flase -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 60
 
 -- Bodygroups --
 
@@ -195,12 +195,6 @@ SWEP.AttachmentElements = {
 
     ["nois"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
     },
 }
 
@@ -406,7 +400,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.2, 3),
+            vpos = Vector(0, -0.45, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -416,12 +410,5 @@ SWEP.Attachments = {
         Slot = {"lpspmi_mag"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
         DefaultAttName = "5-Round 7.62x51mm NATO",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"lpspmi_skin"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

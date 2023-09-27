@@ -21,17 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "AR-10 (Custom)"
+SWEP.PrintName = "XHR-50"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Desc = "AR-10 custom in full auto"
+SWEP.Trivia_Manufacturer = "KA"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Country = "United States"
+SWEP.Trivia_Year = 2011
 
 -- Weapon slot --
 
@@ -363,7 +363,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.035, 0.1, 4),
+            vpos = Vector(0.035, -0.1, 4),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

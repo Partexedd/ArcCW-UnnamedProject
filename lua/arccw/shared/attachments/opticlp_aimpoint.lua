@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/aimpoint.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 13, -1),
+        Pos = Vector(0, 10, -1),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_NONE
@@ -24,9 +24,9 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/reticles/uc_reddot.png", "mips smooth")
+att.HolosightReticle = Material("hud/reticles/dot.png", "mips smooth")
 att.HolosightPiece = "models/weapons/arccw/atts/aimpoint_hsp.mdl"
 att.HolosightNoFlare = true
-att.HolosightSize = 1.5
+att.HolosightSize = 0.5
 att.HolosightBone = "holosight"
 att.Colorable = true

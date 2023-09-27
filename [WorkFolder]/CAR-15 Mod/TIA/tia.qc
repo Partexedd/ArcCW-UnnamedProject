@@ -4,6 +4,11 @@ $bodygroup "studio" {
 	studio "tia.smd"
 }
 
+$bodygroup "1" {
+	blank
+	studio "sightrail.smd"
+}
+
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0

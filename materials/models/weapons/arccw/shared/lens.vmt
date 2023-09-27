@@ -1,8 +1,6 @@
-"VertexlitGeneric"
+VertexLitGeneric
 {
-   "$basetexture"   "models/UC/attachments/uc_glass"
-	"$nodecal" "1"
-	"$translucent" 1
-
-
+	"$basetexture"	"models\weapons\arccw\shared\lens"
+	"$nocull" "1"
+	"$translucent" "1"
 }

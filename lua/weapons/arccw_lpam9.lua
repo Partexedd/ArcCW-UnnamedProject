@@ -15,7 +15,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 5
+SWEP.TracerNum = 1
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -118,7 +118,6 @@ SWEP.HipDispersion = 150
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.MagID = "mp3008"
 
 -- Speed mult --
 
@@ -263,49 +262,6 @@ SWEP.Animations = {
             { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
             { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
             { s = path .. "cloth.ogg", t = 19 / 30, c = ca, v = 0.8 },
-        },
-    },
-
-    -- 32-R Reloads --
-
-    ["reload_32"] = {
-        Source = "reload_32",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Framerate = 30,
-        Time = 34 / 30,
-        MinProgress = 0.2,
-        LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
-        MinProgress = 1,
-        SoundTable = {
-            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
-        },
-    },
-    ["reload_empty_32"] = {
-        Source = "reload_empty_32",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Framerate = 30,
-        Time = 36 / 30,
-        MinProgress = 0,
-        LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
-        SoundTable = {
-            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
         },
     },
     

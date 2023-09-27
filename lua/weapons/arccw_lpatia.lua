@@ -21,8 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CAR-15 Modified" 
-SWEP.TrueName = "CAR-15" 
+SWEP.PrintName = "CAR-15 (Mod)"
 
 -- Trivia --
 
@@ -64,7 +63,7 @@ SWEP.MuzzleVelocity = 800
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.8,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
@@ -154,7 +153,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.24, -3, 0.3),
-     Ang = Angle(1, 0, 0),
+     Ang = Angle(0.3, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -194,15 +193,6 @@ SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
-}
-
-SWEP.AttachmentElements = {
-
-    -- Skins --
-
-    ["skin_black"] = {
-        VMSkin = 1,
-    },
 }
 
 -- Animations --
@@ -349,6 +339,12 @@ end
 
 -- Attachments --
 
+SWEP.AttachmentElements = {
+    ["sightRail"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+}
+
 SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
@@ -357,11 +353,13 @@ SWEP.Attachments = {
         Slot = {"lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
+        Hidden = true,
         Offset = {
-            vpos = Vector(0.035, -2.2, 3),
+            vpos = Vector(0.035, -2.1, 3),
             vang = Angle(90, 0, -90),
         },
-        --Installed = "opticlp_aimpoint"
+        InstalledEles = {"sightRail"},
+        Installed = "opticlp_aimpoint"
     },
     {
         PrintName = "Muzzle",
@@ -372,18 +370,6 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -2.5),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Stock",
-        Slot = {"lpc7a2_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock"
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpc7a2_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "30-Round 5.56x45mm",
     },
     {
         PrintName = "Skins",

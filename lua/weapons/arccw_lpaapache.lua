@@ -342,6 +342,15 @@ end
 
 -- Attachments --
 
+SWEP.Lasers = 
+{
+    {
+        LaserStrength = 1,
+        LaserBone = "laser",
+        Color = Color(255, 0, 0)
+    }
+}
+
 SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
@@ -351,7 +360,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.03, -0.1, 2),
+            vpos = Vector(0.03, -0.2, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
