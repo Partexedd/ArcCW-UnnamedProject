@@ -81,6 +81,7 @@ SWEP.Primary.ClipSize = 30
 -- Recoil --
 
 SWEP.Recoil = 0.6
+SWEP.RecoilDirection = Angle(1, 0.2, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -336,7 +337,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -2, 0),
+            vpos = Vector(0, -2.2, 0),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

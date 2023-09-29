@@ -68,6 +68,7 @@ SWEP.Primary.ClipSize = 30
 -- Recoil --
 
 SWEP.Recoil = 0.5
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
