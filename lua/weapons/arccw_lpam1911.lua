@@ -21,14 +21,14 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "M1911"
+SWEP.PrintName = "M1911A1"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "Colt"
-SWEP.Trivia_Calibre = "9x19mm Parabellum"
+SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short recoil"
 SWEP.Trivia_Country = "United States, Italy"
 SWEP.Trivia_Year = 1985
@@ -59,6 +59,7 @@ SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 253
+SWEP.PhysBulletMuzzleVelocity = 253
 
 -- slight tomfoolery --
 
@@ -81,6 +82,7 @@ SWEP.Primary.ClipSize = 7
 -- Recoil --
 
 SWEP.Recoil = 1
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -98,7 +100,7 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ShootPitch = 90
+SWEP.ShootPitch = 87
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
@@ -165,10 +167,11 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw/gsh18/"
 local path9 = "weapons/arccw/glock/"
+local pathF = "weapons/arccw/1911/"
 
-SWEP.ShootSound = {path9 .. "fire-01.ogg", path9 .. "fire-02.ogg", path9 .. "fire-03.ogg", path9 .. "fire-04.ogg", path9 .. "fire-05.ogg", path9 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = pathF .. "fire.ogg" -- ph
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
-SWEP.DistantShootSound = {path9 .. "fire-dist-01.ogg", path9 .. "fire-dist-02.ogg", path9 .. "fire-dist-03.ogg", path9 .. "fire-dist-04.ogg", path9 .. "fire-dist-05.ogg", path9 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = pathF .. "dist.ogg" -- ph
 
 -- Bodygroups --
 
@@ -179,6 +182,10 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
+    ["tir"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        VMSkin = 1,
+    },
 }
 
 -- Animations --
@@ -195,7 +202,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        Time = 40 / 30,
+        Time = 35 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -333,7 +340,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lpm1911_is"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {
@@ -343,13 +350,13 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Barrel",
+        DefaultAttName = "Threaded Barrel",
         Slot = {"lowpoly_muzzle"},
     },
     {
         PrintName = "Pose",
-        Slot = {"lpgsh18_pose"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
+        Slot = {"lppistol_pose"},
         DefaultAttName = "Default Pose",
+        FreeSlot = true,
     },
 }

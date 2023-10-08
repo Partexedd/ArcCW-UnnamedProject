@@ -53,12 +53,26 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 32
-SWEP.DamageMin = 20
-SWEP.Range = 75
+SWEP.DamageMin = 14
+SWEP.Range = 40
 SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 550
+SWEP.PhysBulletMuzzleVelocity = 550
+
+-- slight tomfoolery --
+
+SWEP.BodyDamageMults = 
+{
+    [HITGROUP_HEAD] = 1.3,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.85,
+    [HITGROUP_RIGHTLEG] = 0.85,
+}
 
 -- Mag size --
 
@@ -69,7 +83,7 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.45
 SWEP.RecoilDirection = Angle(1, -0.5, 0)
 SWEP.RecoilSide = 0.2
 
@@ -178,16 +192,12 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["sawnoffirons"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+    ["nois"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
 
-    ["intsupp"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    ["solidstock"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+    ["extstock"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
     },
 }
 
@@ -304,20 +314,21 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpmp3008_irons"},
+        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
 		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "Iron Sights",
+        Offset = {
+            vpos = Vector(0, 0, -1.5),
+            vang = Angle(90, 0, -90),
+        },
         Bone = "Body",
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Vent",
-        Slot = {"lpmp3008_muzzle"},
+        InstalledEles = {"nois"},
     },
     {
         PrintName = "Stock",
         Slot = {"lpkh9sd_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Skeleton Stock",
+		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
+        DefaultAttName = "No stock",
+        Bone = "Body",
     },
 }

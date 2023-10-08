@@ -83,6 +83,7 @@ SWEP.ReducedClipSize = 2
 -- Recoil --
 
 SWEP.Recoil = 1
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0
@@ -176,9 +177,9 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
 
-SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
-SWEP.DistantShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", pathXC .. "fire-dist-03.ogg", pathXC .. "fire-dist-04.ogg", pathXC .. "fire-dist-05.ogg", pathXC .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder -- Maybe Not Placeholder
+SWEP.ShootSound = path .. "sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.ShootSoundSilenced = false
+SWEP.DistantShootSound = false
 
 SWEP.ShootPitch = 80
 
@@ -387,19 +388,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.4, 2),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpspmi_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "5-Round 7.62x51mm NATO",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"lpspmi_skin"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

@@ -59,6 +59,7 @@ SWEP.Penetration = 22
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 900
+SWEP.PhysBulletMuzzleVelocity = 900
 
 -- slight tomfoolery --
 
@@ -99,10 +100,10 @@ SWEP.Firemodes = {
         Mode = 2,
         Override_ShotRecoilTable = {
             [1] = 0.5,
-            [2] = 0.7,
-            [3] = 0.9,
-            [4] = 0.5,
-            [5] = 0.7,
+            [2] = 0.6,
+            [3] = 0.6,
+            [4] = 0.7,
+            [5] = 0.8,
             [6] = 0.9,
         },
     },

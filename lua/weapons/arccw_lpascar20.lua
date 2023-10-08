@@ -51,20 +51,21 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 48
+SWEP.Damage = 52
 SWEP.DamageMin = 32
 SWEP.Range = 200
 SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 750
+SWEP.PhysBulletMuzzleVelocity = 750
 
 -- miniscule tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 4,
-    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_CHEST] = 1.1,
     [HITGROUP_STOMACH] = 0.9,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -82,6 +83,7 @@ SWEP.ReducedClipSize = 5
 -- Recoil --
 
 SWEP.Recoil = 1
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.22
 
 SWEP.RecoilRise = 0
@@ -383,12 +385,6 @@ SWEP.Attachments = {
         InstalledEles = {"nois"},
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpscar_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"lowpoly_muzzle"},
@@ -407,33 +403,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 2.5, 13),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Grip",
-        Slot = {"lpscar20_grip"},
-        DefaultAttName = "A2 Grip",
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpxcr_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

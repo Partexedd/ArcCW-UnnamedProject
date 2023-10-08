@@ -59,6 +59,7 @@ SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 535
+SWEP.PhysBulletMuzzleVelocity = 535
 
 -- slight tomfoolery --
 
@@ -83,6 +84,7 @@ SWEP.ReducedClipSize = 16
 -- Recoil --
 
 SWEP.Recoil = 0.6
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -411,11 +413,12 @@ SWEP.Attachments = {
         PrintName = "Mag",
         DefaultAttName = "18-Round 9mm AP",
         Slot = {"lpgsh18_mag"},
+        FreeSlot = true,
     },
     {
         PrintName = "Pose",
-        Slot = {"lpgsh18_pose"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
+        Slot = {"lppistol_pose"},
         DefaultAttName = "Default Pose",
+        FreeSlot = true,
     },
 }

@@ -21,17 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "M16 M203"
+SWEP.PrintName = "M16A1 M203"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "gread lacher"
-SWEP.Trivia_Manufacturer = "Colt"
-SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
+SWEP.Trivia_Manufacturer = "ColtColt's Manufacturing Company"
+SWEP.Trivia_Calibre = "5.56x45mm NATO / 40×46mm SR"
+SWEP.Trivia_Mechanism = "Gas-operated, closed rotating bolt"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Year = 1967
 
 -- Weapon slot --
 
@@ -91,7 +91,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 800
+SWEP.Delay = 60 / 750
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

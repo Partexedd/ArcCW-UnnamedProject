@@ -22,7 +22,6 @@ SWEP.TracerWidth = 1
 -- Name --
 
 SWEP.PrintName = "CSP9 MK1"
-SWEP.TrueName = "CSP9 MK1"
 
 -- Trivia --
 
@@ -54,12 +53,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 -- Damage parameters --
 
 SWEP.Damage = 29
-SWEP.DamageMin = 22
-SWEP.Range = 50
+SWEP.DamageMin = 14
+SWEP.Range = 30
 SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 535
+SWEP.PhysBulletMuzzleVelocity = 535
 
 -- slight tomfoolery --
 
@@ -84,6 +84,7 @@ SWEP.ReducedClipSize = 16
 -- Recoil --
 
 SWEP.Recoil = 1
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0

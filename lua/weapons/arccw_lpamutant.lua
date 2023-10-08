@@ -26,7 +26,7 @@ SWEP.PrintName = "Mk47 Mutant"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "tremendo mutante"
+SWEP.Trivia_Desc = "mutante"
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "7.62x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
@@ -52,21 +52,22 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 35
-SWEP.DamageMin = 20
+SWEP.Damage = 33
+SWEP.DamageMin = 18
 SWEP.Range = 100
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 719
+SWEP.PhysBulletMuzzleVelocity = 719
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_HEAD] = 1.7,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1.4,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -83,7 +84,7 @@ SWEP.ReducedClipSize = 10
 -- Recoil --
 
 SWEP.Recoil = 1
-SWEP.RecoilDirection = Angle(1, 0.4, 0)
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0

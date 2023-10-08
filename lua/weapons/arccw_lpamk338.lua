@@ -53,24 +53,25 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 100
-SWEP.DamageMin = 95
+SWEP.DamageMin = 79
 SWEP.Range = 100
 SWEP.Penetration = 44
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 940
+SWEP.PhysBulletMuzzleVelocity = 940
 
 -- miniscule tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.02,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.97,
-    [HITGROUP_RIGHTARM] = 0.97,
-    [HITGROUP_LEFTLEG] = 0.94,
-    [HITGROUP_RIGHTLEG] = 0.94,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 0.6,
+    [HITGROUP_LEFTARM] = 0.5,
+    [HITGROUP_RIGHTARM] = 0.5,
+    [HITGROUP_LEFTLEG] = 0.4,
+    [HITGROUP_RIGHTLEG] = 0.4,
 }
 
 -- Mag size --
@@ -83,6 +84,7 @@ SWEP.ReducedClipSize = 7
 -- Recoil --
 
 SWEP.Recoil = 2.5
+SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 1.5
 
 SWEP.RecoilRise = 0
@@ -332,7 +334,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.05, -0.5, 5),
+            vpos = Vector(-0.085, -0.6, 5),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -356,27 +358,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.8, 15),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpmk338_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "10-Round .338 Lapua Magnum",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

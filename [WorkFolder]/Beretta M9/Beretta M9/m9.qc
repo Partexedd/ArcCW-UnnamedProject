@@ -8,6 +8,11 @@ $bodygroup "1" {
 	studio "tir.smd"
 }
 
+$texturegroup "skinfamilies"
+{
+	{ "m9" }
+	{ "m1911c" }
+}
 
 $cdmaterials "models\weapons\arccw\shared"
 

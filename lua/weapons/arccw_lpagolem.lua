@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Galil"
+SWEP.PrintName = "IMI Galil"
 
 -- Trivia --
 
@@ -52,20 +52,21 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 39
+SWEP.Damage = 40
 SWEP.DamageMin = 27
 SWEP.Range = 100
 SWEP.Penetration = 33
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 719
+SWEP.PhysBulletMuzzleVelocity = 719
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.7,
-    [HITGROUP_CHEST] = 1.35,
+    [HITGROUP_HEAD] = 2.4,
+    [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -82,7 +83,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 1.6
+SWEP.Recoil = 1.4
 SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.3
 

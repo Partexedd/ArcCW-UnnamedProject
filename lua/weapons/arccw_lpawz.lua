@@ -58,7 +58,7 @@ SWEP.Range = 100
 SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.PhysBulletMuzzleVelocity = 960
+SWEP.PhysBulletMuzzleVelocity = 900
 
 -- slight tomfoolery --
 
@@ -326,21 +326,5 @@ SWEP.Attachments = {
             vpos = Vector(0.048, 0.2, 11),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

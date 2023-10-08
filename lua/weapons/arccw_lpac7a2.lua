@@ -58,7 +58,8 @@ SWEP.Range = 100
 SWEP.Penetration = 26
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 800
+SWEP.MuzzleVelocity = 950
+SWEP.PhysBulletMuzzleVelocity = 950
 
 -- slight tomfoolery --
 
@@ -83,6 +84,7 @@ SWEP.ReducedClipSize = 10
 -- Recoil --
 
 SWEP.Recoil = 0.2
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
@@ -430,18 +432,6 @@ SWEP.Attachments = {
 		ExcludeFlags = {"45acp","modernframe"},
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpc7a2_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -2.5),
-            vang = Angle(90, 0, -90),
-        },
-		ExcludeFlags = {"45acp"},
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"lowpoly_muzzle"},
@@ -450,44 +440,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -2.5),
             vang = Angle(90, 0, -90),
         },
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.2, 11),
-            vang = Angle(90, 0, -90),
-        },
-		IncludeFlags = {"45acp"},
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
-		IncludeFlags = {"45acp"},
-    },
-    {
-        PrintName = "Stock",
-        Slot = {"lpc7a2_stock"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
-        DefaultAttName = "Solid Stock"
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpc7a2_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "30-Round 5.56x45mm",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Green",
-        FreeSlot = true,
     },
 }

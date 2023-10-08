@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Beretta M9"
+SWEP.PrintName = "Beretta M92FS"
 
 -- Trivia --
 
@@ -59,6 +59,7 @@ SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 535
+SWEP.PhysBulletMuzzleVelocity = 535
 
 -- slight tomfoolery --
 
@@ -81,6 +82,7 @@ SWEP.Primary.ClipSize = 17
 -- Recoil --
 
 SWEP.Recoil = 0.5
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -181,6 +183,9 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
+    ["pg"] = {
+        VMSkin = 1,
+    },
 }
 
 -- Animations --
@@ -346,17 +351,19 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "Barrel",
-        Slot = {"lpgsh18_barrel"},
-    },
-    {
-        PrintName = "Mag",
-        DefaultAttName = "18-Round 9mm AP",
-        Slot = {"lpgsh18_mag"},
+        Slot = {"lowpoly_muzzle"},
     },
     {
         PrintName = "Pose",
-        Slot = {"lpgsh18_pose"},
+        Slot = {"lppistol_pose"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
         DefaultAttName = "Default Pose",
+        FreeSlot = true,
+    },
+    {
+        PrintName = "Skins",
+        DefaultAttName = "Wooden Grip",
+        Slot = {"lpm9_skin"},
+        FreeSlot = true,
     },
 }

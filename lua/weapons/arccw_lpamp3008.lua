@@ -59,6 +59,7 @@ SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 365
+SWEP.PhysBulletMuzzleVelocity = 365
 
 -- Mag size --
 
@@ -70,6 +71,7 @@ SWEP.ReducedClipSize = 16
 -- Recoil --
 
 SWEP.Recoil = 0.4
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.4
 
 SWEP.RecoilRise = 0

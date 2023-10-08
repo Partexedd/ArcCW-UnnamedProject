@@ -1,0 +1,15 @@
+"UnlitGeneric"
+{
+		"$basetexture"	"models/weapons/arccw/shared/sg_tir"
+		$nocull 1
+		$selfilum 1
+		"$blendtintbybasealpha" "1"
+		"$blendtintcoloroverbase" "0"
+	Proxies
+	{
+		hsc
+		{
+		default 0 0 0
+		}
+	}
+}

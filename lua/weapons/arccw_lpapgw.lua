@@ -59,6 +59,7 @@ SWEP.Penetration = 50
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 823
+SWEP.PhysBulletMuzzleVelocity = 823
 
 -- slight tomfoolery --
 
@@ -83,6 +84,7 @@ SWEP.ReducedClipSize = 2
 -- Recoil --
 
 SWEP.Recoil = 3
+SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0
@@ -385,33 +387,6 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
     },
-
-    ["enter_inspect_empty"] = {
-        Source = "enter_inspect_empty",
-        time = 10 / 30,
-        Framerate = 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0,
-    },
-    ["idle_inspect_empty"] = {
-        Source = "idle_inspect_empty",
-        time = 120 / 30,
-        Framerate = 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
-    },
-    ["exit_inspect_empty"] = {
-        Source = "exit_inspect_empty",
-        time = 20 / 30,
-        Framerate = 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
-    },
 }
 
 -- FESIUG MY BELOVED --
@@ -427,17 +402,6 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        DefaultAttName = "Iron Sights",
-        MergeSlots = {1,3},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpxcr_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
-    },
-    {
-        PrintName = "Optic",
         Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
@@ -446,7 +410,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
-        Hidden = true,
     },
     {
         PrintName = "Muzzle",
@@ -476,18 +439,5 @@ SWEP.Attachments = {
             vpos = Vector(0, -1, 16),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"lpxcr_mag"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416defmag.png"),
-        DefaultAttName = "20-Round .308 Win",
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
     },
 }

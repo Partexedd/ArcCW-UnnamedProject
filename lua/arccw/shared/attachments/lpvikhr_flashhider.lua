@@ -1,23 +1,21 @@
-att.PrintName = "Flash Hider"
+att.PrintName = "Unsuppressed"
 att.Icon = Material("entities/att/acwatt_lpm249_commandohandguard.png", "smooth")
-att.Description = "Removes the suppressor ok"
-att.Desc_Pros = {
-}
+att.Description = "Removes the standard suppressor"
 att.Desc_Cons = {
+    "+40% Weapon Volume"
 }
+att.Desc_Neutrals = {
+    "Cosmetic with negatives"
+}
+
 att.Slot = "lpvikhr_muzzle"
 
-att.AutoStats = true
+att.AutoStats = false
 att.SortOrder = -3
-
-att.Mult_Recoil = 0.8
-att.Mult_SightTime = 0.5
-att.Mult_HipDispersion = 2
-att.Mult_MoveDispersion = 2
-att.Mult_Range = 0.95
 
 att.Override_MuzzleEffectAttachment = 4
 
-att.Silencer = false
+att.Silencer = true
+att.Mult_ShootVol = 1.4
 
 att.ActivateElements = {"fh"}

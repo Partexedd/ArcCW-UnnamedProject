@@ -26,7 +26,7 @@ SWEP.PrintName = "MP7A1"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Low calibre SMG designed to defeat armor"
+SWEP.Trivia_Desc = "Low calibre SMG designed to use AP ammo"
 SWEP.Trivia_Manufacturer = "HK"
 SWEP.Trivia_Calibre = "4.6x30mm HK"
 SWEP.Trivia_Mechanism = "Gas-operated, short stroke piston"
@@ -52,18 +52,32 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 22
-SWEP.DamageMin = 18
-SWEP.Range = 100
+SWEP.Damage = 18
+SWEP.DamageMin = 12
+SWEP.Range = 70
 SWEP.Penetration = 28
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 735
+SWEP.PhysBulletMuzzleVelocity = 735
+
+-- miniscule tomfoolery --
+
+SWEP.BodyDamageMults = 
+{
+    [HITGROUP_HEAD] = 1.7,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
+}
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 30
+SWEP.Primary.ClipSize = 40
 
 -- Recoil --
 

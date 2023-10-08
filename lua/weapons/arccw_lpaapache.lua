@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Mk. 18 MOD 1"
+SWEP.PrintName = "APACHE Mk. 18"
 
 -- Trivia --
 
@@ -52,21 +52,22 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
 
-SWEP.Damage = 27
+SWEP.Damage = 26
 SWEP.DamageMin = 18
 SWEP.Range = 100
 SWEP.Penetration = 26
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 800
+SWEP.PhysBulletMuzzleVelocity = 800
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.95,
+    [HITGROUP_HEAD] = 1.8,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 0.9,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -83,6 +84,7 @@ SWEP.ReducedClipSize = 10
 -- Recoil --
 
 SWEP.Recoil = 0.7
+SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -341,15 +343,6 @@ SWEP.Hook_Think = function(wep)
 end
 
 -- Attachments --
-
-SWEP.Lasers = 
-{
-    {
-        LaserStrength = 1,
-        LaserBone = "laser",
-        Color = Color(255, 0, 0)
-    }
-}
 
 SWEP.AutosolveSourceSeq = "ref"
 

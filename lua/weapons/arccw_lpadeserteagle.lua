@@ -53,19 +53,20 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 52
-SWEP.DamageMin = 23
+SWEP.DamageMin = 16
 SWEP.Range = 40
 SWEP.Penetration = 24
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 470
+SWEP.PhysBulletMuzzleVelocity = 470
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_HEAD] = 2.3,
+    [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1.25,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -80,7 +81,8 @@ SWEP.Primary.ClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 4
+SWEP.Recoil = 2.5
+SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -340,8 +342,10 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "Barrel",
-        Slot = {"lpgsh18_barrel"},
+        PrintName = "Skins",
+        PrintName = "Skin",
+        Slot = {"lowpoly_skin_deagle"},
+        DefaultAttName = "Silver",
+        FreeSlot = true,
     },
 }

@@ -52,19 +52,20 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
-SWEP.Damage = 26
-SWEP.DamageMin = 18
+SWEP.Damage = 25
+SWEP.DamageMin = 20
 SWEP.Range = 100
 SWEP.Penetration = 24
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 775
+SWEP.PhysBulletMuzzleVelocity = 775
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.9,
     [HITGROUP_CHEST] = 1.15,
     [HITGROUP_STOMACH] = 1.15,
     [HITGROUP_LEFTARM] = 0.9,
@@ -80,7 +81,8 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.75
+SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.15
 
 SWEP.RecoilRise = 0
@@ -338,7 +340,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -2, 0),
+            vpos = Vector(-0.04, -0.45, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

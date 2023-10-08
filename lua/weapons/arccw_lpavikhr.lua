@@ -21,17 +21,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SR3M"
+SWEP.PrintName = "SR-3 Vikhr"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "First 4 bullets have less recoil"
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "9x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas operated, Rotating bolt"
 SWEP.Trivia_Country = "Russian Federation"
-SWEP.Trivia_Year = 1996
+SWEP.Trivia_Year = 1995
 
 -- Weapon slot --
 
@@ -52,20 +52,21 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 -- Damage parameters --
 
 SWEP.Damage = 39
-SWEP.DamageMin = 14
+SWEP.DamageMin = 20
 SWEP.Range = 40
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 310
+SWEP.MuzzleVelocity = 295
+SWEP.PhysBulletMuzzleVelocity = 295
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.25,
-    [HITGROUP_CHEST] = 1.15,
-    [HITGROUP_STOMACH] = 1.15,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.85,
     [HITGROUP_RIGHTARM] = 0.85,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -82,12 +83,13 @@ SWEP.ReducedClipSize = 10
 -- Recoil --
 
 SWEP.Recoil = 1.1
+SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -97,9 +99,12 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.85,
-            [2] = 0.9,
-            [3] = 0.95,
+            [1] = 0.3,
+            [2] = 0.6,
+            [3] = 0.7,
+            [4] = 0.7,
+            [5] = 0.7,
+            [6] = 0.9,
         },
     },
     {
@@ -188,8 +193,8 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathVKR = "weapons/arccw/vikhr/"
 
-SWEP.ShootSound = {path556 .. "fire-01.ogg", path556 .. "fire-02.ogg", path556 .. "fire-03.ogg", path556 .. "fire-04.ogg", path556 .. "fire-05.ogg", path556 .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSoundSilenced = {path556 .. "fire-01.ogg", path556 .. "fire-02.ogg", path556 .. "fire-03.ogg", path556 .. "fire-04.ogg", path556 .. "fire-05.ogg", path556 .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.DistantShootSound = nil --subsonic
 
 SWEP.ShootPitchVariation = 0

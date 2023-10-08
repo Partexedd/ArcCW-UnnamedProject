@@ -59,6 +59,7 @@ SWEP.Penetration = 10
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 351
+SWEP.PhysBulletMuzzleVelocity = 351
 
 -- slight tomfoolery --
 
@@ -117,11 +118,10 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 15
-SWEP.HipDispersion = 300
+SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
 
-SWEP.Primary.Ammo = "SniperPenetratedRound"
-SWEP.MagID = "pgm"
+SWEP.Primary.Ammo = "buckshot"
 
 -- Speed mult --
 
