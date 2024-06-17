@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SG 552"
+SWEP.PrintName = "SIG SG 552"
 
 -- Trivia --
 
@@ -87,7 +87,7 @@ SWEP.RecoilSide = 0.16
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.3
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -125,8 +125,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 450
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"

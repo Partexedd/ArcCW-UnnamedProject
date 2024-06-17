@@ -21,13 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "SCAR-20S"
+SWEP.PrintName = "FN SCAR-20S"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "DMR"
 SWEP.Trivia_Desc = "cum, pee poo"
-SWEP.Trivia_Manufacturer = "BT"
+SWEP.Trivia_Manufacturer = "FN"
 SWEP.Trivia_Calibre = "6.5 Creedmoor"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
@@ -64,7 +64,7 @@ SWEP.PhysBulletMuzzleVelocity = 750
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 4,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1.1,
     [HITGROUP_STOMACH] = 0.9,
     [HITGROUP_LEFTARM] = 0.9,
@@ -101,8 +101,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = 2,
-        Mult_Recoil = 2,
-        Mult_HipDispersion = 5,
+        Mult_HipDispersion = 3,
         Mult_RPM = 1.2,
         -- Mult_BodyDamage = 
         -- {

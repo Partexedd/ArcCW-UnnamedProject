@@ -81,8 +81,8 @@ SWEP.Primary.ClipSize = 1
 
 -- Recoil --
 
-SWEP.Recoil = 3
-SWEP.RecoilDirection = Angle(1, 0.4, 0)
+SWEP.Recoil = 4
+SWEP.RecoilDirection = Angle(1, 0.7, 0)
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0
@@ -118,15 +118,16 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
+SWEP.CrouchDispersion = -550
 SWEP.JumpDispersion = 0
 
-SWEP.Primary.Ammo = "SniperPenetratedRound"
+SWEP.Primary.Ammo = "357"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.2
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.28
 
 -- Gun length --
 

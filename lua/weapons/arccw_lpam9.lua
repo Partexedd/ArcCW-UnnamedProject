@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Beretta M92FS"
+SWEP.PrintName = "Beretta 92FS"
 
 -- Trivia --
 
@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 28
-SWEP.DamageMin = 22
+SWEP.DamageMin = 17
 SWEP.Range = 40
 SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
@@ -70,8 +70,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --
@@ -86,7 +86,7 @@ SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 1
+SWEP.VisualRecoilMult = 0.1
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilPunch = 0.1
 

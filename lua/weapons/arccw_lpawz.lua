@@ -27,7 +27,7 @@ SWEP.PrintName = "wz.88 Tantal"
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Polish assault rifle"
-SWEP.Trivia_Manufacturer = "Kalashnikov"
+SWEP.Trivia_Manufacturer = "FB Radom"
 SWEP.Trivia_Calibre = "5.45x39mm Soviet"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "Poland"

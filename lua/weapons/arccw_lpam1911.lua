@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "M1911A1"
+SWEP.PrintName = "Colt M1911A1"
 
 -- Trivia --
 
@@ -92,7 +92,7 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 400
+SWEP.Delay = 60 / 410
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -116,8 +116,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 150
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 200
+SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "pistol"
 

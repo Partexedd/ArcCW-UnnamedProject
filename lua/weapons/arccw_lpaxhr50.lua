@@ -27,7 +27,7 @@ SWEP.PrintName = "XHR-50"
 
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "AR-10 custom in full auto"
-SWEP.Trivia_Manufacturer = "KA"
+SWEP.Trivia_Manufacturer = "LP Arms"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "United States"
@@ -123,8 +123,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "ar2"

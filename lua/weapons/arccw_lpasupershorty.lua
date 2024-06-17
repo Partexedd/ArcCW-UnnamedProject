@@ -21,12 +21,12 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Super-shorty"
+SWEP.PrintName = "Serbu Super-shorty"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "(WIP)"
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "Serbu Firearms"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Pump action"
@@ -52,7 +52,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 38
+SWEP.Damage = 30
 SWEP.DamageMin = 3
 SWEP.Range = 30
 SWEP.Penetration = 10
@@ -71,7 +71,7 @@ SWEP.BodyDamageMults =
     [HITGROUP_LEFTARM] = 0.4,
     [HITGROUP_RIGHTARM] = 0.4,
     [HITGROUP_LEFTLEG] = 0.7,
-    [HITGROUP_RIGHTLEG] = 0.5,
+    [HITGROUP_RIGHTLEG] = 0.7,
 }
 
 -- Mag size --
@@ -96,6 +96,7 @@ SWEP.Delay = 60 / 60
 SWEP.Num = 6
 SWEP.Firemodes = {
     {
+        PrintName = "Pump-Action",
         Mode = 2,
     },
 }

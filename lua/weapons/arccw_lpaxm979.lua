@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "M16A1 M203"
+SWEP.PrintName = "Colt M16A1 Grenadier"
 
 -- Trivia --
 
@@ -51,7 +51,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
 
-SWEP.Damage = 27
+SWEP.Damage = 25
 SWEP.DamageMin = 18
 SWEP.Range = 100
 SWEP.Penetration = 26
@@ -63,9 +63,9 @@ SWEP.MuzzleVelocity = 800
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.95,
+    [HITGROUP_HEAD] = 1.8,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 0.9,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -76,8 +76,6 @@ SWEP.BodyDamageMults =
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 20
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
@@ -91,7 +89,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 750
+SWEP.Delay = 60 / 733
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

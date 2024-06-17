@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 52
-SWEP.DamageMin = 16
+SWEP.DamageMin = 19
 SWEP.Range = 40
 SWEP.Penetration = 24
 SWEP.DamageType = DMG_BULLET
@@ -92,7 +92,7 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 400
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

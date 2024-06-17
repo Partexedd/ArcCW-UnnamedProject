@@ -21,13 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "G36C"
+SWEP.PrintName = "HK G36C"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "how do i balance this one"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Desc = ""
+SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas operated, Rotating bolt"
 SWEP.Trivia_Country = "Germany"
@@ -122,8 +122,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"

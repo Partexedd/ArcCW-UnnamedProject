@@ -27,7 +27,7 @@ SWEP.PrintName = "SR-3 Vikhr"
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "Tula Arms Plant"
 SWEP.Trivia_Calibre = "9x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas operated, Rotating bolt"
 SWEP.Trivia_Country = "Russian Federation"

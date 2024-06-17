@@ -118,8 +118,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 2000
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 800
+SWEP.MoveDispersion = 1200
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"

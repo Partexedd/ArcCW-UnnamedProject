@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "CAR-15 (Mod)"
+SWEP.PrintName = "Colt CAR-15 (Mod)"
 
 -- Trivia --
 
@@ -125,8 +125,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 450
+SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"

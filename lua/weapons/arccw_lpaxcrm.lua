@@ -27,7 +27,7 @@ SWEP.PrintName = "XCR-M"
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "Robinson Armament"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
@@ -123,8 +123,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "ar2"

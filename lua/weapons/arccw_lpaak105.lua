@@ -124,12 +124,10 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 250
-SWEP.MoveDispersion = 50
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 550
+SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "smg1"
-SWEP.MagID = "xcr"
 
 -- Speed mult --
 

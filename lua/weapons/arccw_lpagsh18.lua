@@ -52,8 +52,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
-SWEP.DamageMin = 19
+SWEP.Damage = 28
+SWEP.DamageMin = 17
 SWEP.Range = 40
 SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
@@ -70,8 +70,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --
@@ -141,8 +141,8 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 0, 1.2),
-     Ang = Angle(-0.5, 0, 0),
+     Pos = Vector(-1.92, 0, 1.18),
+     Ang = Angle(-0.6, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }

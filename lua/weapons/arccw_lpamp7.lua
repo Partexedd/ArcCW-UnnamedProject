@@ -21,13 +21,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "MP7A1"
+SWEP.PrintName = "HK MP7A1"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Low calibre SMG designed to use AP ammo"
-SWEP.Trivia_Manufacturer = "HK"
+SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "4.6x30mm HK"
 SWEP.Trivia_Mechanism = "Gas-operated, short stroke piston"
 SWEP.Trivia_Country = "Germany"
@@ -65,9 +65,9 @@ SWEP.PhysBulletMuzzleVelocity = 735
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
     [HITGROUP_LEFTLEG] = 0.9,
@@ -81,8 +81,8 @@ SWEP.Primary.ClipSize = 40
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
-SWEP.RecoilDirection = Angle(1, 0.3, 0)
+SWEP.Recoil = 0.55
+SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0

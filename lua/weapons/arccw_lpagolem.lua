@@ -83,7 +83,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 1.4
+SWEP.Recoil = 1.2
 SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.3
 
@@ -125,7 +125,7 @@ SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 50
 SWEP.JumpDispersion = 0
 
-SWEP.Primary.Ammo = "smg1"
+SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "xcr"
 
 -- Speed mult --
