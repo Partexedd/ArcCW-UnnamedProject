@@ -21,7 +21,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "PP-19-01 Vityaz-SN"
+SWEP.PrintName = "Vityaz-SN (Mod)"
 
 -- Trivia --
 

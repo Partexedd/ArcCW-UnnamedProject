@@ -1,4 +1,4 @@
-$modelname "weapons\arccw\c_lpamp3008.mdl"
+$modelname "weapons\arc9\c_lpamp3008.mdl"
  
 $bodygroup "studio" {
 	studio "mp3008.smd"
@@ -24,7 +24,7 @@ $bodygroup "4" {
 	studio "sawnoffirons.smd"
 }
 
-$cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arc9\uplp_unofficial"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" -0.3 1 1 rotate -10 110 180

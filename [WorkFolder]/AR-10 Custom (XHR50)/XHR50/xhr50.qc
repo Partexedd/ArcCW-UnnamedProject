@@ -1,4 +1,4 @@
-$modelname "weapons\arccw\c_lpaxhr50.mdl"
+$modelname "weapons\arc9\c_lpaxhr50.mdl"
  
 $bodygroup "studio" {
 	studio "ar50.smd"
@@ -7,7 +7,6 @@ $bodygroup "studio" {
 $bodygroup "1" {
 	studio "308mag.smd"
 	studio "500mag.smd"
-	studio "4570mag.smd"
 }
 
 $bodygroup "2" {
@@ -16,7 +15,8 @@ $bodygroup "2" {
 }
 
 $bodygroup "3" {
-	studio "irons.smd"
+	studio "ironsup.smd"
+	studio "ironsdown.smd"
 	blank
 }
 
@@ -25,12 +25,7 @@ $bodygroup "4" {
 	blank
 }
 
-$bodygroup "5" {
-	blank
-	studio "bottomrail.smd"
-}
-
-$cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arc9\uplp_unofficial"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 -1 rotate -10 140 180
@@ -77,30 +72,8 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
-$sequence "fire_01" {
-	"anims\fire_01.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.05
-	fadeout 0.05
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_02" {
-	"anims\fire_02.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.05
-	fadeout 0.05
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_03" {
-	"anims\fire_03.smd"
+$sequence "fire" {
+	"anims\fire.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1

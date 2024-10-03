@@ -66,8 +66,8 @@ SWEP.PhysBulletMuzzleVelocity = 685
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.7,
-    [HITGROUP_STOMACH] = 1.7,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -314,53 +314,3 @@ end
 -- Attachments --
 
 SWEP.AutosolveSourceSeq = "ref"
-
-SWEP.Attachments = {
-    {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0.048, 0.2, 11),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -2.5),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.2, 11),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"fgrail"},
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_lpak"},
-        DefaultAttName = "Black",
-        FreeSlot = true,
-    },
-}

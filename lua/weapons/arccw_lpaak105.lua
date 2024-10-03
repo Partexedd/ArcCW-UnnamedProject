@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 600
+SWEP.Delay = 60 / 603
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -318,13 +318,14 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lowpoly_optic_lp","lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.048, 0.2, 11),
+            vpos = Vector(0.048, 0.2, 12),
             vang = Angle(90, 0, -90),
         },
+        ExtraSightDist = 10,
     },
     {
         PrintName = "Muzzle",

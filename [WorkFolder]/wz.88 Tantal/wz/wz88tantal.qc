@@ -1,4 +1,4 @@
-$modelname "weapons\arccw\c_lpawz.mdl"
+$modelname "weapons\arc9\c_lpawz.mdl"
  
 $bodygroup "studio" {
 	studio "wz.smd"
@@ -8,7 +8,7 @@ $bodygroup "1" {
 	studio "tantal_magsteel.smd"
 }
 
-$cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arc9\uplp_unofficial"
 
 $attachment "1" "Barrel" 0 0 2 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180

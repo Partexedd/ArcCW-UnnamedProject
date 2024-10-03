@@ -17,11 +17,12 @@ att.Model = "models/weapons/arccw/atts/c79a2.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 7, -1.61),
+        Pos = Vector(0, 11, -1.61),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
         ZoomLevels = 0,
+        ViewModelFOV = 30,
         ZoomSound = "weapons/arccw/fiveseven/fiveseven_slideback.wav",
         IgnoreExtra = true
     }
@@ -32,7 +33,7 @@ att.Mult_SightTime = 1.05
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/c79a2.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 12
+att.HolosightSize = 9
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/c79a2_hsp.mdl"
 att.Colorable = true

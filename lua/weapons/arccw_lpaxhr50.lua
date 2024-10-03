@@ -27,7 +27,7 @@ SWEP.PrintName = "XHR-50"
 
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "AR-10 custom in full auto"
-SWEP.Trivia_Manufacturer = "LP Arms"
+SWEP.Trivia_Manufacturer = "LPA"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "United States"
@@ -51,8 +51,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 38
-SWEP.DamageMin = 22
+SWEP.Damage = 42
+SWEP.DamageMin = 29
 SWEP.Range = 100
 SWEP.Penetration = 36
 SWEP.DamageType = DMG_BULLET
@@ -65,10 +65,10 @@ SWEP.PhysBulletMuzzleVelocity = 770
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1.6,
-    [HITGROUP_CHEST] = 1.4,
-    [HITGROUP_STOMACH] = 1.4,
-    [HITGROUP_LEFTARM] = 1.3,
-    [HITGROUP_RIGHTARM] = 1.3,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -93,7 +93,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 700
+SWEP.Delay = 60 / 701
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -101,9 +101,8 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
-        Override_ShotRecoilTable = {
-            [1] = 0.6,
-        },
+        Mult_RPM = 0.5,
+        Mult_Recoil = 0.6,
     },
 }
 
@@ -152,7 +151,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.24, -3, 0.52),
+     Pos = Vector(-2.25, -3, 0.54),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -249,9 +248,9 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
-        Time = 16 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
@@ -267,7 +266,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 42 / 30,
+        Time = 48 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
@@ -287,7 +286,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
-        Time = 50 / 30,
+        Time = 56 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -378,7 +377,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.035, -0.1, 4),
+            vpos = Vector(0.021, -0.1, 4),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

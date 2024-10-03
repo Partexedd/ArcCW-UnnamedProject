@@ -1,10 +1,10 @@
-$modelname "weapons\arccw\c_lpaxm979.mdl"
+$modelname "weapons\arc9\c_lpaxm979.mdl"
  
 $bodygroup "studio" {
 	studio "xm979.smd"
 } 
 
-$cdmaterials "models\weapons\arccw\shared"
+$cdmaterials "models\weapons\arc9\uplp_unofficial"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 -2 rotate -10 140 180

@@ -1,4 +1,4 @@
-att.PrintName = "Vortex Razor (1x-8x)"
+att.PrintName = "Vortex Razor Gen III (1x-8x)"
 att.Icon = Material("entities/att/acwatt_optic_lp_aimpoint_aco.png")
 att.Description = "High to low magnification optic designed for all ranges."
 
@@ -17,10 +17,11 @@ att.Model = "models/weapons/arccw/atts/vortexrazor.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 11, -1.5),
+        Pos = Vector(0, 13, -1.5),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ViewModelFOV = 30,
         ZoomLevels = 0,
         ZoomSound = "weapons/arccw/fiveseven/fiveseven_slideback.wav",
         IgnoreExtra = true

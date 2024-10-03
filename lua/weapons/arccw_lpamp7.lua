@@ -81,9 +81,9 @@ SWEP.Primary.ClipSize = 40
 
 -- Recoil --
 
-SWEP.Recoil = 0.55
-SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.45
+SWEP.RecoilDirection = Angle(1, 0.25, 0)
+SWEP.RecoilSide = 0.35
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -92,7 +92,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 950
+SWEP.Delay = 60 / 944
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -133,7 +133,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(0, -2, 0.6)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -195,7 +195,7 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ironsup"] = {
+    ["unfis"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
 
@@ -346,19 +346,18 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpmp3008_irons"},
-		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
-        DefaultAttName = "Iron Sights",
+        Slot = {"lpmp7_irons", "lowpoly_optic_lp", "lowpoly_optic"},
+        DefaultAttName = "Folded Iron Sights",
         Bone = "Body",
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Vent",
-        Slot = {"lpmp3008_muzzle"},
+        Offset = {
+            vpos = Vector(0.012, -0.9, 1),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"nois"},
     },
     {
         PrintName = "Stock",
-        Slot = {"lpmp3008_barrel"},
+        Slot = {"lpmp7_stock"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
         DefaultAttName = "Skeleton Stock",
     },
