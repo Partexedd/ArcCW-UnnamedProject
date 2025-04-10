@@ -7,7 +7,6 @@ $bodygroup "studio" {
 $bodygroup "1" {
 	studio "defbar.smd"
 	studio "compbar.smd"
-	studio "sdbar.smd"
 }
 
 $bodygroup "2" {
@@ -18,12 +17,6 @@ $bodygroup "2" {
 $bodygroup "3" {
 	studio "9mm.smd"
 }
-
-// $bodygroup "4" {
-// 	blank
-// 	studio "skelstock.smd"
-// 	studio "woodenstock.smd"
-// }
 
 $cdmaterials "models\weapons\arc9\uplp_unofficial"
 
@@ -249,7 +242,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "gsh18_col.smd"
+$collisionmodel "gsh18.smd"
 {
 	$mass 5
 }

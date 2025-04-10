@@ -208,7 +208,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "ar50_col.smd"
+$collisionmodel "ar50.smd"
 {
 	$mass 5
 }
