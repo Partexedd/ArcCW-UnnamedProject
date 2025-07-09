@@ -15,7 +15,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 1
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -117,7 +117,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 200
+SWEP.MoveDispersion = 350
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -125,7 +125,7 @@ SWEP.Primary.Ammo = "pistol"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.1
+SWEP.SightTime = 0.05
 
 -- Gun length --
 
@@ -138,7 +138,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, -2, 0.83),
+     Pos = Vector(-1.92, 0, 0.83),
      Ang = Angle(0.6, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -178,7 +178,7 @@ SWEP.DistantShootSound = pathF .. "dist.ogg" -- ph
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [2] = "Bullet1",    [3] = "Bullet2",    [4] = "Bullet3"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
 }
 
 SWEP.AttachmentElements = {
@@ -194,10 +194,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",
@@ -235,7 +235,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 36 / 30,
+        Time = 40 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,
@@ -254,7 +254,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 42 / 30,
+        Time = 48 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,

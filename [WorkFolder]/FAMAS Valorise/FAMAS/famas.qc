@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpafamas.mdl"
+$modelname "weapons\arccw\c_lpafamas.mdl"
  
 $bodygroup "studio" {
 	studio "famas.smd"
@@ -9,7 +9,7 @@ $bodygroup "1" {
 	studio "ironsdown.smd"
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180

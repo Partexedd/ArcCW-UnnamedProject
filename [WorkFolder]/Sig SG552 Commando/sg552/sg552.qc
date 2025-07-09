@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpasg552.mdl"
+$modelname "weapons\arccw\c_lpasg552.mdl"
  
 $bodygroup "studio" {
 	studio "sg552.smd"
@@ -8,7 +8,7 @@ $bodygroup "1" {
 	studio "tir.smd"
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 2 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180

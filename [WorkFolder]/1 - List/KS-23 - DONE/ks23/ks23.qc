@@ -1,10 +1,10 @@
-$modelname "weapons\arc9\c_lpaks23.mdl"
+$modelname "weapons\arccw\c_lpaks23.mdl"
  
 $bodygroup "studio" {
 	studio "ks23.smd"
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180

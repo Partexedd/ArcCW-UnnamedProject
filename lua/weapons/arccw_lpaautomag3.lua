@@ -15,7 +15,7 @@ SWEP.ShellPitch = 77
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 5
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -147,8 +147,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(0, -4, -6)
+SWEP.HolsterAng = Angle(35, 0, -7)
 
 SWEP.CrouchPos = Vector(0, 0, 1)
 SWEP.CrouchAng = Angle(0, 0, -2)
@@ -188,10 +188,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",
@@ -228,7 +228,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 44 / 30,
+        Time = 46 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -247,7 +247,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 48 / 30,
+        Time = 54 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.7,
         LHIK = true,

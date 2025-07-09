@@ -203,10 +203,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",

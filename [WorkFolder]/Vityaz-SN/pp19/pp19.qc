@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpapp19sn.mdl"
+$modelname "weapons\arccw\c_lpapp19sn.mdl"
  
 $bodygroup "studio" {
 	studio "pp19.smd"
@@ -8,7 +8,7 @@ $bodygroup "studio" {
 // 	studio "laser_flashlight_combo.smd"
 // }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 2 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180

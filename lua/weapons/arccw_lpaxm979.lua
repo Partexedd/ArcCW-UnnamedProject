@@ -15,7 +15,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 5
+SWEP.TracerNum = 15
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -226,10 +226,10 @@ end
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",

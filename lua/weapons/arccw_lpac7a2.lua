@@ -15,7 +15,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 5
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 850
+SWEP.Delay = 60 / 846
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -237,10 +237,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",

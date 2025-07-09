@@ -1,4 +1,4 @@
-$modelname "weapons/arc9/lhik/lhik_grenadier.mdl"
+$modelname "weapons/arccw/lhik/lhik_grenadier.mdl"
 
 $surfaceprop "default"
 

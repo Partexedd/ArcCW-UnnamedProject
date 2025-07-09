@@ -15,13 +15,13 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 1
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Beretta 92FS"
+SWEP.PrintName = "Beretta M9"
 
 -- Trivia --
 
@@ -138,7 +138,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, -2, 0.79),
+     Pos = Vector(-1.94, -2, 0.85),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -147,13 +147,13 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(0, -4, -6)
+SWEP.HolsterAng = Angle(35, 0, -7)
 
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(1, 1, 0.8)
+SWEP.ActivePos = Vector(0, 1, 0.6)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
@@ -179,7 +179,7 @@ SWEP.ShootPitch = 100
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [2] = "Bullet1",    [3] = "Bullet2",    [4] = "Bullet3"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
 }
 
 SWEP.AttachmentElements = {
@@ -194,10 +194,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",
@@ -235,7 +235,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 34 / 30,
+        Time = 40 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,
@@ -254,7 +254,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 36 / 30,
+        Time = 44 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,

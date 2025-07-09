@@ -15,7 +15,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 5
+SWEP.TracerNum = 25
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -27,7 +27,7 @@ SWEP.PrintName = "Colt CAR-15 (Mod)"
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "USA"
@@ -91,7 +91,7 @@ SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 800
+SWEP.Delay = 60 / 804
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -201,10 +201,10 @@ SWEP.BulletBones = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = false,
     },
     ["idle_empty"] = {
-        Source = "idle_empty",
+        Source = false,
     },
     ["ready"] = {
         Source = "ready",

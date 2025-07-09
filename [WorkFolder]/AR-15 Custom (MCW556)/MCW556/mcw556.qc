@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpamcw556.mdl"
+$modelname "weapons\arccw\c_lpamcw556.mdl"
  
 $bodygroup "studio" {
 	studio "mcw556.smd"
@@ -30,7 +30,7 @@ $bodygroup "5" {
 	studio "bottomrail.smd"
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 -1 rotate -10 140 180

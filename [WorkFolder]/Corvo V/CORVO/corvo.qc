@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpacorvo.mdl"
+$modelname "weapons\arccw\c_lpacorvo.mdl"
  
 $bodygroup "studio" {
 	studio "corvo.smd"
@@ -9,7 +9,7 @@ $bodygroup "4" {
 	blank
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Brass" 0 0 0 rotate -10 140 180

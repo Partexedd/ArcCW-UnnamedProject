@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpaghs18.mdl"
+$modelname "weapons\arccw\c_lpaghs18.mdl"
  
 $bodygroup "studio" {
 	studio "gsh18.smd"
@@ -18,7 +18,7 @@ $bodygroup "3" {
 	studio "9mm.smd"
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Slide" 0 0 0 rotate -10 110 180

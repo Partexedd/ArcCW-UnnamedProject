@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpam1911.mdl"
+$modelname "weapons\arccw\c_lpam1911.mdl"
  
 $bodygroup "studio" {
 	studio "m1911.smd"
@@ -15,7 +15,7 @@ $texturegroup "skinfamilies"
 	{ "m1911c" }
 }
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Slide" 0 0 0 rotate -10 110 180

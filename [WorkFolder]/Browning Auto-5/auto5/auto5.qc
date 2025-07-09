@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpaauto5.mdl"
+$modelname "weapons\arccw\c_lpaauto5.mdl"
  
 $bodygroup "studio" {
 	studio "auto5.smd"
@@ -9,7 +9,7 @@ $bodygroup "1" {
 	studio "brassshells.smd"
 } 
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Barrel" 0 0 -4 rotate -90 0 0

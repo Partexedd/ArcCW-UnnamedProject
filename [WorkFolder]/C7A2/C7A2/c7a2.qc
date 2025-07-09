@@ -1,4 +1,4 @@
-$modelname "weapons\arc9\c_lpac7a2.mdl"
+$modelname "weapons\arccw\c_lpac7a2.mdl"
  
 $bodygroup "studio" {
 	studio "c7a2.smd"
@@ -45,7 +45,7 @@ $texturegroup "skinfamilies"
 }
 
 
-$cdmaterials "models\weapons\arc9\uplp_unofficial"
+$cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180
