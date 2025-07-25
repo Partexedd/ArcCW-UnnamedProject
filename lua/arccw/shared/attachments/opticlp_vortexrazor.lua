@@ -17,7 +17,7 @@ att.Model = "models/weapons/arccw/atts/vortexrazor.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 13, -1.5),
+        Pos = Vector(0, 12, -1.12),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -27,6 +27,8 @@ att.AdditionalSights = {
         IgnoreExtra = true
     }
 }
+
+att.ScopeGlint = true
 
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/vr_s.png")
@@ -44,3 +46,5 @@ att.HolosightMagnificationMax = 6
 att.HolosightMagnificationMin = 1.1
 
 att.HolosightBlackbox = false
+att.ModelScale = Vector(0.8, 0.8, 0.8)
+att.ModelOffset = Vector(-0.5, 0, -0.1)

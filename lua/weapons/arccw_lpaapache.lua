@@ -6,15 +6,17 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
+SWEP.TracerFinalMag = 5
 SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
@@ -68,8 +70,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_HEAD] = 1.8,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -90,11 +92,12 @@ SWEP.RecoilSide = 0.2
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 800
+SWEP.Delay = 60 / 789
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -124,7 +127,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 50
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
@@ -144,7 +147,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.1, 0.7, 0)
+SWEP.ActivePos = Vector(0.1, 0.7, 0.4)
 SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -205,10 +208,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -227,9 +230,9 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
-        Time = 16 / 30,
+        Time = 14 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
@@ -247,11 +250,13 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 48 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -264,11 +269,13 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 56 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -353,16 +360,10 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.03, -0.2, 2),
+            vpos = Vector(0.06, -0.2, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpapache_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
     },
     {
         PrintName = "Muzzle",

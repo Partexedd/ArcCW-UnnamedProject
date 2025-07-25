@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -55,7 +56,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.Damage = 24
 SWEP.DamageMin = 16
 SWEP.Range = 100
-SWEP.Penetration = 24
+SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 800
@@ -65,31 +66,30 @@ SWEP.PhysBulletMuzzleVelocity = 800
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 1.9,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_LEFTLEG] = 0.82,
+    [HITGROUP_RIGHTLEG] = 0.82,
 }
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 30
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.65
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
@@ -99,11 +99,22 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.6,
+            [2] = 0.7,
+            [3] = 0.7,
+        },
     },
     {
-        Mode = 1,
-        Mult_Recoil = 0.3,
-        Mult_RPM = 0.7,
+        Mode = -3,
+        RunawayBurst = true,
+        PostBurstDelay = 0.24,
+        AutoBurst = true,
+        PrintName = "Auto-Burst",
+        Override_ShotRecoilTable = {
+            [1] = 0.5,
+            [2] = 0.5,
+        },
     },
 }
 
@@ -123,7 +134,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 600
 SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
@@ -134,7 +145,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.32
+SWEP.SightTime = 0.47
 
 -- Gun length --
 
@@ -144,7 +155,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.1, -2, -0.3)
+SWEP.ActivePos = Vector(0, -1, -0.4)
 SWEP.ActiveAng = Angle(2, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -152,10 +163,10 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.24, -3, 0.35),
-     Ang = Angle(0.47, 0, 0),
-     Magnification = 1,
-     ViewModelFOV = 70,
+    Pos = Vector(-3.15, -4, 0.74),
+    Ang = Angle(0.3, 0, 0),
+    Magnification = 1,
+    ViewModelFOV = 70,
 }
 
 SWEP.CustomizePos = Vector(0, 0, 0)
@@ -196,24 +207,21 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
 }
 
 -- Animations --
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 31 / 30,
+        time = 27 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -247,7 +255,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
-        Time = 54 / 30,
+        Time = 52 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -256,16 +264,16 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
-            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 18 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
-        Time = 68 / 30,
+        Time = 66 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -274,10 +282,10 @@ SWEP.Animations = {
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
-            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 18 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 37 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 44 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -351,20 +359,15 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_G41"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.03, -0.2, 2),
+            vpos = Vector(-0.095, 0.1, -1.05),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "14.5' Barrel",
-        Slot = {"lpapache_barrel"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolyhk416stbarrel.png"),
+        Hidden = true,
+        Installed = "opticlp_g41scope"
     },
     {
         PrintName = "Muzzle",
@@ -376,12 +379,5 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_apache"},
-        DefaultAttName = "Tan",
-        FreeSlot = true,
     },
 }

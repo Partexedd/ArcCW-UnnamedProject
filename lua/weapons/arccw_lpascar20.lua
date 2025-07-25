@@ -6,15 +6,17 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
+SWEP.TracerFinalMag = 3
 SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
@@ -26,7 +28,7 @@ SWEP.PrintName = "FN SCAR-20S"
 -- Trivia --
 
 SWEP.Trivia_Class = "DMR"
-SWEP.Trivia_Desc = "cum, pee poo"
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "FN"
 SWEP.Trivia_Calibre = "6.5 Creedmoor"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
@@ -64,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 750
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.1,
-    [HITGROUP_STOMACH] = 0.9,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.98,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -89,11 +91,12 @@ SWEP.RecoilSide = 0.22
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 479
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -102,7 +105,7 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Mult_HipDispersion = 3,
-        Mult_RPM = 1.2,
+        Mult_RPM = 1.195,
         -- Mult_BodyDamage = 
         -- {
         --     [HITGROUP_HEAD] = 2,
@@ -126,8 +129,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 250
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 550
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
@@ -147,8 +150,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 1, 0.8)
-SWEP.ActiveAng = Angle(0, 0, 5)
+SWEP.ActivePos = Vector(0.5, 0, 0.2)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -242,10 +245,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",

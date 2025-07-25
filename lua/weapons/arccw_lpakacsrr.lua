@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed"
-SWEP.ShellModel = "models/shells/shell_338mag.mdl"
-SWEP.ShellScale = 1
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mag"
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellScale = 1.4
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -51,9 +52,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 81
+SWEP.Damage = 78
 SWEP.DamageMin = 34
-SWEP.Range = 100
+SWEP.Range = 25
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -64,21 +65,19 @@ SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.1,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 1,
-    [HITGROUP_RIGHTLEG] = 1,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 0.95,
+    [HITGROUP_STOMACH] = 0.95,
+    [HITGROUP_LEFTARM] = 0.95,
+    [HITGROUP_RIGHTARM] = 0.95,
+    [HITGROUP_LEFTLEG] = 0.7,
+    [HITGROUP_RIGHTLEG] = 0.7,
 }
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 5
-SWEP.ExtendedClipSize = 10
-SWEP.ReducedClipSize = 2
+SWEP.ChamberSize = 0
+SWEP.Primary.ClipSize = 6
 
 -- Recoil --
 
@@ -89,6 +88,7 @@ SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
@@ -111,6 +111,7 @@ SWEP.ProceduralIronFire = false
 SWEP.ManualAction = true
 SWEP.NoLastCycle = true
 SWEP.Silencer = true
+SWEP.RevolverReload = true
 
 -- NPC stuff -- 
 
@@ -120,7 +121,7 @@ SWEP.NPCWeight = 30
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 200
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
@@ -140,15 +141,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 1, 0.7)
+SWEP.ActivePos = Vector(-0.6, 0, 0.7)
+SWEP.ActiveAng = Angle(0, 0, -4)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.32, -3, 0.67),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.29, -3, 0.5),
+     Ang = Angle(2, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -159,8 +161,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
+SWEP.CrouchPos = Vector(-1, -1, 0.5)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -197,10 +199,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",

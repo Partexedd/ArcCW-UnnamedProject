@@ -52,7 +52,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 52
+SWEP.Damage = 58
 SWEP.DamageMin = 19
 SWEP.Range = 40
 SWEP.Penetration = 24
@@ -67,11 +67,11 @@ SWEP.BodyDamageMults =
 {
     [HITGROUP_HEAD] = 2.3,
     [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.25,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --
@@ -88,6 +88,7 @@ SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
@@ -187,10 +188,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",

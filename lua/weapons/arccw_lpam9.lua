@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -53,23 +54,23 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 28
-SWEP.DamageMin = 17
+SWEP.DamageMin = 15
 SWEP.Range = 40
-SWEP.Penetration = 14
+SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 535
-SWEP.PhysBulletMuzzleVelocity = 535
+SWEP.MuzzleVelocity = 381
+SWEP.PhysBulletMuzzleVelocity = 381
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.9,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1.4,
+    [HITGROUP_LEFTARM] = 1.4,
+    [HITGROUP_RIGHTARM] = 1.4,
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
@@ -88,11 +89,12 @@ SWEP.RecoilSide = 0.2
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.1
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 700
+SWEP.Delay = 60 / 689
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -117,7 +119,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 150
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -138,7 +140,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.94, -2, 0.85),
+     Pos = Vector(-1.94, -1, 0.85),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -194,10 +196,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -242,7 +244,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
-        MinProgress = 1,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
@@ -261,6 +263,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },

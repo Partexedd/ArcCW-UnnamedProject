@@ -35,7 +35,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_ubgl", 0.5)
 
-    wep:FireRocket("arccw_gl_he", 3000 * ArcCW.HUToM)
+    wep:FireRocket("arccw_gl_he", 5500)
 
     wep:EmitSound("weapons/arccw/common/m203_fire_or_something_idk.ogg", 100)
 

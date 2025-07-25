@@ -10,7 +10,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "lowpoly_optic"
+att.Slot = "lowpoly_optic_CAR15mod"
 
 att.Model = "models/weapons/arccw/atts/aimpoint.mdl"
 
@@ -25,7 +25,7 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/reticles/dot.png", "mips smooth")
+att.HolosightReticle = Material("hud/reticles/dot.png")
 att.HolosightPiece = "models/weapons/arccw/atts/aimpoint_hsp.mdl"
 att.HolosightNoFlare = true
 att.HolosightSize = 0.25

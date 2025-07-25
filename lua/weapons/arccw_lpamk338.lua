@@ -11,11 +11,13 @@ SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_338mag"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 10
+SWEP.TracerFinalMag = 1
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -66,35 +68,34 @@ SWEP.PhysBulletMuzzleVelocity = 940
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 0.6,
-    [HITGROUP_LEFTARM] = 0.5,
-    [HITGROUP_RIGHTARM] = 0.5,
-    [HITGROUP_LEFTLEG] = 0.4,
-    [HITGROUP_RIGHTLEG] = 0.4,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1.4,
+    [HITGROUP_LEFTARM] = 1.05,
+    [HITGROUP_RIGHTARM] = 1.05,
+    [HITGROUP_LEFTLEG] = 0.6,
+    [HITGROUP_RIGHTLEG] = 0.6,
 }
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 10
-SWEP.ExtendedClipSize = 14
-SWEP.ReducedClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 2.5
+SWEP.Recoil = 2
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 1.5
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilVMShake = 0
+SWEP.RecoilPunch = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 350
+SWEP.Delay = 60 / 520
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -118,18 +119,17 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 800
-SWEP.MoveDispersion = 1200
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 1700
+SWEP.MoveDispersion = 800
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "mk338"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.4
+SWEP.SpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.7
+SWEP.SightTime = 0.5
 
 -- Gun length --
 
@@ -139,7 +139,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 1, 0)
+SWEP.ActivePos = Vector(0, 0, -0.5)
+SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -201,10 +202,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -224,6 +225,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         ShellEjectAt = 0.01,
+        Time = 22 / 30,
         SoundTable = {
             { s = {path338 .. "mech-01.ogg", path338 .. "mech-02.ogg", path338 .. "mech-03.ogg", path338 .. "mech-04.ogg", path338 .. "mech-05.ogg", path338 .. "mech-06.ogg"}, t = 0.03 }
         },
@@ -231,6 +233,7 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0.01,
+        Time = 22 / 30,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
@@ -240,6 +243,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 52 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -257,6 +261,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 68 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,

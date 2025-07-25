@@ -1,5 +1,0 @@
-"VertexLitGeneric"
-{
-		"$basetexture"	"models/weapons/arccw/shared/automag3"
-		$nocull 1
-}

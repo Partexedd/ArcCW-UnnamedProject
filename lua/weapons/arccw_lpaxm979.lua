@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -27,7 +28,7 @@ SWEP.PrintName = "Colt M16A1 Grenadier"
 
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "gread lacher"
-SWEP.Trivia_Manufacturer = "ColtColt's Manufacturing Company"
+SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 SWEP.Trivia_Calibre = "5.56x45mm NATO / 40×46mm SR"
 SWEP.Trivia_Mechanism = "Gas-operated, closed rotating bolt"
 SWEP.Trivia_Country = "USA"
@@ -52,9 +53,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters >--
 
 SWEP.Damage = 25
-SWEP.DamageMin = 18
+SWEP.DamageMin = 19
 SWEP.Range = 100
-SWEP.Penetration = 26
+SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 800
@@ -64,27 +65,28 @@ SWEP.MuzzleVelocity = 800
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 18
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
@@ -113,8 +115,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 550
+SWEP.MoveDispersion = 350
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
@@ -186,31 +188,6 @@ SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
 }
 
-SWEP.AttachmentElements = {
-
-    ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    -- Ind stocks --
-    
-    ["fgrail"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Extras --
-
-    ["50Beo"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
-    },
-}
-
 -- Logic --
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
@@ -226,10 +203,10 @@ end
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -417,21 +394,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_colt"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0.03, -0.1, 2),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nois"},
-    },	
-    {
         PrintName = "Integral M203",
         Slot = {"lowpolyxm979_ubgl"},
 		Integral = true,
-		Hidden = true,
+		Hidden = false,
 		Installed = "lpxm979_intm203",	
     },	
 }

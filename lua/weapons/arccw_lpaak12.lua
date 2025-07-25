@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -52,8 +53,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
-SWEP.Damage = 26
-SWEP.DamageMin = 18
+SWEP.Damage = 27
+SWEP.DamageMin = 20
 SWEP.Range = 100
 SWEP.Penetration = 37
 SWEP.DamageType = DMG_BULLET
@@ -65,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 1011
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.9,
-    [HITGROUP_CHEST] = 1.6,
-    [HITGROUP_STOMACH] = 1.6,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_HEAD] = 1.7,
+    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_LEFTARM] = 1.25,
+    [HITGROUP_RIGHTARM] = 1.25,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -88,11 +89,12 @@ SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 700
+SWEP.Delay = 60 / 693
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -151,7 +153,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.28, -4, 0.68),
+     Pos = Vector(-2.285, -4, 0.68),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,

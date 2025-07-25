@@ -6,16 +6,18 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 25
+SWEP.TracerFinalMag = 5
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -52,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters >--
 
 SWEP.Damage = 22
-SWEP.DamageMin = 13
+SWEP.DamageMin = 14
 SWEP.Range = 100
 SWEP.Penetration = 24
 SWEP.DamageType = DMG_BULLET
@@ -64,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 725
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.9,
     [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -82,16 +84,17 @@ SWEP.Primary.ClipSize = 30
 
 SWEP.Recoil = 0.5
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.16
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 700
+SWEP.Delay = 60 / 704
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -102,9 +105,9 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.05,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
-            [1] = 0.2,
-            [2] = 0.2,
-            [3] = 0.4,
+            [1] = 0.4,
+            [2] = 0.4,
+            [3] = 0.8,
         },
     },
 }
@@ -126,8 +129,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 450
 
 SWEP.Primary.Ammo = "smg1"
 
@@ -145,8 +147,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1.1, 1, 1)
-SWEP.ActiveAng = Angle(-0.2, 0, 4)
+SWEP.ActivePos = Vector(0.5, 0.7, 0)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -200,10 +202,10 @@ SWEP.BulletBones = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -353,7 +355,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.01, -0.23, 3),
+            vpos = Vector(0.028, -0.25, 3),
             vang = Angle(90, 0, -90),
         },
     },

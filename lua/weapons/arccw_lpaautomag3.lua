@@ -67,11 +67,11 @@ SWEP.BodyDamageMults =
 {
     [HITGROUP_HEAD] = 2.3,
     [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.25,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_LEFTLEG] = 0.75,
+    [HITGROUP_RIGHTLEG] = 0.75,
 }
 
 -- Mag size --
@@ -88,6 +88,7 @@ SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
@@ -139,7 +140,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-1.92, 0, 0.9),
-     Ang = Angle(0.5, 0, 0),
+     Ang = Angle(0.65, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -179,7 +180,7 @@ SWEP.ShootPitch = 80
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [2] = "Bullet1",    [3] = "Bullet2",    [4] = "Bullet3"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
 }
 
 -- Animations --
@@ -188,10 +189,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -230,7 +231,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 46 / 30,
         Framerate = 30,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -238,10 +239,10 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         MinProgress = 1,
         SoundTable = {
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
+            { s = path .. "magout.ogg", t = 6 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 22 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 32 / 30, c = ca, v = 0.8 }, -- Placeholder
+            { s = path .. "magin.ogg", t = 19 / 30, c = ca, v = 1 },
+            { s = path .. "cloth.ogg", t = 26 / 30, c = ca, v = 0.8 }, -- Placeholder
         },
     },
     ["reload_empty"] = {
@@ -249,18 +250,14 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 54 / 30,
         Framerate = 30,
-        LastClip1OutTime = 0.7,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LastClip1OutTime = 0.5,
+        MinProgress = 1,
         SoundTable = {
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
+            { s = path .. "magout.ogg", t = 6 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 22 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 34 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 40 / 30, c = ca, v = 0.8 }, -- Placeholder
+            { s = path .. "magin.ogg", t = 19 / 30, c = ca, v = 1 },
+            { s = path .. "sliderelease.ogg", t = 30 / 30, c = ca, v = 0.8 },      
+            { s = path .. "cloth.ogg", t = 36 / 30, c = ca, v = 0.8 }, -- Placeholder
         },
     },
     

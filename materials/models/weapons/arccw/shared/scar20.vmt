@@ -1,5 +1,0 @@
-"VertexLitGeneric"
-{
-		"$basetexture"	"models/weapons/arccw/shared/scar20"
-		$nocull 1
-}

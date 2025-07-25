@@ -52,8 +52,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 24
-SWEP.DamageMin = 6
+SWEP.Damage = 23
+SWEP.DamageMin = 10
 SWEP.Range = 45
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BUCKSHOT
@@ -66,12 +66,12 @@ SWEP.PhysBulletMuzzleVelocity = 472
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1,
-    [HITGROUP_CHEST] = 0.5,
-    [HITGROUP_STOMACH] = 0.5,
-    [HITGROUP_LEFTARM] = 0.5,
-    [HITGROUP_RIGHTARM] = 0.5,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_CHEST] = 0.7,
+    [HITGROUP_STOMACH] = 0.7,
+    [HITGROUP_LEFTARM] = 0.7,
+    [HITGROUP_RIGHTARM] = 0.7,
+    [HITGROUP_LEFTLEG] = 0.85,
+    [HITGROUP_RIGHTLEG] = 0.85,
 }
 
 -- Mag size --
@@ -88,6 +88,7 @@ SWEP.RecoilSide = 2.5
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.4
 
 -- Firerate / Firemodes --
@@ -116,7 +117,7 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 8
+SWEP.AccuracyMOA = 12
 SWEP.HipDispersion = 300
 SWEP.MoveDispersion = 250
 
@@ -135,18 +136,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
-SWEP.ActivePos = Vector(-0.4, -2, 0.8)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(-0.7, -3, 0.4)
+SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.65, -6, 0.7),
-     Ang = Angle(0.4, 0, 0),
+     Pos = Vector(-2.73, -6, 0.7),
+     Ang = Angle(0.15, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -157,7 +156,7 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(-2, -1, 1)
+SWEP.CrouchPos = Vector(-1, -3, 0.5)
 SWEP.CrouchAng = Angle(0, 0, -7)
 
 SWEP.MirrorVMWM = true
@@ -191,18 +190,12 @@ SWEP.BulletBones = {
 
 -- Animations --
 
--- SWEP.Hook_TranslateAnimation = function(wep, anim)
---     if (wep:Clip1() >= 2) then
---         return anim.."_last"
---     end
--- end
-
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -234,7 +227,6 @@ SWEP.Animations = {
         Source = "fire_empty",
         Framerate = 30,
         Time = 21 / 30,
-        MinProgress = 0,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -245,22 +237,22 @@ SWEP.Animations = {
     ["sgreload_start"] = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 13 / 30,
+        Time = 12 / 30,
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
-        Time = 48 / 30,
+        Time = 45 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 19 / 30,
+        Time = 18 / 30,
         TPAnimStartTime = 0.3,
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 20 / 30,
+        Time = 19 / 30,
         TPAnimStartTime = 0.8,
     },
     

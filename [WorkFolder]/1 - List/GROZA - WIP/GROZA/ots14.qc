@@ -4,9 +4,14 @@ $bodygroup "studio" {
 	studio "ots14.smd"
 }
 
+$bodygroup "1" {
+	studio "supp.smd"
+	blank
+}
+
 $cdmaterials "models\weapons\arccw\shared"
 
-$attachment "1" "Barrel" 0 0 0 rotate -90 0 0
+$attachment "1" "Barrel" 0 0 2 rotate -90 0 0
 $attachment "2" "Bolt" 0 0 0 rotate -10 140 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
  
@@ -75,6 +80,30 @@ $sequence "reload_empty" {
 	"ACT_VM_RELOAD" 1
 	snap
 }
+
+$sequence "enter_inspect" {
+	"anims\enter_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect" {
+	"anims\idle_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect" {
+	"anims\exit_inspect.smd"
+	"anims\exit_inspect_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
 
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"

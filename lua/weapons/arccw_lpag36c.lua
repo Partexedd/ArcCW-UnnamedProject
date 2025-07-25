@@ -6,15 +6,17 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
+SWEP.TracerFinalMag = 5
 SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
@@ -68,8 +70,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1.15,
     [HITGROUP_STOMACH] = 1.15,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTARM] = 1.15,
+    [HITGROUP_RIGHTARM] = 1.15,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -81,18 +83,19 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.5
 SWEP.RecoilDirection = Angle(1, 0.2, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 750
+SWEP.Delay = 60 / 741
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -100,9 +103,9 @@ SWEP.Firemodes = {
     },
     {
         Mode = -2,
-        PostBurstDelay = 0.11,
+        PostBurstDelay = 0.13,
         RunawayBurst = true,
-        Mult_Recoil = 0.5,
+        Mult_Recoil = 0.3,
     },
 }
 
@@ -141,7 +144,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, 0, 0.8)
+SWEP.ActivePos = Vector(0, 0, 0.4)
+SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -221,10 +225,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",

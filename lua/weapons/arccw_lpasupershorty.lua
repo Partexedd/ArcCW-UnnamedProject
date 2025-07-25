@@ -11,6 +11,7 @@ SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
 SWEP.ShellPitch = 100
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -88,6 +89,7 @@ SWEP.RecoilSide = 3
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
@@ -232,7 +234,6 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         Time = 21 / 30,
-        MinProgress = 0,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -243,7 +244,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.7,
         Framerate = 30,
-        Time = 21 / 30,
+        Time = 15 / 30,
         ShellEjectAt = 0.18,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -259,33 +260,22 @@ SWEP.Animations = {
     ["sgreload_start"] = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 10 / 30,
+        Time = 8 / 30,
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
-        Time = 47 / 30,
+        Time = 42 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 19 / 30,
+        Time = 16 / 30,
         TPAnimStartTime = 0.3,
     },
-    -- ["sgreload_insert_last"] = {
-    --     Source = "sgreload_insert_last",
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-    --     Time = 10 / 30,
-    --     TPAnimStartTime = 0.3,
-    -- },
-    -- ["sgreload_finish_last"] = {
-    --     Source = "sgreload_finish_last",
-    --     Time = 13 / 30,
-    --     TPAnimStartTime = 0.8,
-    -- },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 17 / 30,
+        Time = 12 / 30,
         TPAnimStartTime = 0.8,
     },
     

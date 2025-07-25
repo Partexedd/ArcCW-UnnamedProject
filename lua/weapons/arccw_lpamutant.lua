@@ -6,16 +6,18 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 25
+SWEP.TracerFinalMag = 5
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -53,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 33
-SWEP.DamageMin = 18
+SWEP.DamageMin = 20
 SWEP.Range = 100
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
@@ -65,11 +67,11 @@ SWEP.PhysBulletMuzzleVelocity = 719
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1.4,
-    [HITGROUP_STOMACH] = 1.4,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.6,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -90,11 +92,12 @@ SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 650
+SWEP.Delay = 60 / 659
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -124,9 +127,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 50
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 450
+SWEP.MoveDispersion = 350
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "xcr"
@@ -145,14 +147,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.5, 0, 1)
+SWEP.ActivePos = Vector(0, -0.6, 1)
+SWEP.ActiveAng = Angle(-0.2, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.25, -3, 0.6),
+     Pos = Vector(-2.2, -3, 0.65),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -198,9 +201,12 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["nofs"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
 
+    ["bananamag"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -212,31 +218,28 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path556 .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "charge.ogg", t = 2 / 30, c = ca, v = 0.8 },
+            { s = path556 .. "end.ogg", t = 18 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path556 .. "mech-01.ogg", path556 .. "mech-02.ogg", path556 .. "mech-03.ogg", path556 .. "mech-04.ogg", path556 .. "mech-05.ogg", path556 .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
@@ -248,7 +251,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 43 / 30,
+        Time = 47 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -267,7 +270,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 60 / 30,
+        Time = 64 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -330,7 +333,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.4, 5),
+            vpos = Vector(0.03, -0.5, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofs"},
@@ -356,12 +359,8 @@ SWEP.Attachments = {
         InstalledEles = {"fgrail"},
     },
     {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 0.3, 15),
-            vang = Angle(90, 0, 90),
-        },
+        PrintName = "Magazine",
+        Slot = {"lpmutant_mag"},
+        DefaultAttName = "PMAG 30",
     },
 }

@@ -53,8 +53,10 @@ $sequence "fire" {
 
 $sequence "ready" {
 	"anims\ready.smd"
+	"anims\ready_iron.smd"
 	fps 30
 	"ACT_VM_DRAW" 1
+ 	blend "sights" 0 1
 	snap
 }
 
@@ -89,24 +91,6 @@ $sequence "sgreload_start_empty" {
 $sequence "sgreload_insert" {
 	"anims\sgreload_insert.smd"
 	"anims\sgreload_insert_iron.smd"
- 	blend "sights" 0 1
-	fps 30
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "sgreload_insert_last" {
-	"anims\sgreload_insert_last.smd"
-	"anims\sgreload_insert_iron.smd"
- 	blend "sights" 0 1
-	fps 30
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "sgreload_finish_last" {
-	"anims\sgreload_end_fast.smd"
-	"anims\sgreload_end_iron.smd"
  	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1

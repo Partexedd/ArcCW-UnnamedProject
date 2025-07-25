@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -90,6 +91,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
@@ -202,15 +204,15 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
+        Time = 38 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -282,7 +284,7 @@ SWEP.Animations = {
 
     ["enter_inspect"] = {
         Source = "enter_inspect",
-        time = 10 / 30,
+        Time = 10 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0.2,
@@ -290,7 +292,7 @@ SWEP.Animations = {
     },
     ["idle_inspect"] = {
         Source = "idle_inspect",
-        time = 120 / 30,
+        Time = 120 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
@@ -298,7 +300,7 @@ SWEP.Animations = {
     },
     ["exit_inspect"] = {
         Source = "exit_inspect",
-        time = 20 / 30,
+        Time = 20 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
@@ -309,7 +311,7 @@ SWEP.Animations = {
 
     ["enter_inspect_empty"] = {
         Source = "enter_inspect_empty",
-        time = 10 / 30,
+        Time = 10 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0.2,
@@ -317,7 +319,7 @@ SWEP.Animations = {
     },
     ["idle_inspect_empty"] = {
         Source = "idle_inspect_empty",
-        time = 120 / 30,
+        Time = 120 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
@@ -325,7 +327,7 @@ SWEP.Animations = {
     },
     ["exit_inspect_empty"] = {
         Source = "exit_inspect_empty",
-        time = 20 / 30,
+        Time = 20 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,

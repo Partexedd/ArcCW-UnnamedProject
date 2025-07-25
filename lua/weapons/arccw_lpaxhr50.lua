@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -51,7 +52,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 42
+SWEP.Damage = 44
 SWEP.DamageMin = 29
 SWEP.Range = 100
 SWEP.Penetration = 36
@@ -64,11 +65,11 @@ SWEP.PhysBulletMuzzleVelocity = 770
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.6,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
-    [HITGROUP_LEFTARM] = 1.1,
-    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_HEAD] = 1.2,
+    [HITGROUP_CHEST] = 1.18,
+    [HITGROUP_STOMACH] = 1.18,
+    [HITGROUP_LEFTARM] = 1.18,
+    [HITGROUP_RIGHTARM] = 1.18,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -77,19 +78,18 @@ SWEP.BodyDamageMults =
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 20
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
 SWEP.Recoil = 1
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.3
+SWEP.RecoilSide = 0.5
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilVMShake = 0
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -143,8 +143,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.7, 0.6, 0.8)
-SWEP.ActiveAng = Angle(-0.2, 0, 0)
+SWEP.ActivePos = Vector(0.1, 0, 0.4)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -225,10 +225,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -266,7 +266,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 48 / 30,
+        Time = 51 / 30,
         Framerate = 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
@@ -278,15 +278,15 @@ SWEP.Animations = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 32 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
-        Time = 56 / 30,
+        Time = 61 / 30,
         LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -297,9 +297,9 @@ SWEP.Animations = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 34 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 42 / 30, c = ca, v = 0.8 },
         },
     },
     

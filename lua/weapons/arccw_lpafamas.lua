@@ -6,15 +6,17 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
+SWEP.TracerFinalMag = 5
 SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
@@ -90,6 +92,7 @@ SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
@@ -110,7 +113,8 @@ SWEP.Firemodes = {
     },
     {
         Mode = -3,
-        PostBurstDelay = 0.05,
+        Mult_HipDispersion = 3,
+        PostBurstDelay = 0.11,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
             [1] = 0.2,
@@ -137,7 +141,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 700
 SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
@@ -260,6 +264,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },
@@ -277,6 +282,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout.ogg", t = 9 / 30, c = ca, v = 0.8 },

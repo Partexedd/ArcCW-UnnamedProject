@@ -12,7 +12,6 @@ $contents "solid"
 
 $illumposition 0 0 0
 
-$cdmaterials "models\weapons\arccw\atts"
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "holosight" "holosight" 0 0 0 rotate 0 0 0

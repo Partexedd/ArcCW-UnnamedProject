@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "lowpoly_optic"
+att.Slot = "lowpoly_optic_C7A2"
 
 att.Model = "models/weapons/arccw/atts/c79a2.mdl"
 
@@ -28,7 +28,7 @@ att.AdditionalSights = {
     }
 }
 
-att.Mult_SightTime = 1.05
+att.ScopeGlint = true
 
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/c79a2.png")

@@ -6,22 +6,24 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerNum = 25
+SWEP.TracerFinalMag = 5
+SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
-SWEP.TracerWidth = 1
+SWEP.TracerWidth = 5
 
 -- Name --
 
-SWEP.PrintName = "FN SCAR-L (Custom)"
+SWEP.PrintName = "FN SCAR-L"
 
 -- Trivia --
 
@@ -68,8 +70,8 @@ SWEP.BodyDamageMults =
     [HITGROUP_HEAD] = 1.9,
     [HITGROUP_CHEST] = 1.15,
     [HITGROUP_STOMACH] = 1.15,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTARM] = 1.15,
+    [HITGROUP_RIGHTARM] = 1.15,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -81,18 +83,19 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.7
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.15
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
+SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 600
+SWEP.Delay = 60 / 597
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -140,16 +143,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(1, 1, 0.8)
-SWEP.ActiveAng = Angle(0, 0, 5)
+SWEP.ActivePos = Vector(0.5, 0.7, 0.2)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.35, -3, -0.1),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.35, -3, -0.2),
+     Ang = Angle(0.15, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -187,7 +190,7 @@ SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
-SWEP.DefaultBodygroups = "00000000000"
+SWEP.DefaultBodygroups = "01000000000"
 
 SWEP.BulletBones = {
     [2] = "bullet1",    [3] = "bullet2",    [4] = "bullet3"
@@ -195,7 +198,7 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
     ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
 
 }
@@ -204,10 +207,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -244,37 +247,39 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 46 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magout.ogg", t = 1 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR.. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 20 / 30, c = ca, v = 0.8 },
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 54 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
+        MinProgress = 0.8,
         SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "boltcatchpress.ogg", t = 26 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 31 / 30, c = ca, v = 0.8 },
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -340,7 +345,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.04, -0.45, 2),
+            vpos = Vector(-0.04, -0.45, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

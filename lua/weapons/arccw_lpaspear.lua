@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1.1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -52,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 41
-SWEP.DamageMin = 30
+SWEP.DamageMin = 28
 SWEP.Range = 100
 SWEP.Penetration = 36
 SWEP.DamageType = DMG_BULLET
@@ -64,9 +65,9 @@ SWEP.PhysBulletMuzzleVelocity = 1200
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_HEAD] = 1.8,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 1.2,
     [HITGROUP_LEFTARM] = 1.2,
     [HITGROUP_RIGHTARM] = 1.2,
     [HITGROUP_LEFTLEG] = 0.85,
@@ -80,18 +81,19 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 1.2
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.45
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilVMShake = 0
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 793
+SWEP.Delay = 60 / 804
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -104,9 +106,6 @@ SWEP.Firemodes = {
             [1] = 0.6,
         },
     },
-    {
-        Mode = 0,
-    },
 }
 
 SWEP.ShootPitch = 90
@@ -116,6 +115,7 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
+SWEP.Silencer = true
 
 -- NPC stuff -- 
 
@@ -125,7 +125,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 600
+SWEP.HipDispersion = 800
 SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
@@ -135,7 +135,7 @@ SWEP.Primary.Ammo = "ar2"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.23
+SWEP.SightTime = 0.26
 
 -- Gun length --
 
@@ -145,8 +145,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.7, 0.6, 0.4)
-SWEP.ActiveAng = Angle(-0.2, 0, 0)
+SWEP.ActivePos = Vector(0.1, 0, 0.4)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -209,15 +209,14 @@ SWEP.AttachmentElements = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 35 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -361,7 +360,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.025, -0.75, 4),
+            vpos = Vector(-0.04, -0.75, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},

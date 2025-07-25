@@ -62,30 +62,8 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
-$sequence "fire_01" {
-	"anims\fire_01.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.05
-	fadeout 0.05
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_02" {
-	"anims\fire_02.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.05
-	fadeout 0.05
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_03" {
-	"anims\fire_03.smd"
+$sequence "fire" {
+	"anims\fire.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -220,7 +198,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "apache_col.smd"
+$collisionmodel "apache.smd"
 {
 	$mass 5
 }

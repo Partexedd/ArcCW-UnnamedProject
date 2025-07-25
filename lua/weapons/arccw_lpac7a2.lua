@@ -6,22 +6,24 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
+SWEP.TracerFinalMag = 3
 SWEP.TracerNum = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "C7A2 (ELCAN)"
+SWEP.PrintName = "Colt C7A2 (ELCAN)"
 
 -- Trivia --
 
@@ -53,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters >--
 
 SWEP.Damage = 27
-SWEP.DamageMin = 18
+SWEP.DamageMin = 17
 SWEP.Range = 100
 SWEP.Penetration = 26
 SWEP.DamageType = DMG_BULLET
@@ -66,10 +68,10 @@ SWEP.PhysBulletMuzzleVelocity = 950
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_CHEST] = 1.29,
+    [HITGROUP_STOMACH] = 1.29,
+    [HITGROUP_LEFTARM] = 1.29,
+    [HITGROUP_RIGHTARM] = 1.29,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -83,14 +85,15 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.2
-SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 0.25
+SWEP.Recoil = 0.3
+SWEP.RecoilDirection = Angle(1, -0.55, 0)
+SWEP.RecoilSide = 0
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.3
+SWEP.RecoilVMShake = 0
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -100,7 +103,7 @@ SWEP.Firemodes = {
     {
         Mode = -3,
         RunawayBurst = true,
-        PostBurstDelay = 0.2,
+        PostBurstDelay = 0.28,
         AutoBurst = true,
         PrintName = "Auto-Burst",
         Override_ShotRecoilTable = {
@@ -110,12 +113,12 @@ SWEP.Firemodes = {
     },
     {
         Mode = -3,
-        PostBurstDelay = 0.05,
+        PostBurstDelay = 0.11,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
-            [1] = 0.2,
-            [2] = 0.2,
-            [3] = 0.4,
+            [1] = 0.5,
+            [2] = 0.5,
+            [3] = 0.8,
         },
     },
 }
@@ -136,8 +139,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 650
+SWEP.MoveDispersion = 350
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
@@ -208,39 +211,14 @@ SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
 }
 
-SWEP.AttachmentElements = {
-
-    ["nois"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
-    -- Ind stocks --
-    
-    ["45acp"] = {
-        VMBodygroups = {{ind = 1, bg = 2},{ind = 2, bg = 1},{ind = 3, bg = 1},{ind = 4, bg = 1},{ind = 5, bg = 2}},
-    },
-
-    -- Extras --
-
-    ["50Beo"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_black"] = {
-        VMSkin = 1,
-    },
-}
-
 -- Animations --
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -420,7 +398,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_C7A2"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -429,16 +407,5 @@ SWEP.Attachments = {
         },
         Installed = "opticlp_c79a2",
         Hidden = true;
-		ExcludeFlags = {"45acp","modernframe"},
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"lowpoly_muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -2.5),
-            vang = Angle(90, 0, -90),
-        },
     },
 }

@@ -6,11 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 90
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -21,7 +22,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Colt M1911A1"
+SWEP.PrintName = "Colt M1911"
 
 -- Trivia --
 
@@ -30,8 +31,8 @@ SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short recoil"
-SWEP.Trivia_Country = "United States, Italy"
-SWEP.Trivia_Year = 1985
+SWEP.Trivia_Country = "United States"
+SWEP.Trivia_Year = 1911
 
 -- Weapon slot --
 
@@ -53,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 41
-SWEP.DamageMin = 17
+SWEP.DamageMin = 14
 SWEP.Range = 40
 SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
@@ -65,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 253
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.7,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.9,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
     [HITGROUP_LEFTLEG] = 0.9,
     [HITGROUP_RIGHTLEG] = 0.9,
 }
@@ -81,18 +82,19 @@ SWEP.Primary.ClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 2
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilVMShake = 0
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 410
+SWEP.Delay = 60 / 350
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -138,7 +140,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 0, 0.83),
+     Pos = Vector(-1.92, 1, 0.83),
      Ang = Angle(0.6, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -147,13 +149,13 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(0, -3, -7)
+SWEP.HolsterAng = Angle(35, 0, -7)
 
-SWEP.CrouchPos = Vector(-1.5, -1, 0)
+SWEP.CrouchPos = Vector(0.6, 1, 0.5)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(1, 1, 0.8)
+SWEP.ActivePos = Vector(1, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
@@ -194,10 +196,10 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = false,
+        Source = "idle",
     },
     ["idle_empty"] = {
-        Source = false,
+        Source = "idle_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -242,7 +244,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
-        MinProgress = 1,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
@@ -261,6 +263,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
