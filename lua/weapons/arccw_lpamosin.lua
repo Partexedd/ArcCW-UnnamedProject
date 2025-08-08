@@ -211,7 +211,6 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_SelectReloadAnimation = function (wep)
     if (wep:Clip1() == 1) then
-        self:GetBuff_Override("Override_ShotgunReload")
         return "reload"
     end
 end

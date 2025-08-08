@@ -1,4 +1,4 @@
-VertexLitGeneric
+"VertexLitGeneric"
 {
 	"$basetexture"	"models\weapons\arccw\shared\lens"
 	"$nocull" "1"

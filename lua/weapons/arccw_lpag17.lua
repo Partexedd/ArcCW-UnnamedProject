@@ -185,8 +185,8 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["pg"] = {
-        VMSkin = 1,
+    ["skinb"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 }
 
@@ -366,7 +366,7 @@ SWEP.Attachments = {
     {
         PrintName = "Skins",
         DefaultAttName = "Wooden Grip",
-        Slot = {"lpm9_skin"},
+        Slot = {"lowpoly_skin"},
         FreeSlot = true,
     },
 }

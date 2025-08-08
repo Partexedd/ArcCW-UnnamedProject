@@ -11,6 +11,7 @@ SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.6
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 77
+SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -21,12 +22,12 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Desert Eagle XIX"
+SWEP.PrintName = "IMI Desert Eagle XIX"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "it is big pistol"
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "IMI"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-operated, closed rotating bolt"
@@ -81,7 +82,7 @@ SWEP.Primary.ClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 2.5
+SWEP.Recoil = 3.5
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.3
 
@@ -89,7 +90,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -117,8 +118,9 @@ SWEP.NPCWeight = 80
 -- Accuracy --
 
 SWEP.AccuracyMOA = 3
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 500
+SWEP.HipDispersion = 200
+SWEP.MoveDispersion = 700
+SWEP.SightsDispersion = 0
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -139,7 +141,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 0, 0.35),
+     Pos = Vector(-1.92, 2, 0.35),
      Ang = Angle(0.5, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -148,13 +150,14 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(1.5, 2, 1)
+SWEP.HolsterAng = Angle(-8, 10, -5)
 
 SWEP.CrouchPos = Vector(0, 0, 1)
 SWEP.CrouchAng = Angle(0, 0, -2)
 
-SWEP.ActivePos = Vector(0, 1, 0.8)
+SWEP.ActivePos = Vector(0.3, 2, 0.3)
+SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -167,12 +170,13 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw/gsh18/"
 local path9 = "weapons/arccw/glock/"
+local pathCSR = "weapons/arccw/csr338/"
 
-SWEP.ShootSound = {path9 .. "fire-01.ogg", path9 .. "fire-02.ogg", path9 .. "fire-03.ogg", path9 .. "fire-04.ogg", path9 .. "fire-05.ogg", path9 .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"}
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path9 .. "fire-dist-01.ogg", path9 .. "fire-dist-02.ogg", path9 .. "fire-dist-03.ogg", path9 .. "fire-dist-04.ogg", path9 .. "fire-dist-05.ogg", path9 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 100
+SWEP.ShootPitch = 70
 
 -- Bodygroups --
 
@@ -211,14 +215,12 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 16 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 16 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.ogg", t = 0.02 }},
     },
@@ -248,7 +250,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 0.8,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,

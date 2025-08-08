@@ -36,7 +36,7 @@ SWEP.Trivia_Year = 1989
 
 -- Weapon slot --
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 -- Weapon's manufacturer real name --
 
@@ -99,7 +99,7 @@ SWEP.Num = 6
 SWEP.Firemodes = {
     {
         PrintName = "Pump-Action",
-        Mode = 2,
+        Mode = 1,
     },
 }
 

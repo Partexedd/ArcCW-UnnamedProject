@@ -23,13 +23,13 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "APACHE Mk. 18"
+SWEP.PrintName = "Colt M4A1 (APACHE)"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Carbine"
-SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "Daniel Defense"
+SWEP.Trivia_Desc = "Colt M4A1 in the APACHE configuration, includes an angled foregrip, top LASER / IR Designator combo, quick pull magazines"
+SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated, rotating bolt"
 SWEP.Trivia_Country = "USA"
@@ -167,8 +167,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
+SWEP.CrouchPos = Vector(0, -1, 0.5)
+SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

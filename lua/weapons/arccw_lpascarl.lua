@@ -190,7 +190,7 @@ SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
-SWEP.DefaultBodygroups = "01000000000"
+SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
     [2] = "bullet1",    [3] = "bullet2",    [4] = "bullet3"
@@ -200,7 +200,9 @@ SWEP.AttachmentElements = {
     ["nois"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-
+    ["skinb"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -369,5 +371,10 @@ SWEP.Attachments = {
             vpos = Vector(0, 2.5, 13),
             vang = Angle(90, 0, -90),
         },
+    },
+    {
+        PrintName = "Skin",
+        Slot = {"lowpoly_skin"},
+        DefaultAttName = "Tan Body",
     },
 }

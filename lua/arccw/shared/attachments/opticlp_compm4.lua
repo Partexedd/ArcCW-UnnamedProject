@@ -18,7 +18,7 @@ att.Mult_Recoil = 0.95
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.0235, 8, -1.12),
+        Pos = Vector(-0.028, 8, -1.44),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ViewModelFOV = 50,
@@ -26,6 +26,7 @@ att.AdditionalSights = {
 }
 
 att.ModelOffset = Vector(0, 0.025, -0.1)
+att.ModelScale = Vector(1.25, 1.25, 1.25)
 
 att.HolosightMagnification = 1.005
 

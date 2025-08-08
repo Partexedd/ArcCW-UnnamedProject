@@ -65,11 +65,11 @@ SWEP.PhysBulletMuzzleVelocity = 770
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.2,
-    [HITGROUP_CHEST] = 1.18,
-    [HITGROUP_STOMACH] = 1.18,
-    [HITGROUP_LEFTARM] = 1.18,
-    [HITGROUP_RIGHTARM] = 1.18,
+    [HITGROUP_HEAD] = 1.8,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -122,7 +122,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 700
 SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 0
 

@@ -181,13 +181,14 @@ local path = "weapons/arccw/xhr50/"
 local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
-local pathSCAR = "weapons/arccw/scar/"
 
-SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
+local pathM1 = "weapons/arccw/m1garand/"
+
+SWEP.ShootSound = pathM1 .. "Untitled+design.wav" -- {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", pathXC .. "fire-dist-03.ogg", pathXC .. "fire-dist-04.ogg", pathXC .. "fire-dist-05.ogg", pathXC .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder -- Maybe Not Placeholder
 
---SWEP.ShootPitch = 100
+SWEP.ShootPitch = 250
 
 -- Bodygroups --
 

@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 23
-SWEP.DamageMin = 10
+SWEP.DamageMin = 7
 SWEP.Range = 45
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BUCKSHOT
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 472
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1,
-    [HITGROUP_CHEST] = 0.7,
-    [HITGROUP_STOMACH] = 0.7,
-    [HITGROUP_LEFTARM] = 0.7,
-    [HITGROUP_RIGHTARM] = 0.7,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 1.3,
+    [HITGROUP_CHEST] = 0.78,
+    [HITGROUP_STOMACH] = 0.78,
+    [HITGROUP_LEFTARM] = 0.78,
+    [HITGROUP_RIGHTARM] = 0.78,
+    [HITGROUP_LEFTLEG] = 1.3,
+    [HITGROUP_RIGHTLEG] = 1.3,
 }
 
 -- Mag size --
@@ -108,7 +108,7 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.ShotgunReload = true
-SWEP.ReloadInSights = true
+SWEP.ReloadInSights = false
 
 -- NPC stuff -- 
 
@@ -118,8 +118,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 12
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 250
+SWEP.HipDispersion = 450
+SWEP.MoveDispersion = 0
 
 SWEP.Primary.Ammo = "buckshot"
 SWEP.MagID = "pgm"
@@ -136,8 +136,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(-0.7, -3, 0.4)
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActivePos = Vector(-0.8, -3, 0.6)
+SWEP.ActiveAng = Angle(-1, -1, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -237,12 +237,14 @@ SWEP.Animations = {
     ["sgreload_start"] = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 12 / 30,
+        Time = 24 / 30,
+        RestoreAmmo = 1,
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
-        Time = 45 / 30,
+        Time = 56 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 2,
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
@@ -252,7 +254,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 19 / 30,
+        Time = 14 / 30,
         TPAnimStartTime = 0.8,
     },
     

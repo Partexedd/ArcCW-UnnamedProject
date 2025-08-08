@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 1011
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1.25,
-    [HITGROUP_STOMACH] = 1.25,
-    [HITGROUP_LEFTARM] = 1.25,
-    [HITGROUP_RIGHTARM] = 1.25,
+    [HITGROUP_CHEST] = 1.22,
+    [HITGROUP_STOMACH] = 1.22,
+    [HITGROUP_LEFTARM] = 1.22,
+    [HITGROUP_RIGHTARM] = 1.22,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -145,8 +145,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 0, 1)
-SWEP.ActiveAng = Angle(0, 0, 4)
+SWEP.ActivePos = Vector(0.5, 0.7, 0)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -249,7 +249,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 45 / 30,
+        Time = 49 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -268,7 +268,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 62 / 30,
+        Time = 66 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,

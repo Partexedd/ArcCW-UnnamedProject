@@ -175,11 +175,13 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
 
-SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
-SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+local pathM1 = "weapons/arccw/m1garand/"
 
-SWEP.ShootPitch = 100
+SWEP.ShootSound = pathM1 .. "Untitled+design.wav" -- {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
+-- SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+
+SWEP.ShootPitch = 75
 
 -- Bodygroups --
 
@@ -244,10 +246,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "chpull.ogg", t = 4 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "chrelease.ogg", t = 10 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 4 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 10 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 16 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -278,12 +280,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.38,
         SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magout.ogg", t = 1 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR.. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 21 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 1 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 14 / 30, c = ca, v = 0.3 },
+            { s = pathM1 .. "Untitled+design.wav", t = 30 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 40 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 45 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -296,13 +298,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.47,
         SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathSCAR.. "struggle.ogg", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "magin.ogg", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathSCAR .. "boltcatchpress.ogg", t = 24 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 29 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 2 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 14 / 30, c = ca, v = 0.3 },
+            { s = pathM1 .. "Untitled+design.wav", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 18 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 24 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled+design.wav", t = 29 / 30, c = ca, v = 0.8 },
         },
     },
     
