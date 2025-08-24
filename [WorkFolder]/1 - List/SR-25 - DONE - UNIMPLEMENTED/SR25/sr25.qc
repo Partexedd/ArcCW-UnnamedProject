@@ -10,15 +10,15 @@ $bodygroup "1" {
 }
 
 $bodygroup "2" {
-	studio "defstock.smd"
+	studio "ironsup.smd"
+	studio "ironsdown.smd"
 	blank
 }
-
 
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0
-$attachment "2" "Bolt" 0 0 0 rotate -10 140 180
+$attachment "2" "Bolt" 0 0 -1 rotate -10 140 180
 $attachment "3" "Camera" 0 0 0 rotate -90 0 0
  
 $surfaceprop "default"
@@ -62,15 +62,14 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
-
 $sequence "fire" {
 	"anims\fire.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
-	fadein 0.02
-	fadeout 0.02
+	fadein 0.03
+	fadeout 0.03
 	{ event 5001 0 "1" }
 }
 
@@ -80,8 +79,8 @@ $sequence "fire_empty" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
-	fadein 0.02
-	fadeout 0.02
+	fadein 0.03
+	fadeout 0.03
 	{ event 5001 0 "1" }
 }
 
@@ -108,6 +107,52 @@ $sequence "reload_empty" {
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
+}
+
+$sequence "enter_inspect" {
+	"anims\enter_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect" {
+	"anims\idle_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect" {
+	"anims\exit_inspect.smd"
+	"anims\exit_inspect_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "enter_inspect_empty" {
+	"anims\enter_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect_empty" {
+	"anims\idle_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect_empty" {
+	"anims\exit_inspect_empty.smd"
+	"anims\exit_inspect_empty_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
 }
 
 $bonemerge "ValveBiped.Bip01_Spine4"

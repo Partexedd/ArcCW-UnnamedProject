@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
+SWEP.Damage = 24
 SWEP.DamageMin = 3
 SWEP.Range = 30
 SWEP.Penetration = 10
@@ -66,19 +66,19 @@ SWEP.PhysBulletMuzzleVelocity = 351
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 0.7,
-    [HITGROUP_CHEST] = 0.4,
-    [HITGROUP_STOMACH] = 0.4,
-    [HITGROUP_LEFTARM] = 0.4,
-    [HITGROUP_RIGHTARM] = 0.4,
-    [HITGROUP_LEFTLEG] = 0.7,
-    [HITGROUP_RIGHTLEG] = 0.7,
+    [HITGROUP_HEAD] = 1.1,
+    [HITGROUP_CHEST] = 0.78,
+    [HITGROUP_STOMACH] = 0.78,
+    [HITGROUP_LEFTARM] = 0.78,
+    [HITGROUP_RIGHTARM] = 0.78,
+    [HITGROUP_LEFTLEG] = 1.3,
+    [HITGROUP_RIGHTLEG] = 1.3,
 }
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 2
+SWEP.ChamberSize = 0
+SWEP.Primary.ClipSize = 3
 
 -- Recoil --
 
@@ -140,7 +140,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(-1, -1, 0.8)
+SWEP.ActivePos = Vector(-0.5, -1, 0.4)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"

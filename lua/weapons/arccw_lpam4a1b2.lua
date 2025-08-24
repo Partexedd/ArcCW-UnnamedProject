@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
-SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.24
+SWEP.Recoil = 0.5
+SWEP.RecoilDirection = Angle(1, 0.2, 0)
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -95,7 +95,7 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 802
+SWEP.Delay = 60 / 804
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -131,7 +131,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 800
-SWEP.MoveDispersion = 550
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
@@ -192,7 +192,7 @@ SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-0
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0
+SWEP.ShootPitch = 90
 
 -- Bodygroups --
 

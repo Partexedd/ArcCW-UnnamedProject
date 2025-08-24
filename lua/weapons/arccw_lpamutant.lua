@@ -28,7 +28,7 @@ SWEP.PrintName = "CMMG Mk47 Mutant"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "mutante"
+SWEP.Trivia_Desc = "TIER D - Overall great all-rounder, high consistent damage, barely any horizontal recoil and accurate hip-fire. Main drawback is its steep vertical kick, however it is consistent enough to learn to control reliably."
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "7.62x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas-operated, Rotating bolt"
@@ -150,6 +150,9 @@ SWEP.HolsterPos = Vector(12, -1, -1)
 SWEP.ActivePos = Vector(0, -0.6, 1)
 SWEP.ActiveAng = Angle(-0.2, 0, -2)
 
+SWEP.CrouchPos = Vector(0, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
+
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
@@ -166,9 +169,6 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
-
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

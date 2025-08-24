@@ -27,7 +27,7 @@ SWEP.PrintName = "IMI Desert Eagle XIX"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "TIER B - A classic pocket cannon, high recoil / damage pistol with an insanely high calibre, it has an amazing standing hip-fire accuracy giving it great 1 shot head-shot potential while holding close angles. However it has many negatives, the gun suffers highly from accuracy penalties when moving requiring you to stop before taking a shot, it's high recoil makes it really hard to control at medium range and it's massive bullets quickly lose damage at range."
 SWEP.Trivia_Manufacturer = "IMI"
 SWEP.Trivia_Calibre = ".50 Action Express"
 SWEP.Trivia_Mechanism = "Gas-operated, closed rotating bolt"
@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 470
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2.3,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
@@ -256,6 +256,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 1,
         SoundTable = {
             { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 1 },
             { s = path .. "magout.ogg", t = 13 / 30, c = ca, v = 1 },

@@ -26,7 +26,7 @@ SWEP.PrintName = "AutoMag III"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "it is again big pistol"
+SWEP.Trivia_Desc = "TIER B - High calibre pistol with good damage and range, viable for short to medium range engagements. While more versatile than other pistols at range it still suffers from high recoil, inaccurate hip-fire and low fire-rate."
 SWEP.Trivia_Manufacturer = "AMT"
 SWEP.Trivia_Calibre = ".30 Carbine"
 SWEP.Trivia_Mechanism = "Short recoil operated, locked breech"
@@ -65,7 +65,7 @@ SWEP.PhysBulletMuzzleVelocity = 470
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.3,
+    [HITGROUP_HEAD] = 2.2,
     [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1.2,
     [HITGROUP_LEFTARM] = 1.2,
@@ -117,8 +117,8 @@ SWEP.NPCWeight = 80
 -- Accuracy --
 
 SWEP.AccuracyMOA = 2
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 500
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -173,7 +173,7 @@ SWEP.ShootSound = pathF .. "fire.ogg" -- ph
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = pathF .. "dist.ogg" -- ph
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 85
 
 -- Bodygroups --
 

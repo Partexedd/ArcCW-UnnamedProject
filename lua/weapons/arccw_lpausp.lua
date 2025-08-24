@@ -102,7 +102,7 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ShootPitch = 87
+SWEP.ShootPitch = 75
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false

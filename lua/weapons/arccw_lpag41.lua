@@ -118,7 +118,7 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ShootPitch = 90
+SWEP.ShootPitch = 65
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
@@ -366,8 +366,8 @@ SWEP.Attachments = {
             vpos = Vector(-0.095, 0.1, -1.05),
             vang = Angle(90, 0, -90),
         },
+        Installed = "opticlp_g41scope",
         Hidden = true,
-        Installed = "opticlp_g41scope"
     },
     {
         PrintName = "Muzzle",

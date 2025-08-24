@@ -27,7 +27,7 @@ SWEP.PrintName = "PP-90"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "TIER A - A low recoil, highly controllable and accurate SMG, use it for running and gunning since hip-fire accuracy is great. Suffers greatly from low magazine capacity, slow fire-rate and low damage due to it's small calibre."
 SWEP.Trivia_Manufacturer = "KBP Instrument Design Bureau"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -118,7 +118,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 250
+SWEP.HipDispersion = 150
 SWEP.MoveDispersion = 50
 SWEP.JumpDispersion = 50
 
@@ -144,8 +144,8 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.285, -4, 0.35),
-     Ang = Angle(-0.5, 0, 0),
+     Pos = Vector(-2.285, -4, 0.25),
+     Ang = Angle(-0, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }

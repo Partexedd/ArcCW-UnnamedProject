@@ -130,8 +130,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 450
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 350
+SWEP.MoveDispersion = 450
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "smg1"
@@ -192,7 +192,7 @@ SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-0
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0
+SWEP.ShootPitch = 110
 
 -- Bodygroups --
 

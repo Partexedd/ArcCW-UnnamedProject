@@ -28,7 +28,7 @@ SWEP.PrintName = "FN SCAR-L"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "camionero"
+SWEP.Trivia_Desc = "TIER C - Robust assault rifle with low fire-rate and good damage for its calibre, it also has next to no random spread while moving letting you fire accurately on the move. While the fire-rate helps it stay stable it also really handicaps it's DPS at close range."
 SWEP.Trivia_Manufacturer = "FN"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated short-stroke piston"
@@ -67,11 +67,11 @@ SWEP.PhysBulletMuzzleVelocity = 775
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.9,
-    [HITGROUP_CHEST] = 1.15,
-    [HITGROUP_STOMACH] = 1.15,
-    [HITGROUP_LEFTARM] = 1.15,
-    [HITGROUP_RIGHTARM] = 1.15,
+    [HITGROUP_HEAD] = 1.95,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }

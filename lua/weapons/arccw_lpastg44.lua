@@ -28,7 +28,7 @@ SWEP.PrintName = "StG 44"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "ak44"
+SWEP.Trivia_Desc = "TIER A - Pioneer in its field, manufactured by an evil regime, versatile option for all ranges with easy to control recoil and good base hip-fire spread. Mostly limited by its lack of modability and low damage / fire-rate, outclassed by most modern rifles until used in it's time period."
 SWEP.Trivia_Manufacturer = "Sauer & Sohn"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-operated long-stroke piston, closed tilting bolt"
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 685
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.4,
-    [HITGROUP_STOMACH] = 1.4,
-    [HITGROUP_LEFTARM] = 1.4,
-    [HITGROUP_RIGHTARM] = 1.4,
-    [HITGROUP_LEFTLEG] = 1.1,
-    [HITGROUP_RIGHTLEG] = 1.1,
+    [HITGROUP_HEAD] = 1.6,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
 }
 
 -- Mag size --
@@ -146,7 +146,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(-0.6, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -155,7 +155,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.12, -5, 0.78),
-     Ang = Angle(0.4, 0, 0),
+     Ang = Angle(0.4, 0, -3),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -166,8 +166,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
+SWEP.CrouchPos = Vector(-1, -1, 1)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -188,7 +188,7 @@ SWEP.ShootSound = {pathAK .. "fire-01.ogg", pathAK .. "fire-02.ogg", pathAK .. "
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {pathAK .. "fire-dist-01.ogg", pathAK .. "fire-dist-02.ogg", pathAK .. "fire-dist-03.ogg", pathAK .. "fire-dist-04.ogg", pathAK .. "fire-dist-05.ogg", pathAK .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0
+SWEP.ShootPitch = 115
 
 -- Bodygroups --
 

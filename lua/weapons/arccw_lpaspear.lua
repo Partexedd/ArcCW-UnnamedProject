@@ -27,7 +27,7 @@ SWEP.PrintName = "SIG MCX Spear 6.8"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "TIER D - Incredibly versatile rifle with high recoil / damage / fire-rate, switching to semi-auto reduces recoil and fire-rate by 40% making it a formidable DMR, packs the punch of 7.62x51 NATO without it's high recoil, its 20 round mags mean you'll still have to be accurate with your shots."
 SWEP.Trivia_Manufacturer = "SIG"
 SWEP.Trivia_Calibre = ".277 Fury"
 SWEP.Trivia_Mechanism = "Short-stroke gas-operated piston, rotating bolt"

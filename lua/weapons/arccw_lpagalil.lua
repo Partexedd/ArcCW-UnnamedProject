@@ -143,8 +143,12 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(1, 0.6, 0.8)
-SWEP.ActiveAng = Angle(-0.2, 0, 5)
+
+SWEP.ActivePos = Vector(0, -0.6, 0.7)
+SWEP.ActiveAng = Angle(0, 0, -2)
+
+SWEP.CrouchPos = Vector(0, -1, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -162,9 +166,6 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -2, 0)
 SWEP.HolsterAng = Angle(-8, 25.881, 0)
-
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -232,14 +233,14 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.01,

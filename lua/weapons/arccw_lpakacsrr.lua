@@ -28,7 +28,7 @@ SWEP.PrintName = "KAC SRR"
 
 SWEP.Trivia_Class = "Battle Carbine"
 SWEP.Trivia_Desc = "Literally called Silenced Revolver Rifle"
-SWEP.Trivia_Manufacturer = "KAC"
+SWEP.Trivia_Manufacturer = "Knight's Armament Company"
 SWEP.Trivia_Calibre = ".30 Caliber Telescoping"
 SWEP.Trivia_Mechanism = "Double-Action"
 SWEP.Trivia_Country = "USA"

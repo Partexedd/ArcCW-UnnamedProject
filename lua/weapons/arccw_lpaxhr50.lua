@@ -27,7 +27,7 @@ SWEP.PrintName = "XHR-50"
 -- Trivia --
 
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "AR-10 custom in full auto"
+SWEP.Trivia_Desc = "TIER D - Custom AR-10 with full-auto (best used only in close quarters) and really high recoil, switching to semi-auto reduces recoil and fire-rate by 50% making it a powerful DMR, its 20 round mags make it hard to spray at longer range so don't forget to hit the fire-switch before pressing the trigger at range."
 SWEP.Trivia_Manufacturer = "LPA"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 44
-SWEP.DamageMin = 29
+SWEP.DamageMin = 31
 SWEP.Range = 100
 SWEP.Penetration = 36
 SWEP.DamageType = DMG_BULLET
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 770
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.8,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1.1,
     [HITGROUP_STOMACH] = 1.1,
     [HITGROUP_LEFTARM] = 1.1,
     [HITGROUP_RIGHTARM] = 1.1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
 }
 
 -- Mag size --
@@ -81,15 +81,15 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 1.3
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.65
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.2
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
@@ -102,7 +102,7 @@ SWEP.Firemodes = {
     {
         Mode = 1,
         Mult_RPM = 0.5,
-        Mult_Recoil = 0.6,
+        Mult_Recoil = 0.5,
     },
 }
 

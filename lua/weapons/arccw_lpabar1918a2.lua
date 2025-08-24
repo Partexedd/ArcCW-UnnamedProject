@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 -- Damage parameters --
 
 SWEP.Damage = 46
-SWEP.DamageMin = 34
+SWEP.DamageMin = 29
 SWEP.Range = 100
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 860
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_STOMACH] = 1.05,
+    [HITGROUP_LEFTARM] = 1.05,
+    [HITGROUP_RIGHTARM] = 1.05,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -82,7 +82,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 3
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.3
 
@@ -90,7 +90,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
@@ -146,15 +146,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(1, 0, 0.8)
-SWEP.ActiveAng = Angle(0, 0, 5)
+SWEP.ActivePos = Vector(-0.5, -2, 1)
+SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.13, -4, 0.97),
+     Pos = Vector(-3.13, -5, 0.97),
      Ang = Angle(-0.2, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,

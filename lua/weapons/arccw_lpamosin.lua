@@ -27,7 +27,7 @@ SWEP.PrintName = "Mosin–Nagant"
 -- Trivia --
 
 SWEP.Trivia_Class = "Bolt-action rifle"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "TIER B - WIP."
 SWEP.Trivia_Manufacturer = "Tula"
 SWEP.Trivia_Calibre = "7.62×54mmR"
 SWEP.Trivia_Mechanism = "Manually operated bolt action"
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 40
+SWEP.Delay = 60 / 400
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -195,7 +195,7 @@ SWEP.ShootPitch = 80
 
 -- Bodygroups --
 
-SWEP.DefaultBodygroups = "00000000000"
+SWEP.DefaultBodygroups = "0000000000"
 
 SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3",    [4] = "bullet4",    [5] = "bullet5"
@@ -209,11 +209,11 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.Hook_SelectReloadAnimation = function (wep)
+--[[ SWEP.Hook_SelectReloadAnimation = function (wep)
     if (wep:Clip1() == 1) then
         return "reload"
     end
-end
+end ]]
 
 -- Animations --
 
@@ -290,6 +290,7 @@ SWEP.Animations = {
             { s = pathXC .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
         },
     },
+
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -315,8 +316,8 @@ SWEP.Animations = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
-        MinProgress = 0.1,
-        LastClip1OutTime = 1.4,
+        MinProgress = 0,
+        LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 8 / 30, c = ca, v = 0.8 },
@@ -328,8 +329,8 @@ SWEP.Animations = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
-        MinProgress = 0.3,
-        LastClip1OutTime = 0.1,
+        MinProgress = 0,
+        LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "eject.ogg", t = 11 / 30, c = ca, v = 0.2 },
         },
@@ -338,7 +339,7 @@ SWEP.Animations = {
         Source = "sgreload_finish",
         TPAnimStartTime = 0.8,
         MinProgress = 0.8,
-        LastClip1OutTime = 0.1,
+        LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "boltforward.ogg", t = 4 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltdown.ogg", t = 4 / 30, c = ca, v = 0.8 },

@@ -28,7 +28,7 @@ SWEP.PrintName = "FAMAS Valorisé"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "how do i balance this one"
+SWEP.Trivia_Desc = "TIER C - Amazing CQB option that stays relevant at medium ranges thanks to its really stable 3 round burst-fire, its first 6 shots have reduced recoil, which can be reset by releasing the trigger for a moment before firing again. As you can see spraying and praying is penalised but not discouraged, the low damage stops it from dominating at all ranges, its hip-fire inaccuracy makes it harder hit your target unless you're aiming or close to them, and the low mag capacity makes every hit count."
 SWEP.Trivia_Manufacturer = "NW"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas operated, Rotating bolt"
@@ -80,8 +80,6 @@ SWEP.BodyDamageMults =
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 25
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
@@ -90,10 +88,10 @@ SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -113,14 +111,13 @@ SWEP.Firemodes = {
     },
     {
         Mode = -3,
-        Mult_HipDispersion = 3,
+        Mult_HipDispersion = 0.65,
         PostBurstDelay = 0.11,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
             [1] = 0.2,
             [2] = 0.2,
-            [3] = 0.2,
-            [4] = 0.2,
+            [3] = 0.8,
         },
     },
 }
@@ -152,7 +149,7 @@ SWEP.MagID = "famas"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.34
 
 -- Gun length --
 
@@ -243,12 +240,12 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         ShellEjectAt = 0.01,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         ShellEjectAt = 0.01,
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },

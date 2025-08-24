@@ -27,7 +27,7 @@ SWEP.PrintName = "AK-12 (2016)"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "ak47"
+SWEP.Trivia_Desc = "TIER D - Versatile assault rifle with really low recoil for its fire-rate, includes a 2 round burst-fire that reduces recoil by 60% on the first shot. It's only negative being the low damage per bullet which is sort of irrelevant thanks to how easy it is to send accurate rounds at range helping you keep a constant DPS that other rifles struggle to maintain."
 SWEP.Trivia_Manufacturer = "Kalashnikov"
 SWEP.Trivia_Calibre = "5.45x39mm Soviet"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 1011
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1.22,
-    [HITGROUP_STOMACH] = 1.22,
-    [HITGROUP_LEFTARM] = 1.22,
-    [HITGROUP_RIGHTARM] = 1.22,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -101,9 +101,11 @@ SWEP.Firemodes = {
         Mode = 2,
     },
     {
-        Mode = 1,
+        Mode = -2,
+        RunawayBurst = true,
+        PostBurstDelay = 0.11,
         Override_ShotRecoilTable = {
-            [1] = 0.3,
+            [1] = 0.4,
         },
     },
 }
@@ -187,7 +189,7 @@ SWEP.ShootSound = {pathAK .. "fire-01.ogg", pathAK .. "fire-02.ogg", pathAK .. "
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {pathAK .. "fire-dist-01.ogg", pathAK .. "fire-dist-02.ogg", pathAK .. "fire-dist-03.ogg", pathAK .. "fire-dist-04.ogg", pathAK .. "fire-dist-05.ogg", pathAK .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitchVariation = 0
+SWEP.ShootPitch = 85
 
 -- Bodygroups --
 

@@ -90,11 +90,11 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0.15
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 60
+SWEP.Delay = 60 / 400
 SWEP.Num = 8
 SWEP.Firemodes = {
     {
@@ -116,12 +116,12 @@ SWEP.NoLastCycle = true
 
 -- NPC stuff -- 
 
-SWEP.NPCWeaponType = "weapon_crossbow"
+SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 50
+SWEP.AccuracyMOA = 16
 SWEP.HipDispersion = 300
 SWEP.MoveDispersion = 0
 
@@ -130,8 +130,8 @@ SWEP.Primary.Ammo = "buckshot"
 -- Speed mult --
 
 SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.16
+SWEP.SightedSpeedMult = 0.9
+SWEP.SightTime = 0.22
 
 -- Gun length --
 
@@ -141,7 +141,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(-0.8, -2, 1)
+SWEP.ActivePos = Vector(-0.8, -1, 1)
 SWEP.ActiveAng = Angle(-1, -1.5, -2)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -183,7 +183,7 @@ SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .
 SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 60
 
 -- Bodygroups --
 
@@ -252,10 +252,8 @@ SWEP.Animations = {
         ShellEjectAt = 0.18,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltback.ogg", t = 4 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "eject.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltforward.ogg", t = 9 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltdown.ogg", t = 11 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 1 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 7 / 30, c = ca, v = 0.8 },
         },
     },
 
@@ -272,6 +270,7 @@ SWEP.Animations = {
         Time = 68 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 2,
+        ShellEjectAt = 0.2,
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
@@ -283,6 +282,7 @@ SWEP.Animations = {
         Source = "sgreload_finish",
         Time = 14 / 30,
         TPAnimStartTime = 0.8,
+        MinProgress = 0.2
     },
     
     

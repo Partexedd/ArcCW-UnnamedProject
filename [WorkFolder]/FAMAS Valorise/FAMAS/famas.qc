@@ -45,30 +45,8 @@ $sequence "idle"{
 	node "Ready"
 }
 
-$sequence "fire_01" {
-	"anims\fire_01.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_02" {
-	"anims\fire_02.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_03" {
-	"anims\fire_03.smd"
+$sequence "fire" {
+	"anims\fire.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1

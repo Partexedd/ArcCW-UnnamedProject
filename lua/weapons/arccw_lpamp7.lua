@@ -17,7 +17,7 @@ SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
 SWEP.TracerNum = 0
-SWEP.TracerFinalMag = 10
+SWEP.TracerFinalMag = 0
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
@@ -28,7 +28,7 @@ SWEP.PrintName = "HK MP7A1"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Low calibre SMG designed to use AP ammo"
+SWEP.Trivia_Desc = "TIER B - Classic SMG with really low recoil / damage / moving dispresion followed by high capacity mags / fire-rate making it a really unique option in the pack. With it's main downside being its damage per bullet, specially at range. If you want high consistent damage you'll have to aim for headshots."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "4.6x30mm HK"
 SWEP.Trivia_Mechanism = "Gas-operated, short stroke piston"
@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 40
 
 -- Recoil --
 
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.4
 SWEP.RecoilDirection = Angle(1, 0.25, 0)
-SWEP.RecoilSide = 0.35
+SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -118,7 +118,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 550
+SWEP.HipDispersion = 350
 SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol"
