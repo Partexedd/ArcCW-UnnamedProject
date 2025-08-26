@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 410
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_STOMACH] = 1.05,
+    [HITGROUP_LEFTARM] = 1.05,
+    [HITGROUP_RIGHTARM] = 1.05,
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
@@ -139,14 +139,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.5, 0, -0.5)
+SWEP.ActivePos = Vector(0, -3, 0.3)
+SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.65, -5, 0.15),
+     Pos = Vector(-2.645, -7, 0.15),
      Ang = Angle(0.8, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,

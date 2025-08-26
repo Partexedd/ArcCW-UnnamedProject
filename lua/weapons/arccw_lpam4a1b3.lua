@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.6
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.4
+SWEP.RecoilSide = 0.33
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -101,9 +101,9 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.8,
-            [2] = 0.8,
-            [3] = 0.9,
+            [1] = 0.7,
+            [2] = 0.7,
+            [3] = 0.8,
             [4] = 0.9,
         },
     },
