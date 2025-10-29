@@ -150,8 +150,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(1.5, 2, 1)
-SWEP.HolsterAng = Angle(-8, 10, -5)
+SWEP.HolsterPos = Vector(1, -5, -6)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(0, 0, 1)
 SWEP.CrouchAng = Angle(0, 0, -2)

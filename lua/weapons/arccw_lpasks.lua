@@ -83,15 +83,15 @@ SWEP.Primary.ClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.53
+SWEP.Recoil = 0.7
 SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.2
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
@@ -138,8 +138,6 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
 SWEP.ActivePos = Vector(0, -1, 0.85)
 SWEP.ActiveAng = Angle(0, 0, -1)
 
@@ -160,8 +158,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(0.5, -6, -7)
+SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

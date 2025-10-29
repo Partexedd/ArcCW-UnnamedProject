@@ -8,6 +8,11 @@ $bodygroup "1" {
 	studio "ironrail.smd"
 } 
 
+$bodygroup "1" {
+	studio "muzzle.smd"
+	blank
+} 
+
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0

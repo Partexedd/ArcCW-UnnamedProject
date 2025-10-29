@@ -87,13 +87,13 @@ SWEP.ReducedClipSize = 10
 
 SWEP.Recoil = 1.2
 SWEP.RecoilDirection = Angle(1, -0.3, 0)
-SWEP.RecoilSide = 0.3
+SWEP.RecoilSide = 0.55
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -102,9 +102,16 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.3,
+            [2] = 1.2,
+            [3] = 1.1,
+        },
     },
     {
         Mode = 1,
+        Mult_RPM = 0.5,
+        Mult_Recoil = 0.5,
     },
 }
 
@@ -124,8 +131,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 600
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "ar2"
@@ -164,8 +171,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -6, -7)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

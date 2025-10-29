@@ -91,7 +91,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -144,8 +144,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, 0, 0.4)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(0, -0.6, 1)
+SWEP.ActiveAng = Angle(0, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -161,8 +161,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, 2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -7, -7)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(-1, -1, 1)
 SWEP.CrouchAng = Angle(0, 0, -7)

@@ -28,7 +28,7 @@ SWEP.PrintName = "StG 44"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "TIER A - Pioneer in its field, manufactured by an evil regime, versatile option for all ranges with easy to control recoil and good base hip-fire spread. Mostly limited by its lack of modability and low damage / fire-rate, outclassed by most modern rifles until used in it's time period."
+SWEP.Trivia_Desc = "TIER A - Pioneer in its field, manufactured by an evil regime, versatile option for all ranges with easy to control recoil and good base hip-fire spread. Mostly limited by its lack of modability and low damage / fire-rate, outclassed by most modern rifles unless used in Its time period."
 SWEP.Trivia_Manufacturer = "Sauer & Sohn"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-operated long-stroke piston, closed tilting bolt"
@@ -163,8 +163,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -7, -8)
+SWEP.HolsterAng = Angle(35, 0, -5)
 
 SWEP.CrouchPos = Vector(-1, -1, 1)
 SWEP.CrouchAng = Angle(0, 0, -5)

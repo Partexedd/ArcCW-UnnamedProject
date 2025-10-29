@@ -89,7 +89,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.3
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -98,6 +98,11 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.3,
+            [2] = 1.2,
+            [3] = 1.1,
+        },
     },
     {
         Mode = 1,
@@ -160,8 +165,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -6, -7)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(-0.5, 0, 0.5)
 SWEP.CrouchAng = Angle(0, 0, -2)

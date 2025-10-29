@@ -22,12 +22,12 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Vityaz-SN (Mod)"
+SWEP.PrintName = "PP-19-01 Vityaz"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "A german take on the iconic British submachine gun Sten"
+SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "Kalashnikov"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Blowback, closed bolt"
@@ -82,26 +82,29 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.37
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.2
+SWEP.RecoilSide = 0.22
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 800
+SWEP.Delay = 60 / 803
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-    },
-    {
-        Mode = 1,
+        Override_ShotRecoilTable = {
+            [1] = 1.3,
+            [2] = 1.3,
+            [3] = 1.2,
+            [4] = 1.1,
+        },
     },
 }
 
@@ -130,7 +133,7 @@ SWEP.Primary.Ammo = "pistol"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.12
+SWEP.SightTime = 0.16
 
 -- Gun length --
 
@@ -138,16 +141,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(1, 1, 1)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(0, -0.6, 0.7)
+SWEP.ActiveAng = Angle(0, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.285, -4, 2.3),
-     Ang = Angle(-0.1, 0, 0),
+     Pos = Vector(-2.285, -4, 0.88),
+     Ang = Angle(-0.4, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -155,8 +158,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(1, -5, -6)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(-1, 1, 0)
 SWEP.CrouchAng = Angle(0, 0, -8)
@@ -171,17 +174,30 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/mp3008/"
+local path7 = "weapons/arccw/mp7/"
 local pathAK = "weapons/arccw/ak105/"
 local path556 = "weapons/arccw/xhr50/"
-local pathDist = "weapons/arccw/hk416/"
-local pathXC = "weapons/arccw/xcrm/"
-local pathCSR = "weapons/arccw/csr338/"
 
-SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
+SWEP.ShootSound = {
+    path7 .. "fire-01.ogg",
+    path7 .. "fire-02.ogg",
+    path7 .. "fire-03.ogg",
+    path7 .. "fire-04.ogg",
+    path7 .. "fire-05.ogg",
+    path7 .. "fire-06.ogg"
+}
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
-SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
+SWEP.DistantShootSound = {
+    path7 .. "fire-dist-01.ogg",
+    path7 .. "fire-dist-02.ogg",
+    path7 .. "fire-dist-03.ogg",
+    path7 .. "fire-dist-04.ogg",
+    path7 .. "fire-dist-05.ogg",
+    path7 .. "fire-dist-06.ogg"
+}
 
-SWEP.ShootPitch = 80
+
+SWEP.ShootPitch = 60
 
 -- Bodygroups --
 
@@ -189,6 +205,17 @@ SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
     [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3"
+}
+
+SWEP.AttachmentElements = {
+
+    ["modhg"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+
+    ["toprail"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -229,14 +256,14 @@ SWEP.Animations = {
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
-    -- 416 reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 45 / 30,
+        Time = 46 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -255,7 +282,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 62 / 30,
+        Time = 63 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -318,15 +345,24 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.035, 0.35, 2),
+            vpos = Vector(0.035, 0.25, 2.5),
             vang = Angle(90, 0, -90),
         },
-        Installed = "opticlp_1p87",
-        Hidden = true;
+        InstalledEles = {"toprail"},
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Muzzle Brake",
         Slot = {"lppp19_muzzle"},
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip", "lppp19_hg"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0, 2.5, 13),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"modhg"},
     },
 }

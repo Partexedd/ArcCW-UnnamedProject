@@ -144,8 +144,6 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
 SWEP.ActivePos = Vector(0, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
@@ -160,12 +158,11 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 70,
 }
 
-
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -4.7, -6)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(-1.2, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -15)

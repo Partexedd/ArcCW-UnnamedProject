@@ -60,20 +60,20 @@ SWEP.Range = 100
 SWEP.Penetration = 44
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 940
-SWEP.PhysBulletMuzzleVelocity = 940
+SWEP.MuzzleVelocity = 881
+SWEP.PhysBulletMuzzleVelocity = 881
 
 -- miniscule tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.4,
-    [HITGROUP_STOMACH] = 1.4,
-    [HITGROUP_LEFTARM] = 1.05,
-    [HITGROUP_RIGHTARM] = 1.05,
-    [HITGROUP_LEFTLEG] = 0.6,
-    [HITGROUP_RIGHTLEG] = 0.6,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.06,
+    [HITGROUP_RIGHTARM] = 1.06,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --

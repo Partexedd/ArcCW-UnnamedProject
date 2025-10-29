@@ -87,7 +87,7 @@ SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.3
@@ -127,8 +127,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 700
-SWEP.MoveDispersion = 50
+SWEP.HipDispersion = 600
+SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "ar2"
@@ -146,7 +146,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(-0.5, -2, 1)
+SWEP.ActivePos = Vector(-0.5, -2, 0.4)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"

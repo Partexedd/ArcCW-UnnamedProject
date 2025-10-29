@@ -27,7 +27,7 @@ SWEP.PrintName = "C14 Timberwolf"
 -- Trivia --
 
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = ""
+SWEP.Trivia_Desc = "TIER C - Formidable long-range sniper rifle with great stopping power. It's able to one shot to the torso and arms up until 75m so it can be used for quickscoping. It is however limited by it's hip-fire accuracy and small mag capacity."
 SWEP.Trivia_Manufacturer = "PGW Defence Technologies Ltd"
 SWEP.Trivia_Calibre = ".338 Lapua Magnum"
 SWEP.Trivia_Mechanism = "Manually operated bolt action"
@@ -46,8 +46,8 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpapgw.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_lpapgw.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpac14.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_lpac14.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 823
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 0.984,
-    [HITGROUP_STOMACH] = 0.962,
-    [HITGROUP_LEFTARM] = 0.95,
-    [HITGROUP_RIGHTARM] = 0.95,
+    [HITGROUP_CHEST] = 1.02,
+    [HITGROUP_STOMACH] = 1.02,
+    [HITGROUP_LEFTARM] = 1.02,
+    [HITGROUP_RIGHTARM] = 1.02,
     [HITGROUP_LEFTLEG] = 0.87,
     [HITGROUP_RIGHTLEG] = 0.87,
 }
@@ -84,23 +84,23 @@ SWEP.ReducedClipSize = 2
 
 -- Recoil --
 
-SWEP.Recoil = 3
+SWEP.Recoil = 2
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
-SWEP.RecoilSide = 2
+SWEP.RecoilSide = 1.25
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.2
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 750
+SWEP.Delay = 60 / 350
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
-        Mode = 2,
+        Mode = 1,
     },
 }
 
@@ -123,7 +123,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 1500
-SWEP.MoveDispersion = 250
+SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 0
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
@@ -133,7 +133,7 @@ SWEP.MagID = "pgm"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.34
 
 -- Gun length --
 
@@ -143,16 +143,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(1, 0.6, 0.8)
-SWEP.ActiveAng = Angle(0, 0, 2)
+SWEP.ActivePos = Vector(0, 0, 0.6)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.32, -3, 0),
-     Ang = Angle(0.7, 0, 0),
+     Pos = Vector(-3.08, -5, -0.3),
+     Ang = Angle(0.95, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -160,8 +159,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -4, -9)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(0, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -2)
@@ -198,7 +197,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["nois"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 
     -- Barrel
@@ -243,16 +242,16 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 33 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = pathCSR .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltforward.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltdown.ogg", t = 14 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 8 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 15 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 24 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -261,7 +260,6 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 21 / 30,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -269,7 +267,6 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 21 / 30,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -280,14 +277,14 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         TPAnimStartTime = 0.7,
         Framerate = 30,
-        Time = 27 / 30,
-        ShellEjectAt = 0.3,
+        ShellEjectAt = 0.5,
+        MinProgress = 1.4,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltforward.ogg", t = 11 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltdown.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 8 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 12 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 15 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 24 / 30, c = ca, v = 0.8 },
         },
     },
 
@@ -296,41 +293,33 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
+        LastClip1OutTime = 1,
+        MinProgress = 1.5,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathXHR .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = pathXC .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 7 / 30, c = ca, v = 0.8 },
+            { s = pathXHR .. "magdrop.ogg", t = 25 / 30, c = ca, v = 0.3 },
+            { s = pathXC .. "magin.ogg", t = 27 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
-        ShellEjectAt = 0.3,
+        MinProgress = 1.5,
+        ShellEjectAt = 2.3,
         SoundTable = {
-            { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "magout.ogg", t = 20 / 30, c = ca, v = 0.8 },
-            { s = pathXHR .. "magdrop.ogg", t = 30 / 30, c = ca, v = 0.3 },
-            { s = pathXC .. "magin.ogg", t = 39 / 32, c = ca, v = 0.8 },
+            { s = pathXC .. "magout.ogg", t = 7 / 30, c = ca, v = 0.8 },
+            { s = pathXHR .. "magdrop.ogg", t = 25 / 30, c = ca, v = 0.3 },
+            { s = pathXC .. "magin.ogg", t = 27 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "end.ogg", t = 40 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltforward.ogg", t = 62 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltdown.ogg", t = 70 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltup.ogg", t = 52 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltback.ogg", t = 60 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "eject.ogg", t = 64 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltforward.ogg", t = 67 / 30, c = ca, v = 0.8 },
+            { s = pathCSR .. "boltdown.ogg", t = 76 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -408,7 +397,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, -0.6, 3),
+            vpos = Vector(-0.07, 0.3, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -425,21 +414,8 @@ SWEP.Attachments = {
         InstalledEles = {"nofh"},
     },
     { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.5, 13),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
-        },
+        PrintName = "Ammunition",
+        Slot = {"lowpoly_ammo"},
+        DefaultAttName = "Tracerless",
     },
 }

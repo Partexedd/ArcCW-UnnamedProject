@@ -153,11 +153,11 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(1, -5, -6)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
-SWEP.CrouchPos = Vector(-2, 1, 0)
-SWEP.CrouchAng = Angle(0, 0, -8)
+SWEP.CrouchPos = Vector(-0.2, 0, 0.2)
+SWEP.CrouchAng = Angle(1, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -169,10 +169,8 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/xhr50/"
-local pathDist = "weapons/arccw/hk416/"
 local path762 = "weapons/arccw/mutant/"
 local pathXC = "weapons/arccw/xcrm/"
-local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
 
 SWEP.ShootSound = {path762 .. "fire-01.ogg", path762 .. "fire-02.ogg", path762 .. "fire-03.ogg", path762 .. "fire-04.ogg", path762 .. "fire-05.ogg", path762 .. "fire-06.ogg"} -- Maybe Not Placeholder

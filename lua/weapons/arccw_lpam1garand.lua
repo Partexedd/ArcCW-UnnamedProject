@@ -191,45 +191,6 @@ SWEP.BulletBones = {
     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3",    [4] = "bullet4",    [5] = "bullet5",    [6] = "bullet6",    [7] = "bullet7",    [8] = "bullet8",
 }
 
-SWEP.AttachmentElements = {
-
-    ["nois"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
-    },
-
-    -- Barrel
-
-    ["extbar"] = {
-        VMBodygroups = {{ind = 1, bg = 1},{ind = 5, bg = 1}},
-        AttPosMods = {
-            [4] = {
-                vpos = Vector(0, 0, 5.5),
-            }
-        },
-    },
-
-    ["snipergrip"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
-    },
-
-    -- Flash hider --
-    ["nofh"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
-    },
-
-    -- Extras --
-
-    ["6_8"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
-    },
-
-    -- Skins --
-
-    ["skin_wireframe"] = {
-        VMSkin = 1,
-    },
-}
-
 -- Animations --
 
 SWEP.Animations = {
@@ -366,32 +327,11 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lpm1_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
             vpos = Vector(-0.05, -0.3, 4),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"lowpoly_muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -1.2),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.5, 13),
             vang = Angle(90, 0, -90),
         },
     },
