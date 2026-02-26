@@ -174,7 +174,7 @@ SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 110
 
 -- Bodygroups --
 

@@ -197,7 +197,7 @@ SWEP.DistantShootSound = {
 }
 
 
-SWEP.ShootPitch = 60
+SWEP.ShootPitch = 70
 
 -- Bodygroups --
 
@@ -345,7 +345,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.035, 0.25, 2.5),
+            vpos = Vector(0.025, 0.25, 2.5),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"toprail"},

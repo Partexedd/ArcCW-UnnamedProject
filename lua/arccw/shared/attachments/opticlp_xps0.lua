@@ -1,4 +1,4 @@
-att.PrintName = "XPS0 (Holo)"
+att.PrintName = "EOTech XPS2-0 (Holo)"
 att.Icon = Material("entities/att/acwatt_optic_lp_aimpoint_aco.png")
 att.Description = "Red dot sight designed for close range."
 

@@ -66,7 +66,7 @@ SWEP.PhysBulletMuzzleVelocity = 535
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.72,
     [HITGROUP_CHEST] = 1.25,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
@@ -105,12 +105,6 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.14,
         RunawayBurst = true,
         Mult_Recoil = 0.5,
-    },
-    {
-        Mode = 2,
-        Mult_Recoil = 1.8,
-        Mult_HipDispersion = 8,
-        Mult_RPM = 0.8,
     },
 }
 

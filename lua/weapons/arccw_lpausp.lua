@@ -342,16 +342,6 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lpm1911_is"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
         PrintName = "Barrel",
         DefaultAttName = "Threaded Barrel",
         Slot = {"lowpoly_muzzle"},

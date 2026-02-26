@@ -1,4 +1,4 @@
-$modelname "weapons\arccw\c_lpaqbz.mdl"
+$modelname "weapons\arccw\c_lpaqbz191.mdl"
  
 $bodygroup "studio" {
 	studio "qbz.smd"
@@ -7,6 +7,11 @@ $bodygroup "studio" {
 $bodygroup "1" {
 	studio "191.smd"
 	studio "192.smd"
+}
+
+$bodygroup "2" {
+	studio "isup.smd"
+	studio "isdown.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
