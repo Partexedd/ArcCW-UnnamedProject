@@ -124,8 +124,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 300
+SWEP.HipDispersion = 250
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -357,12 +358,11 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip", "lppp19_hg"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc", "lppp19_hg"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.36, -0.95, -8.4),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"modhg"},
     },
 }

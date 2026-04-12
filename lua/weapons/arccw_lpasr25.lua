@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 522
+SWEP.Delay = 60 / 472
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -118,9 +118,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 650
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "scar"
@@ -139,8 +139,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.5, 0, 0.8)
-SWEP.ActiveAng = Angle(0.5, 0, -1)
+SWEP.ActivePos = Vector(0.2, 0.7, 0.5)
+SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -177,7 +177,7 @@ local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
 
-SWEP.ShootSound = {pathSCAR .. "fire-01.ogg", pathSCAR .. "fire-02.ogg", pathSCAR .. "fire-03.ogg", pathSCAR .. "fire-04.ogg", pathSCAR .. "fire-05.ogg", pathSCAR .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
 SWEP.DistantShootSound = {pathSCAR .. "fire-dist-01.ogg", pathSCAR .. "fire-dist-02.ogg", pathSCAR .. "fire-dist-03.ogg", pathSCAR .. "fire-dist-04.ogg", pathSCAR .. "fire-dist-05.ogg", pathSCAR .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder
 
@@ -245,8 +245,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.38,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.62,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathSCAR .. "magout.ogg", t = 1 / 30, c = ca, v = 0.8 },
@@ -338,7 +338,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.05, -0.3, 2),
+            vpos = Vector(-0.05, -0.15, 2),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -356,10 +356,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.2, -1.7, -7),
             vang = Angle(90, 0, -90),
         },
     },

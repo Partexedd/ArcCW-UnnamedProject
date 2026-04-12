@@ -119,8 +119,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 150
-SWEP.MoveDispersion = 50
-SWEP.JumpDispersion = 50
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"

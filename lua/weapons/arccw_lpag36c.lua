@@ -126,8 +126,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 150
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "famas"
@@ -218,7 +218,9 @@ SWEP.AttachmentElements = {
     ["nois"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
-
+    ["norail"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -266,7 +268,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.5, 
+        MinProgress = 1,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path3 .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
@@ -284,6 +287,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
+        MinProgress = 1,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path3 .. "magout.ogg", t = 6 / 30, c = ca, v = 0.8 },
@@ -363,8 +367,20 @@ SWEP.Attachments = {
         Slot = {"lowpoly_foregrip"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.36, -1.7, -9),
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {4},
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip_nocc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.36, -1.7, -8.5),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"norail"},
+        Hidden = true,
     },
 }

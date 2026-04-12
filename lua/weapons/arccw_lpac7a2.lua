@@ -80,8 +80,6 @@ SWEP.BodyDamageMults =
 
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 30
-SWEP.ExtendedClipSize = 40
-SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
@@ -140,8 +138,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 650
-SWEP.MoveDispersion = 350
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "xcr"
@@ -289,44 +287,6 @@ SWEP.Animations = {
             { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
         },
     },
-
-    -- .45 reloads --
-
-    ["reload_45"] = {
-        Source = "reload_45",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
-        SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
-        },
-    },
-    ["reload_empty_45"] = {
-        Source = "reload_empty_45",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.45,
-        SoundTable = {
-            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop.ogg", t = 16 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber_press.ogg", t = 28 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
-        },
-    },
     
     -- Inspecc --
 
@@ -406,6 +366,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         Installed = "opticlp_c79a2",
-        Hidden = true;
+        Integral = true,
     },
 }

@@ -118,16 +118,19 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 350
+SWEP.HipDispersion = 350
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1
+SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 1
 SWEP.SightTime = 0.05
+
+SWEP.ShootWhileSprint = true
 
 -- Gun length --
 

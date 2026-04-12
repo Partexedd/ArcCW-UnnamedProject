@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.55
-SWEP.RecoilDirection = Angle(1, 0.7, 0)
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.65
+SWEP.RecoilDirection = Angle(1, 0.4, 0)
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -125,8 +125,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 700
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "famas"
@@ -250,7 +250,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
+        LHIKEaseOut = 0.15,
         LHIKOut = 0.5,
         MinProgress = 0.8,
         SoundTable = {
@@ -269,8 +269,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.45,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.5,
         MinProgress = 0.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -362,10 +362,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.2, -1.4, -8),
             vang = Angle(90, 0, -90),
         },
     },

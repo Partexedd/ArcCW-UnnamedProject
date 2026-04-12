@@ -6,12 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect =  "muzzleflash_3"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
-SWEP.ShellScale = 1.2
+SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 90
-SWEP.NoFlash = true
+SWEP.NoFlash = false
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -26,7 +26,7 @@ SWEP.PrintName = "M1918A2 BAR"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "LMG"
+SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Three germans walk into a BAR..."
 SWEP.Trivia_Manufacturer = "Browning"
 SWEP.Trivia_Calibre = ".30-06 Springfield"
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 860
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.15,
-    [HITGROUP_CHEST] = 1.05,
-    [HITGROUP_STOMACH] = 1.05,
-    [HITGROUP_LEFTARM] = 1.05,
-    [HITGROUP_RIGHTARM] = 1.05,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.35,
+    [HITGROUP_CHEST] = 1.18,
+    [HITGROUP_STOMACH] = 1.18,
+    [HITGROUP_LEFTARM] = 1.18,
+    [HITGROUP_RIGHTARM] = 1.18,
+    [HITGROUP_LEFTLEG] = 0.8,
+    [HITGROUP_RIGHTLEG] = 0.8,
 }
 
 -- Mag size --
@@ -83,7 +83,7 @@ SWEP.Primary.ClipSize = 20
 -- Recoil --
 
 SWEP.Recoil = 3
-SWEP.RecoilDirection = Angle(1, 0.5, 0)
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -100,6 +100,17 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         PrintName = "Fast fire",
+        Override_ShotRecoilTable = {
+            [1] = 0.6,
+            [2] = 0.6,
+            [3] = 0.6,
+            [4] = 0.6,
+            [5] = 0.7,
+            [6] = 0.7,
+            [8] = 0.8,
+            [9] = 0.8,
+            [10] = 0.9,
+        },
     },
     {
         Mode = 2,
@@ -128,17 +139,16 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 150
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.MagID = "famas"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.45
 
 -- Gun length --
 
@@ -146,16 +156,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(-0.5, -2, 0.4)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(-0.6, 0, 0.6)
+SWEP.ActiveAng = Angle(-0.5, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.13, -5, 0.97),
-     Ang = Angle(-0.2, 0, 0),
+     Pos = Vector(-3.13, -2, 0.97),
+     Ang = Angle(0, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -163,11 +173,11 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, 2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(2, 0, 0.5)
+SWEP.HolsterAng = Angle(-12, 32, -15)
 
-SWEP.CrouchPos = Vector(-1, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -7)
+SWEP.CrouchPos = Vector(-1, 0, 0.8)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -189,6 +199,7 @@ SWEP.ShootSound = {pathSCAR .. "fire-01.ogg", pathSCAR .. "fire-02.ogg", pathSCA
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
 SWEP.DistantShootSound = {pathSCAR .. "fire-dist-01.ogg", pathSCAR .. "fire-dist-02.ogg", pathSCAR .. "fire-dist-03.ogg", pathSCAR .. "fire-dist-04.ogg", pathSCAR .. "fire-dist-05.ogg", pathSCAR .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder
 
+SWEP.ShootPitch = 80
 SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
@@ -200,7 +211,7 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["nois"] = {
+    ["lrs"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
 
@@ -255,6 +266,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 1.6,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathSCAR .. "magout.ogg", t = 1 / 30, c = ca, v = 0.8 },
@@ -273,6 +285,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
+        MinProgress = 2.2,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathSCAR .. "magout.ogg", t = 2 / 30, c = ca, v = 0.8 },
@@ -342,33 +355,8 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_bar1918a2_optic"},
         DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(-0.04, -0.45, 2),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nois"},
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"lowpoly_muzzle"},
-        Bone = "Barrel",
-        Offset = {
-            vpos = Vector(0, 0, -1.2),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nofh"},
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.5, 13),
-            vang = Angle(90, 0, -90),
-        },
+        InstalledEles = {"lrs"},
     },
 }

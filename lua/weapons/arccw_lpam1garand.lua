@@ -6,12 +6,12 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect =  "muzzleflash_6"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
 SWEP.ShellPitch = 90
-SWEP.NoFlash = true
+SWEP.NoFlash = false
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -32,7 +32,7 @@ SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Gas-operated, closed rotating bolt"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2004
+SWEP.Trivia_Year = 1936
 
 -- Weapon slot --
 
@@ -81,8 +81,8 @@ SWEP.Primary.ClipSize = 8
 
 -- Recoil --
 
-SWEP.Recoil = 1.5
-SWEP.RecoilDirection = Angle(1, -0.2, 0)
+SWEP.Recoil = 2
+SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.6
 
 SWEP.RecoilRise = 0
@@ -98,6 +98,9 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 1,
+    },
+    {
+        Mode = 0,
     },
 }
 
@@ -118,8 +121,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 850
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "scar"
@@ -128,7 +131,7 @@ SWEP.MagID = "scar"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.4
 
 -- Gun length --
 
@@ -136,9 +139,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
-
-SWEP.ActivePos = Vector(-0.7, -1, 1)
+SWEP.ActivePos = Vector(-0.8, -1.5, 0.6)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -147,7 +148,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.08, -5, 1.2),
-     Ang = Angle(-0.1, 0, 0),
+     Ang = Angle(-0.1, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -155,8 +156,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(2, 0, 0.5)
+SWEP.HolsterAng = Angle(-12, 32, -15)
 
 SWEP.CrouchPos = Vector(0, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -2)
@@ -171,17 +172,19 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/xhr50/"
+local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
-
 local pathM1 = "weapons/arccw/m1garand/"
 
-SWEP.ShootSound = pathM1 .. "Untitled+design.wav" -- {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .. "fire-03.ogg", pathCSR .. "fire-04.ogg", pathCSR .. "fire-05.ogg", pathCSR .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = "weapons/arccw/m98b/lowpolym98b_supp.ogg" -- Placeholder
--- SWEP.DistantShootSound = {pathCSR .. "fire-dist-01.ogg", pathCSR .. "fire-dist-02.ogg", pathCSR .. "fire-dist-03.ogg", pathCSR .. "fire-dist-04.ogg", pathCSR .. "fire-dist-05.ogg", pathCSR .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg"  -- Placeholder
+SWEP.DistantShootSound = {pathSCAR .. "fire-dist-01.ogg", pathSCAR .. "fire-dist-02.ogg", pathSCAR .. "fire-dist-03.ogg", pathSCAR .. "fire-dist-04.ogg", pathSCAR .. "fire-dist-05.ogg", pathSCAR .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 75
+SWEP.ShootPitch = 90
+SWEP.ShootPitchVariation = 0
+
 
 -- Bodygroups --
 
@@ -207,10 +210,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 4 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 10 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "chpull.ogg", t = 4 / 30, c = ca, v = 0.8 },
+            { s = pathSCAR .. "chrelease.ogg", t = 10 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "end.ogg", t = 16 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -226,7 +229,8 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0.01,
-        SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
+        MinProgress = 0.6,
+        SoundTable = {{ s = pathM1 .. "Untitled.wav", t = 0 }},
     },
 
     -- reloads --
@@ -241,12 +245,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.38,
         SoundTable = {
-            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 1 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathM1 .. "Untitled+design.wav", t = 30 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 40 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 45 / 30, c = ca, v = 0.8 },
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = pathM1 .. "Untitled.wav", t = 34 / 30, c = ca, v = 1 },
         },
     },
     ["reload_empty"] = {
@@ -259,13 +262,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.47,
         SoundTable = {
-            { s = pathM1 .. "Untitled+design.wav", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 2 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 14 / 30, c = ca, v = 0.3 },
-            { s = pathM1 .. "Untitled+design.wav", t = 12 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 18 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 24 / 30, c = ca, v = 0.8 },
-            { s = pathM1 .. "Untitled+design.wav", t = 29 / 30, c = ca, v = 0.8 },
+            { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -327,7 +328,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpm1_optic"},
+        Slot = {"lowpoly_m1garand_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

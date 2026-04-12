@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_6" -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 0.6
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
@@ -28,7 +28,7 @@ SWEP.PrintName = "HK MP7A1"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "TIER B - Classic SMG with really low recoil / damage / moving dispresion followed by high capacity mags / fire-rate making it a really unique option in the pack. With it's main downside being its damage per bullet, specially at range. If you want high consistent damage you'll have to aim for headshots."
+SWEP.Trivia_Desc = "TIER B - Classic SMG with really low recoil / damage followed by high capacity mags and good fire-rate making it a really unique option in the pack. With it's main downside being its damage per bullet, specially at range. If you want high consistent damage you'll have to aim for headshots."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "4.6x30mm HK"
 SWEP.Trivia_Mechanism = "Gas-operated, short stroke piston"
@@ -119,7 +119,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 50
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"
@@ -258,6 +259,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
+        MinProgress = 0.8,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path7 .. "magout.ogg", t = 2 / 30, c = ca },
@@ -275,6 +277,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 1.6,
         SoundTable = {
             --{ s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path7 .. "magout.ogg", t = 2 / 30, c = ca},

@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.62
+SWEP.Recoil = 0.7
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.24
+SWEP.RecoilSide = 0.19
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -131,8 +131,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 450
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "xcr"
@@ -149,7 +149,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
+SWEP.HolsterPos = Vector(1, -6, -6)
+SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.ActivePos = Vector(0.1, 0.5, 0.4)
 SWEP.ActiveAng = Angle(1, 0, -1)
@@ -167,9 +168,6 @@ SWEP.IronSightStruct = {
 
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
-
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
 SWEP.CrouchPos = Vector(0, -1, 1)
 SWEP.CrouchAng = Angle(0, 0, -3)
@@ -206,6 +204,9 @@ SWEP.AttachmentElements = {
     ["nois"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
+    ["fghgcover"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -224,10 +225,11 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKOut = 0.45,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = path .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 19 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -275,8 +277,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.45,
+        LHIKEaseOut = 0.17,
+        LHIKOut = 0.54,
         MinProgress = 0.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -378,11 +380,14 @@ SWEP.Attachments = {
         },
         InstalledEles = {"nofh"},
     },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_apache"},
-        DefaultAttName = "Tan",
-        FreeSlot = true,
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.36, -1.6, -6.7),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"fghgcover"},
     },
 }

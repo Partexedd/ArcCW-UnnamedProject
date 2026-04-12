@@ -122,6 +122,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 12
 SWEP.HipDispersion = 450
 SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 
@@ -244,24 +245,38 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 24 / 30,
         RestoreAmmo = 1,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 6 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
         Time = 68 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 2,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 14 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "boltrelease.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 51 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 17 / 30,
         TPAnimStartTime = 0.3,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 15 / 30,
+        Time = 20 / 30,
         TPAnimStartTime = 0.8,
-        MinProgress = 0.2
+        MinProgress = 0.2,
+        SoundTable = {
+            { s = pathXC .. "end.ogg", t = 0 / 30, c = ca, v = 0.8 },
+        },
     },
     
     

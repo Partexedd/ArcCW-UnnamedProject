@@ -82,7 +82,7 @@ SWEP.Primary.ClipSize = 7
 
 -- Recoil --
 
-SWEP.Recoil = 3.5
+SWEP.Recoil = 4.5
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.3
 
@@ -90,11 +90,11 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.2
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 400
+SWEP.Delay = 60 / 270
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -118,9 +118,9 @@ SWEP.NPCWeight = 80
 -- Accuracy --
 
 SWEP.AccuracyMOA = 3
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 700
-SWEP.SightsDispersion = 0
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 

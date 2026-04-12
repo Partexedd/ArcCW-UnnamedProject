@@ -22,17 +22,17 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "GSH-18"
+SWEP.PrintName = "GSh-18"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "it is pistol"
-SWEP.Trivia_Manufacturer = "NW"
+SWEP.Trivia_Manufacturer = "KBP Instrument Design Bureau"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short recoil, rotating barrel striker fired"
 SWEP.Trivia_Country = "Russian Federation"
-SWEP.Trivia_Year = 2000
+SWEP.Trivia_Year = 2001
 
 -- Weapon slot --
 
@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 28
-SWEP.DamageMin = 17
+SWEP.DamageMin = 15
 SWEP.Range = 40
 SWEP.Penetration = 17
 SWEP.DamageType = DMG_BULLET
@@ -66,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 535
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_HEAD] = 1.9,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1.4,
+    [HITGROUP_LEFTARM] = 1.4,
+    [HITGROUP_RIGHTARM] = 1.4,
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
@@ -120,8 +120,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 150
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"
@@ -230,7 +231,7 @@ SWEP.Animations = {
         Source = "draw",
     },
     ["fire"] = {
-        Source = {"fire_01","fire_02","fire_03"},
+        Source = "fire",
         Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.02,
@@ -252,11 +253,6 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 34 / 30,
         LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
         MinProgress = 1,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
@@ -271,11 +267,7 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 36 / 30,
         LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        MinProgress = 0.8,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
@@ -285,49 +277,6 @@ SWEP.Animations = {
         },
     },
 
-    -- 32-R Reloads --
-
-    ["reload_32"] = {
-        Source = "reload_32",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Framerate = 30,
-        Time = 34 / 30,
-        MinProgress = 0.2,
-        LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
-        MinProgress = 1,
-        SoundTable = {
-            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
-        },
-    },
-    ["reload_empty_32"] = {
-        Source = "reload_empty_32",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Framerate = 30,
-        Time = 36 / 30,
-        MinProgress = 0,
-        LastClip1OutTime = 0.4,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
-        SoundTable = {
-            { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
-            { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 20 / 30, c = ca, v = 0.8 },
-        },
-    },
-    
     -- Inspecc --
 
     ["enter_inspect"] = {

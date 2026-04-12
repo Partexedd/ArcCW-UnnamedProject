@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_5" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_5"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -118,7 +118,8 @@ SWEP.NPCWeight = 80
 
 SWEP.AccuracyMOA = 2
 SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 250
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 

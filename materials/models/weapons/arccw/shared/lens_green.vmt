@@ -1,7 +1,0 @@
-VertexLitGeneric
-{
-	"$basetexture"	"models\weapons\arccw\shared\lens_green"
-	"$nocull" "1"
-	"$translucent" "1"
-}
-

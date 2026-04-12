@@ -119,7 +119,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 250
-SWEP.MoveDispersion = 250
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "ump45"
@@ -136,7 +137,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0.5, 0.5, 0.5)
+SWEP.ActivePos = Vector(0.5, 0.7, 0.2)
 SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -260,7 +261,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
-        LHIKOut = 0.4,
+        LHIKOut = 0.5,
         MinProgress = 1.2,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -278,7 +279,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
+        LHIKEaseOut = 0.14,
         LHIKOut = 0.5,
         MinProgress = 1.2,
         SoundTable = {
@@ -383,10 +384,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.36, -1.1, -9.5),
             vang = Angle(90, 0, -90),
         },
     },

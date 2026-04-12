@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -128,8 +128,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 700
-SWEP.MoveDispersion = 200
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "xcr"
@@ -400,10 +400,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.2, 11),
+            vpos = Vector(2.2, -1.7, -7),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"fgrail"},

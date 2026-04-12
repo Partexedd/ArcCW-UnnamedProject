@@ -46,8 +46,8 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpaqbz191.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_lpaqbz191.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpaots33.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_lpaots33.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -119,7 +119,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 300
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 
@@ -237,7 +238,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 38 / 30,
+        Time = 45 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,
@@ -256,7 +257,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 42 / 30,
+        Time = 49 / 30,
         LastClip1OutTime = 0.4,
         LHIK = true,
         LHIKIn = 0.2,

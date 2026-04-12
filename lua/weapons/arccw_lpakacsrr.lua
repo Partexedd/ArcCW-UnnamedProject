@@ -65,7 +65,7 @@ SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 0.95,
     [HITGROUP_STOMACH] = 0.95,
     [HITGROUP_LEFTARM] = 0.95,
@@ -122,8 +122,8 @@ SWEP.NPCWeight = 30
 
 SWEP.AccuracyMOA = 0
 SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 

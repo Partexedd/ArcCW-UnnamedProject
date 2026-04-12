@@ -126,8 +126,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 800
-SWEP.MoveDispersion = 150
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "ar2"
 
@@ -165,8 +165,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(2, 0, 0.5)
 SWEP.HolsterAng = Angle(-12, 32, -15)
 
-SWEP.CrouchPos = Vector(-0.5, 0, -0.2)
-SWEP.CrouchAng = Angle(0, 0, -15)
+SWEP.CrouchPos = Vector(-1, 0, 0)
+SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -184,11 +184,11 @@ local pathCSR = "weapons/arccw/csr338/"
 
 local pathM1 = "weapons/arccw/m1garand/"
 
-SWEP.ShootSound = pathM1 .. "Untitled+design.wav" -- {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", pathXC .. "fire-dist-03.ogg", pathXC .. "fire-dist-04.ogg", pathXC .. "fire-dist-05.ogg", pathXC .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
-SWEP.DistantShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", pathXC .. "fire-dist-03.ogg", pathXC .. "fire-dist-04.ogg", pathXC .. "fire-dist-05.ogg", pathXC .. "fire-dist-06.ogg"}  -- Maybe Not Placeholder -- Maybe Not Placeholder
+SWEP.DistantShootSound = false
 
-SWEP.ShootPitch = 250
+SWEP.ShootPitch = 130
 
 -- Bodygroups --
 
@@ -368,10 +368,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.2, 11),
+            vpos = Vector(2.36, -1.6, -7),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"fgrail"},

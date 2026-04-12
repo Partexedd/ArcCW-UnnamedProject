@@ -85,7 +85,7 @@ SWEP.Primary.ClipSize = 30
 
 SWEP.Recoil = 0.6
 SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.33
+SWEP.RecoilSide = 0.28
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -130,9 +130,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "xcr"
@@ -149,7 +149,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
+SWEP.HolsterPos = Vector(1, -6, -6)
+SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.ActivePos = Vector(0.1, 1, 0.4)
 SWEP.ActiveAng = Angle(1, 0, -1)
@@ -167,9 +168,6 @@ SWEP.IronSightStruct = {
 
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
-
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
 SWEP.CrouchPos = Vector(0, -1, 1)
 SWEP.CrouchAng = Angle(0, 0, -3)
@@ -224,10 +222,11 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKOut = 0.45,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 18 / 30, c = ca, v = 0.8 },
+            { s = path .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 19 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -377,6 +376,15 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip_cc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.36, -1.7, -7),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Skins",

@@ -28,9 +28,9 @@ SWEP.PrintName = "QBZ-191"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "TIER C - Robust assault rifle with low fire-rate and good damage for its calibre, it also has next to no random spread while moving letting you fire accurately on the move. While the fire-rate helps it stay stable it also really handicaps it's DPS at close range."
-SWEP.Trivia_Manufacturer = "FN"
-SWEP.Trivia_Calibre = "5.56x45mm NATO"
+SWEP.Trivia_Desc = "TIER C - Robust assault rifle with high fire-rate and good damage for its calibre, it also has next to no random spread while moving letting you fire accurately on the move. While the fire-rate helps it stay stable it also really handicaps it's DPS at close range."
+SWEP.Trivia_Manufacturer = "Chongqing Jianshe"
+SWEP.Trivia_Calibre = "	5.8×42mm DBP191"
 SWEP.Trivia_Mechanism = "Gas-operated short-stroke piston"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2004
@@ -100,6 +100,16 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [24] = 1.1,
+            [25] = 1.2,
+            [26] = 1.2,
+            [27] = 1.2,
+            [28] = 1.3,
+            [29] = 1.4,
+            [30] = 1.5,
+            [31] = 1.5,
+        },
     },
     {
         Mode = 1,
@@ -125,8 +135,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 700
-SWEP.MoveDispersion = 50
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "famas"
@@ -217,6 +227,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
+        MinProgress = 1,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathSCAR .. "chpull.ogg", t = 4 / 30, c = ca, v = 0.8 },
@@ -247,14 +258,14 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        Time = 48 / 30,
+        LastClip1OutTime = 0,
+        Time = 53 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
-        MinProgress = 0.8,
+        MinProgress = 0.4,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -266,14 +277,14 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        Time = 58 / 30,
+        LastClip1OutTime = 3,
+        Time = 64 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.45,
-        MinProgress = 0.8,
+        MinProgress = 1.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -364,10 +375,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.36, -0.9, -7),
             vang = Angle(90, 0, -90),
         },
     },

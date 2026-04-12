@@ -125,8 +125,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 50
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "famas"
@@ -142,6 +142,9 @@ SWEP.SightTime = 0.25
 SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
+
+SWEP.HolsterPos = Vector(1, -7, -7)
+SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.ActivePos = Vector(0.5, 0.7, 0.2)
 SWEP.ActiveAng = Angle(1, 0, -1)
@@ -159,9 +162,6 @@ SWEP.IronSightStruct = {
 
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
-
-SWEP.HolsterPos = Vector(1, -6, -6)
-SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.CrouchPos = Vector(-1, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -7)
@@ -347,7 +347,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.04, -0.45, 3),
+            vpos = Vector(-0.045, -0.45, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nois"},
@@ -365,16 +365,16 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 2.5, 13),
+            vpos = Vector(2.2, -1.34, -6),
             vang = Angle(90, 0, -90),
         },
     },
     {
         PrintName = "Skin",
         Slot = {"lowpoly_skin"},
-        DefaultAttName = "Tan Body",
+        DefaultAttName = "Tan",
     },
 }

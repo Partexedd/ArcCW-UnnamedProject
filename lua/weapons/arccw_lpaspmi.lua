@@ -123,8 +123,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 0
 SWEP.HipDispersion = 500
-SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 0
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "aws"

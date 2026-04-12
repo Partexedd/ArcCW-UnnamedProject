@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 23
 SWEP.DamageMin = 7
-SWEP.Range = 45
+SWEP.Range = 55
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
@@ -118,8 +118,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 12
-SWEP.HipDispersion = 450
+SWEP.HipDispersion = 250
 SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 SWEP.MagID = "pgm"
@@ -136,7 +137,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(-0.8, -3, 0.6)
+SWEP.ActivePos = Vector(-0.8, 0, 0.6)
 SWEP.ActiveAng = Angle(-1, -1, -2)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -144,8 +145,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.73, -6, 0.7),
-     Ang = Angle(0.15, 0, 0),
+     Pos = Vector(-2.73, -2, 1.1),
+     Ang = Angle(0.15, 0, -3),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -237,25 +238,39 @@ SWEP.Animations = {
     ["sgreload_start"] = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        Time = 24 / 30,
+        Time = 25 / 30,
         RestoreAmmo = 1,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 6 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
-        Time = 56 / 30,
+        Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 2,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 14 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "boltrelease.ogg", t = 28 / 30, c = ca, v = 0.8 },
+            { s = pathXC .. "start.ogg", t = 50 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 18 / 30,
         TPAnimStartTime = 0.3,
+        SoundTable = {
+            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
+        },
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 14 / 30,
+        Time = 20 / 30,
         TPAnimStartTime = 0.8,
+        SoundTable = {
+            { s = pathXC .. "end.ogg", t = 0 / 30, c = ca, v = 0.8 },
+        },
     },
     
     -- Inspecc --

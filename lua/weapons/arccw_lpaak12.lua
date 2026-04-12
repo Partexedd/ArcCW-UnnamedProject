@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -126,9 +126,9 @@ SWEP.NPCWeight = 60
 -- Accuracy, Dispersion --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 100
-SWEP.JumpDispersion = 0
+SWEP.HipDispersion = 450
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "xcr"
@@ -147,7 +147,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.5, 0.7, 0)
+SWEP.ActivePos = Vector(0.1, 0.7, 0.5)
 SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -218,8 +218,8 @@ SWEP.Animations = {
         time = 35 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -253,10 +253,10 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 49 / 30,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKEaseOut = 0.1,
+        LHIKOut = 0.52,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
@@ -272,10 +272,10 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 66 / 30,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
-        LHIKEaseOut = 0.2,
-        LHIKOut = 0.45,
+        LHIKEaseOut = 0.1,
+        LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },
@@ -344,6 +344,15 @@ SWEP.Attachments = {
         Bone = "Barrel",
         Offset = {
             vpos = Vector(0, 0, -2.5),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.2, -1.08, -7),
             vang = Angle(90, 0, -90),
         },
     },

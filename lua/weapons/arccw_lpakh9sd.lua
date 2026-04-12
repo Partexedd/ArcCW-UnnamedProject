@@ -28,7 +28,7 @@ SWEP.PrintName = "B&T KH9-SD"
 
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Only 400 have been produced"
-SWEP.Trivia_Manufacturer = "B&T"
+SWEP.Trivia_Manufacturer = "Brügger & Thomet"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Closed bolt back"
 SWEP.Trivia_Country = "Switzerland"
@@ -128,7 +128,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 250
 SWEP.MoveDispersion = 0
-SWEP.JumpDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "mp3008"
@@ -325,6 +325,15 @@ SWEP.Attachments = {
         },
         Bone = "Body",
         InstalledEles = {"nois"},
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.36, -1.6, -8),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Stock",

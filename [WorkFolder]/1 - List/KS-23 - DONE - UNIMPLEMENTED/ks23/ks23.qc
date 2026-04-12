@@ -58,19 +58,9 @@ $sequence "ready" {
 	snap
 }
 
-$sequence "cycle_01"{
-	"anims\cycle_01.smd"
-	"anims\cycle_01_iron.smd"
- 	blend "sights" 0 1
-	fps 30
-	"ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.03
-}
-
-$sequence "cycle_02"{
-	"anims\cycle_02.smd"
-	"anims\cycle_02_iron.smd"
+$sequence "cycle"{
+	"anims\cycle.smd"
+	"anims\cycle_iron.smd"
  	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1
@@ -80,8 +70,6 @@ $sequence "cycle_02"{
 
 $sequence "sgreload_start" {
 	"anims\sgreload_start.smd"
-	"anims\sgreload_start_iron.smd"
- 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -89,8 +77,6 @@ $sequence "sgreload_start" {
 
 $sequence "sgreload_start_empty" {
 	"anims\sgreload_start_empty.smd"
-	"anims\sgreload_start_empty_iron.smd"
- 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -98,8 +84,6 @@ $sequence "sgreload_start_empty" {
 
 $sequence "sgreload_insert" {
 	"anims\sgreload_insert.smd"
-	"anims\sgreload_insert_iron.smd"
- 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -107,11 +91,32 @@ $sequence "sgreload_insert" {
 
 $sequence "sgreload_finish" {
 	"anims\sgreload_end.smd"
-	"anims\sgreload_end_iron.smd"
- 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
+}
+
+$sequence "enter_inspect" {
+	"anims\enter_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect" {
+	"anims\idle_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect" {
+	"anims\exit_inspect.smd"
+	"anims\exit_inspect_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
 }
 
 $bonemerge "ValveBiped.Bip01_Spine4"

@@ -8,8 +8,13 @@ $bodygroup "1" {
 	studio "ironrail.smd"
 } 
 
-$bodygroup "1" {
+$bodygroup "2" {
 	studio "muzzle.smd"
+	blank
+} 
+
+$bodygroup "3" {
+	studio "siderail.smd"
 	blank
 } 
 

@@ -2,20 +2,6 @@ $modelname "weapons\arccw\c_lpaghs18.mdl"
  
 $bodygroup "studio" {
 	studio "gsh18.smd"
-} 
-
-$bodygroup "1" {
-	studio "defbar.smd"
-	studio "compbar.smd"
-}
-
-$bodygroup "2" {
-	studio "defmag.smd"
-	studio "32mag.smd"
-}
-
-$bodygroup "3" {
-	studio "9mm.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
@@ -66,8 +52,8 @@ $sequence "idle_empty"{
 	node "Ready"
 }
 
-$sequence "fire_01" {
-	"anims\fire_01.smd"
+$sequence "fire" {
+	"anims\fire.smd"
 	"anims\fire_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -77,27 +63,6 @@ $sequence "fire_01" {
 	{ event 5001 0 "1" }
 }
 
-$sequence "fire_02" {
-	"anims\fire_02.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
-	{ event 5001 0 "1" }
-}
-
-$sequence "fire_03" {
-	"anims\fire_03.smd"
-	"anims\fire_iron.smd"
-	fps 30
-	"ACT_VM_PRIMARYATTACK" 1
- 	blend "sights" 0 1
-	fadein 0.03
-	fadeout 0.03
-	{ event 5001 0 "1" }
-}
 
 $sequence "fire_empty" {
 	"anims\fire_empty.smd"
@@ -131,24 +96,6 @@ $sequence "reload" {
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
 	"anims\reload_empty_iron.smd"
-	blend "sights" 0 1
-	fps 30
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "reload_32" {
-	"anims\reload_32.smd"
-	"anims\reload_iron_32.smd"
-	blend "sights" 0 1
-	fps 30
-	"ACT_VM_RELOAD" 1
-	snap
-}
-
-$sequence "reload_empty_32" {
-	"anims\reload_empty_32.smd"
-	"anims\reload_empty_iron_32.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1

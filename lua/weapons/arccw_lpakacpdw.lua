@@ -55,8 +55,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 26
-SWEP.DamageMin = 13
-SWEP.Range = 100
+SWEP.DamageMin = 15
+SWEP.Range = 50
 SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 739
 
 -- slight tomfoolery --
 
-SWEP.BodyDamageMults = 
+SWEP.BodyDamageMults =
 {
-    [HITGROUP_HEAD] = 1.9,
-    [HITGROUP_CHEST] = 1.24,
-    [HITGROUP_STOMACH] = 1.24,
-    [HITGROUP_LEFTARM] = 1.24,
-    [HITGROUP_RIGHTARM] = 1.24,
+    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
     [HITGROUP_LEFTLEG] = 0.9,
     [HITGROUP_RIGHTLEG] = 0.9,
 }
@@ -127,8 +127,9 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 250
-SWEP.MoveDispersion = 600
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 0
+SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
 
@@ -371,5 +372,15 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(2.2, -1.7, -10),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"fgrail"},
     },
 }
