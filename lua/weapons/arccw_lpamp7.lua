@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_6" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_6"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 0.6
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
@@ -352,7 +352,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpmp7_irons", "lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lpmp7_irons", "lowpoly_optic_lowprofile", "lowpoly_optic"},
         DefaultAttName = "Folded Iron Sights",
         Bone = "Body",
         Offset = {

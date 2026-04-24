@@ -92,7 +92,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.5
+SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
@@ -141,9 +141,10 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
+SWEP.HolsterPos = Vector(12, -4, -4)
 
-SWEP.ActivePos = Vector(0, 0, 0.6)
+SWEP.ActivePos = Vector(-0.3, -2, 0.6)
+SWEP.ActiveAng = Angle(0, -1, 0.6)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -393,7 +394,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

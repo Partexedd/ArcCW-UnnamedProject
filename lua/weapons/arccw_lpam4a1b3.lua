@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -29,7 +29,7 @@ SWEP.PrintName = "M4A1 URG-I"
 
 SWEP.Trivia_Class = "Carbine"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "Daniel Defense"
+SWEP.Trivia_Manufacturer = "Geissele Automatics"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated, rotating bolt"
 SWEP.Trivia_Country = "USA"
@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters >--
 
 SWEP.Damage = 25
-SWEP.DamageMin = 20
+SWEP.DamageMin = 21
 SWEP.Range = 100
 SWEP.Penetration = 26
 SWEP.DamageType = DMG_BULLET
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 803
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.5,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
-    [HITGROUP_LEFTARM] = 1.3,
-    [HITGROUP_RIGHTARM] = 1.3,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 1.1,
+    [HITGROUP_RIGHTLEG] = 1.1,
 }
 
 -- Mag size --
@@ -88,10 +88,10 @@ SWEP.RecoilDirection = Angle(1, 0.4, 0)
 SWEP.RecoilSide = 0.28
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -101,8 +101,8 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.7,
-            [2] = 0.7,
+            [1] = 0.8,
+            [2] = 0.8,
             [3] = 0.8,
             [4] = 0.9,
         },
@@ -141,7 +141,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.27
+SWEP.SightTime = 0.33
 
 -- Gun length --
 
@@ -357,7 +357,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

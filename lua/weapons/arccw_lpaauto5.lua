@@ -82,7 +82,7 @@ SWEP.Primary.ClipSize = 4
 -- Recoil --
 
 SWEP.Recoil = 3
-SWEP.RecoilDirection = Angle(1, 0.8, 0)
+SWEP.RecoilDirection = Angle(1, -0.5, 0)
 SWEP.RecoilSide = 2.5
 
 SWEP.RecoilRise = 0
@@ -154,8 +154,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(2, 0, 0.5)
+SWEP.HolsterAng = Angle(-12, 32, -15)
 
 SWEP.CrouchPos = Vector(-1, -3, 0.5)
 SWEP.CrouchAng = Angle(0, 0, -7)

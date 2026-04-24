@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -28,7 +28,7 @@ SWEP.PrintName = "XHR-50"
 
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "TIER D - Custom AR-10 with full-auto (best used only in close quarters) and really high recoil, switching to semi-auto reduces recoil and fire-rate by 50% making it a powerful DMR, its 20 round mags make it hard to spray at longer range so don't forget to hit the fire-switch before pressing the trigger at range."
-SWEP.Trivia_Manufacturer = "LPA"
+SWEP.Trivia_Manufacturer = "Low Poly Armory"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Long Stroke, Gas Piston"
 SWEP.Trivia_Country = "United States"
@@ -52,9 +52,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 44
-SWEP.DamageMin = 31
-SWEP.Range = 100
+SWEP.Damage = 39
+SWEP.DamageMin = 28
+SWEP.Range = 200
 SWEP.Penetration = 36
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 770
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.1,
-    [HITGROUP_STOMACH] = 1.1,
-    [HITGROUP_LEFTARM] = 1.1,
-    [HITGROUP_RIGHTARM] = 1.1,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_HEAD] = 2.65,
+    [HITGROUP_CHEST] = 1.35,
+    [HITGROUP_STOMACH] = 1.35,
+    [HITGROUP_LEFTARM] = 1.35,
+    [HITGROUP_RIGHTARM] = 1.35,
+    [HITGROUP_LEFTLEG] = 1.25,
+    [HITGROUP_RIGHTLEG] = 1.25,
 }
 
 -- Mag size --
@@ -89,7 +89,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.2
+SWEP.RecoilPunch = 0.15
 
 -- Firerate / Firemodes --
 
@@ -99,8 +99,8 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 1.3,
-            [2] = 1.2,
+            [1] = 1.1,
+            [2] = 1.1,
             [3] = 1.1,
         },
     },
@@ -138,7 +138,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.26
+SWEP.SightTime = 0.29
 
 -- Gun length --
 
@@ -378,7 +378,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

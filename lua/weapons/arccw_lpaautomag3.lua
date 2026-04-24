@@ -332,7 +332,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lowpoly_optic_lowprofile"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {

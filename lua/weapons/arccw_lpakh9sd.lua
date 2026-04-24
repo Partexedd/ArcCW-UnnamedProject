@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -101,6 +101,14 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.2,
+            [2] = 1.2,
+            [3] = 1.2,
+            [4] = 1.2,
+            [4] = 1.2,
+            [4] = 1.1,
+        },
     },
     {
         Mode = 1,
@@ -135,7 +143,7 @@ SWEP.MagID = "mp3008"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1.1
+SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
 SWEP.SightTime = 0.1
 
@@ -152,8 +160,8 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.281, -1, 1.47),
-     Ang = Angle(-0.1, 0, 0),
+     Pos = Vector(-2.281, 1, 1.47),
+     Ang = Angle(-0.1, 0, -4),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -161,8 +169,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(1, -5, -5)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(-5, 1, 2)
 SWEP.CrouchAng = Angle(0, 0, -35)
@@ -177,12 +185,14 @@ SWEP.WorldModelOffset = {
 -- Weapon sounds --
 
 local path = "weapons/arccw/mp3008/"
+local pathVKR = "weapons/arccw/vikhr/"
 
-SWEP.ShootSound = path .. "sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.ShootSound = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 160
+SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
@@ -316,7 +326,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
 		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "Iron Sights",
         Offset = {
@@ -337,9 +347,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"lpkh9sd_stock"},
+        Slot = {"lowpoly_kh9sd_stock"},
 		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "No stock",
-        Bone = "Body",
     },
 }

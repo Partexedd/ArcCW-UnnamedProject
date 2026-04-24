@@ -5,13 +5,26 @@ $bodygroup "studio" {
 }
 
 $bodygroup "1" {
-	studio "tir.smd"
+	studio "framedef.smd"
+	studio "frameblk.smd"
 }
 
-$texturegroup "skinfamilies"
-{
-	{ "fn502" }
-	{ "fn502c" }
+$bodygroup "2" {
+	studio "follower1.smd"
+	studio "follower2.smd"
+	studio "follower3.smd"
+	studio "follower4.smd"
+	studio "follower5.smd"
+	studio "follower6.smd"
+	studio "follower7.smd"
+	studio "follower8.smd"
+	studio "follower9.smd"
+	studio "follower10.smd"
+	studio "follower11.smd"
+	studio "follower12.smd"
+	studio "follower13.smd"
+	studio "follower14.smd"
+	studio "follower15.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

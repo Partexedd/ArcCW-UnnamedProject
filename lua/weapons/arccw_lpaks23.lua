@@ -10,7 +10,7 @@ SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
-SWEP.ShellPitch = 100
+SWEP.ShellPitch = 90
 SWEP.NoFlash = true
 
 SWEP.MuzzleEffectAttachment = 1
@@ -256,6 +256,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 26 / 30,
         RestoreAmmo = 1,
+        MinProgress = 0.8,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
@@ -266,6 +267,8 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 2,
         ShellEjectAt = 0.2,
+        MinProgress = 0.3,
+        LastClip1OutTime = 0,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 14 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltup.ogg", t = 3 / 30, c = ca, v = 0.8 },
@@ -278,6 +281,7 @@ SWEP.Animations = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 20 / 30,
+        MinProgress = 0.6,
         TPAnimStartTime = 0.3,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },

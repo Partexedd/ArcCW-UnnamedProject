@@ -6,9 +6,8 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "Cosmetic"
 }
-att.Slot = "lpkh9sd_stock"
+att.Slot = "lowpoly_kh9sd_stock"
 
 att.AutoStats = true
 att.SortOrder = -3

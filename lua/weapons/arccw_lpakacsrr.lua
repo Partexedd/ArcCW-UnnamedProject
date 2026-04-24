@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.4
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -52,7 +52,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 78
+SWEP.Damage = 58
 SWEP.DamageMin = 34
 SWEP.Range = 25
 SWEP.Penetration = 6
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.9,
     [HITGROUP_CHEST] = 0.95,
     [HITGROUP_STOMACH] = 0.95,
     [HITGROUP_LEFTARM] = 0.95,
     [HITGROUP_RIGHTARM] = 0.95,
-    [HITGROUP_LEFTLEG] = 0.7,
-    [HITGROUP_RIGHTLEG] = 0.7,
+    [HITGROUP_LEFTLEG] = 0.64,
+    [HITGROUP_RIGHTLEG] = 0.64,
 }
 
 -- Mag size --
@@ -81,9 +81,9 @@ SWEP.Primary.ClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.5
 SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 1
+SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -98,7 +98,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         PrintName = "DOUBLE-ACTION",
-        Mode = 2,
+        Mode = 1,
     },
 }
 
@@ -178,12 +178,14 @@ local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
+local pathVKR = "weapons/arccw/vikhr/"
 
-SWEP.ShootSound = path .. "sterling_suppressed_fp.ogg" -- Placeholder
+SWEP.ShootSound = {pathVKR .. "fire-sup-01.ogg", pathVKR .. "fire-sup-02.ogg", pathVKR .. "fire-sup-03.ogg", pathVKR .. "fire-sup-04.ogg", pathVKR .. "fire-sup-05.ogg", pathVKR .. "fire-sup-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = false
 SWEP.DistantShootSound = false
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 126
+SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
@@ -226,9 +228,6 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         Time = 18 / 30,
-        SoundTable = {
-            { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
-        },
     },
     
     ["cycle"] = {
@@ -236,11 +235,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         TPAnimStartTime = 0.7,
         SoundTable = {
-            { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "eject.ogg", t = 8 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltforward.ogg", t = 11 / 30, c = ca, v = 0.8 },
-            { s = pathCSR .. "boltdown.ogg", t = 16 / 30, c = ca, v = 0.8 },
         },
     },
 
@@ -383,7 +378,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

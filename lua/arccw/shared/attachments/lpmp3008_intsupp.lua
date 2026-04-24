@@ -12,7 +12,7 @@ att.SortOrder = 1
 
 att.ActivateElements = {"intsupp"}
 
-att.Slot = "lpmp3008_muzzle"
+att.Slot = "lowpoly_mp3008_muzzle"
 att.Override_MuzzleEffectAttachment = 4
 
 att.Silencer = true

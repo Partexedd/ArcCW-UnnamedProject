@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
@@ -54,8 +54,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
-SWEP.Damage = 25
-SWEP.DamageMin = 20
+SWEP.Damage = 26
+SWEP.DamageMin = 22
 SWEP.Range = 100
 SWEP.Penetration = 24
 SWEP.DamageType = DMG_BULLET
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 775
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.95,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
-    [HITGROUP_LEFTARM] = 1.3,
-    [HITGROUP_RIGHTARM] = 1.3,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.15,
+    [HITGROUP_CHEST] = 1.4,
+    [HITGROUP_STOMACH] = 1.4,
+    [HITGROUP_LEFTARM] = 1.4,
+    [HITGROUP_RIGHTARM] = 1.4,
+    [HITGROUP_LEFTLEG] = 1.08,
+    [HITGROUP_RIGHTLEG] = 1.08,
 }
 
 -- Mag size --
@@ -88,10 +88,10 @@ SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.22
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -101,14 +101,10 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [24] = 1.1,
-            [25] = 1.2,
-            [26] = 1.2,
-            [27] = 1.2,
-            [28] = 1.3,
-            [29] = 1.4,
-            [30] = 1.5,
-            [31] = 1.5,
+            [1] = 0.9,
+            [2] = 0.9,
+            [3] = 0.9,
+            [4] = 0.9,
         },
     },
     {
@@ -258,7 +254,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0,
+        LastClip1OutTime = 3,
         Time = 53 / 30,
         LHIK = true,
         LHIKIn = 0.2,
@@ -268,10 +264,10 @@ SWEP.Animations = {
         MinProgress = 0.4,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
-            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 27 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 9 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 19 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
@@ -287,11 +283,11 @@ SWEP.Animations = {
         MinProgress = 1.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = path .. "magout_metal.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = path .. "magdrop_metal.ogg", t = 11 / 30, c = ca, v = 1 },
-            { s = path .. "magin_metal.ogg", t = 16 / 30, c = ca, v = 0.8 },
-            { s = path .. "chamber.ogg", t = 28 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
+            { s = path .. "magout_metal.ogg", t = 9 / 30, c = ca, v = 0.8 },
+            { s = path .. "magdrop_metal.ogg", t = 19 / 30, c = ca, v = 1 },
+            { s = path .. "magin_metal.ogg", t = 23 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 38 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 45 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -353,7 +349,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

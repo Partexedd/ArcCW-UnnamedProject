@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -23,11 +23,11 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "M4A1 URG-I"
+SWEP.PrintName = "Colt M4A1"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Carbine"
+SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = ""
 SWEP.Trivia_Manufacturer = "Daniel Defense"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
@@ -141,7 +141,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.27
+SWEP.SightTime = 0.24
 
 -- Gun length --
 
@@ -357,7 +357,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

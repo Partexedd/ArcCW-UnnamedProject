@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -335,7 +335,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp_russian", "lowpoly_optic_russian", "lowpoly_optic_sniper_russian"},
+        Slot = {"lowpoly_optic_lowprofile_russian", "lowpoly_optic_russian", "lowpoly_optic_sniper_russian"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

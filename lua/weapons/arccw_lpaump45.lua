@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.4
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -90,7 +90,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.25
+SWEP.RecoilPunch = 0.15
 
 -- Firerate / Firemodes --
 
@@ -275,13 +275,13 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         LastClip1OutTime = 0.7,
-        Time = 70 / 30,
+        Time = 68 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.14,
         LHIKOut = 0.5,
-        MinProgress = 1.2,
+        MinProgress = 1.7,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 7 / 30, c = ca, v = 0.8 },
@@ -362,7 +362,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

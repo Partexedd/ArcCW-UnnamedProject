@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_suppressed" -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
-SWEP.Damage = 27
+SWEP.Damage = 24
 SWEP.DamageMin = 20
 SWEP.Range = 100
 SWEP.Penetration = 37
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 1011
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.7,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.18,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 1.22,
+    [HITGROUP_RIGHTLEG] = 1.22,
 }
 
 -- Mag size --
@@ -99,6 +99,12 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.7,
+            [2] = 0.7,
+            [3] = 0.8,
+            [4] = 0.9,
+        },
     },
     {
         Mode = -2,
@@ -137,7 +143,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.85
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.3
 
 -- Gun length --
 
@@ -164,8 +170,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -6, -6)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(0, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -2)
@@ -244,14 +250,14 @@ SWEP.Animations = {
         SoundTable = {{ s = "weapons/arccw/arx160/lowpolyarx160_empty.ogg", t = 0.03 }},
     },
 
-    -- 416 reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 49 / 30,
+        Time = 51 / 30,
         LHIK = true,
         LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
@@ -270,7 +276,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 66 / 30,
+        Time = 70 / 30,
         LHIK = true,
         LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
@@ -329,7 +335,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpak12_irons","lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lpak12_irons","lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

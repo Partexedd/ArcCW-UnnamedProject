@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 -- Damage parameters --
 
 SWEP.Damage = 24
-SWEP.DamageMin = 17
+SWEP.DamageMin = 19
 SWEP.Range = 100
 SWEP.Penetration = 22
 SWEP.DamageType = DMG_BULLET
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 722
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.15,
-    [HITGROUP_STOMACH] = 1.15,
-    [HITGROUP_LEFTARM] = 1.15,
-    [HITGROUP_RIGHTARM] = 1.15,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 1.1,
+    [HITGROUP_RIGHTLEG] = 1.1,
 }
 
 -- Mag size --
@@ -100,6 +100,10 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.1,
+            [2] = 1.1,
+        },
     },
     {
         Mode = -2,
@@ -125,7 +129,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 400
+SWEP.HipDispersion = 600
 SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 
@@ -136,7 +140,7 @@ SWEP.MagID = "famas"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.25
+SWEP.SightTime = 0.32
 
 -- Gun length --
 
@@ -144,8 +148,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(0, -0.6, 1)
-SWEP.ActiveAng = Angle(0, 0, -1)
+SWEP.ActivePos = Vector(0.1, -1, 0.9)
+SWEP.ActiveAng = Angle(0, 0, 1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -342,7 +346,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

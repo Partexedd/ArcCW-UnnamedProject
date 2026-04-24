@@ -3,7 +3,8 @@ att.AbbrevName = "KAC VFG"
 att.Icon = Material("entities/att/acwatt_lp_ph.png", "mips smooth")
 att.Description = ""
 att.Desc_Pros = {
-    "Makes recoil follow a more stable vertical pattern and removes visual recoil."
+    "Makes recoil direction vertical",
+    "Reduces horizontal recoil by 15%"
 }
 att.Desc_Cons = {
 }
@@ -25,4 +26,3 @@ att.Override_HoldtypeActive_Priority = 2
 
 att.Override_RecoilDirection = Angle(1, 0, 0)
 att.Mult_RecoilSide = 0.85
-att.Mult_VisualRecoilMult = 0

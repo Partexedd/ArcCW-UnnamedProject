@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/srs.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.01, 10, -1.28),
+        Pos = Vector(-0.01, 9, -1.28),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ViewModelFOV = 50,

@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 -- Damage parameters --
 
 SWEP.Damage = 31
-SWEP.DamageMin = 15
+SWEP.DamageMin = 14
 SWEP.Range = 100
 SWEP.Penetration = 15
 SWEP.DamageType = DMG_BULLET
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 472
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.7,
+    [HITGROUP_HEAD] = 1.8,
     [HITGROUP_CHEST] = 1.2,
     [HITGROUP_STOMACH] = 1.2,
     [HITGROUP_LEFTARM] = 1.2,
     [HITGROUP_RIGHTARM] = 1.2,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
 
 -- Mag size --
@@ -135,7 +135,7 @@ SWEP.MagID = "famas"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.25
+SWEP.SightTime = 0.33
 
 -- Gun length --
 
@@ -340,7 +340,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

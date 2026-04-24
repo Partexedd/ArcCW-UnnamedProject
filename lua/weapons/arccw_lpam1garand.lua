@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 78
-SWEP.DamageMin = 52
+SWEP.DamageMin = 62
 SWEP.Range = 200
 SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 750
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.98,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_LEFTLEG] = 0.6,
+    [HITGROUP_RIGHTLEG] = 0.6,
 }
 
 -- Mag size --

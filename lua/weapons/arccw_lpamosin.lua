@@ -160,7 +160,7 @@ SWEP.IronSightStruct = {
 
 SWEP.IronSightStruct = {
     Pos = Vector(-3.07, -5, 1.5),
-    Ang = Angle(0.1, 0, 0),
+    Ang = Angle(0.1, 0, -2),
     Magnification = 1,
     ViewModelFOV = 70,
 }
@@ -168,8 +168,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(2, 0, 0.5)
+SWEP.HolsterAng = Angle(-12, 32, -15)
 
 SWEP.CrouchPos = Vector(-1, -2, 1)
 SWEP.CrouchAng = Angle(0, 0, -5)
@@ -275,25 +275,10 @@ SWEP.Animations = {
 
     -- Reloads --
 
-    ["reload"] = {
-        Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        RestoreAmmo = 5,
-        LastClip1OutTime = 0,
-        ShellEjectAt = 0.5,
-        MinProgress = 0.3,
-        SoundTable = {
-            { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "magout.ogg", t = 5 / 30, c = ca, v = 0.8 },
-            { s = pathXHR .. "magdrop.ogg", t = 16 / 30, c = ca, v = 0.3 },
-            { s = pathXC .. "magin.ogg", t = 17 / 30, c = ca, v = 0.8 },
-            { s = pathXC .. "end.ogg", t = 25 / 30, c = ca, v = 0.8 },
-        },
-    },
-
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 103 / 30,
         ShellEjectAt = 0.4,
         LastClip1OutTime = 0,
         MinProgress = 1,
@@ -316,7 +301,7 @@ SWEP.Animations = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
-        MinProgress = 0,
+        MinProgress = 1.4,
         LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -329,7 +314,7 @@ SWEP.Animations = {
         Source = "sgreload_insert",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
-        MinProgress = 0,
+        MinProgress = 0.7,
         LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "eject.ogg", t = 11 / 30, c = ca, v = 0.2 },
@@ -416,7 +401,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

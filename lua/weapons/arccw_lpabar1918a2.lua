@@ -53,8 +53,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 -- Damage parameters --
 
-SWEP.Damage = 46
-SWEP.DamageMin = 32
+SWEP.Damage = 54
+SWEP.DamageMin = 42
 SWEP.Range = 100
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
@@ -66,11 +66,11 @@ SWEP.PhysBulletMuzzleVelocity = 860
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.35,
-    [HITGROUP_CHEST] = 1.18,
-    [HITGROUP_STOMACH] = 1.18,
-    [HITGROUP_LEFTARM] = 1.18,
-    [HITGROUP_RIGHTARM] = 1.18,
+    [HITGROUP_HEAD] = 1.95,
+    [HITGROUP_CHEST] = 0.98,
+    [HITGROUP_STOMACH] = 0.98,
+    [HITGROUP_LEFTARM] = 0.98,
+    [HITGROUP_RIGHTARM] = 0.98,
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
@@ -82,7 +82,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 3
+SWEP.Recoil = 2.6
 SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.3
 
@@ -114,9 +114,9 @@ SWEP.Firemodes = {
     },
     {
         Mode = 2,
-        Mult_Recoil = 0.8,
+        Mult_Recoil = 0.7,
         Mult_RPM = 0.545,
-        Mult_HipDispersion = 0.4,
+        Mult_HipDispersion = 0.45,
         PrintName = "Slow fire",
         Override_RecoilDirection = Angle(1, 0, 0)
     },
@@ -138,7 +138,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 600
+SWEP.HipDispersion = 950
 SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 

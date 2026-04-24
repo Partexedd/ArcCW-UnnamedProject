@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 0.6
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -78,7 +78,7 @@ SWEP.BodyDamageMults =
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 15
 
 -- Recoil --
 
@@ -101,9 +101,6 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-
-SWEP.ShootPitch = 100
-SWEP.ShootVol = 100
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -141,7 +138,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, -2, 0.68),
+     Pos = Vector(-1.92, 2, 0.68),
      Ang = Angle(0.5, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -150,13 +147,13 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(2, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, -5)
+SWEP.HolsterPos = Vector(0, -4, -7)
+SWEP.HolsterAng = Angle(35, 0, -7)
 
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(1, 1, 0.8)
+SWEP.ActivePos = Vector(0.3, 2, 0.3)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
@@ -175,19 +172,21 @@ local pathF = "weapons/arccw/fn502/"
 SWEP.ShootSound = pathF .. "fire.ogg" -- ph
 SWEP.DistantShootSound = {path9 .. "fire-dist-01.ogg", path9 .. "fire-dist-02.ogg", path9 .. "fire-dist-03.ogg", path9 .. "fire-dist-04.ogg", path9 .. "fire-dist-05.ogg", path9 .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 100
+SWEP.ShootPitch = 110
 
 -- Bodygroups --
 
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [2] = "Bullet1",    [3] = "Bullet2"
+    [1] = "Bullet1",    [2] = "Bullet2",    [3] = "Bullet3",    [4] = "Bullet4",    [5] = "Bullet5",    [6] = "Bullet6",    [7] = "Bullet7",
+    [8] = "Bullet8",    [9] = "Bullet9",    [10] = "Bullet10",    [11] = "Bullet11",    [12] = "Bullet12",    [13] = "Bullet13",    [14] = "Bullet14",
+    [15] = "Bullet15"
 }
 
 SWEP.AttachmentElements = {
-    ["pb"] = {
-        VMSkin = 1,
+    ["frameblk"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 }
 
@@ -238,38 +237,39 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 34 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 39 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
         LHIKOut = 0.4,
-        MinProgress = 1,
+        MinProgress = 0.4,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "cloth.ogg", t = 15 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
+            { s = path .. "cloth.ogg", t = 21 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 36 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 44 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
+        MinProgress = 0.4,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
-            { s = path .. "magin.ogg", t = 14 / 30, c = ca, v = 1 },
-            { s = path .. "sliderelease.ogg", t = 18 / 30, c = ca, v = 0.8 },      
-            { s = path .. "cloth.ogg", t = 19 / 30, c = ca, v = 0.8 },
+            { s = path .. "magin.ogg", t = 17 / 30, c = ca, v = 1 },
+            { s = path .. "sliderelease.ogg", t = 23 / 30, c = ca, v = 0.8 },      
+            { s = path .. "cloth.ogg", t = 28 / 30, c = ca, v = 0.8 },
         },
     },
     
@@ -343,18 +343,13 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lowpoly_optic_lowprofile"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {
             vpos = Vector(0, -0.3, -2.8),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "Barrel",
-        Slot = {"lowpoly_muzzle"},
     },
     {
         PrintName = "Pose",
@@ -364,9 +359,23 @@ SWEP.Attachments = {
         FreeSlot = true,
     },
     {
-        PrintName = "Skins",
+        PrintName = "Frame",
         DefaultAttName = "Tan Polymer",
-        Slot = {"lpfn502_skin"},
+        Slot = {"lowpoly_fn502_frame"},
         FreeSlot = true,
     },
 }
+
+-- Ignore my silly implementation --
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local ammo = wep:Clip1()
+
+    local follower = 14
+
+    for i = 15, ammo, -1 do
+        follower = follower - 1
+    end
+
+    data.vm:SetBodygroup(2, follower)
+end

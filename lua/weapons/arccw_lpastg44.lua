@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 0.8
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -28,7 +28,7 @@ SWEP.PrintName = "StG 44"
 -- Trivia --
 
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "TIER A - Pioneer in its field, manufactured by an evil regime, versatile option for all ranges with easy to control recoil and good base hip-fire spread. Mostly limited by its lack of modability and low damage / fire-rate, outclassed by most modern rifles unless used in Its time period."
+SWEP.Trivia_Desc = "TIER A - Pioneer in its field, manufactured by an evil regime. Versatile option for all ranges with low control recoil when shot in bursts and good base hip-fire spread. Mostly limited by its lack of modability mediocre damage and fire-rate, outclassed by most modern rifles unless used in Its time period."
 SWEP.Trivia_Manufacturer = "Sauer & Sohn"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-operated long-stroke piston, closed tilting bolt"
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 685
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.6,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_HEAD] = 1.9,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 1.2,
+    [HITGROUP_RIGHTLEG] = 1.2,
 }
 
 -- Mag size --
@@ -85,8 +85,8 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.45
-SWEP.RecoilDirection = Angle(1, 0.2, 0)
+SWEP.Recoil = 0.6
+SWEP.RecoilDirection = Angle(1, -0.2, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -97,11 +97,22 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 597
+SWEP.Delay = 60 / 545
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.4,
+            [2] = 0.4,
+            [3] = 0.4,
+            [4] = 0.4,
+            [5] = 0.5,
+            [6] = 0.6,
+            [7] = 0.7,
+            [8] = 0.8,
+            [9] = 0.9,
+        },
     },
     {
         Mode = 1,
@@ -189,7 +200,7 @@ SWEP.ShootSound = {pathAK .. "fire-01.ogg", pathAK .. "fire-02.ogg", pathAK .. "
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {pathAK .. "fire-dist-01.ogg", pathAK .. "fire-dist-02.ogg", pathAK .. "fire-dist-03.ogg", pathAK .. "fire-dist-04.ogg", pathAK .. "fire-dist-05.ogg", pathAK .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 115
+SWEP.ShootPitch = 70
 
 -- Bodygroups --
 

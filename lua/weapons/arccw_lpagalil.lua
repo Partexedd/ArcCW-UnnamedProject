@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1.2
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 719
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.4,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
-    [HITGROUP_LEFTLEG] = 0.88,
-    [HITGROUP_RIGHTLEG] = 0.88,
+    [HITGROUP_HEAD] = 2.6,
+    [HITGROUP_CHEST] = 1.3,
+    [HITGROUP_STOMACH] = 1.3,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
+    [HITGROUP_LEFTLEG] = 1.24,
+    [HITGROUP_RIGHTLEG] = 1.24,
 }
 
 -- Mag size --
@@ -86,7 +86,7 @@ SWEP.ReducedClipSize = 10
 -- Recoil --
 
 SWEP.Recoil = 1.2
-SWEP.RecoilDirection = Angle(1, -0.3, 0)
+SWEP.RecoilDirection = Angle(1, -0.2, 0)
 SWEP.RecoilSide = 0.55
 
 SWEP.RecoilRise = 0
@@ -142,7 +142,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.24
+SWEP.SightTime = 0.4
 
 -- Gun length --
 
@@ -163,7 +163,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.29, -3, 0.47),
-     Ang = Angle(0.2, 0, 0),
+     Ang = Angle(0.2, 0, -1),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -335,7 +335,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

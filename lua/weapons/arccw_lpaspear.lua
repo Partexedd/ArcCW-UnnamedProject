@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellScale = 1.1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556mm"
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 1200
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.5,
+    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_LEFTARM] = 1.25,
+    [HITGROUP_RIGHTARM] = 1.25,
+    [HITGROUP_LEFTLEG] = 1.2,
+    [HITGROUP_RIGHTLEG] = 1.2,
 }
 
 -- Mag size --
@@ -81,7 +81,7 @@ SWEP.Primary.ClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1.3
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
 SWEP.RecoilSide = 0.45
 
@@ -89,7 +89,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.3
+SWEP.RecoilPunch = 0.15
 
 -- Firerate / Firemodes --
 
@@ -98,6 +98,12 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.8,
+            [2] = 0.8,
+            [3] = 0.8,
+            [4] = 0.9,
+        },
     },
     {
         Mode = 1,
@@ -135,7 +141,7 @@ SWEP.Primary.Ammo = "ar2"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.26
+SWEP.SightTime = 0.34
 
 -- Gun length --
 
@@ -357,7 +363,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {

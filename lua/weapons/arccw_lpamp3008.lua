@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -53,8 +53,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 29
-SWEP.DamageMin = 19
+SWEP.Damage = 24
+SWEP.DamageMin = 12
 SWEP.Range = 100
 SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 365
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.2,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_LEFTLEG] = 0.87,
+    [HITGROUP_RIGHTLEG] = 0.87,
 }
 
 -- Mag size --
@@ -84,15 +84,15 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
-SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 0.4
+SWEP.Recoil = 0.3
+SWEP.RecoilDirection = Angle(1, -0.35, 0)
+SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 1
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -131,7 +131,7 @@ SWEP.MagID = "mp3008"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.12
+SWEP.SightTime = 0.18
 
 -- Gun length --
 
@@ -147,7 +147,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.285, -4, 2.3),
-     Ang = Angle(-0.1, 0, 0),
+     Ang = Angle(-0.1, 0, -8),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -176,7 +176,7 @@ SWEP.ShootSound = path .. "fire.ogg" -- Placeholder
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = path .. "sterling_dist.ogg" -- Placeholder
 
-SWEP.ShootPitch = 80
+SWEP.ShootPitch = 100
 
 -- Bodygroups --
 
@@ -359,11 +359,11 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Vent",
-        Slot = {"lpmp3008_muzzle"},
+        Slot = {"lowpoly_mp3008_muzzle"},
     },
     {
         PrintName = "Stock",
-        Slot = {"lpmp3008_barrel"},
+        Slot = {"lowpoly_mp3008_stock"},
 		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
         DefaultAttName = "Skeleton Stock",
     },

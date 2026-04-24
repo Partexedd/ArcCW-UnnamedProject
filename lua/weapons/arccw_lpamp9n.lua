@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -53,8 +53,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15
+SWEP.Damage = 26
+SWEP.DamageMin = 14
 SWEP.Range = 40
 SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
@@ -66,7 +66,7 @@ SWEP.PhysBulletMuzzleVelocity = 550
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.1,
+    [HITGROUP_HEAD] = 1.15,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -89,10 +89,10 @@ SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.32
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 1
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -138,13 +138,12 @@ SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.MagID = "mp3008"
 
 -- Speed mult --
 
 SWEP.SpeedMult = 1.1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.1
+SWEP.SightTime = 0.18
 
 -- Gun length --
 
@@ -366,7 +365,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic"},
 		DefaultAttIcon = Material("models/entities/att/mp3008/closedirons.png", "smooth"),
         DefaultAttName = "Iron Sights",
         Offset = {

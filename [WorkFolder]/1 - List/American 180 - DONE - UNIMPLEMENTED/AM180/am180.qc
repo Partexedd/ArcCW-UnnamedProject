@@ -60,8 +60,8 @@ $bodygroup "4" {
 }
 
 $bodygroup "5" {
-	studio "barrelsuppsight.smd"
 	blank
+	studio "barrelsuppsight.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
@@ -152,6 +152,52 @@ $sequence "reload_empty" {
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
+}
+
+$sequence "enter_inspect" {
+	"anims\enter_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect" {
+	"anims\idle_inspect.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect" {
+	"anims\exit_inspect.smd"
+	"anims\exit_inspect_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "enter_inspect_empty" {
+	"anims\enter_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "idle_inspect_empty" {
+	"anims\idle_inspect_empty.smd"
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "exit_inspect_empty" {
+	"anims\exit_inspect_empty.smd"
+	"anims\exit_inspect_empty_iron.smd"
+	blend "sights" 0 1
+	"ACT_VM_IDLE" 1
+	snap
+	fps 30
 }
 
 $bonemerge "ValveBiped.Bip01_Spine4"

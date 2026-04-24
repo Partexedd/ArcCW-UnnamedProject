@@ -245,6 +245,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 24 / 30,
         RestoreAmmo = 1,
+        MinProgress = 0.7,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
@@ -254,6 +255,7 @@ SWEP.Animations = {
         Time = 68 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 2,
+        MinProgress = 0.3,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 14 / 30, c = ca, v = 0.8 },
             { s = pathXC .. "boltrelease.ogg", t = 28 / 30, c = ca, v = 0.8 },
@@ -265,6 +267,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         Time = 17 / 30,
         TPAnimStartTime = 0.3,
+        MinProgress = 0.4,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
         },

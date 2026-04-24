@@ -121,6 +121,8 @@ $sequence "sgreload_insert" {
 
 $sequence "sgreload_finish" {
 	"anims\reload_end.smd"
+	"anims\reload_end_iron.smd"
+ 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap
@@ -135,6 +137,8 @@ $sequence "reload" {
 
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
+	"anims\reload_empty_iron.smd"
+ 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
 	snap

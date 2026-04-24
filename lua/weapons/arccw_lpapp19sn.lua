@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 365
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.2,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_LEFTLEG] = 0.87,
+    [HITGROUP_RIGHTLEG] = 0.87,
 }
 
 -- Mag size --
@@ -82,19 +82,19 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.37
+SWEP.Recoil = 0.35
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.22
+SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
 SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 803
+SWEP.Delay = 60 / 798
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -134,7 +134,7 @@ SWEP.Primary.Ammo = "pistol"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
-SWEP.SightTime = 0.16
+SWEP.SightTime = 0.18
 
 -- Gun length --
 
@@ -210,7 +210,7 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["modhg"] = {
+    ["hgmodern"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
 
@@ -358,11 +358,12 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc", "lppp19_hg"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc", "lowpoly_pp19sn_hg"},
         Bone = "Body",
         Offset = {
             vpos = Vector(2.36, -0.95, -8.4),
             vang = Angle(90, 0, -90),
         },
+        InstalledEles = {"hgmodern"},
     },
 }

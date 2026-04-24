@@ -55,8 +55,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 100
-SWEP.DamageMin = 79
-SWEP.Range = 100
+SWEP.DamageMin = 71
+SWEP.Range = 300
 SWEP.Penetration = 44
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -68,12 +68,12 @@ SWEP.PhysBulletMuzzleVelocity = 881
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.1,
-    [HITGROUP_STOMACH] = 1.1,
-    [HITGROUP_LEFTARM] = 1.06,
-    [HITGROUP_RIGHTARM] = 1.06,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_CHEST] = 1.08,
+    [HITGROUP_STOMACH] = 1.08,
+    [HITGROUP_LEFTARM] = 1.02,
+    [HITGROUP_RIGHTARM] = 1.02,
+    [HITGROUP_LEFTLEG] = 1.02,
+    [HITGROUP_RIGHTLEG] = 1.02,
 }
 
 -- Mag size --
@@ -85,7 +85,7 @@ SWEP.Primary.ClipSize = 10
 
 SWEP.Recoil = 2
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 1.5
+SWEP.RecoilSide = 1.7
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
@@ -95,7 +95,7 @@ SWEP.RecoilPunch = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 520
+SWEP.Delay = 60 / 417
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -157,8 +157,8 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
+SWEP.HolsterPos = Vector(1, -7, -7)
+SWEP.HolsterAng = Angle(35, 0, -4)
 
 SWEP.CrouchPos = Vector(0, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -2)
@@ -336,7 +336,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -358,10 +358,10 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
+        Slot = {"lowpoly_foregrip_nocc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(0, 1.8, 15),
+            vpos = Vector(2.2, -1.6, -3),
             vang = Angle(90, 0, -90),
         },
     },

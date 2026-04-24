@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -82,9 +82,9 @@ SWEP.Primary.ClipSize = 27
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.3
 SWEP.RecoilDirection = Angle(1, -0.1, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.45
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.1
@@ -99,6 +99,12 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+    },
+    {
+        Mode = 1,
+        Override_ShotRecoilTable = {
+            [1] = 0.3,
+        },
     },
 }
 
@@ -220,14 +226,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
+        Time = 17 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 20 / 30,
+        Time = 17 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.wav", t = 0.02 }},
     },
@@ -344,11 +350,11 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lowpoly_optic_pistol"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {
-            vpos = Vector(0, -0.3, -2.8),
+            vpos = Vector(0, -0.6, -2.8),
             vang = Angle(90, 0, -90),
         },
     },

@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -83,14 +83,14 @@ SWEP.Primary.ClipSize = 17
 -- Recoil --
 
 SWEP.Recoil = 0.45
-SWEP.RecoilDirection = Angle(1, -0.5, 0)
+SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.1
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -141,8 +141,8 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 0, 0.85),
-     Ang = Angle(0.1, 0, 0),
+     Pos = Vector(-1.92, 2, 0.82),
+     Ang = Angle(0.2, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -220,14 +220,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
+        Time = 17 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 20 / 30,
+        Time = 17 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.ogg", t = 0.02 }},
     },
@@ -239,7 +239,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 41 / 30,
-        LastClip1OutTime = 0.4,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -258,7 +258,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
         Time = 46 / 30,
-        LastClip1OutTime = 0.4,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -344,7 +344,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
+        Slot = {"lowpoly_optic_lowprofile"},
         DefaultAttName = "Iron Sights",
         Bone = "Slide",
         Offset = {

@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = false -- Iron sights are much easier to use this way
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -83,14 +83,14 @@ SWEP.Primary.ClipSize = 17
 -- Recoil --
 
 SWEP.Recoil = 0.4
-SWEP.RecoilDirection = Angle(1, -0.5, 0)
+SWEP.RecoilDirection = Angle(1, 0.2, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.1
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
@@ -141,7 +141,7 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 0, 1.05),
+     Pos = Vector(-1.92, 2, 1.05),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -156,7 +156,7 @@ SWEP.HolsterAng = Angle(35, 0, -7)
 SWEP.CrouchPos = Vector(-1.5, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(0, 1, 0.6)
+SWEP.ActivePos = Vector(0.3, 2, 0.3)
 SWEP.ActiveAng = Angle(0, 0, -2)
 
 SWEP.MirrorVMWM = true
@@ -211,7 +211,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            { s = path .. "sliderelease.ogg", t = 6 / 30, c = ca, v = 0.8 },
+            { s = path .. "chamber.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
     },
     ["draw"] = {
@@ -220,26 +220,26 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
+        Time = 15 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 20 / 30,
+        Time = 15 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.wav", t = 0.02 }},
     },
 
-    -- 18-R Reloads --
+    -- Reloads --
 
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 38 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 40 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -257,8 +257,8 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 42 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 45 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -343,16 +343,6 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lp"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
         PrintName = "Barrel",
         DefaultAttName = "Barrel",
         Slot = {"lowpoly_muzzle"},
@@ -366,8 +356,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Skins",
-        DefaultAttName = "Wooden Grip",
-        Slot = {"lowpoly_skin"},
+        DefaultAttName = "Tan Frame",
+        Slot = {"lowpoly_g17_skin"},
         FreeSlot = true,
     },
 }
