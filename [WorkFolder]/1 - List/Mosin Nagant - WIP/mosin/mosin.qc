@@ -4,32 +4,6 @@ $bodygroup "studio" {
 	studio "mosin.smd"
 }
 
-$bodygroup "1" {
-	studio "pristinebody.smd"
-	studio "oldbody.smd"
-	studio "m38body.smd"
-	studio "obrezbody.smd"
-}
-
-$bodygroup "2" {
-	studio "lateprodammo.smd"
-	studio "earlyprodammo.smd"
-	studio "modernammo.smd"
-}
-
-$bodygroup "3" {
-	studio "lateprodirons.smd"
-	studio "earlyprodirons.smd"
-	studio "m38irons.smd"
-	studio "obrezirons.smd"
-}
-
-$bodygroup "4" {
-	studio "defbarrel.smd"
-	studio "m38barrel.smd"
-	studio "obrezbarrel.smd"
-}
-
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 0 rotate -90 0 0

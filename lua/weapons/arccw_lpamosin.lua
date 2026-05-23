@@ -159,7 +159,7 @@ SWEP.IronSightStruct = {
 ]]
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.07, -5, 1.5),
+    Pos = Vector(-3.07, -5, 1.2),
     Ang = Angle(0.1, 0, -2),
     Magnification = 1,
     ViewModelFOV = 70,

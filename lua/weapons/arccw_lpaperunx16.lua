@@ -151,7 +151,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.275, -2, 0.18),
+     Pos = Vector(-2.275, -2, 0.45),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      ViewModelFOV = 70,
