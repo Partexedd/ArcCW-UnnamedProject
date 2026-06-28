@@ -83,8 +83,8 @@ SWEP.Primary.ClipSize = 17
 -- Recoil --
 
 SWEP.Recoil = 0.4
-SWEP.RecoilDirection = Angle(1, 0.2, 0)
-SWEP.RecoilSide = 0.3
+SWEP.RecoilDirection = Angle(1, 0.1, 0)
+SWEP.RecoilSide = 0.22
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 772
+SWEP.Delay = 60 / 500
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -142,7 +142,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-1.92, 2, 1.05),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.1, 0, 1),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -186,8 +186,11 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["skinb"] = {
+    ["frameblack"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["framegreen"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
 }
 

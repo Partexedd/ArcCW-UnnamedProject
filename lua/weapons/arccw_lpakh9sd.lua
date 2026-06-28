@@ -53,8 +53,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters --
 
-SWEP.Damage = 32
-SWEP.DamageMin = 13
+SWEP.Damage = 27
+SWEP.DamageMin = 14
 SWEP.Range = 40
 SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 550
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.1,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_LEFTLEG] = 0.87,
+    [HITGROUP_RIGHTLEG] = 0.87,
 }
 
 -- Mag size --
@@ -84,9 +84,9 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.25
 SWEP.RecoilDirection = Angle(1, -0.5, 0)
-SWEP.RecoilSide = 0.2
+SWEP.RecoilSide = 0.37
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 1
@@ -96,18 +96,20 @@ SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 800
+SWEP.Delay = 60 / 812
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 1.2,
-            [2] = 1.2,
-            [3] = 1.2,
-            [4] = 1.2,
-            [4] = 1.2,
-            [4] = 1.1,
+            [1] = 1.6,
+            [2] = 1.6,
+            [3] = 1.6,
+            [4] = 1.5,
+            [5] = 1.4,
+            [6] = 1.3,
+            [7] = 1.2,
+            [8] = 1.1,
         },
     },
     {
@@ -160,7 +162,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.281, 1, 1.47),
+     Pos = Vector(-2.281, -1, 1.47),
      Ang = Angle(-0.1, 0, -4),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -205,7 +207,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
 
     ["extstock"] = {

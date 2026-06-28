@@ -1,7 +1,8 @@
 $modelname "weapons\arccw\c_lpausp.mdl"
  
 $bodygroup "studio" {
-	studio "usp.smd"
+	studio "usp45.smd"
+	studio "usp9.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
@@ -65,6 +66,28 @@ $sequence "fire" {
 $sequence "fire_empty" {
 	"anims\fire_empty.smd"
 	"anims\fire_empty_iron.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.02
+	fadeout 0.02
+	{ event 5001 0 "1" }
+}
+
+$sequence "fire_9" {
+	"anims\fire_9.smd"
+	"anims\fire_9_iron.smd"
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+ 	blend "sights" 0 1
+	fadein 0.02
+	fadeout 0.02
+	{ event 5001 0 "1" }
+}
+
+$sequence "fire_empty_9" {
+	"anims\fire_empty_9.smd"
+	"anims\fire_empty_9_iron.smd"
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
@@ -185,7 +208,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "usp.smd"
+$collisionmodel "usp45.smd"
 {
 	$mass 5
 }

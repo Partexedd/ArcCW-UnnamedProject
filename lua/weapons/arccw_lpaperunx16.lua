@@ -84,7 +84,7 @@ SWEP.Primary.ClipSize = 30
 -- Recoil --
 
 SWEP.Recoil = 0.65
-SWEP.RecoilDirection = Angle(1, 0.4, 0)
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0
@@ -100,6 +100,14 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.7,
+            [2] = 0.7,
+            [3] = 0.7,
+            [4] = 0.7,
+            [5] = 0.8,
+            [6] = 0.9,
+        },
     },
     {
         Mode = 1,
@@ -151,8 +159,8 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.275, -2, 0.45),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-2.275, -2, 0.11),
+     Ang = Angle(0.3, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

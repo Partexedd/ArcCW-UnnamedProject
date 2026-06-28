@@ -1,18 +1,7 @@
-$modelname "weapons\arccw\c_lpam1911.mdl"
+$modelname "weapons\arccw\c_lpam1911a1.mdl"
  
 $bodygroup "studio" {
-	studio "m1911.smd"
-}
-
-$bodygroup "1" {
-	blank
-	studio "tir.smd"
-}
-
-$texturegroup "skinfamilies"
-{
-	{ "m9" }
-	{ "m1911c" }
+	studio "m1911a1.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
@@ -68,7 +57,7 @@ $sequence "fire" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
-	fadein 0.02
+	fadein 0.005
 	fadeout 0.02
 	{ event 5001 0 "1" }
 }
@@ -79,7 +68,7 @@ $sequence "fire_empty" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
  	blend "sights" 0 1
-	fadein 0.02
+	fadein 0.005
 	fadeout 0.02
 	{ event 5001 0 "1" }
 }
@@ -196,7 +185,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 
-$collisionmodel "m1911.smd"
+$collisionmodel "m1911a1.smd"
 {
 	$mass 5
 }

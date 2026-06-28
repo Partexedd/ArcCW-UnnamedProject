@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 900
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1.1,
-    [HITGROUP_STOMACH] = 1.1,
-    [HITGROUP_LEFTARM] = 1.1,
-    [HITGROUP_RIGHTARM] = 1.1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 1.1,
+    [HITGROUP_RIGHTLEG] = 1.1,
 }
 
 -- Mag size --
@@ -85,7 +85,7 @@ SWEP.Primary.ClipSize = 25
 
 SWEP.Recoil = 1.1
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
-SWEP.RecoilSide = 0.25
+SWEP.RecoilSide = 0.8
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -101,9 +101,9 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.6,
-            [3] = 0.6,
+            [1] = 0.7,
+            [2] = 0.7,
+            [3] = 0.7,
             [4] = 0.7,
             [5] = 0.8,
             [6] = 0.9,
@@ -113,11 +113,12 @@ SWEP.Firemodes = {
         Mode = -3,
         Mult_HipDispersion = 0.65,
         PostBurstDelay = 0.11,
+        Mult_RPM = 1.11,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
-            [1] = 0.2,
-            [2] = 0.2,
-            [3] = 0.8,
+            [1] = 0.05,
+            [2] = 0.05,
+            [3] = 0.2,
         },
     },
 }
@@ -165,7 +166,7 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.26, -3, 0.7),
-     Ang = Angle(-1, 0, 0),
+     Ang = Angle(-1, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

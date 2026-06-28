@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.2
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 514
+SWEP.Delay = 60 / 467
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -186,8 +186,11 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["pg"] = {
-        VMSkin = 1,
+    ["gripwood"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["framechrome"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
 }
 
@@ -343,16 +346,6 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lowprofile"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
         PrintName = "Barrel",
         DefaultAttName = "Barrel",
         Slot = {"lowpoly_muzzle"},
@@ -365,9 +358,15 @@ SWEP.Attachments = {
         FreeSlot = true,
     },
     {
-        PrintName = "Skins",
-        DefaultAttName = "Wooden Grip",
-        Slot = {"lpm9_skin"},
+        PrintName = "Grip Skin",
+        DefaultAttName = "Polymer Grip",
+        Slot = {"lowpoly_p226_grip"},
+        FreeSlot = true,
+    },
+    {
+        PrintName = "Frame Skin",
+        DefaultAttName = "Black Frame",
+        Slot = {"lowpoly_p226_frame"},
         FreeSlot = true,
     },
 }

@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-		"$basetexture"	"models/weapons/arccw/shared/tir"
+		"$basetexture"	"models/weapons/arccw/shared/gun_tex"
 		$nocull 1
 		$selfilum 1
 		"$blendtintbybasealpha" "1"

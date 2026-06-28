@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\weapons\arccw\shared\gun_tex"
+	"$nocull" "1"
+	"$translucent" "1"
+    "$aplha" "0.2"
+}

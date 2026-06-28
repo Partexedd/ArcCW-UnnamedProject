@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 27
 SWEP.DamageMin = 16
-SWEP.Range = 100
+SWEP.Range = 50
 SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -84,7 +84,7 @@ SWEP.Primary.ClipSize = 30
 
 SWEP.Recoil = 0.35
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.25
+SWEP.RecoilSide = 0.35
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -151,7 +151,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.285, -4, 0.88),
-     Ang = Angle(-0.4, 0, 0),
+     Ang = Angle(-0.4, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

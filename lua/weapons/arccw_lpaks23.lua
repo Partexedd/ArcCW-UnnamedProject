@@ -82,15 +82,15 @@ SWEP.Primary.ClipSize = 4
 
 -- Recoil --
 
-SWEP.Recoil = 5
-SWEP.RecoilDirection = Angle(1, 0.6, 0)
-SWEP.RecoilSide = 2
+SWEP.Recoil = 6
+SWEP.RecoilDirection = Angle(1, -0.6, 0)
+SWEP.RecoilSide = 6
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.2
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.15
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 

@@ -163,7 +163,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.29, -3, 0.47),
-     Ang = Angle(0.2, 0, -1),
+     Ang = Angle(0.2, 0, -3),
      Magnification = 1,
      ViewModelFOV = 70,
 }

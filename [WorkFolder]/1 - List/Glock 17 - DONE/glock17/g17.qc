@@ -5,8 +5,9 @@ $bodygroup "studio" {
 }
 
 $bodygroup "1" {
-	studio "tanframe.smd"
-	studio "blackframe.smd"
+	studio "frametan.smd"
+	studio "frameblack.smd"
+	studio "framegreen.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

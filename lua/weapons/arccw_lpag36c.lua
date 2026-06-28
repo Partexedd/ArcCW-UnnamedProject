@@ -109,7 +109,10 @@ SWEP.Firemodes = {
         Mode = -2,
         PostBurstDelay = 0.13,
         RunawayBurst = true,
-        Mult_Recoil = 0.3,
+        Mult_RPM = 1.22,
+        Override_ShotRecoilTable = {
+            [1] = 0.1,
+        },
     },
 }
 

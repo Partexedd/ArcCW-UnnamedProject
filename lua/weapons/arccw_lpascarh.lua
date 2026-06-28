@@ -151,8 +151,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 SWEP.HolsterPos = Vector(1, -7, -7)
 SWEP.HolsterAng = Angle(35, 0, -6)
 
-SWEP.ActivePos = Vector(0.5, 0.7, 0.2)
-SWEP.ActiveAng = Angle(1, 0, -1)
+SWEP.ActivePos = Vector(0.5, 0.4, 0.5)
+SWEP.ActiveAng = Angle(0.3, 0, 2)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"
@@ -160,7 +160,7 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.35, -3, -0.2),
-     Ang = Angle(0.15, 0, 0),
+     Ang = Angle(0.15, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

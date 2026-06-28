@@ -82,9 +82,9 @@ SWEP.Primary.ClipSize = 17
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.52
 SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 0.2
+SWEP.RecoilSide = 0.32
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.1
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 689
+SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -118,7 +118,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 150
+SWEP.HipDispersion = 350
 SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 
@@ -142,7 +142,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-1.94, -1, 0.85),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.1, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -186,8 +186,17 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["pg"] = {
-        VMSkin = 1,
+    ["griptan"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["gripwood"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["frametan"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+    ["framechrome"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
     },
 }
 
@@ -220,14 +229,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
+        Time = 15 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 20 / 30,
+        Time = 15 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.ogg", t = 0.02 }},
     },
@@ -343,16 +352,6 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lowprofile"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
         PrintName = "Barrel",
         DefaultAttName = "Barrel",
         Slot = {"lowpoly_muzzle"},
@@ -360,14 +359,20 @@ SWEP.Attachments = {
     {
         PrintName = "Pose",
         Slot = {"lppistol_pose"},
-		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"), --ph
+		DefaultAttIcon = Material("entities/att/acwatt_lowpolybuffer.png"),
         DefaultAttName = "Default Pose",
         FreeSlot = true,
     },
     {
-        PrintName = "Skins",
-        DefaultAttName = "Wooden Grip",
-        Slot = {"lpm9_skin"},
+        PrintName = "Grip Skin",
+        DefaultAttName = "Polymer Grip",
+        Slot = {"lowpoly_m9_grip"},
+        FreeSlot = true,
+    },
+    {
+        PrintName = "Frame Skin",
+        DefaultAttName = "Black Frame",
+        Slot = {"lowpoly_m9_frame"},
         FreeSlot = true,
     },
 }

@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 33
-SWEP.DamageMin = 20
+SWEP.DamageMin = 13
 SWEP.Range = 100
 SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
@@ -67,11 +67,11 @@ SWEP.PhysBulletMuzzleVelocity = 719
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.6,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
     [HITGROUP_LEFTLEG] = 0.85,
     [HITGROUP_RIGHTLEG] = 0.85,
 }
@@ -102,6 +102,11 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.3,
+            [2] = 1.2,
+            [3] = 1.1,
+        },
     },
     {
         Mode = 1,
@@ -160,7 +165,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.2, -3, 0.65),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.1, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

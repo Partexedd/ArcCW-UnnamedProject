@@ -246,6 +246,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
+        MinProgress = 0.27,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -253,6 +254,7 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire",
         Framerate = 30,
+        MinProgress = 0.2,
         SoundTable = {
             { s = {pathCSR .. "mech-01.ogg", pathCSR .. "mech-02.ogg", pathCSR .. "mech-03.ogg", pathCSR .. "mech-04.ogg", pathCSR .. "mech-05.ogg", pathCSR .. "mech-06.ogg"}, t = 0 }
         },
@@ -263,7 +265,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         TPAnimStartTime = 0.7,
         Framerate = 30,
-        ShellEjectAt = 0.3,
+        ShellEjectAt = 0.45,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 8 / 30, c = ca, v = 0.8 },
@@ -279,9 +281,9 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 103 / 30,
-        ShellEjectAt = 0.4,
+        ShellEjectAt = 0.45,
         LastClip1OutTime = 0,
-        MinProgress = 1,
+        MinProgress = 0.9,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 8 / 30, c = ca, v = 0.8 },
@@ -301,7 +303,7 @@ SWEP.Animations = {
         Source = "sgreload_start",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
-        MinProgress = 1.4,
+        MinProgress = 0,
         LastClip1OutTime = 0,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },

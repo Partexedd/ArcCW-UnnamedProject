@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Colt M1911"
+SWEP.PrintName = "Colt M1911A1"
 
 -- Trivia --
 
@@ -46,8 +46,8 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpam1911.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_lpam1911.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpam1911a1.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_lpam1911a1.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -83,7 +83,7 @@ SWEP.Primary.ClipSize = 7
 -- Recoil --
 
 SWEP.Recoil = 2
-SWEP.RecoilDirection = Angle(1, 0.3, 0)
+SWEP.RecoilDirection = Angle(1, -0.3, 0)
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0
@@ -94,7 +94,7 @@ SWEP.RecoilPunch = 0.3
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 350
+SWEP.Delay = 60 / 322
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -143,8 +143,8 @@ SWEP.HoldtypeActive = "revolver"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-1.92, 1, 0.83),
-     Ang = Angle(0.6, 0, 0),
+     Pos = Vector(-1.922, 2, 0.97),
+     Ang = Angle(0.3, 0, -5),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -158,8 +158,8 @@ SWEP.HolsterAng = Angle(35, 0, -7)
 SWEP.CrouchPos = Vector(0.6, 1, 0.5)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.ActivePos = Vector(1, 1, 0.5)
-SWEP.ActiveAng = Angle(0, 0, -2)
+SWEP.ActivePos = Vector(1, 2, 0.5)
+SWEP.ActiveAng = Angle(1, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -222,7 +222,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 18 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
@@ -240,8 +240,8 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 40 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 42 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -259,14 +259,14 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Framerate = 30,
-        Time = 48 / 30,
-        LastClip1OutTime = 0.4,
+        Time = 51 / 30,
+        LastClip1OutTime = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
-        MinProgress = 0.8,
+        MinProgress = 1.1,
         SoundTable = {
             { s = path .. "magout.ogg", t = 4 / 30, c = ca, v = 1 },
             { s = path .. "drop.ogg", t = 13 / 30, c = ca, v = 1 },
@@ -344,25 +344,4 @@ end
 SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
-    {
-        PrintName = "Optic",
-        Slot = {"lpm1911_is"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Slide",
-        Offset = {
-            vpos = Vector(0, -0.3, -2.8),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "Threaded Barrel",
-        Slot = {"lowpoly_muzzle"},
-    },
-    {
-        PrintName = "Pose",
-        Slot = {"lppistol_pose"},
-        DefaultAttName = "Default Pose",
-        FreeSlot = true,
-    },
 }

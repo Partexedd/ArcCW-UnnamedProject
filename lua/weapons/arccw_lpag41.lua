@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 800
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.9,
-    [HITGROUP_CHEST] = 1.1,
-    [HITGROUP_STOMACH] = 1.1,
-    [HITGROUP_LEFTARM] = 1.1,
-    [HITGROUP_RIGHTARM] = 1.1,
-    [HITGROUP_LEFTLEG] = 0.82,
-    [HITGROUP_RIGHTLEG] = 0.82,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.5,
+    [HITGROUP_STOMACH] = 1.5,
+    [HITGROUP_LEFTARM] = 1.5,
+    [HITGROUP_RIGHTARM] = 1.5,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
 }
 
 -- Mag size --
@@ -82,7 +82,7 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.6
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
 SWEP.RecoilSide = 0.2
 
@@ -100,9 +100,11 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.6,
-            [2] = 0.7,
-            [3] = 0.7,
+            [1] = 1.5,
+            [2] = 1.4,
+            [3] = 1.3,
+            [4] = 1.2,
+            [5] = 1.1,
         },
     },
     {
@@ -112,8 +114,9 @@ SWEP.Firemodes = {
         AutoBurst = true,
         PrintName = "Auto-Burst",
         Override_ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.5,
+            [1] = 0.1,
+            [2] = 0.1,
+            [3] = 0.2,
         },
     },
 }
@@ -153,7 +156,8 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(12, -1, -1)
+SWEP.HolsterPos = Vector(1, -6, -8)
+SWEP.HolsterAng = Angle(35, 0, -6)
 
 SWEP.ActivePos = Vector(0, -1, -0.4)
 SWEP.ActiveAng = Angle(2, 0, -2)
@@ -171,9 +175,6 @@ SWEP.IronSightStruct = {
 
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
-
-SWEP.HolsterPos = Vector(3, -2, 0)
-SWEP.HolsterAng = Angle(-8, 25.881, 0)
 
 SWEP.CrouchPos = Vector(0, -1, 0)
 SWEP.CrouchAng = Angle(0, 0, -2)

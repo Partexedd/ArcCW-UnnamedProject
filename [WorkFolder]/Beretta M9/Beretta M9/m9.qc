@@ -5,13 +5,15 @@ $bodygroup "studio" {
 }
 
 $bodygroup "1" {
-	studio "tir.smd"
+	studio "gripblack.smd"
+	studio "griptan.smd"
+	studio "gripwood.smd"
 }
 
-$texturegroup "skinfamilies"
-{
-	{ "m9" }
-	{ "m1911c" }
+$bodygroup "2" {
+	studio "frameblack.smd"
+	studio "frametan.smd"
+	studio "framechrome.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

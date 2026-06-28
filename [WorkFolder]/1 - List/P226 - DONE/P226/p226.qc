@@ -5,8 +5,13 @@ $bodygroup "studio" {
 }
 
 $bodygroup "1" {
-	studio "blackgrip.smd"
-	studio "woodgrip.smd"
+	studio "gripblack.smd"
+	studio "gripwood.smd"
+}
+
+$bodygroup "1" {
+	studio "frameblack.smd"
+	studio "framechrome.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"
