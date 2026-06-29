@@ -190,6 +190,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
     ["m1911frame"] = {
         VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 2}},
+        TrueNameChange = "Colt M1911A1"
     },
     ["tanframe"] = {
         VMBodygroups = {{ind = 1, bg = 1}},

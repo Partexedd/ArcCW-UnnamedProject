@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 735
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.9,
-    [HITGROUP_CHEST] = 1.2,
-    [HITGROUP_STOMACH] = 1.2,
-    [HITGROUP_LEFTARM] = 1.2,
-    [HITGROUP_RIGHTARM] = 1.2,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.02,
+    [HITGROUP_STOMACH] = 1.02,
+    [HITGROUP_LEFTARM] = 1.02,
+    [HITGROUP_RIGHTARM] = 1.02,
+    [HITGROUP_LEFTLEG] = 0.87,
+    [HITGROUP_RIGHTLEG] = 0.87,
 }
 
 -- Mag size --
@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 50
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.4
 SWEP.RecoilDirection = Angle(1, 0.25, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.8
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -104,8 +104,8 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.1,
         PrintName = "Hyper-Burst",
         Override_ShotRecoilTable = {
-            [1] = 0.005,
-            [2] = 0.005,
+            [1] = 0,
+            [2] = 0,
             [3] = 0.015,
         },
     },

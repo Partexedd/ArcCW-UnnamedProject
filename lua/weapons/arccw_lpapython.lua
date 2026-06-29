@@ -27,7 +27,7 @@ SWEP.PrintName = "Colt Python"
 -- Trivia --
 
 SWEP.Trivia_Class = "Revolver"
-SWEP.Trivia_Desc = "Literally called Silenced Revolver Rifle"
+SWEP.Trivia_Desc = "Placeholder :))"
 SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 SWEP.Trivia_Calibre = ".357 Magnum"
 SWEP.Trivia_Mechanism = "Double-action and single-action"
@@ -48,7 +48,7 @@ end
 SWEP.ViewModel = "models/weapons/arccw/c_lpapython.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_lpapython.mdl"
 SWEP.ViewModelFOV = 70
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 -- Damage parameters --
 
@@ -110,7 +110,7 @@ SWEP.Firemodes = {
         Override_ManualAction = true,
         Override_TriggerDelay = false,
         Mult_HipDispersion = 0.5,
-        Mult_RPM = 0.2,
+        Mult_RPM = 1.5,
         Mult_Recoil = 0.45,
         Mult_ReloadSpeed = 0.5,
     },
@@ -141,7 +141,6 @@ SWEP.Primary.Ammo = "357"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.21
-SWEP.ShootSpeedMult = 0.8
 
 -- Gun length --
 
@@ -204,6 +203,18 @@ SWEP.DefaultBodygroups = "00000000000"
 --     [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3", [4] = "bullet4",    [5] = "bullet5",    [6] = "bullet6"
 -- }
 
+SWEP.AttachmentElements = {
+    ["snubnose"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["gripblack"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+    ["chromed"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+    },
+}
+
 -- Animations --
 
 SWEP.AutosolveSourceSeq = "ref"
@@ -245,7 +256,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        MinProgress = 0.3,
+        MinProgress = 0.26,
         Time = 25 / 30,
     },
 
@@ -253,7 +264,7 @@ SWEP.Animations = {
         Source = "cock",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         TPAnimStartTime = 0.7,
-        MinProgress = 1,
+        MinProgress = 0.7,
         SoundTable = {
             { s = pathCSR .. "boltback.ogg", t = 6 / 30, c = ca, v = 0.8 },
         },
@@ -337,14 +348,10 @@ SWEP.Animations = {
         Source = "idle_cocked",
     },
 
-    ["draw"] = {
-        Source = "draw",
-    },
-
     ["fire_cocked"] = {
         Source = "fire_cocked",
         Framerate = 30,
-        MinProgress = 5,
+        MinProgress = 3,
         Time = 20 / 30,
     },
 
@@ -413,6 +420,11 @@ end
 SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "Regular Barrel",
+        Slot = {"lowpoly_python_barrel"},
+    },
     {
         PrintName = "Grip Skin",
         DefaultAttName = "Wooden Grip",

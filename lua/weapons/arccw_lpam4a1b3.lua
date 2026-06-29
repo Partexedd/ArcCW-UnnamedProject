@@ -152,7 +152,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 SWEP.HolsterPos = Vector(1, -6, -6)
 SWEP.HolsterAng = Angle(35, 0, -6)
 
-SWEP.ActivePos = Vector(0.1, 1, 0.4)
+SWEP.ActivePos = Vector(0.1, 0.5, 0.6)
 SWEP.ActiveAng = Angle(1, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"

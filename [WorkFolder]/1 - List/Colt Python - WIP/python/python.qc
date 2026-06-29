@@ -36,7 +36,7 @@ $cbox 0 0 0 0 0 0
 $poseparameter "sights" 0 1 loop 0
 
 $sequence "ref"{
-	"anims\idle_iron.smd"
+	"anims\ref.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
 	snap

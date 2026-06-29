@@ -15,7 +15,7 @@ att.SortOrder = -4
 
 att.Override_IronSightStruct = {
      Pos = Vector(-1.922, 2, 0.97),
-     Ang = Angle(0.3, 0, -2),
+     Ang = Angle(0.45, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
