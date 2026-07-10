@@ -4,10 +4,6 @@ $bodygroup "studio" {
 	studio "sg552.smd"
 }
 
-$bodygroup "1" {
-	studio "tir.smd"
-}
-
 $cdmaterials "models\weapons\arccw\shared"
 
 $attachment "1" "Barrel" 0 0 2 rotate -90 0 0

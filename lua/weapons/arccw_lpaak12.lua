@@ -111,9 +111,7 @@ SWEP.Firemodes = {
         RunawayBurst = true,
         PostBurstDelay = 0.11,
         Mult_RPM = 1.11,
-        Override_ShotRecoilTable = {
-            [1] = 0.2,
-        },
+        Mult_Recoil = 0.42,
     },
 }
 
@@ -154,16 +152,16 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.1, 0.7, 0.5)
-SWEP.ActiveAng = Angle(1, 0, -1)
+SWEP.ActivePos = Vector(0.1, 0, 0.8)
+SWEP.ActiveAng = Angle(1, 0, 1)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.285, -4, 0.68),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.1, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

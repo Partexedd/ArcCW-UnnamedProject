@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
+SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.4
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -53,25 +53,25 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 -- Damage parameters --
 
 SWEP.Damage = 55
-SWEP.DamageMin = 19
+SWEP.DamageMin = 24
 SWEP.Range = 25
-SWEP.Penetration = 12
+SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 470
-SWEP.PhysBulletMuzzleVelocity = 470
+SWEP.MuzzleVelocity = 245
+SWEP.PhysBulletMuzzleVelocity = 245
 
 -- slight tomfoolery --
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_STOMACH] = 1.5,
-    [HITGROUP_LEFTARM] = 1.5,
-    [HITGROUP_RIGHTARM] = 1.5,
-    [HITGROUP_LEFTLEG] = 0.78,
-    [HITGROUP_RIGHTLEG] = 0.78,
+    [HITGROUP_HEAD] = 2.2,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
+    [HITGROUP_LEFTLEG] = 0.74,
+    [HITGROUP_RIGHTLEG] = 0.74,
 }
 
 -- Mag size --
@@ -97,7 +97,7 @@ SWEP.TriggerDelay = true
 SWEP.RevolverReload = true
 SWEP.UC_CanManualAction = true
 
-SWEP.Delay = 60 / 550
+SWEP.Delay = 60 / 452
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -120,7 +120,7 @@ SWEP.NPCWeight = 70
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 300
+SWEP.HipDispersion = 200
 SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 
@@ -130,7 +130,7 @@ SWEP.Primary.Ammo = "357"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.21
+SWEP.SightTime = 0.1
 
 -- Gun length --
 
@@ -157,7 +157,7 @@ SWEP.IronSightStruct = {
 SWEP.CustomizePos = Vector(0, 0, 0)
 SWEP.CustomizeAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(0, -5, -7)
+SWEP.HolsterPos = Vector(0, -4, -6)
 SWEP.HolsterAng = Angle(35, 0, -7)
 
 SWEP.CrouchPos = Vector(-1, -1, 0.5)
@@ -177,12 +177,12 @@ local pathDist = "weapons/arccw/hk416/"
 local pathXC = "weapons/arccw/xcrm/"
 local pathCSR = "weapons/arccw/csr338/"
 local pathSCAR = "weapons/arccw/scar/"
+local pathF = "weapons/arccw/fn502/"
 
 SWEP.ShootSound = {pathXC .. "fire-01.ogg", pathXC .. "fire-02.ogg", pathXC .. "fire-03.ogg", pathXC .. "fire-04.ogg", pathXC .. "fire-05.ogg", pathXC .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSoundSilenced = false
 SWEP.DistantShootSound = false
 
-SWEP.ShootPitch = 100
+SWEP.ShootPitch = 80
 SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
@@ -209,15 +209,6 @@ SWEP.AttachmentElements = {
 
 SWEP.AutosolveSourceSeq = "ref"
 
-SWEP.Hook_TranslateAnimation = function(wep,anim)
-    if wep:GetCurrentFiremode().Override_ManualAction and anim == "fire_dry" then
-        return "fire_dry_sact"
-    end
-    if wep:GetCurrentFiremode().Override_ManualAction then
-        return anim .. "_cocked"
-    end
-end
-
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -226,7 +217,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         Framerate = 30,
-        time = 36 / 30,
+        time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
@@ -247,13 +238,13 @@ SWEP.Animations = {
         Source = "fire",
         Framerate = 30,
         MinProgress = 0.1,
-        Time = 15 / 30,
+        Time = 18 / 30,
     },
     
     ["fire_dry"] = {
         Source = "dry_fire",
         MinProgress = 0.05,
-        Time = 17 / 30,
+        Time = 19 / 30,
         SoundTable = {
             { s = path, t = 0 }
         },
@@ -262,6 +253,7 @@ SWEP.Animations = {
     ["trigger"] = {
         Source = "hammer",
         Time = 3 / 30,
+        MinProgress = 0.075,
     },
 
     -- Reloads --
@@ -270,6 +262,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 0.5,
+        Time = 87 / 30,
         MinProgress = 2.2,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -284,7 +277,7 @@ SWEP.Animations = {
 
     ["enter_inspect"] = {
         Source = "enter_inspect",
-        time = 10 / 30,
+        Time = 10 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0.2,
@@ -292,7 +285,7 @@ SWEP.Animations = {
     },
     ["idle_inspect"] = {
         Source = "idle_inspect",
-        time = 120 / 30,
+        Time = 120 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,
@@ -300,7 +293,7 @@ SWEP.Animations = {
     },
     ["exit_inspect"] = {
         Source = "exit_inspect",
-        time = 20 / 30,
+        Time = 20 / 30,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0,

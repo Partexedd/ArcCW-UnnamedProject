@@ -83,7 +83,7 @@ SWEP.Primary.ClipSize = 20
 -- Recoil --
 
 SWEP.Recoil = 0.4
-SWEP.RecoilDirection = Angle(1, 0.7, 0)
+SWEP.RecoilDirection = Angle(1, -0.7, 0)
 SWEP.RecoilSide = 0.45
 
 SWEP.RecoilRise = 0
@@ -161,7 +161,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.24, -3, 0.38),
-     Ang = Angle(0.5, 0, 0),
+     Ang = Angle(0.5, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }

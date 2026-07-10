@@ -65,7 +65,7 @@ $sequence "hammer" {
 	"ACT_VM_IDLE" 1
  	blend "sights" 0 1
 	fadein 0.1
-	fadeout 0.2
+	fadeout 0.1
 }
 
 $sequence "dry_fire" {
