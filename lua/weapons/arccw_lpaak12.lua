@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "AK-12 (2016)"
+SWEP.PrintName = "AK-12 (2023)"
 
 -- Trivia --
 
@@ -82,9 +82,9 @@ SWEP.Primary.ClipSize = 30
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.62
 SWEP.RecoilDirection = Angle(1, 0.2, 0)
-SWEP.RecoilSide = 0.25
+SWEP.RecoilSide = 0.28
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -100,7 +100,7 @@ SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.7,
+            [1] = 0.6,
             [2] = 0.7,
             [3] = 0.8,
             [4] = 0.9,
@@ -111,7 +111,7 @@ SWEP.Firemodes = {
         RunawayBurst = true,
         PostBurstDelay = 0.11,
         Mult_RPM = 1.11,
-        Mult_Recoil = 0.42,
+        Mult_Recoil = 0.35,
     },
 }
 
@@ -142,7 +142,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.85
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.27
 
 -- Gun length --
 
@@ -152,7 +152,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.1, 0, 0.8)
+SWEP.ActivePos = Vector(0.1, 0, 0.6)
 SWEP.ActiveAng = Angle(1, 0, 1)
 
 SWEP.HoldtypeHolstered = "passive"
@@ -160,8 +160,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.285, -4, 0.68),
-     Ang = Angle(0.1, 0, 2),
+     Pos = Vector(-2.177, -2.4, 0.1),
+     Ang = Angle(0.6, 0, 2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -172,8 +172,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(1, -6, -6)
 SWEP.HolsterAng = Angle(35, 0, -4)
 
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
+SWEP.CrouchPos = Vector(-0.3, -1, 0.7)
+SWEP.CrouchAng = Angle(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -256,7 +256,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 51 / 30,
+        Time = 52 / 30,
         LHIK = true,
         LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
@@ -275,7 +275,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 2,
         Framerate = 30,
-        Time = 70 / 30,
+        Time = 69 / 30,
         LHIK = true,
         LHIKIn = 0.15,
         LHIKEaseIn = 0.2,
@@ -334,11 +334,11 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lpak12_irons","lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic", "lowpoly_optic_sniper"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.005, 0.3, 3),
+            vpos = Vector(0.015, -0.05, 3),
             vang = Angle(90, 0, -90),
         },
     },
@@ -357,7 +357,7 @@ SWEP.Attachments = {
         Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
         Bone = "Body",
         Offset = {
-            vpos = Vector(2.2, -1.08, -7),
+            vpos = Vector(2.2, -1.4, -7),
             vang = Angle(90, 0, -90),
         },
     },

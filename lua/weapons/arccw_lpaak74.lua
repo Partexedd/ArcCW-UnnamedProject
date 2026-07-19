@@ -136,7 +136,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.85
-SWEP.SightTime = 0.34
+SWEP.SightTime = 0.35
 
 -- Gun length --
 
@@ -164,8 +164,8 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(1, -6, -7)
 SWEP.HolsterAng = Angle(35, 0, -4)
 
-SWEP.CrouchPos = Vector(0, -1, 0)
-SWEP.CrouchAng = Angle(0, 0, -2)
+SWEP.CrouchPos = Vector(-0.3, -1, 0.7)
+SWEP.CrouchAng = Angle(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -198,7 +198,23 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
     ["dovetail"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+        VMBodygroups = {{ind = 3, bg = 1}},
+        TrueNameChange = "AK-74N"
+    },
+    ["foldingstock"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        TrueNameChange = "AK-74S"
+    },
+    ["foldingstock-dovetail"] = {
+        VMBodygroups = {{ind = 1, bg = 1}, {ind = 3, bg = 1}},
+        TrueNameChange = "AK-74SN"
+    },
+    ["akm742"] = {
+        VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 1}, {ind = 2, bg = 1}, {ind = 3, bg = 1}, {ind = 4, bg = 1}},
+        TrueNameChange = "AKM-74/2"
+    },
+    ["ironsopen"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 }
 
@@ -326,16 +342,27 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"lowpoly_russianoptic"},
-        DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(-0.005, 0.3, 3),
+            vpos = Vector(0.63, 2.68, 2.1),
             vang = Angle(90, 0, -90),
         },
-        GivesFlags = {"dovetail"},
+        HideIfBlocked = true,
+        RequireFlags = {"dovetail"},
+    },
+    {
+        PrintName = "Muzzle",
+        Slot = {"lowpoly_russianmuzzle"},
+        DefaultAttName = "Flash Hider",
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0.63, 2.68, 2.1),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Kit",
+        Slot = {"lowpoly_ak74_kit"},
         DefaultAttName = "AK-74",
     },
 }

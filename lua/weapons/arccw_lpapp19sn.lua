@@ -342,6 +342,16 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
+        Slot = {"lowpoly_russianoptic"},
+        Bone = "Body",
+        Offset = {
+            vpos = Vector(0.63, 2.98, 2.1),
+            vang = Angle(90, 0, -90),
+        },
+        MergeSlots = {1,2}
+    },
+    {
+        PrintName = "Optic",
         Slot = {"lowpoly_optic"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",

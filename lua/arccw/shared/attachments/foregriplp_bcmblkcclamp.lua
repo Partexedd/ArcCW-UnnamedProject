@@ -4,7 +4,7 @@ att.Icon = Material("entities/att/acwatt_lp_ph.png", "smooth")
 att.Description = ""
 att.Desc_Pros = {
      "Allows canting (Press E twice while aiming)",
-     "+34% Faster aiming speed",
+     "+34% Aiming speed",
      "+25% hipfire accuracy"
 }
 att.Desc_Cons = {

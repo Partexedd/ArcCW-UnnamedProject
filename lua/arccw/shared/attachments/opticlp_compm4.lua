@@ -31,10 +31,10 @@ att.ModelScale = Vector(1.25, 1.25, 1.25)
 att.HolosightMagnification = 1.005
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/reticles/tinydot.png", "mips smooth")
+att.HolosightReticle = Material("hud/reticles/dot.png", "mips smooth")
 att.HolosightPiece = "models/weapons/arccw/atts/compm4_hsp.mdl"
 att.HolosightNoFlare = true
-att.HolosightSize = 0.01
+att.HolosightSize = 0.18
 att.HolosightBone = "holosight"
 att.Colorable = true
 att.HolosightBlackbox = false

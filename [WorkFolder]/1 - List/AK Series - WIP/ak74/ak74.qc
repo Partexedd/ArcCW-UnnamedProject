@@ -2,25 +2,33 @@ $modelname "weapons\arccw\c_lpaak74.mdl"
  
 $bodygroup "studio" {
 	studio "ak74.smd"
+	studio "akm742.smd"
 }
 
-$bodygroup "2" {
+$bodygroup "1" {
 	studio "receiversolid.smd"
 	studio "receiverfolding.smd"
 }
 
-$bodygroup "3" {
+$bodygroup "2" {
 	studio "dustcover.smd"
+	studio "dustcover742.smd"
 	blank
 }
 
-$bodygroup "4" {
+$bodygroup "3" {
 	blank
 	studio "dovetail.smd"
 }
 
-$bodygroup "5" {
+$bodygroup "4" {
 	studio "545fmj.smd"
+	studio "545ps.smd"
+}
+
+$bodygroup "5" {
+	studio "rearsight.smd"
+	studio "rearsightopen.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

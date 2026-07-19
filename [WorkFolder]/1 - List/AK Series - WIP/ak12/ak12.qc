@@ -4,9 +4,13 @@ $bodygroup "studio" {
 	studio "ak12.smd"
 }
 
+$bodygroup "1" {
+	studio "cheekrestraised.smd"
+	studio "cheekrest.smd"
+}
+
 $bodygroup "2" {
-	studio "fis.smd"
-	studio "ris.smd"
+	studio "545ppbs.smd"
 }
 
 $cdmaterials "models\weapons\arccw\shared"

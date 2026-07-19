@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 840
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.1,
     [HITGROUP_CHEST] = 1.05,
     [HITGROUP_STOMACH] = 1.05,
     [HITGROUP_LEFTARM] = 1.05,
     [HITGROUP_RIGHTARM] = 1.05,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 0.7,
+    [HITGROUP_RIGHTLEG] = 0.7,
 }
 
 -- Mag size --
@@ -84,7 +84,7 @@ SWEP.Primary.ClipSize = 20
 
 SWEP.Recoil = 1
 SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.38
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
