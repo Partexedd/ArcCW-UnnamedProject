@@ -132,6 +132,7 @@ SWEP.Primary.Ammo = "357"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.26
+SWEP.ShootSpeedMult = 0.6
 
 -- Gun length --
 

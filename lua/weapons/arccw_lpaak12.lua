@@ -143,6 +143,7 @@ SWEP.MagID = "xcr"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.85
 SWEP.SightTime = 0.27
+SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
 
@@ -258,10 +259,10 @@ SWEP.Animations = {
         Framerate = 30,
         Time = 52 / 30,
         LHIK = true,
-        LHIKIn = 0.15,
+        LHIKIn = 0.19,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.1,
-        LHIKOut = 0.52,
+        LHIKOut = 0.5,
         SoundTable = {
             { s = path556 .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathAK .. "magout.ogg", t = 8 / 30, c = ca, v = 0.8 },

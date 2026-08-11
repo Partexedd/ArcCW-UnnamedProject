@@ -8,6 +8,7 @@ att.Desc_Pros = {
     "+35% Aiming speed",
 }
 att.Desc_Cons = {
+    "Increased recoil on the first 4 rounds fired per burst",
 }
 att.Slot = "lowpoly_ak74_kit"
 

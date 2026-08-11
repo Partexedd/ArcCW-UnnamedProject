@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_1"
+SWEP.MuzzleEffect = "muzzleflash_suppressed"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.3
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -66,7 +66,7 @@ SWEP.PhysBulletMuzzleVelocity = 550
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.15,
+    [HITGROUP_HEAD] = 1.45,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,

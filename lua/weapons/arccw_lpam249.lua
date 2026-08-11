@@ -16,7 +16,7 @@ SWEP.NoFlash = true
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerFinalMag = 25
+SWEP.TracerFinalMag = 15
 SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters >--
 
 SWEP.Damage = 25
-SWEP.DamageMin = 21
+SWEP.DamageMin = 19
 SWEP.Range = 100
 SWEP.Penetration = 19
 SWEP.DamageType = DMG_BULLET
@@ -67,13 +67,13 @@ SWEP.PhysBulletMuzzleVelocity = 803
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 2.2,
-    [HITGROUP_CHEST] = 1.5,
-    [HITGROUP_STOMACH] = 1.5,
-    [HITGROUP_LEFTARM] = 1.5,
-    [HITGROUP_RIGHTARM] = 1.5,
-    [HITGROUP_LEFTLEG] = 1.1,
-    [HITGROUP_RIGHTLEG] = 1.1,
+    [HITGROUP_HEAD] = 2.1,
+    [HITGROUP_CHEST] = 1.425,
+    [HITGROUP_STOMACH] = 1.425,
+    [HITGROUP_LEFTARM] = 1.425,
+    [HITGROUP_RIGHTARM] = 1.425,
+    [HITGROUP_LEFTLEG] = 1.05,
+    [HITGROUP_RIGHTLEG] = 1.05,
 }
 
 -- Mag size --
@@ -83,9 +83,9 @@ SWEP.Primary.ClipSize = 200
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.35
 SWEP.RecoilDirection = Angle(1, -0.4, 0)
-SWEP.RecoilSide = 0.33
+SWEP.RecoilSide = 0.28
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -151,15 +151,15 @@ SWEP.BarrelLength = 0 -- Anti fun
 SWEP.HolsterPos = Vector(1, -7, -6)
 SWEP.HolsterAng = Angle(35, 0, -6)
 
-SWEP.ActivePos = Vector(0.2, 0.5, 0.4)
-SWEP.ActiveAng = Angle(2, 0, -1)
+SWEP.ActivePos = Vector(0, 0.5, 0.6)
+SWEP.ActiveAng = Angle(0.3, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.24, -1, 0.77),
+     Pos = Vector(-2.243, -1, 0.77),
      Ang = Angle(0, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
@@ -189,7 +189,7 @@ SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-0
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 115
+SWEP.ShootPitch = 75
 
 -- Bodygroups --
 
@@ -202,9 +202,6 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-    ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 1}, {ind = 2, bg = 1}},
-    },
 }
 
 -- Animations --
@@ -363,7 +360,6 @@ SWEP.Attachments = {
             vpos = Vector(0.02, -0.7, -4),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nois"},
     },
     {
         PrintName = "Muzzle",
@@ -374,6 +370,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -1),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nofh"},
     },
 }

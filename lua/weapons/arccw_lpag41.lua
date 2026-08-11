@@ -149,6 +149,7 @@ SWEP.MagID = "xcr"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.47
+SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
 

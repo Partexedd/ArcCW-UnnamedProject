@@ -16,24 +16,24 @@ SWEP.NoFlash = true
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 SWEP.CamAttachment = 3
-SWEP.TracerFinalMag = 5
-SWEP.TracerNum = 0
+SWEP.TracerFinalMag = 15
+SWEP.TracerNum = 5
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Colt M4A1"
+SWEP.PrintName = "FN Minimi"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Class = "Light machine gun"
 SWEP.Trivia_Desc = ""
-SWEP.Trivia_Manufacturer = "Daniel Defense"
+SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-operated, rotating bolt"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 2007
+SWEP.Trivia_Country = "Belgium"
+SWEP.Trivia_Year = 1977
 
 -- Weapon slot --
 
@@ -47,17 +47,17 @@ end
 
 -- Viewmodel / Worldmodel / Model FOV / Animations --
 
-SWEP.ViewModel = "models/weapons/arccw/c_lpam4a1b3.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_lpam4a1b3.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_lpaminimi.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_lpaminimi.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage parameters >--
 
 SWEP.Damage = 25
-SWEP.DamageMin = 20
+SWEP.DamageMin = 17
 SWEP.Range = 100
-SWEP.Penetration = 26
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 803
@@ -67,60 +67,58 @@ SWEP.PhysBulletMuzzleVelocity = 803
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.5,
-    [HITGROUP_CHEST] = 1.3,
-    [HITGROUP_STOMACH] = 1.3,
-    [HITGROUP_LEFTARM] = 1.3,
-    [HITGROUP_RIGHTARM] = 1.3,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_HEAD] = 2.1,
+    [HITGROUP_CHEST] = 1.425,
+    [HITGROUP_STOMACH] = 1.425,
+    [HITGROUP_LEFTARM] = 1.425,
+    [HITGROUP_RIGHTARM] = 1.425,
+    [HITGROUP_LEFTLEG] = 1.05,
+    [HITGROUP_RIGHTLEG] = 1.05,
 }
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 30
+SWEP.ChamberSize = 0
+SWEP.Primary.ClipSize = 100
 
 -- Recoil --
 
-SWEP.Recoil = 0.6
-SWEP.RecoilDirection = Angle(1, 0.4, 0)
-SWEP.RecoilSide = 0.28
+SWEP.Recoil = 0.5
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
+SWEP.RecoilSide = 0.24
 
 SWEP.RecoilRise = 0
-SWEP.VisualRecoilMult = 0.5
+SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 821
+SWEP.Delay = 60 / 762
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
         Override_ShotRecoilTable = {
-            [1] = 0.7,
-            [2] = 0.7,
-            [3] = 0.8,
-            [4] = 0.9,
+            [1] = 1,
+            [2] = -1.1,
+            [3] = 1,
+            [4] = -0.8,
+            [5] = 1,
+            [6] = -0.4,
+            [7] = 1,
+            [8] = -0.2,
         },
-    },
-    {
-        Mode = 1,
-        Mult_Recoil = 0.3,
-        Mult_RPM = 0.7,
     },
 }
 
-SWEP.ShootPitch = 90
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
-SWEP.ReloadInSights = true
+SWEP.ReloadInSights = false
 
 -- NPC stuff -- 
 
@@ -130,7 +128,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 1
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 475
 SWEP.MoveDispersion = 0
 SWEP.JumpDispersion = 400
 
@@ -139,9 +137,10 @@ SWEP.MagID = "xcr"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.24
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.4
+SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
 
@@ -149,19 +148,19 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.HolsterPos = Vector(1, -6, -6)
+SWEP.HolsterPos = Vector(1, -7, -6)
 SWEP.HolsterAng = Angle(35, 0, -6)
 
-SWEP.ActivePos = Vector(0.1, 1, 0.4)
-SWEP.ActiveAng = Angle(1, 0, -1)
+SWEP.ActivePos = Vector(0, 0.5, 0.6)
+SWEP.ActiveAng = Angle(0.3, 0, -1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.24, -3, 0.28),
-     Ang = Angle(0.2, 0, 0),
+     Pos = Vector(-2.243, -1, 0.77),
+     Ang = Angle(0, 0, -2),
      Magnification = 1,
      ViewModelFOV = 70,
 }
@@ -190,20 +189,19 @@ SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-0
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 79
+SWEP.ShootPitch = 75
 
 -- Bodygroups --
 
 SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.BulletBones = {
-    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3"
+    [1] = "bullet1",    [2] = "bullet2",    [3] = "bullet3",    [4] = "bullet4",    [5] = "bullet5",
+    [6] = "bullet6",    [7] = "bullet7",    [8] = "bullet8",    [9] = "bullet9",    [10] = "bullet10",
+    [11] = "bullet11",    [12] = "bullet12"
 }
 
 SWEP.AttachmentElements = {
-    ["nois"] = {
-        VMBodygroups = {{ind = 1, bg = 1}, {ind = 2, bg = 1}},
-    },
 }
 
 -- Animations --
@@ -222,7 +220,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKOut = 0.45,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "charge.ogg", t = 5 / 30, c = ca, v = 0.8 },
@@ -250,8 +248,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        Time = 48 / 30,
+        LastClip1OutTime = 1.8,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -269,8 +266,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LastClip1OutTime = 0.5,
-        Time = 56 / 30,
+        LastClip1OutTime = 2.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
@@ -356,17 +352,6 @@ SWEP.AutosolveSourceSeq = "ref"
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
-        DefaultAttName = "Iron Sights",
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0.068, -0.1, 3),
-            vang = Angle(90, 0, -90),
-        },
-        InstalledEles = {"nois"},
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"lowpoly_muzzle"},
@@ -375,22 +360,5 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, -1),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"nofh"},
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip_cc"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(2.36, -1.7, -7),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Skins",
-        PrintName = "Skin",
-        Slot = {"skin_apache"},
-        DefaultAttName = "Tan",
-        FreeSlot = true,
     },
 }

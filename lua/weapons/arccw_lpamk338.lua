@@ -131,6 +131,7 @@ SWEP.MagID = "mk338"
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.6
 
 -- Gun length --
 

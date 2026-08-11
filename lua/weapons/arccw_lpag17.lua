@@ -22,7 +22,7 @@ SWEP.TracerWidth = 1
 
 -- Name --
 
-SWEP.PrintName = "Glock 17"
+SWEP.PrintName = "Glock 17 Gen5"
 
 -- Trivia --
 
@@ -223,14 +223,14 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Framerate = 30,
-        Time = 15 / 30,
+        Time = 18 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Framerate = 30,
-        Time = 15 / 30,
+        Time = 18 / 30,
         ShellEjectAt = 0.02,
         SoundTable = {{ s = path .. "empty.wav", t = 0.02 }},
     },

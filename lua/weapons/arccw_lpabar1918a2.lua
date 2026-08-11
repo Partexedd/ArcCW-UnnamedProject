@@ -146,9 +146,10 @@ SWEP.Primary.Ammo = "ar2"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.45
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.5
 
 -- Gun length --
 

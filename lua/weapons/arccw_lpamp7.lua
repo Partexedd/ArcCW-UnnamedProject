@@ -100,6 +100,18 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.5,
+            [2] = 0.5,
+            [3] = 0.6,
+            [4] = 0.6,
+            [5] = 0.7,
+            [6] = 0.7,
+            [7] = 0.8,
+            [8] = 0.8,
+            [9] = 0.9,
+            [10] = 0.9,
+        },
     },
 }
 
@@ -130,6 +142,7 @@ SWEP.MagID = "mp3008"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
 SWEP.SightTime = 0.18
+SWEP.ShootSpeedMult = 0.9
 
 -- Gun length --
 
@@ -137,7 +150,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 -- Ironsight / Customization / Active pos ang --
 
-SWEP.ActivePos = Vector(-0.5, -2, 0.3)
+SWEP.ActivePos = Vector(-0.3, -2.5, 1)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "smg"

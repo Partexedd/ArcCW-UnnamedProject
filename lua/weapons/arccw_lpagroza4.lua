@@ -144,6 +144,7 @@ SWEP.MagID = "vikhr"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.28
+SWEP.ShootSpeedMult = 0.8
 
 -- Gun length --
 

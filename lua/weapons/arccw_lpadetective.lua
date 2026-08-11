@@ -81,9 +81,9 @@ SWEP.Primary.ClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1
 SWEP.RecoilDirection = Angle(1, 0.25, 0)
-SWEP.RecoilSide = 0.5
+SWEP.RecoilSide = 0.44
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -131,6 +131,7 @@ SWEP.Primary.Ammo = "357"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.1
+SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
 

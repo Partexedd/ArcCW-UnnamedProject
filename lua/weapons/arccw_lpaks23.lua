@@ -129,7 +129,8 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.22
+SWEP.SightTime = 0.34
+SWEP.ShootSpeedMult = 0.8
 
 -- Gun length --
 

@@ -144,6 +144,7 @@ SWEP.MagID = "famas"
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.32
+SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
 
