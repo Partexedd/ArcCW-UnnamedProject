@@ -92,7 +92,7 @@ SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.2
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 

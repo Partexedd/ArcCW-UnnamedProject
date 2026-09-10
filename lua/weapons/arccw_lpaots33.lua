@@ -6,7 +6,7 @@ SWEP.UseHands = true
 
 -- Muzzle and shell effects --
 
-SWEP.MuzzleEffect = "muzzleflash_1"
+SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 23
-SWEP.DamageMin = 14
+SWEP.DamageMin = 13
 SWEP.Range = 40
 SWEP.Penetration = 16
 SWEP.DamageType = DMG_BULLET
@@ -66,13 +66,13 @@ SWEP.PhysBulletMuzzleVelocity = 375
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.4,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 1.2,
-    [HITGROUP_RIGHTLEG] = 1.2,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.55,
+    [HITGROUP_STOMACH] = 1.55,
+    [HITGROUP_LEFTARM] = 1.55,
+    [HITGROUP_RIGHTARM] = 1.55,
+    [HITGROUP_LEFTLEG] = 1.18,
+    [HITGROUP_RIGHTLEG] = 1.18,
 }
 
 -- Mag size --
@@ -82,15 +82,15 @@ SWEP.Primary.ClipSize = 27
 
 -- Recoil --
 
-SWEP.Recoil = 0.3
-SWEP.RecoilDirection = Angle(1, -0.1, 0)
-SWEP.RecoilSide = 0.45
+SWEP.Recoil = 1
+SWEP.RecoilDirection = Angle(1, -0.4, 0)
+SWEP.RecoilSide = 0.8
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.1
 SWEP.MaxRecoilBlowback = 0
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0
+SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
@@ -99,6 +99,37 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 0.35,
+            [2] = -0.5,
+            [3] = 0.7,
+            [4] = -0.7,
+            [5] = 0.8,
+            [6] = -0.9,
+            [7] = 1,
+            [8] = -1,
+            [9] = 1,
+            [10] = -1,
+            [11] = 1.1,
+            [12] = -1.1,
+            [13] = 1.1,
+            [14] = -1.1,
+            [15] = 1.2,
+            [15] = -1.2,
+            [16] = 1.2,
+            [17] = -1.2,
+            [18] = 1.2,
+            [19] = -1.1,
+            [20] = 1.1,
+            [21] = -0.9,
+            [22] = 0.9,
+            [23] = -0.8,
+            [24] = 0.7,
+            [25] = -0.9,
+            [26] = 0.9,
+            [27] = -0.8,
+            [28] = 0.7,
+        },
     },
     {
         Mode = 1,
@@ -181,7 +212,7 @@ SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-0
 SWEP.ShootSoundSilenced = path .. "sterling_suppressed_fp.ogg" -- Placeholder
 SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 
-SWEP.ShootPitch = 115
+SWEP.ShootPitch = 88
 
 -- Bodygroups --
 

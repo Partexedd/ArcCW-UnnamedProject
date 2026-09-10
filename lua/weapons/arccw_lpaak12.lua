@@ -115,7 +115,6 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ShootPitch = 90
 SWEP.ShootVol = 120
 
 SWEP.ProceduralRegularFire = false
@@ -153,7 +152,7 @@ SWEP.BarrelLength = 0 -- Anti fun
 
 SWEP.HolsterPos = Vector(12, -1, -1)
 
-SWEP.ActivePos = Vector(0.1, 0, 0.6)
+SWEP.ActivePos = Vector(0.1, 0, 0.4)
 SWEP.ActiveAng = Angle(1, 0, 1)
 
 SWEP.HoldtypeHolstered = "passive"

@@ -95,7 +95,7 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 821
+SWEP.Delay = 60 / 804
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -141,7 +141,7 @@ SWEP.MagID = "xcr"
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.33
+SWEP.SightTime = 0.25
 SWEP.ShootSpeedMult = 0.75
 
 -- Gun length --
