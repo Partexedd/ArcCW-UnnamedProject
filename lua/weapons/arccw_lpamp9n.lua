@@ -54,8 +54,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage parameters --
 
 SWEP.Damage = 26
-SWEP.DamageMin = 14
-SWEP.Range = 40
+SWEP.DamageMin = 16
+SWEP.Range = 30
 SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -67,10 +67,10 @@ SWEP.PhysBulletMuzzleVelocity = 550
 SWEP.BodyDamageMults = 
 {
     [HITGROUP_HEAD] = 1.45,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_CHEST] = 1.1,
+    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_LEFTARM] = 1.1,
+    [HITGROUP_RIGHTARM] = 1.1,
     [HITGROUP_LEFTLEG] = 0.9,
     [HITGROUP_RIGHTLEG] = 0.9,
 }
@@ -84,9 +84,9 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.6
 SWEP.RecoilDirection = Angle(1, 0.5, 0)
-SWEP.RecoilSide = 0.32
+SWEP.RecoilSide = 0.34
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0
@@ -96,23 +96,26 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
+local recoilTable = {}
+
+local shots = 31
+local startingKick = 1
+local maximumKick = 1.4
+local growth = 2
+
+for i = 1, shots do
+    local progress = (i - 1) / (shots - 1)
+    local kick = startingKick + (maximumKick - startingKick) * (progress ^ growth)
+
+    recoilTable[i] = kick
+end
+
 SWEP.Delay = 60 / 1197
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-        Override_ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.5,
-            [3] = 0.6,
-            [4] = 0.6,
-            [5] = 0.7,
-            [6] = 0.7,
-            [7] = 0.8,
-            [8] = 0.8,
-            [9] = 0.9,
-            [10] = 0.9,
-        },
+        Override_ShotRecoilTable = recoilTable,
     },
 }
 
@@ -141,9 +144,10 @@ SWEP.Primary.Ammo = "pistol"
 
 -- Speed mult --
 
-SWEP.SpeedMult = 1.1
+SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 1
 SWEP.SightTime = 0.18
+SWEP.ShootSpeedMult = 0.9
 
 -- Gun length --
 
@@ -204,7 +208,7 @@ SWEP.DistantShootSound = {
     path7 .. "fire-dist-06.ogg"
 }
 
-SWEP.ShootPitch = 85
+SWEP.ShootPitch = 100
 
 -- Bodygroups --
 

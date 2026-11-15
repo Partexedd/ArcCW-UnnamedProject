@@ -31,4 +31,38 @@ att.HolosightPiece = "models/weapons/arccw/atts/xps0_hsp.mdl"
 att.HolosightNoFlare = true
 att.HolosightSize = 1.2
 att.HolosightBone = "holosight"
-att.Colorable = true
+att.Colorable = false
+
+att.ToggleStats = {
+    {
+        PrintName = "Black",
+    },
+    {
+        PrintName = "Tan",
+    }
+}
+
+local reticles = {
+    [1] = Material("hud/reticles/eotech.png", "mips smooth"),
+    [2] = Material("hud/reticles/eotech_green.png", "mips smooth")
+}
+
+att.Hook_ModifyAttBodygroups = function(wep, data)
+    if data.slottbl.ToggleNum == 1 then
+        data.element.Model:SetBodygroup(0, 0)
+    elseif data.slottbl.ToggleNum == 2 then
+        data.element.Model:SetBodygroup(0, 1)
+    end
+end
+
+att.Hook_Think = function(wep)
+    local asight = wep:GetActiveSights()
+    if !asight then return end
+
+    local hs = asight.HolosightData or asight
+    local slot = wep.Attachments[asight.Slot]
+
+    if !slot then return end
+
+    hs.HolosightReticle = reticles[slot.ToggleNum] or reticles[1]
+end

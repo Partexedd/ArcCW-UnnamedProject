@@ -82,9 +82,9 @@ SWEP.Primary.ClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 3
-SWEP.RecoilDirection = Angle(1, 0.6, 0)
-SWEP.RecoilSide = 2
+SWEP.Recoil = 4
+SWEP.RecoilDirection = Angle(1, 1, 0)
+SWEP.RecoilSide = 3
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -100,6 +100,14 @@ SWEP.Firemodes = {
     {
         PrintName = "Slam-Fire",
         Mode = 2,
+        Override_ShotRecoilTable = {
+            [1] = 1.4,
+            [2] = 1,
+            [3] = 0.7,
+            [4] = 0.7,
+            [5] = 0.7,
+            [6] = 2,
+        },
     },
 }
 
@@ -248,10 +256,11 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "cycle",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        Time = 17 / 30,
         TPAnimStartTime = 0.7,
         Framerate = 30,
-        MinProgress = 0.35,
-        ShellEjectAt = 0.18,
+        MinProgress = 0.25,
+        ShellEjectAt = 0.12,
         SoundTable = {
             { s = pathCSR .. "boltup.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = pathCSR .. "boltback.ogg", t = 1 / 30, c = ca, v = 0.8 },

@@ -1,5 +1,5 @@
-att.PrintName = "BCM GUNFIGHTER MOD 3 vertical foregrip (Tan)"
-att.AbbrevName = "GUNFIGHTER MOD 3 (Tan)"
+att.PrintName = "BCM GUNFIGHTER MOD 3 vertical foregrip"
+att.AbbrevName = "GUNFIGHTER MOD 3"
 att.Icon = Material("entities/att/acwatt_lp_ph.png", "mips smooth")
 att.Description = ""
 att.Desc_Pros = {
@@ -20,7 +20,7 @@ att.Slot = "lowpoly_foregrip_cc"
 att.LHIK = true
 
 att.ModelOffset = Vector(0, 0, 0)
-att.Model = "models/weapons/arccw/atts/lp_gfmod3tancclamp.mdl"
+att.Model = "models/weapons/arccw/atts/lp_gfmod3cclamp.mdl"
 
 att.Override_HoldtypeActive = "smg"
 att.Override_HoldtypeActive_Priority = 2
@@ -41,3 +41,20 @@ att.AdditionalSights = {
      CrosshairInSights = true,
     }
 }
+
+att.ToggleStats = {
+    {
+        PrintName = "Black",
+    },
+    {
+        PrintName = "Tan",
+    }
+}
+
+att.Hook_ModifyAttBodygroups = function(wep, data)
+    if data.slottbl.ToggleNum == 1 then
+        data.element.Model:SetBodygroup(0, 0)
+    elseif data.slottbl.ToggleNum == 2 then
+        data.element.Model:SetBodygroup(0, 1)
+    end
+end

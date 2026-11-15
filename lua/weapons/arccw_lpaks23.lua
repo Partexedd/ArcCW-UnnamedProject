@@ -86,11 +86,11 @@ SWEP.Recoil = 6
 SWEP.RecoilDirection = Angle(1, -0.6, 0)
 SWEP.RecoilSide = 6
 
-SWEP.RecoilRise = 0
+SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 0
-SWEP.MaxRecoilBlowback = 0
+SWEP.MaxRecoilBlowback = 0.5
 SWEP.RecoilVMShake = 0
-SWEP.RecoilPunch = 0.1
+SWEP.RecoilPunch = 0
 
 -- Firerate / Firemodes --
 
@@ -100,6 +100,9 @@ SWEP.Firemodes = {
     {
         PrintName = "Pump-Action",
         Mode = 1,
+        Override_ShotRecoilTable = {
+            [1] = -1,
+        },
     },
 }
 

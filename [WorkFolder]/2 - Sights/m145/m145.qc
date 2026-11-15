@@ -5,6 +5,7 @@ $modelname "weapons/arccw/atts/m145.mdl"
 $bodygroup "body"
 {
 	studio "m145.smd"
+	studio "c79a2.smd"
 }
 $bodygroup "hsp"
 {

@@ -53,7 +53,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 -- Damage parameters --
 
 SWEP.Damage = 92
-SWEP.DamageMin = 21
+SWEP.DamageMin = 35
 SWEP.Range = 25
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -65,13 +65,13 @@ SWEP.PhysBulletMuzzleVelocity = 245
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 5,
-    [HITGROUP_CHEST] = 1.6,
-    [HITGROUP_STOMACH] = 1.6,
-    [HITGROUP_LEFTARM] = 1.6,
-    [HITGROUP_RIGHTARM] = 1.6,
-    [HITGROUP_LEFTLEG] = 0.78,
-    [HITGROUP_RIGHTLEG] = 0.78,
+    [HITGROUP_HEAD] = 1.8,
+    [HITGROUP_CHEST] = 1.2,
+    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_LEFTARM] = 1.2,
+    [HITGROUP_RIGHTARM] = 1.2,
+    [HITGROUP_LEFTLEG] = 0.65,
+    [HITGROUP_RIGHTLEG] = 0.65,
 }
 
 -- Mag size --
@@ -81,9 +81,9 @@ SWEP.Primary.ClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 7.2
+SWEP.Recoil = 9.2
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
-SWEP.RecoilSide = 1
+SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.2
@@ -180,7 +180,7 @@ SWEP.ShootSound = {pathCSR .. "fire-01.ogg", pathCSR .. "fire-02.ogg", pathCSR .
 SWEP.ShootSoundSilenced = false
 SWEP.DistantShootSound = false
 
-SWEP.ShootPitch = 100
+SWEP.ShootPitch = 120
 SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --

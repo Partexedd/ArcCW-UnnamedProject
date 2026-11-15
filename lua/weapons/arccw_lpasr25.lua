@@ -356,7 +356,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc", "lowpoly_foregrip_afg"},
         Bone = "Body",
         Offset = {
             vpos = Vector(2.2, -1.7, -7),

@@ -3,6 +3,7 @@ $modelname "weapons/arccw/atts/xps0.mdl"
 $bodygroup "body"
 {
 	studio "xps0.smd"
+	studio "xps0tan.smd"
 }
 $bodygroup "hsp"
 {

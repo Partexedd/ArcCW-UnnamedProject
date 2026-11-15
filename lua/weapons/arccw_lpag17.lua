@@ -66,7 +66,7 @@ SWEP.PhysBulletMuzzleVelocity = 375
 
 SWEP.BodyDamageMults = 
 {
-    [HITGROUP_HEAD] = 1.95,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1.4,
     [HITGROUP_STOMACH] = 1.4,
     [HITGROUP_LEFTARM] = 1.4,

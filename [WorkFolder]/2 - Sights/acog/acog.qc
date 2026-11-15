@@ -5,6 +5,7 @@ $modelname "weapons/arccw/atts/acog.mdl"
 $bodygroup "body"
 {
 	studio "acog.smd"
+	studio "acogtan.smd"
 }
 $bodygroup "hsp"
 {

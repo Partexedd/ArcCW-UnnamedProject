@@ -83,7 +83,7 @@ SWEP.Primary.ClipSize = 20
 
 SWEP.Recoil = 1.3
 SWEP.RecoilDirection = Angle(1, 0.3, 0)
-SWEP.RecoilSide = 0.45
+SWEP.RecoilSide = 0.7
 
 SWEP.RecoilRise = 0
 SWEP.VisualRecoilMult = 0.5
@@ -194,7 +194,7 @@ SWEP.ShootSound = {pathXC .. "fire-dist-01.ogg", pathXC .. "fire-dist-02.ogg", p
 SWEP.ShootSoundSilenced = "weapons/arccw/arx160/lowpolyarx160_supp.ogg" -- Placeholder
 SWEP.DistantShootSound = false
 
-SWEP.ShootPitch = 130
+SWEP.ShootPitch = 115
 
 -- Bodygroups --
 
@@ -374,7 +374,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_nocc", "lowpoly_foregrip_afg"},
         Bone = "Body",
         Offset = {
             vpos = Vector(2.36, -1.6, -7),

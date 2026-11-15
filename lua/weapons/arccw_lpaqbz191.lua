@@ -222,7 +222,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.6,
+        LHIKOut = 0.5,
         MinProgress = 1,
         SoundTable = {
             { s = pathXC .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -255,31 +255,29 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 3,
-        Time = 53 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.6,
         MinProgress = 0.4,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
             { s = path .. "magout_metal.ogg", t = 9 / 30, c = ca, v = 0.8 },
             { s = path .. "magdrop_metal.ogg", t = 19 / 30, c = ca, v = 1 },
             { s = path .. "magin_metal.ogg", t = 23 / 30, c = ca, v = 0.8 },
-            { s = path .. "end.ogg", t = 36 / 30, c = ca, v = 0.8 },
+            { s = path .. "end.ogg", t = 38 / 30, c = ca, v = 0.8 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LastClip1OutTime = 3,
-        Time = 64 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.45,
+        LHIKOut = 0.55,
         MinProgress = 1.8,
         SoundTable = {
             { s = path .. "start.ogg", t = 0 / 30, c = ca, v = 0.8 },
@@ -311,7 +309,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.55,
     },
 
     ["enter_inspect_empty"] = {
@@ -332,7 +330,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.55,
     },
 }
 
@@ -353,7 +351,7 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
-            vpos = Vector(0.07, 0.18, 3),
+            vpos = Vector(0.07, 0.3, 3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"isdown"},
@@ -371,7 +369,7 @@ SWEP.Attachments = {
     },
     { 
         PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc"},
+        Slot = {"lowpoly_foregrip", "lowpoly_foregrip_cc", "lowpoly_foregrip_afg"},
         Bone = "Body",
         Offset = {
             vpos = Vector(2.36, -0.9, -7),

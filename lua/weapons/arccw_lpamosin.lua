@@ -404,7 +404,7 @@ SWEP.AutosolveSourceSeq = "ref"
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Slot = {"lowpoly_optic_lowprofile", "lowpoly_optic", "lowpoly_optic_sniper"},
+        Slot = {"lowpoly_optic_mosin"},
         DefaultAttName = "Iron Sights",
         Bone = "Body",
         Offset = {
@@ -423,23 +423,5 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"nofh"},
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"lowpoly_foregrip"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, 2.5, 13),
-            vang = Angle(90, 0, -90),
-        },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"lowpoly_tac"},
-        Bone = "Body",
-        Offset = {
-            vpos = Vector(0, -1, 16),
-            vang = Angle(90, 0, -90),
-        },
     },
 }

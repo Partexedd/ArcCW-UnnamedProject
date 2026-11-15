@@ -51,3 +51,37 @@ att.HolosightMagnification = 4
 att.Mult_SightTime = 1.22
 
 att.HolosightBlackbox = false
+
+att.ToggleStats = {
+    {
+        PrintName = "Black",
+    },
+    {
+        PrintName = "Tan",
+    }
+}
+
+local reticles = {
+    [1] = Material("hud/scopes/ta01.png"),
+    [2] = Material("hud/scopes/ta01_alt.png")
+}
+
+att.Hook_ModifyAttBodygroups = function(wep, data)
+    if data.slottbl.ToggleNum == 1 then
+        data.element.Model:SetBodygroup(0, 0)
+    elseif data.slottbl.ToggleNum == 2 then
+        data.element.Model:SetBodygroup(0, 1)
+    end
+end
+
+att.Hook_Think = function(wep)
+    local asight = wep:GetActiveSights()
+    if !asight then return end
+
+    local hs = asight.HolosightData or asight
+    local slot = wep.Attachments[asight.Slot]
+
+    if !slot then return end
+
+    hs.HolosightReticle = reticles[slot.ToggleNum] or reticles[1]
+end

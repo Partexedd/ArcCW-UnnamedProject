@@ -3,8 +3,8 @@ att.AbbrevName = "KAC VFG"
 att.Icon = Material("entities/att/acwatt_lp_ph.png", "mips smooth")
 att.Description = ""
 att.Desc_Pros = {
-    "Reduces horizontal recoil by 20%",
-    "Makes recoil follow a vertical pattern"
+    "Reduces vertical recoil by 25%",
+    "Consistent left-diagonal recoil"
 }
 att.Desc_Cons = {
 }
@@ -24,5 +24,5 @@ att.Model = "models/weapons/arccw/atts/lp_kacvg.mdl"
 att.Override_HoldtypeActive = "smg"
 att.Override_HoldtypeActive_Priority = 2
 
-att.Override_RecoilDirection = Angle(1, 0, 0)
-att.Override_RecoilDirectionSide = Angle(0, 0.8, 0)
+att.Mult_Recoil = 0.75
+att.Override_RecoilDirection = Angle(1, -0.2, 0)

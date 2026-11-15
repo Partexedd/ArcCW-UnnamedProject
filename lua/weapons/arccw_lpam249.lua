@@ -95,21 +95,26 @@ SWEP.RecoilPunch = 0.1
 
 -- Firerate / Firemodes --
 
+local recoilTable = {}
+
+local shots = 200
+local strength = 1.2
+local variation = 0.15
+local frequency = 1.6
+
+for i = 1, shots do
+    local direction = (i % 2 == 1) and 1 or -1
+    local amount = strength + math.sin(i * frequency) * variation
+
+    recoilTable[i] = direction * amount
+end
+
 SWEP.Delay = 60 / 848
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-        Override_ShotRecoilTable = {
-            [1] = 0.8,
-            [2] = -1.1,
-            [3] = 0.9,
-            [4] = -0.8,
-            [5] = 1,
-            [6] = -0.4,
-            [7] = 1,
-            [8] = -0.2,
-        },
+        Override_ShotRecoilTable = recoilTable,
     },
 }
 
@@ -129,7 +134,7 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 1
 SWEP.HipDispersion = 650
-SWEP.MoveDispersion = 0
+SWEP.MoveDispersion = 15
 SWEP.JumpDispersion = 400
 
 SWEP.Primary.Ammo = "smg1"
